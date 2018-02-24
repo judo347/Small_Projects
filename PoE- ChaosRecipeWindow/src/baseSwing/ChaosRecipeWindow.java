@@ -12,11 +12,13 @@ import java.util.ArrayList;
  *  PoE colors?
  *  Start at last leauge before close?
  *  Create file if not found
+ *  What to do when i turned a set in?
+ *
+ *  CALCULATE SETS
+ *  setCompleteMethod
  */
 
 /** BUGS:
- *  Cannot save/load
- *  Cannot change league/file
  * */
 
 public class ChaosRecipeWindow extends JFrame{
@@ -49,10 +51,9 @@ public class ChaosRecipeWindow extends JFrame{
     private JLabel labTotalSets;
 
     private Color contentPanesColor = Color.LIGHT_GRAY;
-
     private ArrayList<Item> itemList = new ArrayList<>();
-
     private int currentLeague = 0;
+    private int currentSets = 0;
 
     public ChaosRecipeWindow(){
         //Create the window
@@ -316,5 +317,91 @@ public class ChaosRecipeWindow extends JFrame{
                 setAndUpdateTextButtons();
             }
         }
+    }
+
+    private void calculateSets(){
+        //TODO: this TEST TEST TEST
+        ArrayList<Item> workingItemlist = new ArrayList<>();
+        for(int i = 0; i < itemList.size(); i++)
+            workingItemlist.add(new Item(itemList.get(i).getName(), itemList.get(i).getCount()));
+
+        //TODO: setCompleteMethods, check all. Run untill no one is true
+    }
+
+    //TwoHandWep
+    private boolean setCompleteMethod1(ArrayList<Item> itemList){
+        if(itemList.get(0).getCount() >= 1 ){ //Helmet
+            if(itemList.get(1).getCount() >= 1 ){ //Gloves
+                if(itemList.get(2).getCount() >= 1 ){ //Boots
+                    if(itemList.get(3).getCount() >= 1 ){ //Chest
+                        if(itemList.get(4).getCount() >= 1 ){ //Belt
+                            if(itemList.get(5).getCount() >= 2 ){ //Ring
+                                if(itemList.get(6).getCount() >= 1 ) { //Amulet
+                                    if(itemList.get(7).getCount() >= 1) { //TwoHandWep
+                                        //TODO: Remove the required and checked amount/items
+
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+    //2xOneHandWep
+    private boolean setCompleteMethod2(ArrayList<Item> itemList){
+        if(itemList.get(0).getCount() >= 1 ){ //Helmet
+            if(itemList.get(1).getCount() >= 1 ){ //Gloves
+                if(itemList.get(2).getCount() >= 1 ){ //Boots
+                    if(itemList.get(3).getCount() >= 1 ){ //Chest
+                        if(itemList.get(4).getCount() >= 1 ){ //Belt
+                            if(itemList.get(5).getCount() >= 2 ){ //Ring
+                                if(itemList.get(6).getCount() >= 1 ) { //Amulet
+                                    if(itemList.get(8).getCount() >= 2) { //OneHandWep
+                                        //TODO: Remove the required and checked amount/items
+
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+    //OneHand + Shield
+    private boolean setCompleteMethod3(ArrayList<Item> itemList){
+        if(itemList.get(0).getCount() >= 1 ){ //Helmet
+            if(itemList.get(1).getCount() >= 1 ){ //Gloves
+                if(itemList.get(2).getCount() >= 1 ){ //Boots
+                    if(itemList.get(3).getCount() >= 1 ){ //Chest
+                        if(itemList.get(4).getCount() >= 1 ){ //Belt
+                            if(itemList.get(5).getCount() >= 2 ){ //Ring
+                                if(itemList.get(6).getCount() >= 1 ) { //Amulet
+                                    if(itemList.get(8).getCount() >= 1) { //OneHandWep
+                                        if(itemList.get(9).getCount() >= 1) { //Shield
+                                            //TODO: Remove the required and checked amount/items
+
+                                            return true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 }

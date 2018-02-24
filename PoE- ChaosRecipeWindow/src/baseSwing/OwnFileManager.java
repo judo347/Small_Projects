@@ -1,19 +1,16 @@
 package baseSwing;
 
-import javafx.fxml.Initializable;
-
 import java.io.*;
 import java.util.ArrayList;
 
-//1,2,3,4,5,6,7,8,9,10
+//1,2,3,4,5,6,7,8,9,10.
 public class OwnFileManager {
     public void saveArray(ArrayList<Item> itemList, int currentLeague){
         String leagueFileName = getFileName(currentLeague);
         String fileName = "E:\\SourceTree\\Small_Projects\\PoE- ChaosRecipeWindow\\src\\baseSwing\\" + leagueFileName; //TODO: fix this path!
         String line = createFormattedString(itemList);
         System.out.println("Formatted line?: " + line);
-        //TODO: Write line to file;
-        
+
         try{
             FileWriter fw = new FileWriter(fileName, false); //False = not append
             BufferedWriter bw = new BufferedWriter(fw);
@@ -25,7 +22,6 @@ public class OwnFileManager {
             System.out.println("Failed to open and write to file");
             e.printStackTrace();
         }
-
     }
 
     private String createFormattedString(ArrayList<Item> itemList){
