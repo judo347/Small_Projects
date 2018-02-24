@@ -10,10 +10,11 @@ import java.util.ArrayList;
  *  Save on exit!!
  *  PoE logo?
  *  PoE colors?
+ *  Start at last leauge before close?
+ *  Create file if not found
  */
 
 /** BUGS:
- *  Buttons not connecting corrently
  *  Cannot save/load
  *  Cannot change league/file
  * */
@@ -51,6 +52,8 @@ public class ChaosRecipeWindow extends JFrame{
 
     private ArrayList<Item> itemList = new ArrayList<>();
 
+    private int currentLeague = 0;
+
     public ChaosRecipeWindow(){
         //Create the window
         JFrame frame = new JFrame("PoE: Chaos Recipe Counter");
@@ -59,7 +62,7 @@ public class ChaosRecipeWindow extends JFrame{
         frame.setResizable(false);
 
         //Initializing counter array
-        fillArrayList();
+        fillArrayList(currentLeague);
 
         //Content pane
         addComponentsToPane(frame.getContentPane());
@@ -230,19 +233,19 @@ public class ChaosRecipeWindow extends JFrame{
         butRingMinus.setText("-");
         butAmuletPlus.setText(itemList.get(6).getName() + ": " + itemList.get(6).getCount());
         butAmuletMinus.setText("-");
-        butOneHandWepPlus.setText(itemList.get(7).getName() + ": " + itemList.get(7).getCount());
-        butOneHandWepMinus.setText("-");
+        butTwoHandWepPlus.setText(itemList.get(7).getName() + ": " + itemList.get(7).getCount());
+        butTwoHandWepMinus.setText("-");
         butShieldPlus.setText(itemList.get(8).getName() + ": " + itemList.get(8).getCount());
         butShieldMinus.setText("-");
-        butTwoHandWepPlus.setText(itemList.get(9).getName() + ": " + itemList.get(9).getCount());
-        butTwoHandWepMinus.setText("-");
+        butOneHandWepPlus.setText(itemList.get(9).getName() + ": " + itemList.get(9).getCount());
+        butOneHandWepMinus.setText("-");
     }
 
     private void addFunctionButtons(){
-        //butStandard
-        //butHardcore
-        //butLeagueStandard
-        //butLeagueHardcore
+        butStandard.addActionListener(e -> changeLeague(0));
+        butHardcore.addActionListener(e -> changeLeague(1));
+        butLeagueStandard.addActionListener(e -> changeLeague(2));
+        butLeagueHardcore.addActionListener(e -> changeLeague(3));
 
 
         butHelmetMinus.addActionListener(e -> buttonOneDown(0));
@@ -261,10 +264,10 @@ public class ChaosRecipeWindow extends JFrame{
         butAmuletMinus.addActionListener(e -> buttonOneDown(6));
         butTwoHandWepPlus.addActionListener(e -> buttonOneUp(7));
         butTwoHandWepMinus.addActionListener(e -> buttonOneDown(7));
-        butOneHandWepPlus.addActionListener(e -> buttonOneUp(8));
-        butOneHandWepMinus.addActionListener(e -> buttonOneDown(8));
-        butShieldPlus.addActionListener(e -> buttonOneUp(9));
-        butShieldMinus.addActionListener(e -> buttonOneDown(9));
+        butShieldPlus.addActionListener(e -> buttonOneUp(8));
+        butShieldMinus.addActionListener(e -> buttonOneDown(8));
+        butOneHandWepPlus.addActionListener(e -> buttonOneUp(9));
+        butOneHandWepMinus.addActionListener(e -> buttonOneDown(9));
     }
 
     private void buttonOneUp(int itemNumber){
@@ -278,14 +281,12 @@ public class ChaosRecipeWindow extends JFrame{
         setAndUpdateTextButtons();
     }
 
-
-    private void fillArrayList(){
+    private void fillArrayList(int league){
         initArrayItems();
-
 
         OwnFileManager ofm = new OwnFileManager();
 
-        ofm.fillArray(itemList);
+        ofm.fillArray(itemList, league);
 
     }
 
@@ -298,8 +299,22 @@ public class ChaosRecipeWindow extends JFrame{
         itemList.add(new Item("Ring"));
         itemList.add(new Item("Amulet"));
         itemList.add(new Item("TwoHandWep"));
-        itemList.add(new Item("OneHandWep"));
         itemList.add(new Item("Shield"));
+        itemList.add(new Item("OneHandWep"));
+    }
 
+    //SD, HC, tempSD, tempHC 0-3
+    private void changeLeague(int desiredLeague){
+        if(desiredLeague > -1 && desiredLeague < 4){
+            if(this.currentLeague != desiredLeague){
+                OwnFileManager ofm = new OwnFileManager();
+                ofm.saveArray(itemList, this.currentLeague);
+                boolean success = ofm.fillArray(itemList, desiredLeague);//load new one
+                if(success)
+                    this.currentLeague = desiredLeague;
+
+                setAndUpdateTextButtons();
+            }
+        }
     }
 }
