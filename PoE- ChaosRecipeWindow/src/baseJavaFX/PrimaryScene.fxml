@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="baseJavaFX.PrimarySceneController">
+  <children>
+    <Accordion expandedPane="$null" layoutX="90.0" layoutY="40.0" />
+    <ToolBar layoutX="0.0" layoutY="0.0" prefWidth="600.0">
+      <items>
+        <Button fx:id="butLoad" mnemonicParsing="false" text="Load" />
+        <Button fx:id="butSave" mnemonicParsing="false" text="Save" />
+      </items>
+    </ToolBar>
+    <Button id="butHelmetPlus" fx:id="butChestPlus" contentDisplay="CENTER" layoutX="383.0" layoutY="201.0" mnemonicParsing="false" text="Chest: x" />
+    <Button id="butHelmetPlus" fx:id="butGlovesPlus" layoutX="387.0" layoutY="271.0" mnemonicParsing="false" text="Gloves: x" />
+    <Button fx:id="butHelmetPlus" layoutX="410.0" layoutY="173.0" mnemonicParsing="false" prefHeight="21.0" text="Helmet: x" />
+    <Button id="butHelmetPlus" fx:id="butBootsPlus" layoutX="348.0" layoutY="143.0" mnemonicParsing="false" text="Boots: x" />
+    <FlowPane layoutX="0.0" layoutY="31.0" prefHeight="369.0" prefWidth="200.0">
+      <children>
+        <FlowPane alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="200.0">
+          <children>
+            <Button id="butHelmetPlus" fx:id="butAmuletMinus" contentDisplay="CENTER" mnemonicParsing="false" text="D" />
+            <Button id="butHelmetPlus" fx:id="butAmuletPlus" contentDisplay="CENTER" mnemonicParsing="false" text="Amulet: x" />
+          </children>
+        </FlowPane>
+      </children>
+    </FlowPane>
+    <FlowPane layoutX="200.0" layoutY="32.0" prefHeight="362.9999000000025" prefWidth="200.0">
+      <children>
+        <FlowPane alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="200.0">
+          <children>
+            <Button id="butHelmetPlus" fx:id="butRingPlus" contentDisplay="CENTER" mnemonicParsing="false" text="Ring: x" />
+            <Button id="butHelmetPlus" fx:id="butRingMinus" contentDisplay="CENTER" mnemonicParsing="false" text="D" />
+          </children>
+        </FlowPane>
+      </children>
+    </FlowPane>
+  </children>
+</AnchorPane>
