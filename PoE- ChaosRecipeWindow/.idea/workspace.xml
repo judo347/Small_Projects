@@ -12,14 +12,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChaosRecipeWindow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChaosRecipeWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/baseSwing/ChaosRecipeWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            <state relative-caret-position="1010">
+              <caret line="370" column="38" lean-forward="false" selection-start-line="370" selection-start-column="38" selection-end-line="370" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#ChaosRecipeWindow#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#addComponentsToPane#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#createButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#setAndUpdateTextButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -28,7 +27,6 @@
                 <element signature="method#buttonOneDown#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#fillArrayList#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#initArrayItems#0;class#ChaosRecipeWindow#0" expanded="false" />
-                <element signature="method#changeLeague#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#calculateSets#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#setCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
                 <element signature="method#removeSetCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -65,15 +63,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OwnFileManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OwnFileManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/baseSwing/OwnFileManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="82" column="57" lean-forward="false" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
+            <state relative-caret-position="306">
+              <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#saveArray#0;class#OwnFileManager#0" expanded="false" />
                 <element signature="method#createFormattedString#0;class#OwnFileManager#0" expanded="false" />
+                <element signature="method#createFileIfMissing#0;class#OwnFileManager#0" expanded="false" />
                 <element signature="method#getFileName#0;class#OwnFileManager#0" expanded="false" />
                 <element signature="method#fillArrayWith0#0;class#OwnFileManager#0" expanded="false" />
                 <element signature="method#fillArrayCountFromLine#0;class#OwnFileManager#0" expanded="false" />
@@ -128,10 +127,10 @@
         <option value="$PROJECT_DIR$/src/baseJFrame/Main.java" />
         <option value="$PROJECT_DIR$/src/baseJavaFX/Main.java" />
         <option value="$PROJECT_DIR$/src/baseSwing/Main.java" />
-        <option value="$PROJECT_DIR$/src/baseSwing/OwnFileManager.java" />
         <option value="$PROJECT_DIR$/src/baseSwing/Item.java" />
         <option value="$PROJECT_DIR$/src/baseSwing/JPanaWithPictureBackgorund.java" />
         <option value="$PROJECT_DIR$/src/baseSwing/ChaosRecipeWindow.java" />
+        <option value="$PROJECT_DIR$/src/baseSwing/OwnFileManager.java" />
       </list>
     </option>
   </component>
@@ -163,6 +162,32 @@
             <path>
               <item name="PoE- ChaosRecipeWindow" type="b2602c69:ProjectViewProjectNode" />
               <item name="PoE- ChaosRecipeWindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PoE- ChaosRecipeWindow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PoE- ChaosRecipeWindow" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PoE- ChaosRecipeWindow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PoE- ChaosRecipeWindow" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PoE- ChaosRecipeWindow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PoE- ChaosRecipeWindow" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="PoE- ChaosRecipeWindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PoE- ChaosRecipeWindow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PoE- ChaosRecipeWindow" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="PoE- ChaosRecipeWindow" type="462c0819:PsiDirectoryNode" />
+              <item name="baseSwing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PoE- ChaosRecipeWindow" type="b2602c69:ProjectViewProjectNode" />
@@ -353,7 +378,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -363,7 +387,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -399,7 +423,6 @@
           <caret line="148" column="44" lean-forward="false" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ChaosRecipeWindow#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#addComponentsToPane#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#createButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setAndUpdateTextButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -408,7 +431,6 @@
             <element signature="method#buttonOneDown#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#fillArrayList#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#initArrayItems#0;class#ChaosRecipeWindow#0" expanded="false" />
-            <element signature="method#changeLeague#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#calculateSets#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#removeSetCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -438,6 +460,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#saveArray#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#createFormattedString#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#createFileIfMissing#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#getFileName#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#fillArrayWith0#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#fillArrayCountFromLine#0;class#OwnFileManager#0" expanded="false" />
@@ -471,7 +494,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ChaosRecipeWindow#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#addComponentsToPane#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#createButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setAndUpdateTextButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -480,7 +502,6 @@
             <element signature="method#buttonOneDown#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#fillArrayList#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#initArrayItems#0;class#ChaosRecipeWindow#0" expanded="false" />
-            <element signature="method#changeLeague#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#calculateSets#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#removeSetCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -510,6 +531,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#saveArray#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#createFormattedString#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#createFileIfMissing#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#getFileName#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#fillArrayWith0#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#fillArrayCountFromLine#0;class#OwnFileManager#0" expanded="false" />
@@ -533,7 +555,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ChaosRecipeWindow#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#addComponentsToPane#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#createButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setAndUpdateTextButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -542,7 +563,6 @@
             <element signature="method#buttonOneDown#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#fillArrayList#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#initArrayItems#0;class#ChaosRecipeWindow#0" expanded="false" />
-            <element signature="method#changeLeague#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#calculateSets#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#removeSetCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -572,6 +592,7 @@
             <element signature="imports" expanded="true" />
             <element signature="method#saveArray#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#createFormattedString#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#createFileIfMissing#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#getFileName#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#fillArrayWith0#0;class#OwnFileManager#0" expanded="false" />
             <element signature="method#fillArrayCountFromLine#0;class#OwnFileManager#0" expanded="false" />
@@ -593,6 +614,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -668,21 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/baseSwing/OwnFileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="82" column="57" lean-forward="false" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#saveArray#0;class#OwnFileManager#0" expanded="false" />
-            <element signature="method#createFormattedString#0;class#OwnFileManager#0" expanded="false" />
-            <element signature="method#getFileName#0;class#OwnFileManager#0" expanded="false" />
-            <element signature="method#fillArrayWith0#0;class#OwnFileManager#0" expanded="false" />
-            <element signature="method#fillArrayCountFromLine#0;class#OwnFileManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/baseSwing/JPanaWithPictureBackgorund.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -695,11 +702,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/baseSwing/ChaosRecipeWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        <state relative-caret-position="1010">
+          <caret line="370" column="38" lean-forward="false" selection-start-line="370" selection-start-column="38" selection-end-line="370" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ChaosRecipeWindow#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#addComponentsToPane#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#createButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setAndUpdateTextButtons#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -708,7 +714,6 @@
             <element signature="method#buttonOneDown#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#fillArrayList#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#initArrayItems#0;class#ChaosRecipeWindow#0" expanded="false" />
-            <element signature="method#changeLeague#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#calculateSets#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#setCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#removeSetCompleteMethod1#0;class#ChaosRecipeWindow#0" expanded="false" />
@@ -718,6 +723,22 @@
             <element signature="method#removeSetCompleteMethod3#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#turnInSet#0;class#ChaosRecipeWindow#0" expanded="false" />
             <element signature="method#itemsLeftAfterTurnIn#0;class#ChaosRecipeWindow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baseSwing/OwnFileManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#saveArray#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#createFormattedString#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#createFileIfMissing#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#getFileName#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#fillArrayWith0#0;class#OwnFileManager#0" expanded="false" />
+            <element signature="method#fillArrayCountFromLine#0;class#OwnFileManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

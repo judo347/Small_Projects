@@ -2,11 +2,12 @@ package baseSwing;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 /** TODO NEEDED:
- *  Save on exit!!
- *  Create file if not found
+ *  Create file if one is not found
  *
  *  TODO EXTRA
  *  Better Logo?
@@ -55,15 +56,28 @@ public class ChaosRecipeWindow extends JFrame{
     private ArrayList<Item> itemList = new ArrayList<>();
     private int currentLeague = 0;
 
-
+    /** Main ;) */
     public ChaosRecipeWindow(){
         //Create the window
         ImageIcon windowLogo = new ImageIcon("E:\\SourceTree\\Small_Projects\\PoE- ChaosRecipeWindow\\src\\baseSwing\\logo2.png");
         JFrame frame = new JFrame("PoE: Chaos Recipe Counter");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //TODO: Save on close
         frame.setAlwaysOnTop(true); //TODO: Maybe not
         frame.setResizable(false);
         frame.setIconImage(windowLogo.getImage());
+
+        //Save on window close
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+
+                OwnFileManager ofm = new OwnFileManager();
+                ofm.saveArray(itemList, currentLeague); //save current itemList to current league file
+
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            }
+        });
 
         //Initializing counter array
         fillArrayList(currentLeague);

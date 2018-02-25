@@ -1,7 +1,12 @@
 package baseSwing;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 
 //1,2,3,4,5,6,7,8,9,10.
 public class OwnFileManager {
@@ -41,12 +46,11 @@ public class OwnFileManager {
     public boolean fillArray(ArrayList<Item> itemList, int desiredLeague){
 
         String leagueFileName = getFileName(desiredLeague);
-        //System.out.println(leagueFileName); //TEMP
         String fileName = "E:\\SourceTree\\Small_Projects\\PoE- ChaosRecipeWindow\\src\\baseSwing\\" + leagueFileName; //TODO: fix this path!
         String line = null;
-        //System.out.println(leagueFileName); //TEMP
 
         try {
+
             FileReader fileReader = new FileReader(fileName);
 
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -58,7 +62,9 @@ public class OwnFileManager {
             else //File contains a line
                 fillArrayCountFromLine(itemList, line);
         } catch(FileNotFoundException ex) {
-            System.out.println("Unable to open file '" + fileName + "'");
+            System.out.println("Unable to open file '" + fileName + "'"); //TODO REMOVE?
+            //createFileIfMissing(leagueFileName); //TODO INPUT?
+            //fillArray(itemList, desiredLeague);
             return false;
         }
         catch(IOException ex) {
@@ -66,6 +72,17 @@ public class OwnFileManager {
             return false;
         }
         return true;
+    }
+
+    /** DOOES NOT WORK!*/
+    private void createFileIfMissing(String fileName){
+
+        try {
+            Path file = Paths.get(fileName);
+            Files.write(file, Collections.singleton(""), Charset.defaultCharset());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //HELP FUNCTION FOR fill array
