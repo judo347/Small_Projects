@@ -4,22 +4,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-/** TODO!
+/** TODO NEEDED:
  *  Add button: turned in set
- *  Comments
  *  Save on exit!!
+ *  Create file if not found
+ *  Add (x) with the number of item left after completed sets.
+ *  Make us of the global completedSets variable (NEEDED)
+ *
+ *  TODO EXTRA
  *  PoE logo?
  *  PoE colors?
  *  Start at last leauge before close?
- *  Create file if not found
- *  What to do when i turned a set in?
+ *  Make background darker or maybe poe picture?
  *
- *  Add (x) with the number of item left after completed sets.
- */
-
-/** BUGS:
+ *  TODO BUGS
  *  Something is wrong with the sets with 2xOneHand and 1xOneHand + shield (not refreshing correctly?)
- * */
+ */
 
 public class ChaosRecipeWindow extends JFrame{
 
@@ -68,14 +68,13 @@ public class ChaosRecipeWindow extends JFrame{
         //Content pane
         addComponentsToPane(frame.getContentPane());
 
-        //TODO: Load from file and set text of buttons
-
         //Display window
         frame.pack();
         frame.setSize(400, 330);
         frame.setVisible(true);
     }
 
+    /** Added content to the window. Takes the frame as input. */
     private void addComponentsToPane(Container pane){
 
         //Creating buttons
@@ -156,9 +155,7 @@ public class ChaosRecipeWindow extends JFrame{
 
         //Content panel
         JPanel contentPanel = new JPanel();
-        //contentPanel.setBackground(Color.LIGHT_GRAY); //TODO: NOTWORKING
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
-        //contentPanel.setAlignmentX(Component.CENTER_ALIGNMENT); //TODO NEEDED?
         contentPanel.add(line1);
         contentPanel.add(line2);
         contentPanel.add(line3);
@@ -176,7 +173,6 @@ public class ChaosRecipeWindow extends JFrame{
         //Master Pane
         JPanel masterPanel = new JPanel();
         masterPanel.setLayout(new BoxLayout(masterPanel, BoxLayout.Y_AXIS));
-        //masterPanel.setAlignmentX(Component.LEFT_ALIGNMENT); //TODO DOES NOT MATTER?
         masterPanel.add(topBarPanel);
         masterPanel.add(contentPanel);
         masterPanel.add(buttomBar);
@@ -185,6 +181,7 @@ public class ChaosRecipeWindow extends JFrame{
         pane.add(masterPanel);
     }
 
+    /** Creates the buttons. (Calls setText and addFunc) */
     private void createButtons(){
         //TODO: Combine the JButton("");
         butStandard = new JButton("Standard");
@@ -219,6 +216,7 @@ public class ChaosRecipeWindow extends JFrame{
         addFunctionButtons();
     }
 
+    /** Uses the itemList to put text on buttons. */
     private void setAndUpdateTextButtons(){
         butHelmetMinus.setText("-");
         butHelmetPlus.setText(itemList.get(0).getName() + ": " + itemList.get(0).getCount());
@@ -242,6 +240,7 @@ public class ChaosRecipeWindow extends JFrame{
         butOneHandWepMinus.setText("-");
     }
 
+    /** Adds actions to the buttons */
     private void addFunctionButtons(){
         butStandard.addActionListener(e -> changeLeague(0));
         butHardcore.addActionListener(e -> changeLeague(1));
@@ -271,12 +270,16 @@ public class ChaosRecipeWindow extends JFrame{
         butOneHandWepMinus.addActionListener(e -> buttonOneDown(9));
     }
 
+    /** Action for button: adding 1 to count of desired item.
+     *  @param itemNumber the desired item to change. */
     private void buttonOneUp(int itemNumber){
         itemList.get(itemNumber).setCount(itemList.get(itemNumber).getCount() + 1);
         setAndUpdateTextButtons();
         calculateSets();
     }
 
+    /** Action for button: subtracting 1 from count of desired item.
+     *  @param itemNumber the desired item to change. */
     private void buttonOneDown(int itemNumber){
         if(itemList.get(itemNumber).getCount() != 0)
             itemList.get(itemNumber).setCount(itemList.get(itemNumber).getCount() - 1);
@@ -284,6 +287,9 @@ public class ChaosRecipeWindow extends JFrame{
         calculateSets();
     }
 
+    /** Fills the array with items and count from file to the current selected league.
+     *  Gets called when the window is created.
+     *  @param league the current selected league. */
     private void fillArrayList(int league){
         initArrayItems();
 
@@ -293,6 +299,7 @@ public class ChaosRecipeWindow extends JFrame{
 
     }
 
+    /** Initializes the array of items. Fills it with items with the right names and count 0 */
     private void initArrayItems(){
         itemList.add(new Item("Helmet"));
         itemList.add(new Item("Gloves"));
@@ -307,6 +314,9 @@ public class ChaosRecipeWindow extends JFrame{
     }
 
     //SD, HC, tempSD, tempHC 0-3
+    /** Changes the league. Checks for valid input.
+     *  Saves the current itemlist and load one from a specific file.
+     *  @param desiredLeague the league to change to.*/
     private void changeLeague(int desiredLeague){
         if(desiredLeague > -1 && desiredLeague < 4){
             if(this.currentLeague != desiredLeague){
@@ -322,37 +332,42 @@ public class ChaosRecipeWindow extends JFrame{
         }
     }
 
+    /** Calculates the number of sets that can be completed. Uses preferred order.
+     *  Changes the TotalSets label. */
     private void calculateSets(){
         boolean isAllTrue;
         int completedSets = 0;
-        //TODO: this TEST TEST TEST
-        //Make working copy of list
+
+        //Make work copy of list
         ArrayList<Item> workingItemlist = new ArrayList<>();
         for(int i = 0; i < itemList.size(); i++)
             workingItemlist.add(new Item(itemList.get(i).getName(), itemList.get(i).getCount()));
 
-        //TODO: setCompleteMethods, check all. Run untill no one is true (twoHand > sword+shield > 2xSword)
+        //Counts completed sets in preferred order.
         do{
-            if(setCompleteMethod1(workingItemlist)){
+            if(setCompleteMethod1(workingItemlist)){ //TwoHandWep
                 removeSetCompleteMethod1(workingItemlist);
                 completedSets++;
             }
-            if(setCompleteMethod3(workingItemlist)){
+            if(setCompleteMethod3(workingItemlist)){ //2xOneHandWep
                 removeSetCompleteMethod3(workingItemlist);
                 completedSets++;
             }
-            if(setCompleteMethod2(workingItemlist)){
+            if(setCompleteMethod2(workingItemlist)){ //OneHandWep + Shield
                 removeSetCompleteMethod2(workingItemlist);
                 completedSets++;
             }
 
+            //Is there still a set to be made?
             isAllTrue = setCompleteMethod1(workingItemlist) || setCompleteMethod2(workingItemlist) || setCompleteMethod3(workingItemlist);
         } while(isAllTrue);
 
         labTotalSets.setText("Total Sets: " + completedSets);
     }
 
-    //TwoHandWep
+    /** The first method check if it is possible to complete a set with a TWO-HANDED WEAPON.
+     *  The second method removes the set.
+     * @param itemList work copy of the original itemlist */
     private boolean setCompleteMethod1(ArrayList<Item> itemList){
         if(itemList.get(0).getCount() >= 1 ){ //Helmet
             if(itemList.get(1).getCount() >= 1 ){ //Gloves
@@ -385,7 +400,9 @@ public class ChaosRecipeWindow extends JFrame{
         itemList.get(7).remove1Count();
     }
 
-    //2xOneHandWep
+    /** The first method check if it is possible to complete a set with a 2xONE-HANDED WEAPON.
+     *  The second method removes the set.
+     * @param itemList work copy of the original itemlist */
     private boolean setCompleteMethod2(ArrayList<Item> itemList){
         if(itemList.get(0).getCount() >= 1 ){ //Helmet
             if(itemList.get(1).getCount() >= 1 ){ //Gloves
@@ -418,7 +435,9 @@ public class ChaosRecipeWindow extends JFrame{
         itemList.get(9).remove2Count();
     }
 
-    //OneHand + Shield
+    /** The first method check if it is possible to complete a set with a ONE-HANDED WEAPON + SHIELD.
+     *  The second method removes the set.
+     * @param itemList work copy of the original itemlist */
     private boolean setCompleteMethod3(ArrayList<Item> itemList){
         if(itemList.get(0).getCount() >= 1 ){ //Helmet
             if(itemList.get(1).getCount() >= 1 ){ //Gloves
