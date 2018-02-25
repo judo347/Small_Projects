@@ -25,4 +25,14 @@ public class Item {
     public void setCount(int count) {
         this.count = count;
     }
+
+    //TODO: Cannot go below 0
+    public void remove1Count(){
+        this.count = this.count - 1;
+    }
+
+    //TODO: Cannot go below 0
+    public void remove2Count(){
+        this.count = this.count - 2;
+    }
 }

@@ -14,11 +14,11 @@ import java.util.ArrayList;
  *  Create file if not found
  *  What to do when i turned a set in?
  *
- *  CALCULATE SETS
- *  setCompleteMethod
+ *  Add (x) with the number of item left after completed sets.
  */
 
 /** BUGS:
+ *  Something is wrong with the sets with 2xOneHand and 1xOneHand + shield (not refreshing correctly?)
  * */
 
 public class ChaosRecipeWindow extends JFrame{
@@ -274,12 +274,14 @@ public class ChaosRecipeWindow extends JFrame{
     private void buttonOneUp(int itemNumber){
         itemList.get(itemNumber).setCount(itemList.get(itemNumber).getCount() + 1);
         setAndUpdateTextButtons();
+        calculateSets();
     }
 
     private void buttonOneDown(int itemNumber){
         if(itemList.get(itemNumber).getCount() != 0)
             itemList.get(itemNumber).setCount(itemList.get(itemNumber).getCount() - 1);
         setAndUpdateTextButtons();
+        calculateSets();
     }
 
     private void fillArrayList(int league){
@@ -315,17 +317,39 @@ public class ChaosRecipeWindow extends JFrame{
                     this.currentLeague = desiredLeague;
 
                 setAndUpdateTextButtons();
+                calculateSets();
             }
         }
     }
 
     private void calculateSets(){
+        boolean isAllTrue;
+        int completedSets = 0;
         //TODO: this TEST TEST TEST
+        //Make working copy of list
         ArrayList<Item> workingItemlist = new ArrayList<>();
         for(int i = 0; i < itemList.size(); i++)
             workingItemlist.add(new Item(itemList.get(i).getName(), itemList.get(i).getCount()));
 
-        //TODO: setCompleteMethods, check all. Run untill no one is true
+        //TODO: setCompleteMethods, check all. Run untill no one is true (twoHand > sword+shield > 2xSword)
+        do{
+            if(setCompleteMethod1(workingItemlist)){
+                removeSetCompleteMethod1(workingItemlist);
+                completedSets++;
+            }
+            if(setCompleteMethod3(workingItemlist)){
+                removeSetCompleteMethod3(workingItemlist);
+                completedSets++;
+            }
+            if(setCompleteMethod2(workingItemlist)){
+                removeSetCompleteMethod2(workingItemlist);
+                completedSets++;
+            }
+
+            isAllTrue = setCompleteMethod1(workingItemlist) || setCompleteMethod2(workingItemlist) || setCompleteMethod3(workingItemlist);
+        } while(isAllTrue);
+
+        labTotalSets.setText("Total Sets: " + completedSets);
     }
 
     //TwoHandWep
@@ -338,8 +362,6 @@ public class ChaosRecipeWindow extends JFrame{
                             if(itemList.get(5).getCount() >= 2 ){ //Ring
                                 if(itemList.get(6).getCount() >= 1 ) { //Amulet
                                     if(itemList.get(7).getCount() >= 1) { //TwoHandWep
-                                        //TODO: Remove the required and checked amount/items
-
                                         return true;
                                     }
                                 }
@@ -351,6 +373,16 @@ public class ChaosRecipeWindow extends JFrame{
         }
 
         return false;
+    }
+    private void removeSetCompleteMethod1(ArrayList<Item> itemList){
+        itemList.get(0).remove1Count();
+        itemList.get(1).remove1Count();
+        itemList.get(2).remove1Count();
+        itemList.get(3).remove1Count();
+        itemList.get(4).remove1Count();
+        itemList.get(5).remove2Count();
+        itemList.get(6).remove1Count();
+        itemList.get(7).remove1Count();
     }
 
     //2xOneHandWep
@@ -362,9 +394,7 @@ public class ChaosRecipeWindow extends JFrame{
                         if(itemList.get(4).getCount() >= 1 ){ //Belt
                             if(itemList.get(5).getCount() >= 2 ){ //Ring
                                 if(itemList.get(6).getCount() >= 1 ) { //Amulet
-                                    if(itemList.get(8).getCount() >= 2) { //OneHandWep
-                                        //TODO: Remove the required and checked amount/items
-
+                                    if(itemList.get(9).getCount() >= 2) { //OneHandWep
                                         return true;
                                     }
                                 }
@@ -377,6 +407,16 @@ public class ChaosRecipeWindow extends JFrame{
 
         return false;
     }
+    public void removeSetCompleteMethod2(ArrayList<Item> itemList){
+        itemList.get(0).remove1Count();
+        itemList.get(1).remove1Count();
+        itemList.get(2).remove1Count();
+        itemList.get(3).remove1Count();
+        itemList.get(4).remove1Count();
+        itemList.get(5).remove2Count();
+        itemList.get(6).remove1Count();
+        itemList.get(9).remove2Count();
+    }
 
     //OneHand + Shield
     private boolean setCompleteMethod3(ArrayList<Item> itemList){
@@ -387,10 +427,8 @@ public class ChaosRecipeWindow extends JFrame{
                         if(itemList.get(4).getCount() >= 1 ){ //Belt
                             if(itemList.get(5).getCount() >= 2 ){ //Ring
                                 if(itemList.get(6).getCount() >= 1 ) { //Amulet
-                                    if(itemList.get(8).getCount() >= 1) { //OneHandWep
-                                        if(itemList.get(9).getCount() >= 1) { //Shield
-                                            //TODO: Remove the required and checked amount/items
-
+                                    if(itemList.get(9).getCount() >= 1) { //OneHandWep
+                                        if(itemList.get(8).getCount() >= 1) { //Shield
                                             return true;
                                         }
                                     }
@@ -403,5 +441,15 @@ public class ChaosRecipeWindow extends JFrame{
         }
 
         return false;
+    }
+    public void removeSetCompleteMethod3(ArrayList<Item> itemList){
+        itemList.get(0).remove1Count();
+        itemList.get(1).remove1Count();
+        itemList.get(2).remove1Count();
+        itemList.get(3).remove1Count();
+        itemList.get(4).remove1Count();
+        itemList.get(5).remove2Count();
+        itemList.get(8).remove1Count();
+        itemList.get(9).remove1Count();
     }
 }
