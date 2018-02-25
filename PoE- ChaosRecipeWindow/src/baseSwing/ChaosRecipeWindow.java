@@ -5,20 +5,18 @@ import java.awt.*;
 import java.util.ArrayList;
 
 /** TODO NEEDED:
- *  Add button: turned in set
  *  Save on exit!!
  *  Create file if not found
- *  Add (x) with the number of item left after completed sets.
- *  Make us of the global completedSets variable (NEEDED)
  *
  *  TODO EXTRA
- *  PoE logo?
+ *  Better Logo?
  *  PoE colors?
  *  Start at last leauge before close?
- *  Make background darker or maybe poe picture?
+ *  Make background maybe poe picture?
  *
  *  TODO BUGS
  *  Something is wrong with the sets with 2xOneHand and 1xOneHand + shield (not refreshing correctly?)
+ *  Paths in JPaneWithir... and OWnFFIle..
  */
 
 public class ChaosRecipeWindow extends JFrame{
@@ -48,19 +46,24 @@ public class ChaosRecipeWindow extends JFrame{
     private JButton butShieldMinus;
     private JButton butTwoHandWepPlus;
     private JButton butTwoHandWepMinus;
-    private JLabel labTotalSets;
 
-    private Color contentPanesColor = Color.LIGHT_GRAY;
+    private JLabel labTotalSets;
+    private JButton butTurnInSet;
+
+    private String background = "#201911";
+    private String contentPanesColor = "#110E09";
     private ArrayList<Item> itemList = new ArrayList<>();
     private int currentLeague = 0;
-    private int currentSets = 0;
+
 
     public ChaosRecipeWindow(){
         //Create the window
+        ImageIcon windowLogo = new ImageIcon("E:\\SourceTree\\Small_Projects\\PoE- ChaosRecipeWindow\\src\\baseSwing\\logo2.png");
         JFrame frame = new JFrame("PoE: Chaos Recipe Counter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //TODO: Save on close
         frame.setAlwaysOnTop(true); //TODO: Maybe not
         frame.setResizable(false);
+        frame.setIconImage(windowLogo.getImage());
 
         //Initializing counter array
         fillArrayList(currentLeague);
@@ -68,9 +71,12 @@ public class ChaosRecipeWindow extends JFrame{
         //Content pane
         addComponentsToPane(frame.getContentPane());
 
+        //Update completed sets
+        calculateSets();
+
         //Display window
         frame.pack();
-        frame.setSize(400, 330);
+        frame.setSize(420, 400);
         frame.setVisible(true);
     }
 
@@ -82,70 +88,70 @@ public class ChaosRecipeWindow extends JFrame{
 
         //Split
         JPanel line11 = new JPanel();
-        line11.setBackground(contentPanesColor);
+        line11.setBackground(new Color(0,0,0,0)); //TODO WORKING HERE
         line11.setAlignmentX(Component.RIGHT_ALIGNMENT);
         line11.add(butHelmetMinus); line11.add(butHelmetPlus);
         JPanel line12 = new JPanel();
-        line12.setBackground(contentPanesColor);
+        line12.setBackground(new Color(0,0,0,0));
         line12.setAlignmentX(Component.LEFT_ALIGNMENT);
         line12.add(butGlovesPlus); line12.add(butGlovesMinus);
 
         JPanel line21 = new JPanel();
-        line21.setBackground(contentPanesColor);
+        line21.setBackground(new Color(0,0,0,0));
         line21.setAlignmentX(Component.RIGHT_ALIGNMENT);
         line21.add(butBootsMinus); line21.add(butBootsPlus);
         JPanel line22 = new JPanel();
-        line22.setBackground(contentPanesColor);
+        line22.setBackground(new Color(0,0,0,0));
         line22.setAlignmentX(Component.LEFT_ALIGNMENT);
         line22.add(butChestPlus); line22.add(butChestMinus);
 
         JPanel line31 = new JPanel();
-        line31.setBackground(contentPanesColor);
+        line31.setBackground(new Color(0,0,0,0));
         line31.setAlignmentX(Component.RIGHT_ALIGNMENT);
         line31.add(butBeltMinus); line31.add(butBeltPlus);
         JPanel line32 = new JPanel();
-        line32.setBackground(contentPanesColor);
+        line32.setBackground(new Color(0,0,0,0));
         line32.setAlignmentX(Component.LEFT_ALIGNMENT);
         line32.add(butRingPlus); line32.add(butRingMinus);
 
         JPanel line41 = new JPanel();
-        line41.setBackground(contentPanesColor);
+        line41.setBackground(new Color(0,0,0,0));
         line41.setAlignmentX(Component.RIGHT_ALIGNMENT);
         line41.add(butAmuletMinus); line41.add(butAmuletPlus);
         JPanel line42 = new JPanel();
-        line42.setBackground(contentPanesColor);
+        line42.setBackground(new Color(0,0,0,0));
         line42.setAlignmentX(Component.LEFT_ALIGNMENT);
         line42.add(butTwoHandWepPlus); line42.add(butTwoHandWepMinus);
 
         JPanel line51 = new JPanel();
-        line51.setBackground(contentPanesColor);
+        line51.setBackground(new Color(0,0,0,0));
         line51.setAlignmentX(Component.RIGHT_ALIGNMENT);
         line51.add(butOneHandWepMinus); line51.add(butOneHandWepPlus);
         JPanel line52 = new JPanel();
-        line52.setBackground(contentPanesColor);
+        line52.setBackground(new Color(0,0,0,0));
         line52.setAlignmentX(Component.LEFT_ALIGNMENT);
         line52.add(butShieldPlus); line52.add(butShieldMinus);
 
         //Lines
         JPanel line1 = new JPanel();
-        line1.setBackground(contentPanesColor);
+        line1.setBackground(new Color(0,0,0,0));
         line1.add(line11); line1.add(line12);
         JPanel line2 = new JPanel();
-        line2.setBackground(contentPanesColor);
+        line2.setBackground(new Color(0,0,0,0));
         line2.add(line21); line2.add(line22);
         JPanel line3 = new JPanel();
-        line3.setBackground(contentPanesColor);
+        line3.setBackground(new Color(0,0,0,0));
         line3.add(line31); line3.add(line32);
         JPanel line4 = new JPanel();
-        line4.setBackground(contentPanesColor);
+        line4.setBackground(new Color(0,0,0,0));
         line4.add(line41); line4.add(line42);
         JPanel line5 = new JPanel();
-        line5.setBackground(contentPanesColor);
+        line5.setBackground(new Color(0,0,0,0));
         line5.add(line51); line5.add(line52);
 
         //Topbar
         JPanel topBarPanel = new JPanel();
-        topBarPanel.setBackground(Color.DARK_GRAY);
+        topBarPanel.setBackground(Color.decode(background));
         topBarPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         topBarPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE,15));
         topBarPanel.add(butStandard);
@@ -154,8 +160,12 @@ public class ChaosRecipeWindow extends JFrame{
         topBarPanel.add(butLeagueHardcore);
 
         //Content panel
+        //JPanaWithPictureBackgorund contentPanel = new JPanaWithPictureBackgorund();
+        //contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
         JPanel contentPanel = new JPanel();
-        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+        contentPanel.setBackground(Color.decode(contentPanesColor));
+        //contentPanel.setMaximumSize(new Dimension(600,1000)); //TODO, might not be needed
+        //contentPanel.setMinimumSize(new Dimension(0,800));
         contentPanel.add(line1);
         contentPanel.add(line2);
         contentPanel.add(line3);
@@ -163,16 +173,28 @@ public class ChaosRecipeWindow extends JFrame{
         contentPanel.add(line5);
 
         //Buttom bar
-        JPanel buttomBar = new JPanel();
-        buttomBar.setBackground(Color.DARK_GRAY);
-        buttomBar.setMaximumSize(new Dimension(Integer.MAX_VALUE, 15));
+        JPanel buttomBarLabel = new JPanel(); //TODO Limit buttonBar height? ok without?
         labTotalSets = new JLabel("Total Sets: XX");
-        labTotalSets.setForeground(Color.ORANGE);
-        buttomBar.add(labTotalSets);
+        labTotalSets.setForeground(Color.decode("#EAAA44"));
+        buttomBarLabel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 20));
+        buttomBarLabel.setBackground(Color.decode(background));
+        buttomBarLabel.add(labTotalSets);
+
+        JPanel buttomBarButton = new JPanel();
+        buttomBarButton.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
+        buttomBarButton.setBackground(Color.decode(background));
+        buttomBarButton.add(butTurnInSet);
+
+        JPanel buttomBar = new JPanel();
+        buttomBar.setLayout(new BoxLayout(buttomBar, BoxLayout.Y_AXIS));
+        buttomBar.setBackground(Color.decode(background));
+        buttomBar.add(buttomBarLabel);
+        buttomBar.add(buttomBarButton);
 
         //Master Pane
         JPanel masterPanel = new JPanel();
         masterPanel.setLayout(new BoxLayout(masterPanel, BoxLayout.Y_AXIS));
+        masterPanel.setBackground(Color.decode(background));
         masterPanel.add(topBarPanel);
         masterPanel.add(contentPanel);
         masterPanel.add(buttomBar);
@@ -211,6 +233,8 @@ public class ChaosRecipeWindow extends JFrame{
         butShieldPlus = new JButton();
         butShieldMinus = new JButton();
 
+        butTurnInSet = new JButton();
+
         setAndUpdateTextButtons();
 
         addFunctionButtons();
@@ -218,26 +242,32 @@ public class ChaosRecipeWindow extends JFrame{
 
     /** Uses the itemList to put text on buttons. */
     private void setAndUpdateTextButtons(){
+
+        //The list used to determine number of item left after turn in.
+        ArrayList<Item> afterTurnIn = itemsLeftAfterTurnIn(this.itemList);
+
         butHelmetMinus.setText("-");
-        butHelmetPlus.setText(itemList.get(0).getName() + ": " + itemList.get(0).getCount());
-        butGlovesPlus.setText(itemList.get(1).getName() + ": " + itemList.get(1).getCount());
+        butHelmetPlus.setText(itemList.get(0).getName() + ": " + itemList.get(0).getCount() + " (" + afterTurnIn.get(0).getCount() + ")");
+        butGlovesPlus.setText(itemList.get(1).getName() + ": " + itemList.get(1).getCount() + " (" + afterTurnIn.get(1).getCount() + ")");
         butGlovesMinus.setText("-");
-        butBootsPlus.setText(itemList.get(2).getName() + ": " + itemList.get(2).getCount());
+        butBootsPlus.setText(itemList.get(2).getName() + ": " + itemList.get(2).getCount() + " (" + afterTurnIn.get(2).getCount() + ")");
         butBootsMinus.setText("-");
-        butChestPlus.setText(itemList.get(3).getName() + ": " + itemList.get(3).getCount());
+        butChestPlus.setText(itemList.get(3).getName() + ": " + itemList.get(3).getCount() + " (" + afterTurnIn.get(3).getCount() + ")");
         butChestMinus.setText("-");
-        butBeltPlus.setText(itemList.get(4).getName() + ": " + itemList.get(4).getCount());
+        butBeltPlus.setText(itemList.get(4).getName() + ": " + itemList.get(4).getCount() + " (" + afterTurnIn.get(4).getCount() + ")");
         butBeltMinus.setText("-");
-        butRingPlus.setText(itemList.get(5).getName() + ": " + itemList.get(5).getCount());
+        butRingPlus.setText(itemList.get(5).getName() + ": " + itemList.get(5).getCount() + " (" + afterTurnIn.get(5).getCount() + ")");
         butRingMinus.setText("-");
-        butAmuletPlus.setText(itemList.get(6).getName() + ": " + itemList.get(6).getCount());
+        butAmuletPlus.setText(itemList.get(6).getName() + ": " + itemList.get(6).getCount() + " (" + afterTurnIn.get(6).getCount() + ")");
         butAmuletMinus.setText("-");
-        butTwoHandWepPlus.setText(itemList.get(7).getName() + ": " + itemList.get(7).getCount());
+        butTwoHandWepPlus.setText(itemList.get(7).getName() + ": " + itemList.get(7).getCount() + " (" + afterTurnIn.get(7).getCount() + ")");
         butTwoHandWepMinus.setText("-");
-        butShieldPlus.setText(itemList.get(8).getName() + ": " + itemList.get(8).getCount());
+        butShieldPlus.setText(itemList.get(8).getName() + ": " + itemList.get(8).getCount() + " (" + afterTurnIn.get(8).getCount() + ")");
         butShieldMinus.setText("-");
-        butOneHandWepPlus.setText(itemList.get(9).getName() + ": " + itemList.get(9).getCount());
+        butOneHandWepPlus.setText(itemList.get(9).getName() + ": " + itemList.get(9).getCount() + " (" + afterTurnIn.get(9).getCount() + ")");
         butOneHandWepMinus.setText("-");
+
+        butTurnInSet.setText("Turn in set");
     }
 
     /** Adds actions to the buttons */
@@ -268,6 +298,8 @@ public class ChaosRecipeWindow extends JFrame{
         butShieldMinus.addActionListener(e -> buttonOneDown(8));
         butOneHandWepPlus.addActionListener(e -> buttonOneUp(9));
         butOneHandWepMinus.addActionListener(e -> buttonOneDown(9));
+
+        butTurnInSet.addActionListener(e -> turnInSet());
     }
 
     /** Action for button: adding 1 to count of desired item.
@@ -313,9 +345,9 @@ public class ChaosRecipeWindow extends JFrame{
         itemList.add(new Item("OneHandWep"));
     }
 
-    //SD, HC, tempSD, tempHC 0-3
     /** Changes the league. Checks for valid input.
      *  Saves the current itemlist and load one from a specific file.
+     *  Standard = 0, Hardcore = 1, Temp Standard = 2, Temp Hardcore = 3.
      *  @param desiredLeague the league to change to.*/
     private void changeLeague(int desiredLeague){
         if(desiredLeague > -1 && desiredLeague < 4){
@@ -470,5 +502,56 @@ public class ChaosRecipeWindow extends JFrame{
         itemList.get(5).remove2Count();
         itemList.get(8).remove1Count();
         itemList.get(9).remove1Count();
+    }
+
+    /** Removes a set from the itemList. Uses pref. order.
+     *  Used by the button turnInSet. */
+    public void turnInSet(){
+        //1 - 3 - 2
+        if(setCompleteMethod1(this.itemList)){
+            removeSetCompleteMethod1(this.itemList);
+            setAndUpdateTextButtons();
+            calculateSets();
+            return;
+        }
+        if(setCompleteMethod3(this.itemList)){
+            removeSetCompleteMethod3(this.itemList);
+            setAndUpdateTextButtons();
+            calculateSets();
+            return;
+        }
+        if(setCompleteMethod2(itemList)){
+            removeSetCompleteMethod2(this.itemList);
+            setAndUpdateTextButtons();
+            calculateSets();
+            return;
+        }
+    }
+
+    /** TODO */
+    public ArrayList<Item> itemsLeftAfterTurnIn(ArrayList<Item> itemList){
+        //Make work copy of list
+        ArrayList<Item> workingItemlist = new ArrayList<>();
+        for(int i = 0; i < itemList.size(); i++)
+            workingItemlist.add(new Item(itemList.get(i).getName(), itemList.get(i).getCount()));
+
+        boolean isAllTrue;
+
+        do{
+            if(setCompleteMethod1(workingItemlist)){ //TwoHandWep
+                removeSetCompleteMethod1(workingItemlist);
+            }
+            if(setCompleteMethod3(workingItemlist)){ //2xOneHandWep
+                removeSetCompleteMethod3(workingItemlist);
+            }
+            if(setCompleteMethod2(workingItemlist)){ //OneHandWep + Shield
+                removeSetCompleteMethod2(workingItemlist);
+            }
+
+            //Is there still a set to be made?
+            isAllTrue = setCompleteMethod1(workingItemlist) || setCompleteMethod2(workingItemlist) || setCompleteMethod3(workingItemlist);
+        } while(isAllTrue);
+
+        return workingItemlist;
     }
 }
