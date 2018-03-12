@@ -1,0 +1,22 @@
+function GetAccountName (cookie) {
+  return DoServerRequest({
+    method: 'get',
+    url: Constants.POE_MY_ACCOUNT_URL,
+    options: {
+      headers: {
+        'Cookie': `${POESESSID}=${cookie}`
+      }
+    },
+    onSuccess: 'MY_ACCOUNT_RESPONSE',
+    onError: 'MY_ACCOUNT_ERROR'
+  })
+}
+
+
+GetAccountName(value)
+
+handleLogin (value) {
+    value = value || this.state.config[ConfigKeys.ACCOUNT_COOKIE]
+
+handleLoginButtonClick () {
+    let {value} = this.state
