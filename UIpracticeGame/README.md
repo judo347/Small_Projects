@@ -1,0 +1,1 @@
+Nedarvning af ENUMS
