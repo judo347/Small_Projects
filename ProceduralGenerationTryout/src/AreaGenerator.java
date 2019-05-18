@@ -5,15 +5,17 @@ public class AreaGenerator {
 
     /** Has to be procedural. Start in the middle and move in a spiral to fill in tiles. */
 
-    private AreaHandler area;
-
     private Random rand = new Random();
+
+    private AreaHandler area;
 
     public AreaGenerator(int width, int height) {
         this.area = new AreaHandler(width, height);
-        generateArea01();
+        //generateArea01();
+        generateArea02();
     }
 
+    /** Tile by tile, from one end to the other. */
     private void generateArea01(){
 
         for(int x = 0; x < area.getWidth(); x++){
@@ -34,7 +36,7 @@ public class AreaGenerator {
          * Roads should try to be connected, and have a change to fork.
          * Structures should have a little space them and other tile types. */
 
-        int waterTileChance;
+        double waterTileChance;
         double roadTileChance;
         double structureChance;
         double grassChance;
@@ -68,8 +70,21 @@ public class AreaGenerator {
 
                 if(isAnyOneWaterBodyTooBig){
                     waterTileChance = 0;
-                }else
-                    waterTileChance = 1;
+                }else{
+
+                    //How many water tiles are nearby?
+
+
+                    if( nearbyWater.size() == 1)
+                        waterTileChance = 0.2;
+                    else if(nearbyWater.size() == 2)
+                        waterTileChance = 0.5;
+                    else if(nearbyWater.size() == 3)
+                        waterTileChance = 0.7;
+                    else
+                        waterTileChance = 1;
+                }
+
 
                 //TODO //and how big is the water connected to them.
             }else
@@ -105,8 +120,14 @@ public class AreaGenerator {
 
         if(waterTileChance == 1)
             return AreaHandler.TileType.WATER;
+        else if(waterTileChance >= 0.5){
+            if(rand.nextInt(2) == 0)
+                return AreaHandler.TileType.WATER;
+            else
+                return AreaHandler.TileType.GRASS;
+        }
         else
-            return AreaHandler.TileType.ROAD;
+            return AreaHandler.TileType.GRASS;
 
 
         /** BELOW IS NOT NEEDED ANY MORE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -152,6 +173,49 @@ public class AreaGenerator {
         //PICK THE TILE WITH THE HIGHEST CHANCE
     }
 
+    /** Does it it more step by step. */
+    private void generateArea02(){
+
+        //Set all tiles to be grass
+        for(int x = 0; x < area.getWidth(); x++){
+            for(int y = 0; y < area.getHeight(); y++){
+                area.setTile(x, y, AreaHandler.TileType.GRASS);
+            }
+        }
+
+        //Pick some spots for seas
+        int numberOfLakes = rand.nextInt(6) + 1; //1-6
+
+        ArrayList<int[]> lakeStartPoints = getLakeStartPoints(numberOfLakes);
+
+        //TODO TEMP
+        for(int[] coord : lakeStartPoints)
+            area.setTile(coord[0], coord[1], AreaHandler.TileType.WATER);
+
+            //When spawning lakes... make sure there is a specific number of tiles between others
+
+
+        //Create roads?
+
+        //Create structures...
+            //Get all possible areas.. rolls for spawn
+    }
+
+    private void createLakes(ArrayList<int[]> startPoints){
+
+    }
+
+    /** @return the given number of random coordinates on the map. */
+    private ArrayList<int[]> getLakeStartPoints(int numberOfStartPoints){
+
+        ArrayList<int[]> startPoints = new ArrayList<>();
+
+        for(int i = 0; i < numberOfStartPoints; i++){
+            startPoints.add(new int[]{rand.nextInt(area.getWidth()), rand.nextInt(area.getHeight())});
+        }
+
+        return startPoints;
+    }
 
     /** Takes a 3x3 tileTypes and a tileType, searches for the given tileType and returns the coordinates of them. (-1;1 , -1; 1) */
     public ArrayList<int[]> getNumberOfTileTypes(AreaHandler.TileType[][] area3x3, AreaHandler.TileType type){
