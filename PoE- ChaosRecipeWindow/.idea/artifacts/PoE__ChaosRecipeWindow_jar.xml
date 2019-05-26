@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="PoE- ChaosRecipeWindow:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/PoE__ChaosRecipeWindow_jar</output-path>
-    <root id="archive" name="PoE- ChaosRecipeWindow.jar">
-      <element id="module-output" name="PoE- ChaosRecipeWindow" />
-    </root>
-  </artifact>
-</component>
