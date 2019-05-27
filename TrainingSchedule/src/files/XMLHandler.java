@@ -14,7 +14,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class XMLHandler {
 
@@ -28,21 +27,10 @@ public class XMLHandler {
             Document doc = dBuilder.parse(file);
             doc.getDocumentElement().normalize();
 
-            //System.out.println(doc.getFirstChild().getChildNodes().getLength());
-
             ArrayList<Week> weeks = getAllWeeks(doc);
             ArrayList<Template> templates = getAllTemplates(doc);
-            System.out.println("TEMP");
-            //NodeList weeksNode = doc.getElementsByTagName("weeks");
-            //NodeList templateNodes = doc.getElementsByTagName("templates");
 
-            //Node temp = weeksNode.item(0);
-
-            //System.out.println(weeksNode.getLength());
-            //System.out.println(templateNodes.getLength());
-
-
-            //return new Model(weeks, templates);
+            return new Model(weeks, templates);
 
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
@@ -82,43 +70,31 @@ public class XMLHandler {
         NodeList weeks = doc.getElementsByTagName("weeks");
         for(int i=0; i<weeks.getLength(); i++)
         {
-            Node weaksNode = weeks.item(i);
-            if(weaksNode.getNodeType() == Node.ELEMENT_NODE)
+            Node weeksNode = weeks.item(i);
+            if(weeksNode.getNodeType() == Node.ELEMENT_NODE)
             {
-                //System.out.println("TRIGGERED");
+                Element weeksElement = (Element) weeksNode;
 
-                Element weaksElement = (Element) weaksNode;
+                NodeList weekNodes = weeksElement.getElementsByTagName("week");
+                for(int x = 0; x < weekNodes.getLength(); x++){
+                    Node weekNode = weekNodes.item(x);
+                    if(weekNode.getNodeType() == Node.ELEMENT_NODE){
 
-                //String mondayDateString = weaksElement.getElementsByTagName("mondayDate").item(0).getTextContent();
-                //Calendar date = getDateFromString(mondayDateString);
-
-                //Run through each week
-                ArrayList<Goal> collectedGoals = null;
-                Calendar date = null;
-                NodeList goals = weaksElement.getElementsByTagName("goals");
-                for(int x = 0; x < goals.getLength(); x++){
-                    Node goalsNode = goals.item(x);
-                    if(goalsNode.getNodeType() == Node.ELEMENT_NODE){
+                        Element weekElement = (Element) weekNode;
 
                         String mondayDateString = weekElement.getElementsByTagName("mondayDate").item(0).getTextContent();
-                        date = getDateFromString(mondayDateString);
+                        Calendar date = getDateFromString(mondayDateString);
 
+                        ArrayList<Goal> goals = getGoals(weeksElement);
 
-                        Element elementGoals = (Element) goalsNode;
-                        collectedGoals = getGoals(elementGoals);
+                        collectedWeeks.add(new Week(date, goals));
                     }
-
-                    collectedWeeks.add(new Week(date, collectedGoals));
                 }
-
-
             }
         }
 
         return collectedWeeks;
     }
-
-    //private static String getMondayDate()
 
     private static ArrayList<Goal> getGoals(Element parentElement){
         ArrayList<Goal> collectedGoals = new ArrayList<>();

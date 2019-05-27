@@ -14,8 +14,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        //TODO Update controller
         Model loadedModel = FileManager.loadData();
+        //TODO Update controller
 
         primaryStage.setTitle("Training Schedule");
         primaryStage.setScene(new Scene(root, 800, 400));
