@@ -4,11 +4,14 @@ import java.util.ArrayList;
 
 public class Model {
 
-    private ArrayList<Template> templates;
     private ArrayList<Week> weeks;
-    private Week selectedWeek;
+    private ArrayList<Template> templates;
+    private Week selectedWeek = null;
 
-    //TODO Contructor
+    public Model(ArrayList<Week> weeks, ArrayList<Template> templates) {
+        this.templates = templates;
+        this.weeks = weeks;
+    }
 
     /** Creates a new blank goal. */
     public void createNewGoal(){

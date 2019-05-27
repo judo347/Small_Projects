@@ -12,4 +12,14 @@ public enum Weekday {
     public String getLabel() {
         return label;
     }
+
+    public static Weekday getWeekdayFromString(String string){
+
+        for(Weekday day : Weekday.values()){
+            if(day.label.compareTo(string) == 0)
+                return day;
+        }
+
+        throw new IllegalArgumentException(); //String could not be resolved to Weekday
+    }
 }

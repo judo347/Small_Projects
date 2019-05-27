@@ -1,31 +1,30 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Week {
 
-    private Date mondayDate;
+    private Calendar mondayDate;
     private ArrayList<Goal> goals;
     private int weekNumber;
 
-    public Week(Date mondayDate, ArrayList<Goal> goals, int weekNumber) {
+    public Week(Calendar mondayDate, ArrayList<Goal> goals) {
         this.mondayDate = mondayDate;
         this.goals = goals;
-        this.weekNumber = weekNumber;
+        this.weekNumber = mondayDate.get(Calendar.WEEK_OF_YEAR);
     }
 
-    public Week(Date mondayDate) {
-        this.mondayDate = mondayDate;
-        this.goals = new ArrayList<>();
-        //TODO Calculate week number
+    public Week(Calendar mondayDate) {
+        this(mondayDate, new ArrayList<>());
     }
 
     public void addGoal(Goal goal){
         goals.add(goal);
     }
 
-    public Date getMondayDate() {
+    public Calendar getMondayDate() {
         return mondayDate;
     }
 

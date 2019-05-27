@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
+import model.Model;
 
 public class Controller {
 
@@ -15,6 +16,10 @@ public class Controller {
     @FXML private ListView<?> listviewTemplates;
     @FXML private Button weeksRemoveButton;
     @FXML private TableView<?> tableGoals;
+
+    public void initialize(Model model){
+        //TODO
+    }
 
     @FXML
     void addWeek(ActionEvent event) {

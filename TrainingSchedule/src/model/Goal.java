@@ -22,4 +22,32 @@ public class Goal {
 
     public Goal() {
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPlannedDistance(Float plannedDistance) {
+        this.plannedDistance = plannedDistance;
+    }
+
+    public void setCompletedDistance(Float completedDistance) {
+        this.completedDistance = completedDistance;
+    }
+
+    public void setPlannedMinutes(Integer plannedMinutes) {
+        this.plannedMinutes = plannedMinutes;
+    }
+
+    public void setCompletedMinutes(Integer completedMinutes) {
+        this.completedMinutes = completedMinutes;
+    }
+
+    public void setPlannedWeekday(Weekday plannedWeekday) {
+        this.plannedWeekday = plannedWeekday;
+    }
+
+    public void setCompletedWeekday(Weekday completedWeekday) {
+        this.completedWeekday = completedWeekday;
+    }
 }
