@@ -1,0 +1,25 @@
+<data>
+    <weeks>
+        <week>
+            <mondayDate>27-5-2019</mondayDate>
+            <goals>
+                <goal>
+                    //TODO
+                </goal>
+            </goals>
+        </week>
+    </weeks>
+    <templates>
+        <template>
+            <name>Test 1</name>
+            <goals>
+                <goal>
+                    //TODO
+                </goal>
+                <goal>
+                    //TODO
+                </goal>
+            </goals>
+        </template>
+    </templates>
+</data>
