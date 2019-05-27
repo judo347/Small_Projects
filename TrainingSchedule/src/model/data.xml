@@ -1,10 +1,11 @@
 <data>
     <weeks>
         <week>
-            <mondayDate>27-5-2019</mondayDate>
+            <mondayDate>20-5-2019</mondayDate>
             <goals>
                 <goal>
-                    //TODO
+                    <description>Standard run 1</description>
+                    <plannedDistance>5k</plannedDistance>
                 </goal>
             </goals>
         </week>
@@ -14,10 +15,12 @@
             <name>Test 1</name>
             <goals>
                 <goal>
-                    //TODO
+                    <description>Standard run 2</description>
+                    <plannedDistance>10k</plannedDistance>
                 </goal>
                 <goal>
-                    //TODO
+                    <description>Standard run 3</description>
+                    <plannedDistance>15k</plannedDistance>
                 </goal>
             </goals>
         </template>
