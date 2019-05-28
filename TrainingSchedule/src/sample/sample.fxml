@@ -26,19 +26,19 @@
          <children>
             <TableView fx:id="tableGoals" maxWidth="-Infinity" prefHeight="451.0" prefWidth="560.0">
               <columns>
-                <TableColumn prefWidth="260.0" text="Goal Description" />
+                <TableColumn fx:id="goalViewDiscription" prefWidth="260.0" text="Goal Description" />
                 <TableColumn prefWidth="75.0" text="Planned">
                      <columns>
-                        <TableColumn prefWidth="55.0" text="Distance" />
-                        <TableColumn prefWidth="55.0" text="Duration" />
-                        <TableColumn prefWidth="40.0" text="Day" />
+                        <TableColumn fx:id="goalViewPlannedDistance" prefWidth="55.0" text="Distance" />
+                        <TableColumn fx:id="goalViewPlannedDuration" prefWidth="55.0" text="Duration" />
+                        <TableColumn fx:id="goalViewPlannedDay" prefWidth="40.0" text="Day" />
                      </columns>
                   </TableColumn>
                   <TableColumn prefWidth="75.0" text="Completed">
                      <columns>
-                        <TableColumn prefWidth="55.0" text="Distance" />
-                        <TableColumn prefWidth="55.0" text="Duration" />
-                        <TableColumn prefWidth="40.0" text="Day" />
+                        <TableColumn fx:id="goalViewCompletedDistance" prefWidth="55.0" text="Distance" />
+                        <TableColumn fx:id="goalViewCompletedDuration" prefWidth="55.0" text="Duration" />
+                        <TableColumn fx:id="goalViewCompletedDay" prefWidth="40.0" text="Day" />
                      </columns>
                   </TableColumn>
               </columns>
