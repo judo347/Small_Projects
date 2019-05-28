@@ -36,6 +36,10 @@ public class Model {
         throw new IllegalArgumentException(); //Should not happen.
     }
 
+    public void removeWeek(Week week){
+        weeks.remove(week);
+    }
+
     /*public Week getSelectedWeek() {
         return selectedWeek;
     }

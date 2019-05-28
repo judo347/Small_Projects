@@ -4,13 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.*;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Controller {
@@ -39,19 +37,35 @@ public class Controller {
 
         updateWeeksList();
 
-        ObservableList<Template> templates = FXCollections.observableArrayList(model.getTemplates());
-        this.listviewTemplates.setItems(templates);
+        updateTemplatesList();
 
         goalTableViewInitialize(model);
     }
 
     private void updateWeeksList(){
         ObservableList<Week> weeks = FXCollections.observableArrayList(model.getWeeks());
-        //this.li
         this.listviewWeeks.setItems(weeks);
+        updateGoalView();
+    }
+
+    private void updateGoalView(){
+
+        Week selectedWeek = listviewWeeks.getSelectionModel().getSelectedItem();
+
+        if(selectedWeek == null){
+            tableGoals.setItems(FXCollections.observableList(new ArrayList<>()));
+        }
+    }
+
+    private void updateTemplatesList(){
+        ObservableList<Template> templates = FXCollections.observableArrayList(model.getTemplates());
+        this.listviewTemplates.setItems(templates);
     }
 
     private void goalTableViewInitialize(Model model){
+
+        //Empty table text
+        this.tableGoals.setPlaceholder(new Label("No goals has been created for the selected week."));
 
         //goalViewDiscription.setCellValueFactory(cellData -> cellData.getValue().getDescriptionProperty());
         goalViewDiscription.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -94,6 +108,12 @@ public class Controller {
     @FXML
     void removeSelectedWeek(ActionEvent event) {
 
+        Week selectedWeek = listviewWeeks.getSelectionModel().getSelectedItem();
+
+        if(selectedWeek != null){
+            model.removeWeek(selectedWeek);
+            updateWeeksList();
+        }
     }
 
     @FXML

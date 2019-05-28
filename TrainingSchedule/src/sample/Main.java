@@ -24,7 +24,7 @@ public class Main extends Application {
         ctrl.initialize(loadedModel);
 
         primaryStage.setTitle("Training Schedule");
-        primaryStage.setScene(new Scene(obj, 800, 400));
+        primaryStage.setScene(new Scene(obj));
         primaryStage.show();
     }
 
