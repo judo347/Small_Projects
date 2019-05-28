@@ -36,6 +36,10 @@ public class Week {
         return weekNumber;
     }
 
+    public void removeGoal(Goal goal){
+        goals.remove(goal);
+    }
+
     @Override
     public String toString() {
         return "Week " + weekNumber;

@@ -127,9 +127,22 @@ public class Controller {
     @FXML
     void RemoveSelectedGoal(ActionEvent event) {
 
+        Week selectedWeek = getSelectedWeek();
+        Goal selectedGoal = getSelectedGoal();
+
+        if(selectedGoal != null && selectedWeek != null){
+
+            selectedWeek.removeGoal(selectedGoal);
+            updateGoalView();
+            tableGoals.getSelectionModel().select(tableGoals.getItems().size()-1);
+        }
     }
 
     private Week getSelectedWeek(){
         return listviewWeeks.getSelectionModel().getSelectedItem();
+    }
+
+    private Goal getSelectedGoal(){
+        return tableGoals.getSelectionModel().getSelectedItem();
     }
 }
