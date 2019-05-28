@@ -12,13 +12,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
+
+        Parent obj = loader.load();
+        Controller ctrl = loader.getController();
+
+        //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         Model loadedModel = FileManager.loadData();
-        //TODO Update controller
+        ctrl.initialize(loadedModel);
 
         primaryStage.setTitle("Training Schedule");
-        primaryStage.setScene(new Scene(root, 800, 400));
+        primaryStage.setScene(new Scene(obj, 800, 400));
         primaryStage.show();
     }
 

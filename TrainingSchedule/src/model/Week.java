@@ -35,4 +35,9 @@ public class Week {
     public int getWeekNumber() {
         return weekNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Week " + weekNumber;
+    }
 }

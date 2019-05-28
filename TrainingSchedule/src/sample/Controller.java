@@ -1,24 +1,33 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
 import model.Model;
+import model.Template;
+import model.Week;
 
 public class Controller {
 
-    @FXML private ListView<?> listviewWeeks;
+    @FXML private ListView<Week> listviewWeeks;
     @FXML private Button goalsAddButton;
     @FXML private Button weeksAddButton;
     @FXML private Button goalsRemoveButton;
-    @FXML private ListView<?> listviewTemplates;
+    @FXML private ListView<Template> listviewTemplates;
     @FXML private Button weeksRemoveButton;
     @FXML private TableView<?> tableGoals;
 
     public void initialize(Model model){
-        //TODO
+
+        ObservableList<Week> weeks = FXCollections.observableArrayList(model.getWeeks());
+        this.listviewWeeks.setItems(weeks);
+
+        ObservableList<Template> templates = FXCollections.observableArrayList(model.getTemplates());
+        this.listviewTemplates.setItems(templates);
     }
 
     @FXML

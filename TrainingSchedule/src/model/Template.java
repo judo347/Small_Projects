@@ -19,4 +19,9 @@ public class Template {
     public String getTemplateName() {
         return templateName;
     }
+
+    @Override
+    public String toString() {
+        return templateName;
+    }
 }
