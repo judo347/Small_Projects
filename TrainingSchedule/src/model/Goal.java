@@ -1,22 +1,24 @@
 package model;
 
-import javafx.beans.property.FloatProperty;
-import javafx.beans.property.SimpleFloatProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 public class Goal {
 
     private final StringProperty description = new SimpleStringProperty("");
-    private final FloatProperty plannedDistance = new SimpleFloatProperty();
+    private final SimpleFloatProperty plannedDistance = new SimpleFloatProperty();
+    private final FloatProperty completedDistance = new SimpleFloatProperty();
+    private final IntegerProperty plannedMinutes = new SimpleIntegerProperty();
+    private final IntegerProperty completedMinutes = new SimpleIntegerProperty();
+    private final StringProperty plannedWeekday = new SimpleStringProperty("");
+    private final StringProperty completedWeekday = new SimpleStringProperty("");
 
     //private String description = "";
     //private Float plannedDistance;
-    private Float completedDistance;
-    private Integer plannedMinutes;
-    private Integer completedMinutes;
-    private Weekday plannedWeekday;
-    private Weekday completedWeekday;
+    //private Float completedDistance;
+    //private Integer plannedMinutes;
+    //private Integer completedMinutes;
+    //private Weekday plannedWeekday;
+    //private Weekday completedWeekday;
 
     public Goal(String description, Float plannedDistance, Float completedDistance, Integer plannedMinutes, Integer completedMinutes, Weekday plannedWeekday, Weekday completedWeekday) {
         //this.description = description;
@@ -25,49 +27,101 @@ public class Goal {
         //this.description.set(description);
         setDescription(description);
         setPlannedDistance(plannedDistance);
-        this.completedDistance = completedDistance;
-        this.plannedMinutes = plannedMinutes;
-        this.completedMinutes = completedMinutes;
-        this.plannedWeekday = plannedWeekday;
-        this.completedWeekday = completedWeekday;
+        setCompletedDistance(completedDistance);
+        setPlannedMinutes(plannedMinutes);
+        setPlannedWeekday(plannedWeekday);
+        setCompletedWeekday(completedWeekday);
+        //this.completedDistance = completedDistance;
+        //this.plannedMinutes = plannedMinutes;
+        //this.completedMinutes = completedMinutes;
+        //this.plannedWeekday = plannedWeekday;
+        //this.completedWeekday = completedWeekday;
     }
 
     public Goal() {
-    }
-
-    public void setDescription(String description) {
-        this.description.set(description);
     }
 
     public StringProperty getDescriptionProperty() {
         return description;
     }
 
-    public void setPlannedDistance(Float plannedDistance) {
-        this.plannedDistance.set(plannedDistance);
+    public String getDescription() {
+        return description.get();
     }
 
-    public FloatProperty getPlannedDistanceProperty() {
+    public Float getPlannedDistance() {
+        return plannedDistance.get();
+    }
+
+    public SimpleFloatProperty plannedDistanceProperty() {
         return plannedDistance;
     }
 
-    public void setCompletedDistance(Float completedDistance) {
-        this.completedDistance = completedDistance;
+    public float getCompletedDistance() {
+        return completedDistance.get();
     }
 
-    public void setPlannedMinutes(Integer plannedMinutes) {
-        this.plannedMinutes = plannedMinutes;
+    public FloatProperty completedDistanceProperty() {
+        return completedDistance;
     }
 
-    public void setCompletedMinutes(Integer completedMinutes) {
-        this.completedMinutes = completedMinutes;
+    public int getPlannedMinutes() {
+        return plannedMinutes.get();
+    }
+
+    public IntegerProperty plannedMinutesProperty() {
+        return plannedMinutes;
+    }
+
+    public int getCompletedMinutes() {
+        return completedMinutes.get();
+    }
+
+    public IntegerProperty completedMinutesProperty() {
+        return completedMinutes;
+    }
+
+    public String getPlannedWeekday() {
+        return plannedWeekday.get();
+    }
+
+    public StringProperty plannedWeekdayProperty() {
+        return plannedWeekday;
+    }
+
+    public String getCompletedWeekday() {
+        return completedWeekday.get();
+    }
+
+    public StringProperty completedWeekdayProperty() {
+        return completedWeekday;
+    }
+
+    public void setDescription(String description) {
+        this.description.set(description);
+    }
+
+    public void setPlannedDistance(float plannedDistance) {
+        this.plannedDistance.set(plannedDistance);
+    }
+
+    public void setCompletedDistance(float completedDistance) {
+        this.completedDistance.set(completedDistance);
+    }
+
+    public void setPlannedMinutes(int plannedMinutes) {
+        this.plannedMinutes.set(plannedMinutes);
+    }
+
+    public void setCompletedMinutes(int completedMinutes) {
+        this.completedMinutes.set(completedMinutes);
     }
 
     public void setPlannedWeekday(Weekday plannedWeekday) {
-        this.plannedWeekday = plannedWeekday;
+        this.plannedWeekday.set(plannedWeekday.getLabel());
     }
 
     public void setCompletedWeekday(Weekday completedWeekday) {
-        this.completedWeekday = completedWeekday;
+        this.completedWeekday.set(completedWeekday.getLabel());
     }
 }

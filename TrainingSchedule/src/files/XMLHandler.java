@@ -85,7 +85,7 @@ public class XMLHandler {
                         String mondayDateString = weekElement.getElementsByTagName("mondayDate").item(0).getTextContent();
                         Calendar date = getDateFromString(mondayDateString);
 
-                        ArrayList<Goal> goals = getGoals(weeksElement);
+                        ArrayList<Goal> goals = getGoals(weekElement);
 
                         collectedWeeks.add(new Week(date, goals));
                     }

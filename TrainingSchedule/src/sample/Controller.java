@@ -21,13 +21,13 @@ public class Controller {
     @FXML private Button weeksRemoveButton;
     @FXML private TableView<Goal> tableGoals;
 
-    @FXML private TableColumn<Goal, String> goalViewDiscription;
-    @FXML private TableColumn<Goal, Float> goalViewPlannedDistance;
-    @FXML private TableColumn<Goal, Integer> goalViewPlannedDuration;
-    @FXML private TableColumn<Goal, Weekday> goalViewPlannedDay;
-    @FXML private TableColumn<Goal, Float> goalViewCompletedDistance;
-    @FXML private TableColumn<Goal, Integer> goalViewCompletedDuration;
-    @FXML private TableColumn<Goal, Weekday> goalViewCompletedDay;
+    @FXML private TableColumn<Goal, String>     goalViewDiscription;
+    @FXML private TableColumn<Goal, Float>      goalViewPlannedDistance;
+    @FXML private TableColumn<Goal, Integer>    goalViewPlannedDuration;
+    @FXML private TableColumn<Goal, String>    goalViewPlannedDay;
+    @FXML private TableColumn<Goal, Float>      goalViewCompletedDistance;
+    @FXML private TableColumn<Goal, Integer>    goalViewCompletedDuration;
+    @FXML private TableColumn<Goal, String>    goalViewCompletedDay;
 
 
     @FXML
@@ -48,17 +48,26 @@ public class Controller {
 
     private void goalTableViewInitialize(Model model){
 
-        goalViewDiscription.setCellValueFactory(cellData -> cellData.getValue().getDescriptionProperty());
-        goalViewPlannedDistance.setCellValueFactory(cellData -> cellData.getValue().getPlannedDistanceProperty());
-
+        //goalViewDiscription.setCellValueFactory(cellData -> cellData.getValue().getDescriptionProperty());
+        goalViewDiscription.setCellValueFactory(new PropertyValueFactory<>("description"));
+        //goalViewPlannedDistance.setCellValueFactory(cellData -> cellData.getValue().plannedDistanceProperty());
+        goalViewPlannedDistance.setCellValueFactory(new PropertyValueFactory<>("plannedDistance"));
+        //goalViewPlannedDuration.setCellValueFactory(cellData -> cellData.getValue().getPlannedMinutes());
+        goalViewPlannedDuration.setCellValueFactory(new PropertyValueFactory<>("plannedMinutes"));
+        //goalViewPlannedDay.setCellValueFactory(cellData -> cellData.getValue().plannedWeekdayProperty());
+        goalViewPlannedDay.setCellValueFactory(new PropertyValueFactory<>("plannedWeekday"));
+        //goalViewCompletedDistance.setCellValueFactory(cellData -> cellData.getValue().getCompletedDistance());
+        goalViewCompletedDistance.setCellValueFactory(new PropertyValueFactory<>("completedDistance"));
+        //goalViewCompletedDuration.setCellValueFactory(cellData -> cellData.getValue().completedMinutesProperty());
+        goalViewCompletedDuration.setCellValueFactory(new PropertyValueFactory<>("completedMinutes"));
+        //goalViewCompletedDay.setCellValueFactory(cellData -> cellData.getValue().completedWeekdayProperty());
+        goalViewCompletedDay.setCellValueFactory(new PropertyValueFactory<>("completedWeekday"));
 
         //Triggers when a week is selected
         this.listviewWeeks.getSelectionModel().selectedItemProperty().addListener(observable -> {
 
             Week selectedWeek = listviewWeeks.getSelectionModel().getSelectedItem();
-
             ObservableList<Goal> goals = FXCollections.observableArrayList(model.getGoalsOfWeek(selectedWeek));
-
             tableGoals.setItems(goals);
         });
     }

@@ -5,22 +5,22 @@
             <mondayDate>13-5-2019</mondayDate>
             <goals>
                 <goal>
-                    <description>Standard run 0</description>
+                    <description>Standard run 0 - Week 1</description>
                     <plannedDistance>0</plannedDistance>
-                    <plannedDuration></plannedDuration>
-                    <plannedDay></plannedDay>
-                    <completedDistance></completedDistance>
-                    <completedDuration></completedDuration>
-                    <completedDay></completedDay>
+                    <plannedDuration>0</plannedDuration>
+                    <plannedDay>Monday</plannedDay>
+                    <completedDistance>0</completedDistance>
+                    <completedDuration>0</completedDuration>
+                    <completedDay>Monday</completedDay>
                 </goal>
                 <goal>
-                    <description>Standard run 0.2</description>
-                    <plannedDistance>0</plannedDistance>
-                    <plannedDuration></plannedDuration>
-                    <plannedDay></plannedDay>
-                    <completedDistance></completedDistance>
-                    <completedDuration></completedDuration>
-                    <completedDay></completedDay>
+                    <description>Standard run 1 - Week 1</description>
+                    <plannedDistance>1</plannedDistance>
+                    <plannedDuration>1</plannedDuration>
+                    <plannedDay>Tuesday</plannedDay>
+                    <completedDistance>1</completedDistance>
+                    <completedDuration>1</completedDuration>
+                    <completedDay>Tuesday</completedDay>
                 </goal>
             </goals>
         </week>
@@ -28,13 +28,13 @@
             <mondayDate>20-5-2019</mondayDate>
             <goals>
                 <goal>
-                    <description>Standard run 1</description>
-                    <plannedDistance>5</plannedDistance>
-                    <plannedDuration></plannedDuration>
-                    <plannedDay></plannedDay>
-                    <completedDistance></completedDistance>
-                    <completedDuration></completedDuration>
-                    <completedDay></completedDay>
+                    <description>Standard run 2 - Week 2</description>
+                    <plannedDistance>2</plannedDistance>
+                    <plannedDuration>2</plannedDuration>
+                    <plannedDay>Wednesday</plannedDay>
+                    <completedDistance>2</completedDistance>
+                    <completedDuration>2</completedDuration>
+                    <completedDay>Wednesday</completedDay>
                 </goal>
             </goals>
         </week>
