@@ -11,6 +11,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.*;
 
+import java.util.Calendar;
+
 public class Controller {
 
     @FXML private ListView<Week> listviewWeeks;
@@ -29,21 +31,24 @@ public class Controller {
     @FXML private TableColumn<Goal, Integer>    goalViewCompletedDuration;
     @FXML private TableColumn<Goal, String>    goalViewCompletedDay;
 
-
-    @FXML
-    private void initialize(){
-        //goalViewDiscription.setCellValueFactory(cellData -> cellData.getValue().descriptionProperty());
-    }
+    private Model model;
 
     public void initialize(Model model){
 
-        ObservableList<Week> weeks = FXCollections.observableArrayList(model.getWeeks());
-        this.listviewWeeks.setItems(weeks);
+        this.model = model;
+
+        updateWeeksList();
 
         ObservableList<Template> templates = FXCollections.observableArrayList(model.getTemplates());
         this.listviewTemplates.setItems(templates);
 
         goalTableViewInitialize(model);
+    }
+
+    private void updateWeeksList(){
+        ObservableList<Week> weeks = FXCollections.observableArrayList(model.getWeeks());
+        //this.li
+        this.listviewWeeks.setItems(weeks);
     }
 
     private void goalTableViewInitialize(Model model){
@@ -66,15 +71,24 @@ public class Controller {
         //Triggers when a week is selected
         this.listviewWeeks.getSelectionModel().selectedItemProperty().addListener(observable -> {
 
-            Week selectedWeek = listviewWeeks.getSelectionModel().getSelectedItem();
-            ObservableList<Goal> goals = FXCollections.observableArrayList(model.getGoalsOfWeek(selectedWeek));
-            tableGoals.setItems(goals);
+            if(listviewWeeks.getSelectionModel().getSelectedItem() != null){
+                Week selectedWeek = listviewWeeks.getSelectionModel().getSelectedItem();
+                ObservableList<Goal> goals = FXCollections.observableArrayList(model.getGoalsOfWeek(selectedWeek));
+                tableGoals.setItems(goals);
+            }
+
         });
     }
 
     @FXML
     void addWeek(ActionEvent event) {
 
+        Calendar currentDate = Calendar.getInstance();
+        Week newWeek = new Week(currentDate);
+
+        model.getWeeks().add(newWeek);
+
+        updateWeeksList();
     }
 
     @FXML
