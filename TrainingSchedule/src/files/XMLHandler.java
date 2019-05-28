@@ -119,15 +119,15 @@ public class XMLHandler {
                 if(description.compareTo("") != 0)
                     goal.setDescription(description);
                 if(plannedDistance.compareTo("") != 0)
-                    goal.setPlannedDistance(Float.parseFloat(plannedDistance));
+                    goal.setPlannedDistance(plannedDistance);
                 if(plannedDuration.compareTo("") != 0)
-                    goal.setPlannedMinutes(Integer.parseInt(plannedDuration));
+                    goal.setPlannedMinutes(plannedDuration);
                 if(plannedDay.compareTo("") != 0)
                     goal.setPlannedWeekday(Weekday.getWeekdayFromString(plannedDay));
                 if(completedDistance.compareTo("") != 0)
-                    goal.setCompletedDistance(Float.parseFloat(completedDistance));
+                    goal.setCompletedDistance(completedDistance);
                 if(completedDuration.compareTo("") != 0)
-                    goal.setCompletedMinutes(Integer.parseInt(completedDuration));
+                    goal.setCompletedMinutes(completedDuration);
                 if(completedDay.compareTo("") != 0)
                     goal.setCompletedWeekday(Weekday.getWeekdayFromString(completedDay));
 

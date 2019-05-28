@@ -26,7 +26,7 @@
          <children>
             <TableView fx:id="tableGoals" maxWidth="-Infinity" prefHeight="451.0">
               <columns>
-                <TableColumn fx:id="goalViewDiscription" prefWidth="260.0" text="Goal Description" />
+                <TableColumn fx:id="goalViewDescription" prefWidth="260.0" text="Goal Description" />
                 <TableColumn prefWidth="75.0" text="Planned">
                      <columns>
                         <TableColumn fx:id="goalViewPlannedDistance" prefWidth="55.0" text="Distance" />

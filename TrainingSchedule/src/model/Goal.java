@@ -5,92 +5,48 @@ import javafx.beans.property.*;
 public class Goal {
 
     private final StringProperty description = new SimpleStringProperty("");
-    private final SimpleFloatProperty plannedDistance = new SimpleFloatProperty();
-    private final FloatProperty completedDistance = new SimpleFloatProperty();
-    private final IntegerProperty plannedMinutes = new SimpleIntegerProperty();
-    private final IntegerProperty completedMinutes = new SimpleIntegerProperty();
+    private final StringProperty plannedDistance = new SimpleStringProperty("");
+    private final StringProperty completedDistance = new SimpleStringProperty("");
+    private final StringProperty plannedMinutes = new SimpleStringProperty("");
+    private final StringProperty completedMinutes = new SimpleStringProperty("");
     private final StringProperty plannedWeekday = new SimpleStringProperty("");
     private final StringProperty completedWeekday = new SimpleStringProperty("");
 
-    //private String description = "";
-    //private Float plannedDistance;
-    //private Float completedDistance;
-    //private Integer plannedMinutes;
-    //private Integer completedMinutes;
-    //private Weekday plannedWeekday;
-    //private Weekday completedWeekday;
-
-    public Goal(String description, Float plannedDistance, Float completedDistance, Integer plannedMinutes, Integer completedMinutes, Weekday plannedWeekday, Weekday completedWeekday) {
-        //this.description = description;
-        //setDescription(description);
-        //this.description = new SimpleStringProperty(description);
-        //this.description.set(description);
+    public Goal(String description, String plannedDistance, String completedDistance, String plannedMinutes, String completedMinutes, Weekday plannedWeekday, Weekday completedWeekday) {
         setDescription(description);
         setPlannedDistance(plannedDistance);
         setCompletedDistance(completedDistance);
         setPlannedMinutes(plannedMinutes);
+        setCompletedMinutes(completedMinutes);
         setPlannedWeekday(plannedWeekday);
         setCompletedWeekday(completedWeekday);
-        //this.completedDistance = completedDistance;
-        //this.plannedMinutes = plannedMinutes;
-        //this.completedMinutes = completedMinutes;
-        //this.plannedWeekday = plannedWeekday;
-        //this.completedWeekday = completedWeekday;
     }
 
     public Goal() {
     }
 
-    public StringProperty getDescriptionProperty() {
+    public StringProperty descriptionProperty() {
         return description;
     }
 
-    public String getDescription() {
-        return description.get();
-    }
-
-    public Float getPlannedDistance() {
-        return plannedDistance.get();
-    }
-
-    public SimpleFloatProperty plannedDistanceProperty() {
+    public StringProperty plannedDistanceProperty() {
         return plannedDistance;
     }
 
-    public float getCompletedDistance() {
-        return completedDistance.get();
-    }
-
-    public FloatProperty completedDistanceProperty() {
+    public StringProperty completedDistanceProperty() {
         return completedDistance;
     }
 
-    public int getPlannedMinutes() {
-        return plannedMinutes.get();
-    }
-
-    public IntegerProperty plannedMinutesProperty() {
+    public StringProperty plannedMinutesProperty() {
         return plannedMinutes;
     }
 
-    public int getCompletedMinutes() {
-        return completedMinutes.get();
-    }
-
-    public IntegerProperty completedMinutesProperty() {
+    public StringProperty completedMinutesProperty() {
         return completedMinutes;
-    }
-
-    public String getPlannedWeekday() {
-        return plannedWeekday.get();
     }
 
     public StringProperty plannedWeekdayProperty() {
         return plannedWeekday;
-    }
-
-    public String getCompletedWeekday() {
-        return completedWeekday.get();
     }
 
     public StringProperty completedWeekdayProperty() {
@@ -101,19 +57,19 @@ public class Goal {
         this.description.set(description);
     }
 
-    public void setPlannedDistance(float plannedDistance) {
+    public void setPlannedDistance(String plannedDistance) {
         this.plannedDistance.set(plannedDistance);
     }
 
-    public void setCompletedDistance(float completedDistance) {
+    public void setCompletedDistance(String completedDistance) {
         this.completedDistance.set(completedDistance);
     }
 
-    public void setPlannedMinutes(int plannedMinutes) {
+    public void setPlannedMinutes(String plannedMinutes) {
         this.plannedMinutes.set(plannedMinutes);
     }
 
-    public void setCompletedMinutes(int completedMinutes) {
+    public void setCompletedMinutes(String completedMinutes) {
         this.completedMinutes.set(completedMinutes);
     }
 
