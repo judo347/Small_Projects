@@ -80,4 +80,32 @@ public class Goal {
     public void setCompletedWeekday(Weekday completedWeekday) {
         this.completedWeekday.set(completedWeekday.getLabel());
     }
+
+    public String getDescription() {
+        return description.get();
+    }
+
+    public String getPlannedDistance() {
+        return plannedDistance.get();
+    }
+
+    public String getCompletedDistance() {
+        return completedDistance.get();
+    }
+
+    public String getPlannedMinutes() {
+        return plannedMinutes.get();
+    }
+
+    public String getCompletedMinutes() {
+        return completedMinutes.get();
+    }
+
+    public String getPlannedWeekday() {
+        return plannedWeekday.get();
+    }
+
+    public String getCompletedWeekday() {
+        return completedWeekday.get();
+    }
 }

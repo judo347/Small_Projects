@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class XMLHandler {
+public class XMLLoader {
 
     /** https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/
      * */
@@ -48,6 +48,7 @@ public class XMLHandler {
         ArrayList<Template> collectedTemplates = new ArrayList<>();
 
         NodeList templates = doc.getElementsByTagName("templates");
+        System.out.println(templates.getLength());
         for(int i = 0; i < templates.getLength(); i++){
             Node templateNode = templates.item(i);
             if(templateNode.getNodeType() == Node.ELEMENT_NODE){

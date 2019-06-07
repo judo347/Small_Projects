@@ -145,4 +145,8 @@ public class Controller {
     private Goal getSelectedGoal(){
         return tableGoals.getSelectionModel().getSelectedItem();
     }
+
+    public Model getModel() {
+        return model;
+    }
 }

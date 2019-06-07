@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class Week {
 
@@ -26,6 +25,19 @@ public class Week {
 
     public Calendar getMondayDate() {
         return mondayDate;
+    }
+
+    public String getMondayDateString(){
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(mondayDate.get(Calendar.DAY_OF_MONTH));
+        sb.append("-");
+        sb.append(mondayDate.get(Calendar.MONTH) + 1);
+        sb.append("-");
+        sb.append(mondayDate.get(Calendar.YEAR));
+
+        return sb.toString();
     }
 
     public ArrayList<Goal> getGoals() {

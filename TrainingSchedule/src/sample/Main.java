@@ -2,10 +2,12 @@ package sample;
 
 import files.FileManager;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import model.Model;
 
 public class Main extends Application {
@@ -19,6 +21,13 @@ public class Main extends Application {
         Controller ctrl = loader.getController();
 
         //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                FileManager.saveData(ctrl.getModel());
+            }
+        });
 
         Model loadedModel = FileManager.loadData();
         ctrl.initialize(loadedModel);
