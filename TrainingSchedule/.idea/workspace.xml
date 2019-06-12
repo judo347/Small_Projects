@@ -64,11 +64,11 @@
     <session id="-876288274">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.30" value="1" />
-          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.45" value="1" />
@@ -76,35 +76,38 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="1" />
-          <entry key="java" value="32" />
+          <entry key="fxml" value="3" />
+          <entry key="java" value="37" />
+          <entry key="txt" value="2" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="32" />
-          <entry key="XML" value="7" />
+          <entry key="JAVA" value="37" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="fxml" value="6" />
-          <entry key="java" value="11724" />
+          <entry key="fxml" value="11" />
+          <entry key="java" value="13692" />
+          <entry key="txt" value="462" />
           <entry key="xml" value="416" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11724" />
-          <entry key="PLAIN_TEXT" value="18" />
-          <entry key="XML" value="422" />
+          <entry key="JAVA" value="13692" />
+          <entry key="PLAIN_TEXT" value="480" />
+          <entry key="XML" value="427" />
         </counts>
       </usages-collector>
     </session>
@@ -113,13 +116,13 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42918456">
+    <splitter split-orientation="horizontal" split-proportion="0.75291234">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/files/XMLLoader.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="883">
+                <state relative-caret-position="452">
                   <caret line="59" column="82" selection-start-line="59" selection-start-column="82" selection-end-line="59" selection-end-column="82" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -128,13 +131,12 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/files/XMLSaver.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+                <state relative-caret-position="119">
+                  <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="17" selection-end-column="31" />
                   <folding>
-                    <element signature="imports" expanded="true" />
                     <element signature="method#fillElementWithWeeks#0;class#XMLSaver#0" />
                     <element signature="method#fillElementWithGoals#0;class#XMLSaver#0" />
                     <element signature="method#fillGoalElementWithInformation#0;class#XMLSaver#0" />
@@ -146,10 +148,12 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/model/Week.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="16" selection-start-line="16" selection-end-line="16" />
+                <state relative-caret-position="554">
+                  <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#454#455#0" expanded="true" />
+                    <element signature="e#505#506#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -158,9 +162,12 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/model/Goal.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="969">
-                  <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+                <state relative-caret-position="300">
+                  <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
                   <folding>
+                    <element signature="e#1865#1866#0" expanded="true" />
+                    <element signature="e#1914#1915#0" expanded="true" />
+                    <element signature="e#2698#2699#0" expanded="true" />
                     <element signature="e#2738#2739#0" expanded="true" />
                     <element signature="e#2780#2781#0" expanded="true" />
                     <element signature="e#2824#2825#0" expanded="true" />
@@ -182,7 +189,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/files/FileManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
+                <state relative-caret-position="238">
                   <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -194,49 +201,47 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="30" selection-start-line="30" selection-end-line="30" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="460">
-                  <caret line="70" selection-start-line="70" selection-end-line="70" />
+                <state relative-caret-position="578">
+                  <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#4967#4968#0" expanded="true" />
-                    <element signature="e#4995#4996#0" expanded="true" />
+                    <element signature="method#updateGoalView#0;class#Controller#0" />
+                    <element signature="method#updateTemplatesList#0;class#Controller#0" />
+                    <element signature="method#addWeek#0;class#Controller#0" />
+                    <element signature="method#removeSelectedWeek#0;class#Controller#0" />
+                    <element signature="method#addGoal#0;class#Controller#0" />
+                    <element signature="method#RemoveSelectedGoal#0;class#Controller#0" />
+                    <element signature="e#8700#8701#0" expanded="true" />
+                    <element signature="e#8774#8775#0" expanded="true" />
+                    <element signature="e#8811#8812#0" expanded="true" />
+                    <element signature="e#8882#8883#0" expanded="true" />
+                    <element signature="e#8913#8914#0" expanded="true" />
+                    <element signature="e#8941#8942#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/files/data.xml">
+            <entry file="file://$PROJECT_DIR$/tasks.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+                <state relative-caret-position="187">
+                  <caret line="11" column="70" lean-forward="true" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="28" column="45" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="45" />
+                <state relative-caret-position="136">
+                  <caret line="17" column="78" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="78" />
                 </state>
               </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder" />
             </entry>
           </file>
         </leaf>
@@ -246,8 +251,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/files/data.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-272">
-                  <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+                <state>
+                  <caret column="193" selection-start-column="193" selection-end-column="193" />
                 </state>
               </provider>
             </entry>
@@ -264,6 +269,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dadd</find>
+    </findStrings>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -279,15 +289,18 @@
         <option value="$PROJECT_DIR$/src/model/Template.java" />
         <option value="$PROJECT_DIR$/src/model/Model.java" />
         <option value="$PROJECT_DIR$/src/files/XMLHandler.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/files/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/model/Goal.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/model/Week.java" />
         <option value="$PROJECT_DIR$/src/files/XMLLoader.java" />
         <option value="$PROJECT_DIR$/src/files/XMLSaver.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/model/Goal.java" />
         <option value="$PROJECT_DIR$/src/files/data.xml" />
+        <option value="$PROJECT_DIR$/src/utils/KeyEventListener.java" />
+        <option value="$PROJECT_DIR$/src/utils/EventHandlerMouse.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/model/Week.java" />
+        <option value="$PROJECT_DIR$/tasks.txt" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
@@ -312,7 +325,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -330,24 +342,13 @@
               <item name="TrainingSchedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="TrainingSchedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TrainingSchedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrainingSchedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TrainingSchedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TrainingSchedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,7 +361,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559578635908" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560373901101" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -473,12 +474,13 @@
       <workItem from="1559572019024" duration="6611000" />
       <workItem from="1559822172866" duration="142000" />
       <workItem from="1559831167015" duration="5110000" />
-      <workItem from="1559898232544" duration="2057000" />
+      <workItem from="1559898232544" duration="5600000" />
+      <workItem from="1560368182703" duration="5706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46859000" />
+    <option name="totallyTimeSpent" value="56108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -493,7 +495,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.13059701" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.13166311" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -502,7 +504,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19956616" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19956616" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4121475" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -653,21 +655,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Week.java">
+    <entry file="file://$PROJECT_DIR$/src/files/dataBackup.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-391">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="193" selection-start-column="193" selection-end-column="193" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Goal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        <state relative-caret-position="300">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
+            <element signature="e#1865#1866#0" expanded="true" />
+            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#2698#2699#0" expanded="true" />
             <element signature="e#2738#2739#0" expanded="true" />
             <element signature="e#2780#2781#0" expanded="true" />
             <element signature="e#2824#2825#0" expanded="true" />
@@ -685,9 +694,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/files/XMLSaver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="method#fillElementWithWeeks#0;class#XMLSaver#0" />
+            <element signature="method#fillElementWithGoals#0;class#XMLSaver#0" />
+            <element signature="method#fillGoalElementWithInformation#0;class#XMLSaver#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/files/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="238">
           <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -698,46 +719,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.controls/javafx/scene/control/ListView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="288">
+          <caret line="502" column="21" selection-start-line="502" selection-start-column="21" selection-end-line="502" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#21548#21549#0" expanded="true" />
+            <element signature="e#21615#21616#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.controls/javafx/scene/control/FocusModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4967#4968#0" expanded="true" />
-            <element signature="e#4995#4996#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="65" column="7" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+        <state relative-caret-position="-391">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/files/XMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
+        <state relative-caret-position="452">
           <caret line="59" column="82" selection-start-line="59" selection-start-column="82" selection-end-line="59" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -745,22 +747,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/dataBackup.xml">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/event/MouseWheelListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="458">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/files/XMLSaver.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        <state relative-caret-position="469">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#fillElementWithWeeks#0;class#XMLSaver#0" />
-            <element signature="method#fillElementWithGoals#0;class#XMLSaver#0" />
-            <element signature="method#fillGoalElementWithInformation#0;class#XMLSaver#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/EventHandlerMouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/KeyEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="78" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="78" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Week.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="70" lean-forward="true" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#updateGoalView#0;class#Controller#0" />
+            <element signature="method#updateTemplatesList#0;class#Controller#0" />
+            <element signature="method#addWeek#0;class#Controller#0" />
+            <element signature="method#removeSelectedWeek#0;class#Controller#0" />
+            <element signature="method#addGoal#0;class#Controller#0" />
+            <element signature="method#RemoveSelectedGoal#0;class#Controller#0" />
+            <element signature="e#8700#8701#0" expanded="true" />
+            <element signature="e#8774#8775#0" expanded="true" />
+            <element signature="e#8811#8812#0" expanded="true" />
+            <element signature="e#8882#8883#0" expanded="true" />
+            <element signature="e#8913#8914#0" expanded="true" />
+            <element signature="e#8941#8942#0" expanded="true" />
           </folding>
         </state>
       </provider>

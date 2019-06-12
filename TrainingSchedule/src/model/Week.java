@@ -1,5 +1,6 @@
 package model;
 
+import javax.security.auth.callback.Callback;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -12,6 +13,10 @@ public class Week {
     public Week(Calendar mondayDate, ArrayList<Goal> goals) {
         this.mondayDate = mondayDate;
         this.goals = goals;
+        calculateWeekNumber();
+    }
+
+    private void calculateWeekNumber(){
         this.weekNumber = mondayDate.get(Calendar.WEEK_OF_YEAR);
     }
 
@@ -55,5 +60,15 @@ public class Week {
     @Override
     public String toString() {
         return "Week " + weekNumber;
+    }
+
+    public void incrementWeekNumber(){
+        mondayDate.add(Calendar.DAY_OF_YEAR, 7); //Add 7 days to the current calender/date
+        calculateWeekNumber();
+    }
+
+    public void decrementWeekNumber(){
+        mondayDate.add(Calendar.DAY_OF_YEAR, -7); //Subtract 7 days to the current calender/date
+        calculateWeekNumber();
     }
 }

@@ -1,0 +1,12 @@
+General todos:
+- Format checks for inputs (Weekday, km, duration, etc.)
+- Change color os row when completed (any of the planned fields are filled)
+
+
+Missing features:
+- Templates
+
+Improvements:
+- xml header
+- change week number by scrolling and hovering over a week
+- When an item is deleted from a list or table, select the below items

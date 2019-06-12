@@ -1,12 +1,22 @@
 package sample;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.MouseEvent;
+import javafx.util.Callback;
 import model.*;
+import utils.KeyEventListener;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -39,7 +49,24 @@ public class Controller {
 
         updateTemplatesList();
 
+        weekTableViewInitialize(model);
         goalTableViewInitialize(model);
+
+
+    }
+
+    private void weekTableViewInitialize(Model model){
+
+        //Triggers when a week is selected
+        this.listviewWeeks.getSelectionModel().selectedItemProperty().addListener(observable -> {
+
+            if(listviewWeeks.getSelectionModel().getSelectedItem() != null){
+                Week selectedWeek = listviewWeeks.getSelectionModel().getSelectedItem();
+                ObservableList<Goal> goals = FXCollections.observableArrayList(model.getGoalsOfWeek(selectedWeek));
+                tableGoals.setItems(goals);
+            }
+
+        });
     }
 
     private void updateWeeksList(){
@@ -76,16 +103,20 @@ public class Controller {
         goalViewCompletedDuration.setCellValueFactory(cellData -> cellData.getValue().completedMinutesProperty());
         goalViewCompletedDay.setCellValueFactory(cellData -> cellData.getValue().completedWeekdayProperty());
 
-        //Triggers when a week is selected
-        this.listviewWeeks.getSelectionModel().selectedItemProperty().addListener(observable -> {
+        goalViewDescription.setCellFactory(TextFieldTableCell.forTableColumn());
+        goalViewPlannedDistance.setCellFactory(TextFieldTableCell.forTableColumn());
+        goalViewPlannedDuration.setCellFactory(TextFieldTableCell.forTableColumn());
+        goalViewPlannedDay.setCellFactory(TextFieldTableCell.forTableColumn());
+        goalViewCompletedDistance.setCellFactory(TextFieldTableCell.forTableColumn());
+        goalViewCompletedDuration.setCellFactory(TextFieldTableCell.forTableColumn());
+        goalViewCompletedDay.setCellFactory(TextFieldTableCell.forTableColumn());
 
-            if(listviewWeeks.getSelectionModel().getSelectedItem() != null){
-                Week selectedWeek = listviewWeeks.getSelectionModel().getSelectedItem();
-                ObservableList<Goal> goals = FXCollections.observableArrayList(model.getGoalsOfWeek(selectedWeek));
-                tableGoals.setItems(goals);
-            }
-
-        });
+        //Triggers for completed goals
+        //goalViewCompletedDistance.setCellFactory(Callback<TableCell<Goal, String>, TableCell<>>);
+        //goalViewCompletedDistance.addEventHandler(new EventHandler<>());
+        //goalViewCompletedDistance.
+        //goalViewCompletedDuration.setCellFactory(TextFieldTableCell.forTableColumn());
+        //goalViewCompletedDay.setCellFactory(TextFieldTableCell.forTableColumn());
     }
 
     @FXML
@@ -135,6 +166,24 @@ public class Controller {
             selectedWeek.removeGoal(selectedGoal);
             updateGoalView();
             tableGoals.getSelectionModel().select(tableGoals.getItems().size()-1);
+        }
+    }
+
+    @FXML void weekNameUpClicked(ActionEvent event){
+        Week selectedWeek = getSelectedWeek();
+
+        if(selectedWeek != null){
+            selectedWeek.incrementWeekNumber();
+            updateWeeksList();
+        }
+    }
+
+    @FXML void weekNameDownClicked(ActionEvent event){
+        Week selectedWeek = getSelectedWeek();
+
+        if(selectedWeek != null){
+            selectedWeek.decrementWeekNumber();
+            updateWeeksList();
         }
     }
 

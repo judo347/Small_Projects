@@ -12,7 +12,13 @@
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0">
          <children>
-            <Label text="Weeks" />
+            <HBox>
+               <children>
+                  <Label text="Weeks" />
+                  <Button mnemonicParsing="false" onAction="#weekNameUpClicked" text="⬆" />
+                  <Button mnemonicParsing="false" onAction="#weekNameDownClicked" text="⬇" />
+               </children>
+            </HBox>
             <ListView fx:id="listviewWeeks" minWidth="-Infinity" prefHeight="350.0" prefWidth="100.0" />
             <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0">
                <children>
@@ -24,7 +30,7 @@
       </VBox>
       <VBox prefHeight="200.0">
          <children>
-            <TableView fx:id="tableGoals" maxWidth="-Infinity" prefHeight="451.0">
+            <TableView fx:id="tableGoals" editable="true" maxWidth="-Infinity" prefHeight="451.0">
               <columns>
                 <TableColumn fx:id="goalViewDescription" prefWidth="260.0" text="Goal Description" />
                 <TableColumn prefWidth="75.0" text="Planned">
