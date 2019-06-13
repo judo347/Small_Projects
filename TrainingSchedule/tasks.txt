@@ -1,7 +1,7 @@
 General todos:
 - Format checks for inputs (Weekday, km, duration, etc.)
 - Change color os row when completed (any of the planned fields are filled)
-
+- A way to re-order goals, maybe just order by planned day
 
 Missing features:
 - Templates
