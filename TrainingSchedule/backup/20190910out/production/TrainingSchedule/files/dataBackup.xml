@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <weeks>
+        <week>
+            <mondayDate>13-5-2019</mondayDate>
+            <goals>
+                <goal>
+                    <description>Standard run 0 - Week 1</description>
+                    <plannedDistance>0</plannedDistance>
+                    <plannedDuration>0</plannedDuration>
+                    <plannedDay>Monday</plannedDay>
+                    <completedDistance>0</completedDistance>
+                    <completedDuration>0</completedDuration>
+                    <completedDay>Monday</completedDay>
+                </goal>
+                <goal>
+                    <description>Standard run 1 - Week 1</description>
+                    <plannedDistance></plannedDistance>
+                    <plannedDuration></plannedDuration>
+                    <plannedDay>Tuesday</plannedDay>
+                    <completedDistance></completedDistance>
+                    <completedDuration></completedDuration>
+                    <completedDay>Tuesday</completedDay>
+                </goal>
+            </goals>
+        </week>
+        <week>
+            <mondayDate>20-5-2019</mondayDate>
+            <goals>
+                <goal>
+                    <description>Standard run 2 - Week 2</description>
+                    <plannedDistance>2</plannedDistance>
+                    <plannedDuration>2</plannedDuration>
+                    <plannedDay>Wednesday</plannedDay>
+                    <completedDistance>2</completedDistance>
+                    <completedDuration>2</completedDuration>
+                    <completedDay>Wednesday</completedDay>
+                </goal>
+            </goals>
+        </week>
+    </weeks>
+    <templates>
+        <template>
+            <name>Test 1</name>
+            <goals>
+                <goal>
+                    <description>Standard run 2</description>
+                    <plannedDistance>10</plannedDistance>
+                    <plannedDuration></plannedDuration>
+                    <plannedDay></plannedDay>
+                    <completedDistance></completedDistance>
+                    <completedDuration></completedDuration>
+                    <completedDay></completedDay>
+                </goal>
+                <goal>
+                    <description>Standard run 3</description>
+                    <plannedDistance>15</plannedDistance>
+                    <plannedDuration></plannedDuration>
+                    <plannedDay></plannedDay>
+                    <completedDistance></completedDistance>
+                    <completedDuration></completedDuration>
+                    <completedDay></completedDay>
+                </goal>
+            </goals>
+        </template>
+    </templates>
+</data>
