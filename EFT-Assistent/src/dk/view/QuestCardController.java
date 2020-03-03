@@ -27,10 +27,13 @@ public class QuestCardController {
     @FXML
     private VBox vbox_maps;
 
+    public Quest originalQuest;
+
     ArrayList<Label> objectiveLabels = new ArrayList<>();
     ArrayList<Label> requirementLabels = new ArrayList<>();
 
     public void setValues(Quest quest){
+        originalQuest = quest;
         label_traderName.setText(quest.getTrader().getName());
         label_questName.setText(quest.getQuestName());
         label_reqLevel.setText(String.valueOf(quest.getRequiredLevel()));

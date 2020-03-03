@@ -13,6 +13,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ApplicationMain extends Application {
 
@@ -41,16 +42,19 @@ public class ApplicationMain extends Application {
     private void fillScene(PrimarySceneController rootController){
 
         QuestInstantiator QI = new QuestInstantiator();
-        Quest quest = QI.getQuestTemp1();
-        Pane questCard = createQuestCard(quest);
-        MapType mapType;
+        //Quest quest = QI.getQuestTemp1();
+        for(Quest quest : QI.allQuests){
+            Pane questCard = createQuestCard(quest);
 
-        if(quest.getMaps().size() == 1)
-            mapType = quest.getMaps().get(0);
-        else
-            mapType = MapType.MIXED;
+            MapType mapType;
 
-        rootController.addQuestCard(questCard, mapType);
+            if(quest.getMaps().size() == 1)
+                mapType = quest.getMaps().get(0);
+            else
+                mapType = MapType.MIXED;
+
+            rootController.addQuestCard(questCard, mapType);
+        }
     }
 
     private Pane createQuestCard(Quest quest){

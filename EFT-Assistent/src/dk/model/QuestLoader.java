@@ -11,7 +11,7 @@ public class QuestLoader {
     private static String json_topNodeId = "quests";
 
 
-    ArrayList<Quest> allQuest;
+    public ArrayList<Quest> allQuest;
 
     public QuestLoader() {
         loadAllQuests();

@@ -1,18 +1,17 @@
 package dk.view;
 
-import dk.model.MapType;
-import dk.model.Quest;
-import dk.model.QuestObjectives;
-import dk.model.TraderType;
+import dk.model.*;
 
 import java.util.ArrayList;
 
 public class QuestInstantiator {
 
-    private void instantiateQuest(Quest quest_model){
+    public ArrayList<Quest> allQuests;
 
+    public QuestInstantiator() {
+        QuestLoader questLoader = new QuestLoader();
+        allQuests = questLoader.allQuest;
     }
-
 
     /** TEMP METHOD */
     public Quest getQuestTemp1(){

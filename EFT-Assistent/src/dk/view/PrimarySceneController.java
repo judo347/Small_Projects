@@ -49,7 +49,7 @@ public class PrimarySceneController {
                             break;
             case RESERVE: desiredHBox = hbox_reserve_quests;
                             break;
-            case INTERCHANGE: desiredHBox = hbox_reserve_quests;
+            case INTERCHANGE: desiredHBox = hbox_interchange_quests;
                             break;
             default: throw new IllegalArgumentException();
         }
