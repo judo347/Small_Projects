@@ -1,19 +1,62 @@
-{"quests": [
-  {
+{
+  "quests": [{
     "name": "Debut",
     "giver": "Prapor",
     "req_level": 0,
-    "maps": [ "Customs", "Shoreline" ],
-    "objectives": [ "5x Kill Scav", "Do something else" ],
-    "requirements": [ "Key x", "Water bottle"]
+    "maps": ["Customs"],
+    "objectives": [{
+      "obj": "5x Kill Scav"
+    }, {
+      "obj": "Hand over 2x MP-133"
+    }],
+    "requirements": []
   },
-  {
-    "name": "Shortage",
-    "giver": "Therapist",
-    "req_level": 5,
-    "maps": [ "Customs" ],
-    "objectives": [ "5x Salewa kits", "5x Hand over Salewa kit" ],
-    "requirements": [ ]
-  }
-]
+    {
+      "name": "Checking",
+      "giver": "Prapor",
+      "req_level": 2,
+      "maps": ["Customs"],
+      "objectives": [{
+        "obj": "Find \"bronze pocket watch\""
+      }, {
+        "obj": "Hand over quest item"
+      }],
+      "requirements": ["Machinery Key"]
+    },
+    {
+      "name": "Shootout Picnic",
+      "giver": "Prapor",
+      "req_level": 3,
+      "maps": ["Woods"],
+      "objectives": [{
+        "obj": "15x Kill scav"
+      }],
+      "requirements": []
+    },
+    {
+      "name": "Delivery from the past",
+      "giver": "Prapor",
+      "req_level": 5,
+      "maps": ["Customs", "Factory"],
+      "objectives": [{
+        "obj": "Customs: Find \"secure case\" in RED office"
+      }, {
+        "obj": "Factory: place \"secure case\" in metal hut near Gate 3"
+      }, {
+        "obj": "Factory: extract"
+      }],
+      "requirements": []
+    },
+    {
+      "name": "BP depot",
+      "giver": "Prapor",
+      "req_level": 5,
+      "maps": ["Customs"],
+      "objectives": [{
+        "obj": "4x Mark orange fuel tank trucks",
+        "subs": ["New Gas", "Old Gas", "Construction", "Road left side of map"]
+      }],
+      "requirements": ["4x MS2000 Marker"]
+    }
+  ]
 }
