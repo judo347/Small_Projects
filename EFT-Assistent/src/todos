@@ -2,3 +2,12 @@ model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
 
 Quests unlocks other quests, system for checking this?
+
+Data:Quests:
+Loyalty lvl requirements
+ - Prapor: Shaking up teller: LL2
+Privious quest requirements
+ - Give quest ids to make this easier: wiki quest id + quest giver name?
+
+Ops:
+ - Completing some quests, completes also others: Big customer?
