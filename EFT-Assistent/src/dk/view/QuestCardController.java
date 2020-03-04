@@ -5,6 +5,9 @@ import dk.model.Quest;
 import dk.model.QuestObjectives;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
@@ -29,11 +32,24 @@ public class QuestCardController {
     private VBox vbox_maps;
 
     public Quest originalQuest;
+    private PrimarySceneController psc;
+    private HBox parentBox;
+    private Pane layoutComponent;
 
     ArrayList<Label> objectiveLabels = new ArrayList<>();
     ArrayList<Label> requirementLabels = new ArrayList<>();
 
+    public void setParent(PrimarySceneController psc){
+        this.psc = psc;
+    }
+
+    public void addBoxParent(HBox parentBox, Pane layoutComponent){
+        this.parentBox = parentBox;
+        this.layoutComponent = layoutComponent;
+    }
+
     public void setValues(Quest quest){
+
         originalQuest = quest;
         label_traderName.setText(quest.getTrader().getName());
         label_questName.setText(quest.getQuestName());
@@ -60,5 +76,15 @@ public class QuestCardController {
                 vbox_objectives.getChildren().add(subObj_label);
             }
         }
+    }
+
+    @FXML
+    void cardClicked(MouseEvent event) {
+        deleteCard();
+    }
+
+    /** Removes the questCard from the program. */
+    private void deleteCard(){
+        psc.removeQuestCard(this, parentBox, layoutComponent);
     }
 }

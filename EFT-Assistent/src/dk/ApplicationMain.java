@@ -2,6 +2,7 @@ package dk;
 
 import dk.model.MapType;
 import dk.model.Quest;
+import dk.view.PaneAndController;
 import dk.view.PrimarySceneController;
 import dk.view.QuestCardController;
 import dk.view.QuestInstantiator;
@@ -9,6 +10,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -45,9 +47,9 @@ public class ApplicationMain extends Application {
     private void fillScene(PrimarySceneController rootController){
 
         QuestInstantiator QI = new QuestInstantiator();
-        //Quest quest = QI.getQuestTemp1();
+
         for(Quest quest : QI.allQuests){
-            Pane questCard = createQuestCard(quest);
+            PaneAndController questCardAndController = createQuestCard(quest, rootController);
 
             MapType mapType;
 
@@ -56,19 +58,20 @@ public class ApplicationMain extends Application {
             else
                 mapType = MapType.MIXED;
 
-            rootController.addQuestCard(questCard, mapType);
+            rootController.addQuestCard(questCardAndController, mapType);
         }
     }
 
-    private Pane createQuestCard(Quest quest){
+    private PaneAndController createQuestCard(Quest quest, PrimarySceneController psc){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
             Pane questCard = fxmlLoader.load();
             QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
 
             questCardController.setValues(quest);
+            questCardController.setParent(psc);
 
-            return questCard;
+            return new PaneAndController(questCard, questCardController);
 
         } catch (IOException e) {
             e.printStackTrace();

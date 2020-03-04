@@ -32,8 +32,7 @@ public class PrimarySceneController {
     private HBox hbox_shoreline_quests;
 
 
-
-    public void addQuestCard(Pane questCard, MapType mapType){
+    public void addQuestCard(PaneAndController questCardAndController, MapType mapType){
 
         HBox desiredHBox;
 
@@ -57,7 +56,8 @@ public class PrimarySceneController {
             default: throw new IllegalArgumentException();
         }
 
-        desiredHBox.getChildren().add(questCard);
+        desiredHBox.getChildren().add(questCardAndController.pane);
+        questCardAndController.qcc.addBoxParent(desiredHBox, questCardAndController.pane);
 
         //hbox_interchange_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
         //hbox_labs_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
@@ -67,7 +67,9 @@ public class PrimarySceneController {
         //hbox_reserve_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
         //hbox_factory_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
         //hbox_shoreline_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+    }
 
-
+    public void removeQuestCard(QuestCardController qcc, HBox box, Pane layoutComponent){
+        box.getChildren().remove(layoutComponent);
     }
 }
