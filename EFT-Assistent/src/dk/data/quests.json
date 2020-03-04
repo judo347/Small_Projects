@@ -57,6 +57,20 @@
         "subs": ["New Gas", "Old Gas", "Construction", "Road left side of map"]
       }],
       "requirements": ["4x MS2000 Marker"]
+    },
+
+
+    {
+      "name": "Bad rep evidence",
+      "giver": "Prapor",
+      "req_level": 6,
+      "maps": ["Customs"],
+      "objectives": [{
+        "obj": "Find \"secure case\" in white con second floor, east construction"
+	}, {
+        "obj": "Extract and hand in case"
+      }],
+      "requirements": ["Key: Portable cabin key of customs Factory zone"]
     }
   ]
 }

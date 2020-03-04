@@ -1,2 +1,4 @@
 model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
+
+Quests unlocks other quests, system for checking this?

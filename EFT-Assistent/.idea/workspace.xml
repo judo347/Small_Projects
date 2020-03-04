@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4a6a98db-4bc6-41f4-9188-fb17c2325b5b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/model/QuestObjectives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/model/QuestObjectives.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/view/QuestCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/view/QuestCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/data/quests.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/data/quests.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/view/QuestCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/view/QuestCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/todos" beforeDir="false" afterPath="$PROJECT_DIR$/src/todos" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +96,7 @@
       <updated>1583243811759</updated>
       <workItem from="1583243818068" duration="18818000" />
       <workItem from="1583306624148" duration="961000" />
-      <workItem from="1583317697696" duration="1940000" />
+      <workItem from="1583317697696" duration="2860000" />
     </task>
     <servers />
   </component>
