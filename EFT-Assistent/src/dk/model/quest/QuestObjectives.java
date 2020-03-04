@@ -1,4 +1,4 @@
-package dk.model;
+package dk.model.quest;
 
 import java.util.ArrayList;
 

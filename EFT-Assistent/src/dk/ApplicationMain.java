@@ -1,29 +1,29 @@
 package dk;
 
+import dk.model.MainModel;
 import dk.model.MapType;
-import dk.model.Quest;
+import dk.model.quest.Quest;
 import dk.view.PaneAndController;
 import dk.view.PrimarySceneController;
 import dk.view.QuestCardController;
 import dk.view.QuestInstantiator;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class ApplicationMain extends Application {
 
     private static String appWindowName = "EFT: Quest Assistant";
+    private MainModel mainModel;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
+            mainModel = new MainModel();
 
             //Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("dk/view/PrimaryScene.fxml"));
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/PrimaryScene.fxml"));
@@ -46,9 +46,7 @@ public class ApplicationMain extends Application {
 
     private void fillScene(PrimarySceneController rootController){
 
-        QuestInstantiator QI = new QuestInstantiator();
-
-        for(Quest quest : QI.allQuests){
+        for(Quest quest : mainModel.getQm().getActiveQuests()){
             PaneAndController questCardAndController = createQuestCard(quest, rootController);
 
             MapType mapType;

@@ -1,6 +1,9 @@
 package dk.view;
 
 import dk.model.*;
+import dk.model.quest.Quest;
+import dk.model.quest.QuestLoader;
+import dk.model.quest.QuestObjectives;
 
 import java.util.ArrayList;
 

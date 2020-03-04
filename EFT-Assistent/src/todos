@@ -4,8 +4,6 @@ model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectiv
 Quests unlocks other quests, system for checking this?
 
 Data:Quests:
-Loyalty lvl requirements
- - Prapor: Shaking up teller: LL2
 Privious quest requirements
  - Give quest ids to make this easier: wiki quest id + quest giver name?
 
@@ -13,3 +11,16 @@ Ops:
  - Completing some quests, completes also others: Big customer?
 
 Remove "Requirements" from visuals if non is existing.
+
+Add PlayerInfo to visuals - give ability to change them
+ - Make UI update when changed.
+
+
+Prapor: Big customer
+- req_quests
+ - Chemical - Part 3
+Prapor: No Offence
+- req_quests
+ - Chemical - Part 4 or Out of curiosity
+
+Current todo: QuestManager: addQuest: line 47

@@ -1,8 +1,8 @@
 package dk.view;
 
 import dk.model.MapType;
-import dk.model.Quest;
-import dk.model.QuestObjectives;
+import dk.model.quest.Quest;
+import dk.model.quest.QuestObjectives;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;

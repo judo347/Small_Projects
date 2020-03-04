@@ -3,6 +3,8 @@
     "name": "Debut",
     "giver": "Prapor",
     "req_level": 0,
+    "id": 0,
+    "req_quests": [ ],
     "maps": ["Customs"],
     "objectives": [{
       "obj": "5x Kill Scav"
@@ -15,6 +17,8 @@
       "name": "Checking",
       "giver": "Prapor",
       "req_level": 2,
+      "id": 1,
+      "req_quests": [ 0 ],
       "maps": ["Customs"],
       "objectives": [{
         "obj": "Find \"bronze pocket watch\""
@@ -27,6 +31,8 @@
       "name": "Shootout Picnic",
       "giver": "Prapor",
       "req_level": 3,
+      "id": 2,
+      "req_quests": [ 1 ],
       "maps": ["Woods"],
       "objectives": [{
         "obj": "15x Kill scav"
@@ -37,6 +43,8 @@
       "name": "Delivery from the past",
       "giver": "Prapor",
       "req_level": 5,
+      "id": 3,
+      "req_quests": [ 2 ],
       "maps": ["Customs", "Factory"],
       "objectives": [{
         "obj": "Customs: Find \"secure case\" in RED office"
@@ -51,6 +59,8 @@
       "name": "BP depot",
       "giver": "Prapor",
       "req_level": 5,
+      "id": 4,
+      "req_quests": [ 3 ],
       "maps": ["Customs"],
       "objectives": [{
         "obj": "4x Mark orange fuel tank trucks",
@@ -64,6 +74,8 @@
       "name": "Bad rep evidence",
       "giver": "Prapor",
       "req_level": 6,
+      "id": 5,
+      "req_quests": [ 4 ],
       "maps": ["Customs"],
       "objectives": [{
         "obj": "Find \"secure case\" in white con second floor, east construction"
@@ -76,6 +88,8 @@
       "name": "Ice cream cones",
       "giver": "Prapor",
       "req_level": 9,
+      "id": 6,
+      "req_quests": [ 5 ],
       "maps": [ ],
       "objectives": [{
         "obj": "6x Hand-in \"60 round mags for AK\""
@@ -86,6 +100,8 @@
       "name": "Postman Pat - Part 1",
       "giver": "Prapor",
       "req_level": 10,
+      "id": 7,
+      "req_quests": [ 6 ],
       "maps": [ "Factory" ],
       "objectives": [{
         "obj": "Find \"lettter\" on body, south-east, concrete hut"
@@ -96,6 +112,9 @@
       "name": "Shaking up teller",
       "giver": "Prapor",
       "req_level": 0,
+      "id": 8,
+      "req_quests": [ 7 ],
+      "req_LL" : 2,
       "maps": [ "Customs" ],
       "objectives": [{
         "obj": "Find \"Bank case\", 3-story dorms, second floor, 203, under bed"
@@ -106,6 +125,8 @@
       "name": "The Punisher - Part 1",
       "giver": "Prapor",
       "req_level": 17,
+      "id": 9,
+      "req_quests": [ 8 ],
       "maps": [ "Shoreline" ],
       "objectives": [{
         "obj": "15x Kill Scav using AKM-series"
@@ -116,6 +137,8 @@
       "name": "The Punisher - Part 2",
       "giver": "Prapor",
       "req_level": 18,
+      "id": 10,
+      "req_quests": [ 9 ],
       "maps": [ "Shoreline" ],
       "objectives": [{
         "obj": "12x Kill Scav using suppressed wep"
@@ -128,6 +151,8 @@
       "name": "The Punisher - Part 3",
       "giver": "Prapor",
       "req_level": 19,
+      "id": 11,
+      "req_quests": [ 10 ],
       "maps": [ "Customs" ],
       "objectives": [{
         "obj": "25x Kill Scav using AKS-74U"
@@ -138,6 +163,8 @@
       "name": "The Punisher - Part 4",
       "giver": "Prapor",
       "req_level": 20,
+      "id": 12,
+      "req_quests": [ 11 ],
       "maps": [ "Woods", "Shoreline" ],
       "objectives": [{
         "obj": "Woods: 10x Kill Scav using 12ga shotgun"
@@ -152,6 +179,8 @@
       "name": "The Punisher - Part 5",
       "giver": "Prapor",
       "req_level": 20,
+      "id": 13,
+      "req_quests": [ 12 ],
       "maps": [ ],
       "objectives": [{
         "obj": "3x Hand-in AK-74N"
@@ -168,6 +197,8 @@
       "name": "The Punisher - Part 6",
       "giver": "Prapor",
       "req_level": 21,
+      "id": 14,
+      "req_quests": [ 13 ],
       "maps": [ ],
       "objectives": [{
         "obj": "10x Kill PMC using SVD"
@@ -182,6 +213,8 @@
       "name": "Polikhim hobo",
       "giver": "Prapor",
       "req_level": 0,
+      "id": 15,
+      "req_quests": [ ],
       "maps": [ "Customs" ],
       "objectives": [{
         "obj": "25x Kill Scav"
@@ -192,6 +225,8 @@
       "name": "Big customer",
       "giver": "Prapor",
       "req_level": 0,
+      "id": 16,
+      "req_quests": [ ],
       "maps": [ "Customs" ],
       "objectives": [{
         "obj": "Mark white van, east, big white warehouse, inside"
@@ -202,6 +237,8 @@
       "name": "No offence",
       "giver": "Prapor",
       "req_level": 0,
+      "id": 17,
+      "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
         "obj": "10x Hand-in \"M67 grenades\""
@@ -212,6 +249,8 @@
       "name": "Grenadier",
       "giver": "Prapor",
       "req_level": 30,
+      "id": 18,
+      "req_quests": [ 8 ],
       "maps": [ ],
       "objectives": [{
         "obj": "10x Kill PMC with granade"
@@ -222,6 +261,8 @@
       "name": "Perfect mediator",
       "giver": "Prapor",
       "req_level": 35,
+      "id": 19,
+      "req_quests": [ 8 ],
       "maps": [ ],
       "objectives": [{
         "obj": "Reach LL4 with Ragman"
@@ -242,6 +283,8 @@
       "name": "Insomnia",
       "giver": "Prapor",
       "req_level": 0,
+      "id": 20,
+      "req_quests": [ 18 ],
       "maps": [ ],
       "objectives": [{
         "obj": "30x Kill PMC during nighttime (23-04)"
@@ -252,6 +295,8 @@
       "name": "Test drive - Part 1",
       "giver": "Prapor",
       "req_level": 0,
+      "id": 21,
+      "req_quests": [ 18 ],
       "maps": [ ],
       "objectives": [{
         "obj": "20x Kill PMC using M1A with \"Hybrid 46 silencer\" and \"Trijicon REAP-IR thermal scope\""
@@ -262,6 +307,8 @@
       "name": "Regulated materials",
       "giver": "Prapor",
       "req_level": 25,
+      "id": 22,
+      "req_quests": [ 15 ],
       "maps": [ ],
       "objectives": [{
         "obj": "Hand-in \"military battery\" (Found in raid)"
@@ -278,6 +325,8 @@
       "name": "Shortage",
       "giver": "Therapist",
       "req_level": 0,
+      "id": 23,
+      "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
         "obj": "5x Hand-in \"Salewa Kits\""
@@ -288,6 +337,8 @@
       "name": "Sanitary Standards - Part 1",
       "giver": "Therapist",
       "req_level": 4,
+      "id": 24,
+      "req_quests": [ 23 ],
       "maps": [ ],
       "objectives": [{
         "obj": "Hand-in \"gas analyzer\" (Found in raid)"
@@ -298,6 +349,8 @@
       "name": "Sanitary Standards - Part 2",
       "giver": "Therapist",
       "req_level": 8,
+      "id": 25,
+      "req_quests": [ 24 ],
       "maps": [ ],
       "objectives": [{
         "obj": "Hand-in \"gas analyzer\""
@@ -308,6 +361,8 @@
       "name": "Operation Aquarius - Part 1",
       "giver": "Therapist",
       "req_level": 6,
+      "id": 26,
+      "req_quests": [ 23 ],
       "maps": [ "Customs" ],
       "objectives": [{
         "obj": "2-story dorm, 206, go into room"

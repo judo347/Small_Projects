@@ -1,6 +1,8 @@
-package dk.model;
+package dk.model.quest;
 
 import dk.data.JSONParserHelper;
+import dk.model.MapType;
+import dk.model.TraderType;
 import dk.model.tools.TypeParser;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -56,13 +58,21 @@ public class QuestLoader {
 
         ArrayList<QuestObjectives> questObjectivesStrings = parseObjectives(objectivesJSONArray);
 
-        return new Quest(questName, mapTypes, trader, questReqLevel, questObjectivesStrings, questRequirements);
+        boolean hasLoyaltyLevelReq = questObjectJSON.has("req_LL");
+        int reqLoyaltyLevel = 0;
+        if(hasLoyaltyLevelReq)
+            reqLoyaltyLevel = questObjectJSON.getInt("req_LL");
+
+        int id = questObjectJSON.getInt("id");
+
+        //Required quests
+        JSONArray reqQuestIdArrayJSON = questObjectJSON.getJSONArray("req_quests");
+        ArrayList<Integer> reqQuestId = parseJSONArrayToInt(reqQuestIdArrayJSON);
+
+        return new Quest(questName, mapTypes, trader, questReqLevel, questObjectivesStrings, questRequirements, reqLoyaltyLevel, id, reqQuestId);
     }
 
     private ArrayList<QuestObjectives> parseObjectives(JSONArray questObjectivesJSON){
-        //TODO HERE!!! SDIMASODMAW D"" NEW HERER
-
-        //JSONArray objArrayJSON = parseJSONArray(questObjectivesJSON);
 
         ArrayList<QuestObjectives> objectives = new ArrayList<>();
         for(int i = 0; i < questObjectivesJSON.length(); i++){
@@ -92,6 +102,16 @@ public class QuestLoader {
         }
 
         return stringArray;
+    }
+
+    private ArrayList<Integer> parseJSONArrayToInt(JSONArray JArray){
+        ArrayList<Integer> intArray = new ArrayList<>();
+        for(int i = 0; i < JArray.length(); i++){
+            int parsedInt = JArray.getInt(i);
+            intArray.add(parsedInt);
+        }
+
+        return intArray;
     }
 
     private QuestObjectives stringArrayToQObjectives(ArrayList<String> objectivesStringArray){

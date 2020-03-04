@@ -1,12 +1,5 @@
 package dk;
 
-import dk.model.MapType;
-import dk.model.Quest;
-import dk.model.QuestObjectives;
-import dk.model.TraderType;
-
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
