@@ -269,6 +269,50 @@
 		"obj": "10x Hand-in \"30-mil. shells for BMP cannon\" (Found in raid)"
 		}],
       "requirements": [ ]
+    },
+	
+	
+	
+	
+	{
+      "name": "Shortage",
+      "giver": "Therapist",
+      "req_level": 0,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "5x Hand-in \"Salewa Kits\""
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Sanitary Standards - Part 1",
+      "giver": "Therapist",
+      "req_level": 4,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"gas analyzer\" (Found in raid)"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Sanitary Standards - Part 2",
+      "giver": "Therapist",
+      "req_level": 8,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"gas analyzer\""
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Operation Aquarius - Part 1",
+      "giver": "Therapist",
+      "req_level": 6,
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "2-story dorm, 206, go into room"
+		}],
+      "requirements": [ "Key: Dorm room 206" ]
     }
   ]
 }
