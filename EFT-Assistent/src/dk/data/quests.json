@@ -71,6 +71,204 @@
         "obj": "Extract and hand in case"
       }],
       "requirements": ["Key: Portable cabin key of customs Factory zone"]
+    },
+	{
+      "name": "Ice cream cones",
+      "giver": "Prapor",
+      "req_level": 9,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "6x Hand-in \"60 round mags for AK\""
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Postman Pat - Part 1",
+      "giver": "Prapor",
+      "req_level": 10,
+      "maps": [ "Factory" ],
+      "objectives": [{
+        "obj": "Find \"lettter\" on body, south-east, concrete hut"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Shaking up teller",
+      "giver": "Prapor",
+      "req_level": 0,
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "Find \"Bank case\", 3-story dorms, second floor, 203, under bed"
+		}],
+      "requirements": [ "Key: Dorm room 203" ]
+    },
+	{
+      "name": "The Punisher - Part 1",
+      "giver": "Prapor",
+      "req_level": 17,
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "15x Kill Scav using AKM-series"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "The Punisher - Part 2",
+      "giver": "Prapor",
+      "req_level": 18,
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "12x Kill Scav using suppressed wep"
+		}, {
+        "obj": "10x Hand-in \"Lower half-masks\" (Found in raid)"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "The Punisher - Part 3",
+      "giver": "Prapor",
+      "req_level": 19,
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "25x Kill Scav using AKS-74U"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "The Punisher - Part 4",
+      "giver": "Prapor",
+      "req_level": 20,
+      "maps": [ "Woods", "Shoreline" ],
+      "objectives": [{
+        "obj": "Woods: 10x Kill Scav using 12ga shotgun"
+		}, {
+        "obj": "Shoreline: 10x Kill PMC while wearing \"balaclava\" and \"scav vest\""
+		}, {
+        "obj": "10x Hand-in \"Bars A-2607\" knives"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "The Punisher - Part 5",
+      "giver": "Prapor",
+      "req_level": 20,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "3x Hand-in AK-74N"
+		}, {
+        "obj": "3x Hand-in M4A1"
+		}, {
+        "obj": "5x Hand-in PM pistols"
+		}, {
+        "obj": "10x Kill PMC while wearing \"PACA\" and \"6b47\""
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "The Punisher - Part 6",
+      "giver": "Prapor",
+      "req_level": 21,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "10x Kill PMC using SVD"
+		}, {
+        "obj": "10x Hand-in USEC dogtags"
+		}, {
+        "obj": "10x Hand-in BEAR dogtags"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Polikhim hobo",
+      "giver": "Prapor",
+      "req_level": 0,
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "25x Kill Scav"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Big customer",
+      "giver": "Prapor",
+      "req_level": 0,
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "Mark white van, east, big white warehouse, inside"
+		}],
+      "requirements": [ "1x MS2000 Marker" ]
+    },
+	{
+      "name": "No offence",
+      "giver": "Prapor",
+      "req_level": 0,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "10x Hand-in \"M67 grenades\""
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Grenadier",
+      "giver": "Prapor",
+      "req_level": 30,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "10x Kill PMC with granade"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Perfect mediator",
+      "giver": "Prapor",
+      "req_level": 35,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Reach LL4 with Ragman"
+		}, {
+		"obj": "Reach LL4 with Skier"
+		}, {
+		"obj": "Reach LL4 with Mechanic"
+		}, {
+		"obj": "Reach LL4 with Peacekeeper"
+		}, {
+		"obj": "Reach LL4 with Prapor"
+		}, {
+		"obj": "Reach LL4 with Therapist"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Insomnia",
+      "giver": "Prapor",
+      "req_level": 0,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "30x Kill PMC during nighttime (23-04)"
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Test drive - Part 1",
+      "giver": "Prapor",
+      "req_level": 0,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "20x Kill PMC using M1A with \"Hybrid 46 silencer\" and \"Trijicon REAP-IR thermal scope\""
+		}],
+      "requirements": [ ]
+    },
+	{
+      "name": "Regulated materials",
+      "giver": "Prapor",
+      "req_level": 25,
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"military battery\" (Found in raid)"
+		}, {
+		"obj": "10x Hand-in \"30-mil. shells for BMP cannon\" (Found in raid)"
+		}],
+      "requirements": [ ]
     }
   ]
 }
