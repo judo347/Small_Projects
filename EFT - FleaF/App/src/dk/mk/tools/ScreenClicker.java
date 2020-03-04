@@ -1,5 +1,7 @@
 package dk.mk.tools;
 
+import java.awt.*;
+
 public class ScreenClicker {
 
     public enum ClickPositions {
@@ -25,4 +27,27 @@ public class ScreenClicker {
         }
     }
 
+    /** Makes the mouse click the position of the given enum. */
+    public void clickPos(ClickPositions cPosType){
+        clickPos(cPosType.x, cPosType.y);
+    }
+
+    /** Makes the mouse click the given position. */
+    public void clickPos(int x, int y){
+
+    }
+
+    /** Moves the mouse to the given position. */
+    private void moveMouse(int x, int y){
+        try {
+            Robot robot = new Robot();
+            robot.mouseMove(x, y);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void clickMouseAtCurrentPos(){
+
+    }
 }
