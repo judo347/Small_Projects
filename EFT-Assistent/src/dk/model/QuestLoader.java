@@ -43,7 +43,8 @@ public class QuestLoader {
         String questGiver = (String) questObjectJSON.get("giver");
         int questReqLevel = questObjectJSON.getInt("req_level");
         ArrayList<String> questMaps = parseJSONArray(questObjectJSON.getJSONArray("maps"));
-        JSONObject objectivesJSONObject = questObjectJSON.getJSONObject("objectives");
+        //JSONObject objectivesJSONObject = questObjectJSON.getJSONObject("objectives");
+        JSONArray objectivesJSONArray = questObjectJSON.getJSONArray("objectives");
         ArrayList<String> questRequirements = parseJSONArray(questObjectJSON.getJSONArray("requirements"));
 
         //Parsing from string to model objects
@@ -53,13 +54,28 @@ public class QuestLoader {
 
         TraderType trader = TypeParser.stringToTrader(questGiver);
 
-        QuestObjectives questObjectivesStrings = parseObjectives(objectivesJSONObject);
+        QuestObjectives questObjectivesStrings = parseObjectives(objectivesJSONArray);
 
         return new Quest(questName, mapTypes, trader, questReqLevel, questObjectivesStrings, questRequirements);
     }
 
-    private QuestObjectives parseObjectives(JSONObject questObjectivesJSON){
+    private QuestObjectives parseObjectives(JSONArray questObjectivesJSON){
         //TODO HERE!!! SDIMASODMAW D"" NEW HERER
+
+        //JSONArray objArrayJSON = parseJSONArray(questObjectivesJSON);
+
+        ArrayList<QuestObjectives> objectives = new ArrayList<>();
+        for(int i = 0; i < questObjectivesJSON.length(); i++){
+            QuestObjectives qo = new QuestObjectives();
+            String objective = ((JSONObject)questObjectivesJSON.get(i)).getString("obj");
+            ArrayList<String> subObjectives = ((JSONObject)questObjectivesJSON.get(i)).getJSONArray("subs");
+
+            //TODO
+
+        }
+
+        return null;
+
     }
 
     private ArrayList<String> parseJSONArray(JSONArray JArray){
