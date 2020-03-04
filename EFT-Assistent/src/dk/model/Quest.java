@@ -9,10 +9,10 @@ public class Quest {
     private TraderType trader; //Quest giver
     private int requiredLevel;
 
-    private QuestObjectives objectives;
+    private ArrayList<QuestObjectives> objectives;
     private ArrayList<String> requirements;
 
-    public Quest(String questName, ArrayList<MapType> maps, TraderType trader, int requiredLevel, QuestObjectives objectives, ArrayList<String> requirements) {
+    public Quest(String questName, ArrayList<MapType> maps, TraderType trader, int requiredLevel, ArrayList<QuestObjectives> objectives, ArrayList<String> requirements) {
         this.questName = questName;
         this.maps = maps;
         this.trader = trader;
@@ -37,7 +37,7 @@ public class Quest {
         return requiredLevel;
     }
 
-    public QuestObjectives getObjectives() {
+    public ArrayList<QuestObjectives> getObjectives() {
         return objectives;
     }
 
