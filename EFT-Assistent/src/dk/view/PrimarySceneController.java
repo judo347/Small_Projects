@@ -4,6 +4,7 @@ import dk.model.MapType;
 import javafx.fxml.FXML;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 
 public class PrimarySceneController {
     @FXML
@@ -30,6 +31,8 @@ public class PrimarySceneController {
     @FXML
     private HBox hbox_shoreline_quests;
 
+
+
     public void addQuestCard(Pane questCard, MapType mapType){
 
         HBox desiredHBox;
@@ -55,5 +58,16 @@ public class PrimarySceneController {
         }
 
         desiredHBox.getChildren().add(questCard);
+
+        //hbox_interchange_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+        //hbox_labs_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+        //hbox_customs_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+        //hbox_woods_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+        //hbox_mixed_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+        //hbox_reserve_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+        //hbox_factory_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+        //hbox_shoreline_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
+
+
     }
 }

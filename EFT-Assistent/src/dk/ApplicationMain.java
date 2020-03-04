@@ -30,8 +30,11 @@ public class ApplicationMain extends Application {
 
             fillScene(rootController);
 
+            //primaryStage.setResizable(false);
+
             primaryStage.setTitle(appWindowName);
             primaryStage.setScene(new Scene(root));
+            root.resize(250,250);
             primaryStage.show();
 
         }catch (Exception e){
