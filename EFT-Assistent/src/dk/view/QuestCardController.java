@@ -2,6 +2,7 @@ package dk.view;
 
 import dk.model.MapType;
 import dk.model.Quest;
+import dk.model.QuestObjectives;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -48,6 +49,16 @@ public class QuestCardController {
             vbox_requirements.getChildren().add(label);
         }
 
+        System.out.println("Debug");
+
         //TODO Objectives
+        for(QuestObjectives qo : quest.getObjectives()){
+            Label obj_label = new Label("  " + qo.getObjective());
+            vbox_objectives.getChildren().add(obj_label);
+            for(String subObj : qo.getSubObjectives()){
+                Label subObj_label = new Label("     " + subObj);
+                vbox_objectives.getChildren().add(subObj_label);
+            }
+        }
     }
 }

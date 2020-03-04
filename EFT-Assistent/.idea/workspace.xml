@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a6a98db-4bc6-41f4-9188-fb17c2325b5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../EFT - FleaF/App/.idea/App.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/model/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/model/Quest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/model/QuestLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/model/QuestLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/view/QuestInstantiator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/view/QuestInstantiator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/model/QuestObjectives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/model/QuestObjectives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/view/QuestCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/view/QuestCardController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +95,7 @@
       <updated>1583243811759</updated>
       <workItem from="1583243818068" duration="18818000" />
       <workItem from="1583306624148" duration="961000" />
-      <workItem from="1583317697696" duration="1452000" />
+      <workItem from="1583317697696" duration="1940000" />
     </task>
     <servers />
   </component>
@@ -121,16 +117,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dk/ApplicationMain.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dk/model/QuestLoader.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dk/model/QuestLoader.java</url>
           <line>79</line>
           <option name="timeStamp" value="15" />
@@ -139,6 +125,21 @@
           <url>file://$PROJECT_DIR$/src/dk/model/QuestLoader.java</url>
           <line>72</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dk/ApplicationMain.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dk/view/QuestCardController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dk/view/QuestCardController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

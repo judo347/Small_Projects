@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class QuestObjectives {
 
     private String objective;
-    //private ArrayList<QuestObjectives> objectives;
     private ArrayList<String> subObjectives;
 
     public QuestObjectives(String objective, ArrayList<String> subObjectives) {
@@ -14,6 +13,7 @@ public class QuestObjectives {
     }
 
     public QuestObjectives() {
+        subObjectives = new ArrayList<>();
     }
 
     public String getObjective() {
