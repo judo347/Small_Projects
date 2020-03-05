@@ -32,12 +32,47 @@ public class PlayerInfo {
             case MECHANIC: return mechanicLoyaltyLevel;
             case SKIER: return skierLoyaltyLevel;
             case FENCE: return fenceLoyaltyLevel;
-            case JEAGER: return jaegerLoyaltyLevel;
+            case JAEGER: return jaegerLoyaltyLevel;
             case PRAPOR: return praporLoyaltyLevel;
             case RAGMAN: return ragmanLoyaltyLevel;
             case THERAPIST: return therapistLoyaltyLevel;
             case PEACEKEEPER: return peacekeeperLoyaltyLevel;
             default: throw new IllegalArgumentException();
         }
+    }
+
+    public void incrementLoyaltyLevel(TraderType traderType){
+        switch (traderType) {
+            case MECHANIC:
+                mechanicLoyaltyLevel++;
+                break;
+            case SKIER:
+                skierLoyaltyLevel++;
+                break;
+            case FENCE:
+                fenceLoyaltyLevel++;
+                break;
+            case JAEGER:
+                jaegerLoyaltyLevel++;
+                break;
+            case PRAPOR:
+                praporLoyaltyLevel++;
+                break;
+            case RAGMAN:
+                ragmanLoyaltyLevel++;
+                break;
+            case THERAPIST:
+                therapistLoyaltyLevel++;
+                break;
+            case PEACEKEEPER:
+                peacekeeperLoyaltyLevel++;
+                break;
+            default:
+                throw new IllegalArgumentException();
+        }
+    }
+
+    public void incrementPlayerLevel(){
+        playerLevel++;
     }
 }

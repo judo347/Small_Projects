@@ -25,5 +25,8 @@ Prapor: No Offence
 
 When a quest is completed, re-check prerequisite quest requirements for all locked quests
 
+Next todo: re-adding of quests to visual component when needed. And make sure that the questManager is re-evaluating just before each time.
+ - Levels increase
+ - Quest is completed
 
-Current todo: QuestManager: addQuest: line 47
+

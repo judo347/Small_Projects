@@ -29,6 +29,7 @@ public class ApplicationMain extends Application {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/PrimaryScene.fxml"));
             Pane root = fxmlLoader.load();
             PrimarySceneController rootController = fxmlLoader.getController();
+            rootController.setMainModel(mainModel);
 
             fillScene(rootController);
 

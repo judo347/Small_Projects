@@ -4,7 +4,7 @@ public enum TraderType {
 
     PRAPOR("Prapor"), THERAPIST("Therapist"), FENCE("Fence"),
     SKIER("Skier"), PEACEKEEPER("Peacekeeper"), MECHANIC("Mechanic"),
-    RAGMAN("Ragman"), JEAGER("Jeager");
+    RAGMAN("Ragman"), JAEGER("Jaeger");
 
     private final String name;
 

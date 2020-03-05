@@ -17,4 +17,18 @@ public class MainModel {
     public QuestManager getQm() {
         return qm;
     }
+
+    public PlayerInfo getPlayerInfo() {
+        return playerInfo;
+    }
+
+    public void incrementTraderLoyaltyLevel(TraderType traderType){
+        playerInfo.incrementLoyaltyLevel(traderType);
+        qm.doPrerequisiteQuestCheckForLocked();
+    }
+
+    public void incrementPlayerLevel(){
+        playerInfo.incrementPlayerLevel();
+        qm.doPrerequisiteQuestCheckForLocked();
+    }
 }

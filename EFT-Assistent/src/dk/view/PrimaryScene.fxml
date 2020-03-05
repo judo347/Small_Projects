@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -54,94 +56,246 @@
     </MenuBar>
     <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
-               <content>
-                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
+            <HBox>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/factory.png" />
+                                    <Image url="@../data/playerPortrait.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_factory_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_player" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_player" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/customs.png" />
+                                    <Image url="@../data/traderPortraits/prapor.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_customs_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_prapor" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_prapor" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/woods.png" />
+                                    <Image url="@../data/traderPortraits/therapist.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_woods_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_therapist" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_therapist" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/shoreline.png" />
+                                    <Image url="@../data/traderPortraits/skier.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_shoreline_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_skier" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_skier" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/interchange.jpg" />
+                                    <Image url="@../data/traderPortraits/peacekeeper.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_interchange_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_peacekeeper" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_peacekeeper" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="60.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/labs.png" />
+                                    <Image url="@../data/traderPortraits/mechanic.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_labs_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_mechanic" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_mechanic" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/reserve.png" />
+                                    <Image url="@../data/traderPortraits/ragman.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_reserve_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_ragman" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_ragman" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../data/mapBanners/mixed.png" />
+                                    <Image url="@../data/traderPortraits/jaeger.png" />
                                  </image>
                               </ImageView>
-                              <HBox fx:id="hbox_mixed_quests" prefHeight="100.0" prefWidth="200.0" />
+                              <Label fx:id="label_level_jaeger" text="0" textAlignment="RIGHT" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_jaeger" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../data/plusPicture.jpg" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-               </content>
-            </ScrollPane>
+                  <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
+                     <content>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/factory.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_factory_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/customs.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_customs_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/woods.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_woods_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/shoreline.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_shoreline_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/interchange.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_interchange_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/labs.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_labs_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/reserve.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_reserve_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../data/mapBanners/mixed.png" />
+                                       </image>
+                                    </ImageView>
+                                    <HBox fx:id="hbox_mixed_quests" prefHeight="100.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
          </children></AnchorPane>
   </children>
 </VBox>

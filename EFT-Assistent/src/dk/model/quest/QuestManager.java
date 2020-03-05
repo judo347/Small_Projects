@@ -53,7 +53,7 @@ public class QuestManager {
         activeQuests.add(quest);
     }
 
-    private void doPrerequisiteQuestCheckForLocked(){
+    public void doPrerequisiteQuestCheckForLocked(){
         for(Quest quest : new ArrayList<>(lockedQuests)){
             boolean shouldBeActive = isRequiredQuestsCompleted(quest);
             if(shouldBeActive){
