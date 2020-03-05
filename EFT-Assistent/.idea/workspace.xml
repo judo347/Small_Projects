@@ -15,12 +15,13 @@
     <session id="929126103">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,14 +43,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="4" />
-          <entry key="java" value="2537" />
+          <entry key="java" value="2816" />
           <entry key="json" value="194" />
           <entry key="todos" value="242" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2537" />
+          <entry key="JAVA" value="2816" />
           <entry key="JSON" value="194" />
           <entry key="PLAIN_TEXT" value="242" />
           <entry key="XML" value="4" />
@@ -64,7 +65,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="799">
+                <state relative-caret-position="578">
                   <caret line="47" selection-start-line="47" selection-end-line="47" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -78,15 +79,11 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
                   <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#285#286#0" expanded="true" />
-                    <element signature="e#310#311#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/todos">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="425">
@@ -98,12 +95,14 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/dk/model/quest/Quest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+                <state relative-caret-position="690">
+                  <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1314#1315#0" expanded="true" />
-                    <element signature="e#1345#1346#0" expanded="true" />
+                    <element signature="e#1891#1892#0" expanded="true" />
+                    <element signature="e#1916#1917#0" expanded="true" />
+                    <element signature="e#1969#1970#0" expanded="true" />
+                    <element signature="e#2006#2007#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -118,17 +117,17 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
-                  <caret line="27" column="24" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="24" />
+                <state relative-caret-position="551">
+                  <caret line="55" column="62" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1313#1314#0" expanded="true" />
-                    <element signature="e#1338#1339#0" expanded="true" />
-                    <element signature="e#1387#1388#0" expanded="true" />
-                    <element signature="e#1422#1423#0" expanded="true" />
+                    <element signature="e#1714#1715#0" expanded="true" />
+                    <element signature="e#1739#1740#0" expanded="true" />
+                    <element signature="e#1788#1789#0" expanded="true" />
+                    <element signature="e#1823#1824#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -146,16 +145,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/dk/model/PlayerInfo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="400">
+                <state relative-caret-position="561">
                   <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-                  <folding>
-                    <element signature="e#172#173#0" expanded="true" />
-                    <element signature="e#218#219#0" expanded="true" />
-                    <element signature="e#165#166#0" expanded="true" />
-                    <element signature="e#199#200#0" expanded="true" />
-                    <element signature="e#250#251#0" expanded="true" />
-                    <element signature="e#296#297#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -163,7 +154,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="383">
+                <state relative-caret-position="6188">
                   <caret line="364" column="17" selection-start-line="364" selection-start-column="7" selection-end-line="364" selection-end-column="17" />
                 </state>
               </provider>
@@ -172,7 +163,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestLoader.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="502">
+                <state relative-caret-position="1088">
                   <caret line="74" column="86" selection-start-line="74" selection-start-column="86" selection-end-line="74" selection-end-column="86" />
                 </state>
               </provider>
@@ -181,7 +172,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -227,10 +218,10 @@
         <option value="$PROJECT_DIR$/src/dk/ApplicationMain.java" />
         <option value="$PROJECT_DIR$/src/dk/model/PlayerInfo.java" />
         <option value="$PROJECT_DIR$/src/dk/data/quests.json" />
-        <option value="$PROJECT_DIR$/src/dk/model/quest/Quest.java" />
         <option value="$PROJECT_DIR$/src/dk/model/quest/QuestLoader.java" />
-        <option value="$PROJECT_DIR$/src/dk/model/quest/QuestManager.java" />
         <option value="$PROJECT_DIR$/src/todos" />
+        <option value="$PROJECT_DIR$/src/dk/model/quest/Quest.java" />
+        <option value="$PROJECT_DIR$/src/dk/model/quest/QuestManager.java" />
       </list>
     </option>
   </component>
@@ -379,17 +370,18 @@
       <workItem from="1583334851700" duration="99000" />
       <workItem from="1583335084665" duration="2373000" />
       <workItem from="1583358120857" duration="7510000" />
+      <workItem from="1583389953156" duration="788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12632000" />
+    <option name="totallyTimeSpent" value="13420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -465,20 +457,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/view/QuestCard.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68">
           <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/view/PrimaryScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/view/PaneAndController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -514,42 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/model/PlayerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestObjectives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -560,43 +516,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
+    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestObjectives.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="364" column="17" selection-start-line="364" selection-start-column="7" selection-end-line="364" selection-end-column="17" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/Quest.java">
+    <entry file="file://$PROJECT_DIR$/src/dk/model/PlayerInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="561">
+          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6188">
+          <caret line="364" column="17" selection-start-line="364" selection-start-column="7" selection-end-line="364" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
+        <state relative-caret-position="1088">
           <caret line="74" column="86" selection-start-line="74" selection-start-column="86" selection-end-line="74" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1387#1388#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,6 +548,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/Quest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1916#1917#0" expanded="true" />
+            <element signature="e#1969#1970#0" expanded="true" />
+            <element signature="e#2006#2007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="55" column="62" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1823#1824#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

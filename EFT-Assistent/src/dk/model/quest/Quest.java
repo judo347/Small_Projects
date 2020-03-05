@@ -67,4 +67,12 @@ public class Quest {
     public void complete(){
         completed = true;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public ArrayList<Integer> getRequiredQuestIds() {
+        return requiredQuests;
+    }
 }

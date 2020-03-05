@@ -50,6 +50,18 @@ public class QuestManager {
         activeQuests.add(quest);
     }
 
+    private boolean isRequiredQuestCompleted(Quest quest){
+        ArrayList<Integer> requiredQuests = quest.getRequiredQuestIds();
+
+        Integer[] requiredQuestIds = requiredQuests.toArray();
+
+        for(Integer val : requiredQuests){
+            for(Quest completedQuest : completed){
+
+            }
+        }
+    }
+
     public void completeQuest(Quest quest){
         quest.complete();
         activeQuests.remove(quest);
