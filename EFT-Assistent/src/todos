@@ -3,16 +3,24 @@ model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectiv
 
 
 Next todo: odd cases and rest of quests
+     todo: fix load/save bugs
+
+Bugs:
+- Completing a quest, saving, and loading it, the quest is then not completed.
+  - Seems to save the correct information
 
 Todos:
 - Add the rest of the quests
 - Save and load system
 - Move QuestLoader to data folder, and into JSONParserHelper, use common functions
+- Maybe rework refreshing of model and visuals
+  - Maybe just go through all code and cleanup code and structure
 
 
 Todos (not so important ATM)(Listed in priority, first most important):
 - Allow completion of a part of quests
 - Regret level increase feature
+  - Re-eval quests..
 
 Visual improvements:
 - Player level in two digits is turned into dots

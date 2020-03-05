@@ -13,23 +13,15 @@ import javafx.scene.layout.VBox;
 import java.util.ArrayList;
 
 public class QuestCardController {
-    @FXML
-    private Label label_traderName;
 
-    @FXML
-    private Label label_questName;
+    @FXML private Label label_traderName;
+    @FXML private Label label_questName;
+    @FXML private Label label_reqLevel;
 
-    @FXML
-    private Label label_reqLevel;
+    @FXML private VBox vbox_objectives;
+    @FXML private VBox vbox_requirements;
 
-    @FXML
-    private VBox vbox_objectives;
-
-    @FXML
-    private VBox vbox_requirements;
-
-    @FXML
-    private VBox vbox_maps;
+    @FXML private VBox vbox_maps;
 
     public Quest originalQuest;
     private PrimarySceneController psc;

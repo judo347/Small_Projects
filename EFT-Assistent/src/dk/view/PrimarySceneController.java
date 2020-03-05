@@ -2,8 +2,10 @@ package dk.view;
 
 import dk.model.MainModel;
 import dk.model.MapType;
+import dk.model.PlayerInfo;
 import dk.model.TraderType;
 import dk.model.quest.Quest;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -16,53 +18,23 @@ import java.io.IOException;
 
 public class PrimarySceneController {
 
-    @FXML
-    private Label label_level_player;
+    @FXML private Label label_level_player;
+    @FXML private Label label_level_prapor;
+    @FXML private Label label_level_therapist;
+    @FXML private Label label_level_skier;
+    @FXML private Label label_level_peacekeeper;
+    @FXML private Label label_level_mechanic;
+    @FXML private Label label_level_ragman;
+    @FXML private Label label_level_jaeger;
 
-    @FXML
-    private Label label_level_prapor;
-
-    @FXML
-    private Label label_level_therapist;
-
-    @FXML
-    private Label label_level_skier;
-
-    @FXML
-    private Label label_level_peacekeeper;
-
-    @FXML
-    private Label label_level_mechanic;
-
-    @FXML
-    private Label label_level_ragman;
-
-    @FXML
-    private Label label_level_jaeger;
-
-    @FXML
-    private HBox hbox_interchange_quests;
-
-    @FXML
-    private HBox hbox_labs_quests;
-
-    @FXML
-    private HBox hbox_customs_quests;
-
-    @FXML
-    private HBox hbox_woods_quests;
-
-    @FXML
-    private HBox hbox_mixed_quests;
-
-    @FXML
-    private HBox hbox_reserve_quests;
-
-    @FXML
-    private HBox hbox_factory_quests;
-
-    @FXML
-    private HBox hbox_shoreline_quests;
+    @FXML private HBox hbox_interchange_quests;
+    @FXML private HBox hbox_labs_quests;
+    @FXML private HBox hbox_customs_quests;
+    @FXML private HBox hbox_woods_quests;
+    @FXML private HBox hbox_mixed_quests;
+    @FXML private HBox hbox_reserve_quests;
+    @FXML private HBox hbox_factory_quests;
+    @FXML private HBox hbox_shoreline_quests;
 
     private MainModel mainModel;
 
@@ -130,6 +102,18 @@ public class PrimarySceneController {
 
             addQuestCard(questCardAndController, mapType);
         }
+    }
+
+    public void reloadPlayerInfoVisuals(){
+        PlayerInfo playerInfo = mainModel.getPlayerInfo();
+        label_level_player.setText(String.valueOf(playerInfo.getPlayerLevel()));
+        label_level_therapist.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.THERAPIST)));
+        label_level_prapor.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.PRAPOR)));
+        label_level_skier.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.SKIER)));
+        label_level_ragman.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.RAGMAN)));
+        label_level_jaeger.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.JAEGER)));
+        label_level_mechanic.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.MECHANIC)));
+        label_level_peacekeeper.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.PEACEKEEPER)));
     }
 
     private PaneAndController createQuestCard(Quest quest, PrimarySceneController psc){
@@ -225,5 +209,25 @@ public class PrimarySceneController {
         mainModel.incrementTraderLoyaltyLevel(TraderType.JAEGER);
         label_level_jaeger.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.JAEGER)));
         reloadQuestVisuals();
+    }
+
+    @FXML
+    void menu_buttonAction_save_slot0(ActionEvent event) {
+        mainModel.saveSlot(0);
+    }
+
+    @FXML
+    void menu_buttonAction_save_slot1(ActionEvent event) {
+        mainModel.saveSlot(1);
+    }
+
+    @FXML
+    void menu_buttonAction_load_slot0(ActionEvent event) {
+        mainModel.loadSlot(0);
+    }
+
+    @FXML
+    void menu_buttonAction_load_slot1(ActionEvent event) {
+        mainModel.loadSlot(1);
     }
 }

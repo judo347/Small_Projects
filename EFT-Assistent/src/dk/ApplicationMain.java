@@ -23,12 +23,13 @@ public class ApplicationMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            mainModel = new MainModel();
+
 
             //Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("dk/view/PrimaryScene.fxml"));
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/PrimaryScene.fxml"));
             Pane root = fxmlLoader.load();
             PrimarySceneController rootController = fxmlLoader.getController();
+            mainModel = new MainModel(rootController);
             rootController.setMainModel(mainModel);
 
             //addQuestsToScene(rootController);

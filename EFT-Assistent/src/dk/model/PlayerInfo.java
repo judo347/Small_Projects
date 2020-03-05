@@ -106,4 +106,16 @@ public class PlayerInfo {
     public void incrementPlayerLevel(){
         playerLevel++;
     }
+
+    public void reload(PlayerInfo playerInfo){
+        this.playerLevel = playerInfo.playerLevel;
+        this.peacekeeperLoyaltyLevel = playerInfo.peacekeeperLoyaltyLevel;
+        this.therapistLoyaltyLevel = playerInfo.therapistLoyaltyLevel;
+        this.ragmanLoyaltyLevel = playerInfo.ragmanLoyaltyLevel;
+        this.fenceLoyaltyLevel = playerInfo.fenceLoyaltyLevel;
+        this.praporLoyaltyLevel = playerInfo.praporLoyaltyLevel;
+        this.jaegerLoyaltyLevel = playerInfo.jaegerLoyaltyLevel;
+        this.skierLoyaltyLevel = playerInfo.skierLoyaltyLevel;
+        this.mechanicLoyaltyLevel = playerInfo.mechanicLoyaltyLevel;
+    }
 }

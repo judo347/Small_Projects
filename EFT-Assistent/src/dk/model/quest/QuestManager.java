@@ -34,7 +34,6 @@ public class QuestManager {
             return;
         }
 
-
         //Handle LL requirements for quests
         TraderType questGiver = quest.getTrader();
         int currentLoyaltyLevelForTrader = playerInfo.getLoyaltyLevelFromTrader(questGiver);
@@ -89,11 +88,34 @@ public class QuestManager {
         doPrerequisiteQuestCheckForLocked();
     }
 
+
+    public void reloadFromCompletedQuests(ArrayList<Integer> completedQuestIds, PlayerInfo playerInfo){
+        QuestLoader ql = new QuestLoader();
+        ArrayList<Quest> allQuests = ql.allQuest;
+
+        //Remove completed quests
+        for(Quest quest : new ArrayList<>(allQuests))
+            for(int id : completedQuestIds)
+                if(quest.getId() == id)
+                    allQuests.remove(quest);
+
+        //Load with remaining quests
+        for(Quest quest : allQuests){
+            addQuest(quest, playerInfo);
+        }
+
+        doPrerequisiteQuestCheckForLocked(); //TODO Should run until nothing happens??
+    }
+
     public QuestInstantiator getQi() {
         return qi;
     }
 
     public ArrayList<Quest> getActiveQuests() {
         return activeQuests;
+    }
+
+    public ArrayList<Quest> getCompleted() {
+        return completed;
     }
 }
