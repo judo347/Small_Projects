@@ -23,4 +23,7 @@ Prapor: No Offence
 - req_quests
  - Chemical - Part 4 or Out of curiosity
 
+When a quest is completed, re-check prerequisite quest requirements for all locked quests
+
+
 Current todo: QuestManager: addQuest: line 47

@@ -4,6 +4,7 @@ import dk.model.PlayerInfo;
 import dk.model.TraderType;
 import dk.model.quest.Quest;
 import dk.view.QuestInstantiator;
+import javafx.beans.property.IntegerProperty;
 
 import java.util.ArrayList;
 
@@ -43,23 +44,31 @@ public class QuestManager {
             return;
         }
 
-        //TODO Handle prerequisite quests
-        //TODO has to be checked everytime a new quest is added.
-
+        //Handle prerequisite quests
+        if(!isRequiredQuestsCompleted(quest)){
+            lockedQuests.add(quest);
+            return;
+        }
 
         activeQuests.add(quest);
     }
 
-    private boolean isRequiredQuestCompleted(Quest quest){
+    //TODO Can be optimized by a lot!!
+    private boolean isRequiredQuestsCompleted(Quest quest){
         ArrayList<Integer> requiredQuests = quest.getRequiredQuestIds();
+        ArrayList<Boolean> accepted = new ArrayList<>();
 
-        Integer[] requiredQuestIds = requiredQuests.toArray();
-
-        for(Integer val : requiredQuests){
-            for(Quest completedQuest : completed){
-
+        for(int reqQuestId : requiredQuests){
+            boolean questisCompleted = false;
+            for(Quest compQuest : completed){
+                if(reqQuestId == compQuest.getId()){
+                    questisCompleted = true;
+                    accepted.add(questisCompleted);
+                }
             }
         }
+
+        return requiredQuests.size() == accepted.size();
     }
 
     public void completeQuest(Quest quest){
