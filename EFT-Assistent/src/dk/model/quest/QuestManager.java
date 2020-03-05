@@ -53,6 +53,16 @@ public class QuestManager {
         activeQuests.add(quest);
     }
 
+    private void doPrerequisiteQuestCheckForLocked(){
+        for(Quest quest : new ArrayList<>(lockedQuests)){
+            boolean shouldBeActive = isRequiredQuestsCompleted(quest);
+            if(shouldBeActive){
+                lockedQuests.remove(quest);
+                activeQuests.add(quest);
+            }
+        }
+    }
+
     //TODO Can be optimized by a lot!!
     private boolean isRequiredQuestsCompleted(Quest quest){
         ArrayList<Integer> requiredQuests = quest.getRequiredQuestIds();
@@ -75,6 +85,8 @@ public class QuestManager {
         quest.complete();
         activeQuests.remove(quest);
         completed.add(quest);
+
+        doPrerequisiteQuestCheckForLocked();
     }
 
     public QuestInstantiator getQi() {
