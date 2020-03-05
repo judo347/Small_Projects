@@ -31,7 +31,8 @@ public class ApplicationMain extends Application {
             PrimarySceneController rootController = fxmlLoader.getController();
             rootController.setMainModel(mainModel);
 
-            fillScene(rootController);
+            //addQuestsToScene(rootController);
+            rootController.reloadQuestVisuals();
 
             //primaryStage.setResizable(false);
 
@@ -43,39 +44,5 @@ public class ApplicationMain extends Application {
         }catch (Exception e){
 
         }
-    }
-
-    private void fillScene(PrimarySceneController rootController){
-
-        for(Quest quest : mainModel.getQm().getActiveQuests()){
-            PaneAndController questCardAndController = createQuestCard(quest, rootController);
-
-            MapType mapType;
-
-            if(quest.getMaps().size() == 1)
-                mapType = quest.getMaps().get(0);
-            else
-                mapType = MapType.MIXED;
-
-            rootController.addQuestCard(questCardAndController, mapType);
-        }
-    }
-
-    private PaneAndController createQuestCard(Quest quest, PrimarySceneController psc){
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
-            Pane questCard = fxmlLoader.load();
-            QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
-
-            questCardController.setValues(quest);
-            questCardController.setParent(psc);
-
-            return new PaneAndController(questCard, questCardController);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        throw new IllegalArgumentException();
     }
 }

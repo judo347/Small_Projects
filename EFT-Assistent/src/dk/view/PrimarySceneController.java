@@ -3,12 +3,16 @@ package dk.view;
 import dk.model.MainModel;
 import dk.model.MapType;
 import dk.model.TraderType;
+import dk.model.quest.Quest;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+
+import java.io.IOException;
 
 public class PrimarySceneController {
 
@@ -92,66 +96,113 @@ public class PrimarySceneController {
 
         desiredHBox.getChildren().add(questCardAndController.pane);
         questCardAndController.qcc.addBoxParent(desiredHBox, questCardAndController.pane);
-
-        //hbox_interchange_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
-        //hbox_labs_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
-        //hbox_customs_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
-        //hbox_woods_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
-        //hbox_mixed_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
-        //hbox_reserve_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
-        //hbox_factory_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
-        //hbox_shoreline_quests.setMaxSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE );
     }
 
-    public void removeQuestCard(QuestCardController qcc, HBox box, Pane layoutComponent){
-        box.getChildren().remove(layoutComponent);
+    public void cleanQuestCardBoxes(){
+        hbox_shoreline_quests.getChildren().clear();
+        hbox_labs_quests.getChildren().clear();
+        hbox_mixed_quests.getChildren().clear();
+        hbox_woods_quests.getChildren().clear();
+        hbox_customs_quests.getChildren().clear();
+        hbox_factory_quests.getChildren().clear();
+        hbox_reserve_quests.getChildren().clear();
+        hbox_interchange_quests.getChildren().clear();
+    }
+
+    public void completeQuestCard(QuestCardController qcc, HBox box, Pane layoutComponent, Quest quest){
+        //TODO Model: Move to completed
+        mainModel.getQm().completeQuest(quest);
+        reloadQuestVisuals();
+    }
+
+    public void reloadQuestVisuals(){
+        cleanQuestCardBoxes();
+
+        for(Quest quest : mainModel.getQm().getActiveQuests()){
+            PaneAndController questCardAndController = createQuestCard(quest, this);
+
+            MapType mapType;
+
+            if(quest.getMaps().size() == 1)
+                mapType = quest.getMaps().get(0);
+            else
+                mapType = MapType.MIXED;
+
+            addQuestCard(questCardAndController, mapType);
+        }
+    }
+
+    private PaneAndController createQuestCard(Quest quest, PrimarySceneController psc){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
+            Pane questCard = fxmlLoader.load();
+            QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
+
+            questCardController.setValues(quest);
+            questCardController.setParent(psc);
+
+            return new PaneAndController(questCard, questCardController);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        throw new IllegalArgumentException();
     }
 
     @FXML
     void buttonAction_plus_player(MouseEvent event) {
         mainModel.incrementPlayerLevel();
         label_level_player.setText(String.valueOf(mainModel.getPlayerInfo().getPlayerLevel()));
+        reloadQuestVisuals();
     }
 
     @FXML
     void buttonAction_plus_prapor(MouseEvent event) {
         mainModel.incrementTraderLoyaltyLevel(TraderType.PRAPOR);
         label_level_prapor.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.PRAPOR)));
+        reloadQuestVisuals();
     }
 
     @FXML
     void buttonAction_plus_therapist(MouseEvent event) {
         mainModel.incrementTraderLoyaltyLevel(TraderType.THERAPIST);
         label_level_therapist.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.THERAPIST)));
+        reloadQuestVisuals();
     }
 
     @FXML
     void buttonAction_plus_skier(MouseEvent event) {
         mainModel.incrementTraderLoyaltyLevel(TraderType.SKIER);
         label_level_skier.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.SKIER)));
+        reloadQuestVisuals();
     }
 
     @FXML
     void buttonAction_plus_peacekeeper(MouseEvent event) {
         mainModel.incrementTraderLoyaltyLevel(TraderType.PEACEKEEPER);
         label_level_peacekeeper.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.PEACEKEEPER)));
+        reloadQuestVisuals();
     }
 
     @FXML
     void buttonAction_plus_mechanic(MouseEvent event) {
         mainModel.incrementTraderLoyaltyLevel(TraderType.MECHANIC);
         label_level_mechanic.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.MECHANIC)));
+        reloadQuestVisuals();
     }
 
     @FXML
     void buttonAction_plus_ragman(MouseEvent event) {
         mainModel.incrementTraderLoyaltyLevel(TraderType.RAGMAN);
         label_level_ragman.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.RAGMAN)));
+        reloadQuestVisuals();
     }
 
     @FXML
     void buttonAction_plus_jaeger(MouseEvent event) {
         mainModel.incrementTraderLoyaltyLevel(TraderType.JAEGER);
         label_level_jaeger.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.JAEGER)));
+        reloadQuestVisuals();
     }
 }

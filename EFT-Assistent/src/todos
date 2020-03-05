@@ -27,6 +27,11 @@ When a quest is completed, re-check prerequisite quest requirements for all lock
 
 Next todo: re-adding of quests to visual component when needed. And make sure that the questManager is re-evaluating just before each time.
  - Levels increase
- - Quest is completed
+
+
+
+Todos:
+- Trader LL limit to max
+- Regret level increase feature
 
 
