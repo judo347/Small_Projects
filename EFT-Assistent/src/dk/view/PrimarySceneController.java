@@ -159,6 +159,9 @@ public class PrimarySceneController {
 
     @FXML
     void buttonAction_plus_prapor(MouseEvent event) {
+        if(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.PRAPOR) > 3)
+            return;
+
         mainModel.incrementTraderLoyaltyLevel(TraderType.PRAPOR);
         label_level_prapor.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.PRAPOR)));
         reloadQuestVisuals();
@@ -166,6 +169,9 @@ public class PrimarySceneController {
 
     @FXML
     void buttonAction_plus_therapist(MouseEvent event) {
+        if(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.THERAPIST) > 3)
+            return;
+
         mainModel.incrementTraderLoyaltyLevel(TraderType.THERAPIST);
         label_level_therapist.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.THERAPIST)));
         reloadQuestVisuals();
@@ -173,6 +179,9 @@ public class PrimarySceneController {
 
     @FXML
     void buttonAction_plus_skier(MouseEvent event) {
+        if(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.SKIER) > 3)
+            return;
+
         mainModel.incrementTraderLoyaltyLevel(TraderType.SKIER);
         label_level_skier.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.SKIER)));
         reloadQuestVisuals();
@@ -180,6 +189,9 @@ public class PrimarySceneController {
 
     @FXML
     void buttonAction_plus_peacekeeper(MouseEvent event) {
+        if(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.PEACEKEEPER) > 3)
+            return;
+
         mainModel.incrementTraderLoyaltyLevel(TraderType.PEACEKEEPER);
         label_level_peacekeeper.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.PEACEKEEPER)));
         reloadQuestVisuals();
@@ -187,6 +199,9 @@ public class PrimarySceneController {
 
     @FXML
     void buttonAction_plus_mechanic(MouseEvent event) {
+        if(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.MECHANIC) > 3)
+            return;
+
         mainModel.incrementTraderLoyaltyLevel(TraderType.MECHANIC);
         label_level_mechanic.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.MECHANIC)));
         reloadQuestVisuals();
@@ -194,6 +209,9 @@ public class PrimarySceneController {
 
     @FXML
     void buttonAction_plus_ragman(MouseEvent event) {
+        if(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.RAGMAN) > 3)
+            return;
+
         mainModel.incrementTraderLoyaltyLevel(TraderType.RAGMAN);
         label_level_ragman.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.RAGMAN)));
         reloadQuestVisuals();
@@ -201,6 +219,9 @@ public class PrimarySceneController {
 
     @FXML
     void buttonAction_plus_jaeger(MouseEvent event) {
+        if(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.JAEGER) > 3)
+            return;
+
         mainModel.incrementTraderLoyaltyLevel(TraderType.JAEGER);
         label_level_jaeger.setText(String.valueOf(mainModel.getPlayerInfo().getLoyaltyLevelFromTrader(TraderType.JAEGER)));
         reloadQuestVisuals();

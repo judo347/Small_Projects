@@ -6,12 +6,14 @@ Next todo: odd cases and rest of quests
 
 Todos:
 - Add the rest of the quests
-- Trader LL limit to max
 - Regret level increase feature
 - Improve visuals
  - Remove "Requirements" from visuals if non is existing.
 - Save and load system
 - Allow completion of a part of quests
+
+Visual improvements:
+- Player level in two digits is turned into dots
 
 Future Work:
 - Found in raid items needed for future quests could be displayed and crossed out when found
