@@ -1,0 +1,42 @@
+{
+  "saves": [
+    {
+      "name": "Slot 0",
+      "quests_completed": [ 0, 1 ],
+      "player_info":
+        {
+          "player_level": 4,
+          "loyaltyLevel":
+            {
+              "prapor": 2,
+              "therapist": 2,
+              "skier": 2,
+              "peacekeeper": 2,
+              "mechanic": 2,
+              "ragman": 2,
+              "jaeger": 2,
+              "fence": 0
+            }
+        }
+    },
+    {
+      "name": "Slot 1",
+      "quests_completed": [ 0 ],
+      "player_info":
+        {
+          "player_level": 5,
+          "loyaltyLevel":
+            {
+              "prapor": 3,
+              "therapist": 3,
+              "skier": 3,
+              "peacekeeper": 3,
+              "mechanic": 3,
+              "ragman": 3,
+              "jaeger": 3,
+              "fence": 0
+            }
+        }
+    }
+  ]
+}

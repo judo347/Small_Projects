@@ -2,6 +2,7 @@ package dk.model.quest;
 
 import dk.data.JSONParserHelper;
 import dk.model.MapType;
+import dk.model.SaveData;
 import dk.model.TraderType;
 import dk.model.tools.TypeParser;
 import org.json.JSONArray;

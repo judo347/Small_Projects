@@ -6,14 +6,17 @@ Next todo: odd cases and rest of quests
 
 Todos:
 - Add the rest of the quests
-- Regret level increase feature
-- Improve visuals
- - Remove "Requirements" from visuals if non is existing.
 - Save and load system
+- Move QuestLoader to data folder, and into JSONParserHelper, use common functions
+
+
+Todos (not so important ATM)(Listed in priority, first most important):
 - Allow completion of a part of quests
+- Regret level increase feature
 
 Visual improvements:
 - Player level in two digits is turned into dots
+- Remove "Requirements" from visuals if non is existing.
 
 Future Work:
 - Found in raid items needed for future quests could be displayed and crossed out when found

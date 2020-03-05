@@ -72,6 +72,37 @@ public class PlayerInfo {
         }
     }
 
+    public void setLoyaltyLevel(TraderType traderType, int desiredLevel){
+        switch (traderType) {
+            case MECHANIC:
+                mechanicLoyaltyLevel = desiredLevel;
+                break;
+            case SKIER:
+                skierLoyaltyLevel = desiredLevel;
+                break;
+            case FENCE:
+                fenceLoyaltyLevel = desiredLevel;
+                break;
+            case JAEGER:
+                jaegerLoyaltyLevel = desiredLevel;
+                break;
+            case PRAPOR:
+                praporLoyaltyLevel = desiredLevel;
+                break;
+            case RAGMAN:
+                ragmanLoyaltyLevel = desiredLevel;
+                break;
+            case THERAPIST:
+                therapistLoyaltyLevel = desiredLevel;
+                break;
+            case PEACEKEEPER:
+                peacekeeperLoyaltyLevel = desiredLevel;
+                break;
+            default:
+                throw new IllegalArgumentException();
+        }
+    }
+
     public void incrementPlayerLevel(){
         playerLevel++;
     }
