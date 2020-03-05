@@ -2,6 +2,7 @@ model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
 
 
+Next todo: odd cases and rest of quests
 
 Todos:
 - Add the rest of the quests
@@ -9,9 +10,16 @@ Todos:
 - Regret level increase feature
 - Improve visuals
  - Remove "Requirements" from visuals if non is existing.
+- Save and load system
+- Allow completion of a part of quests
 
 Future Work:
 - Found in raid items needed for future quests could be displayed and crossed out when found
+- In a given state: Display weights/priority for which quests makes sense completing first
+- Beginner and advanced mode
+  - Advanced mode should display less text and require more in-game and quest knowledge
+  - Beginner mode should be provide enough information so a beginner can
+    complete all quests without using other information then whats in this app.
 
 Odd cases needed to be handled:
 
@@ -26,4 +34,25 @@ Prapor: No Offence
 #2 Case
 Ops:
  - Completing some quests, completes also others: Big customer?
+ - Trust regain: require completion of one of two quests
+ - Completing Big customer losses access to Trust Regain
+
+
+-------------------------
+Quest adding notes:
+Check first added quests for requirements
+ - all prapor
+ - 3 from Therapist
+
+Missing ones:
+ - Out of curiosity, missing id from Chemical - part 3
+ - Trust regain, missing id from Chemical - part 4
+
+
+No previous requirements for the quest: Postman Pat - Part 2 ????
+
+
+Make sure format for specific tings are the same:
+ - Wearing requirements, make sure that they are under requirements
+ - Found in raid is noted in the same way.
 

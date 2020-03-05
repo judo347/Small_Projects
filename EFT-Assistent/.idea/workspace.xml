@@ -15,14 +15,15 @@
     <session id="929126103">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,15 +46,15 @@
         <counts>
           <entry key="fxml" value="4" />
           <entry key="java" value="4184" />
-          <entry key="json" value="194" />
-          <entry key="todos" value="963" />
+          <entry key="json" value="1393" />
+          <entry key="todos" value="1645" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4184" />
-          <entry key="JSON" value="194" />
-          <entry key="PLAIN_TEXT" value="963" />
+          <entry key="JSON" value="1393" />
+          <entry key="PLAIN_TEXT" value="1645" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -64,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="561">
               <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -76,12 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/view/PrimarySceneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
+            <state relative-caret-position="3247">
               <caret line="205" column="29" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
-              <folding>
-                <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="e#1256#1257#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -89,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/model/MainModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="374">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
               <folding>
                 <element signature="e#386#387#0" expanded="true" />
                 <element signature="e#419#420#0" expanded="true" />
@@ -103,16 +100,16 @@
         <entry file="file://$PROJECT_DIR$/src/dk/model/TraderType.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/todos">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="629">
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -120,12 +117,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/view/QuestCardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+            <state relative-caret-position="1224">
+              <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2366#2367#0" expanded="true" />
-                <element signature="e#2435#2436#0" expanded="true" />
+                <element signature="e#2452#2453#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,7 +131,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
+            <state relative-caret-position="833">
               <caret line="55" column="49" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -146,21 +143,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/model/PlayerInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="323">
               <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding>
-                <element signature="e#2227#2228#0" expanded="true" />
-                <element signature="e#2253#2254#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="364" column="17" selection-start-line="364" selection-start-column="7" selection-end-line="364" selection-end-column="17" />
+            <state relative-caret-position="673">
+              <caret line="612" column="9" lean-forward="true" selection-start-line="612" selection-start-column="9" selection-end-line="612" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -176,6 +169,11 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Postman</find>
+      <find>Out of curiosity</find>
+      <find>white</find>
+    </findStrings>
     <dirStrings>
       <dir>E:\SourceTree\Small_Projects\EFT-Assistent\src\dk\data\mapLogos</dir>
     </dirStrings>
@@ -190,7 +188,6 @@
         <option value="$PROJECT_DIR$/src/dk/view/PaneAndController.java" />
         <option value="$PROJECT_DIR$/src/dk/model/Quest.java" />
         <option value="$PROJECT_DIR$/src/dk/model/QuestManager.java" />
-        <option value="$PROJECT_DIR$/src/dk/data/quests.json" />
         <option value="$PROJECT_DIR$/src/dk/model/quest/QuestLoader.java" />
         <option value="$PROJECT_DIR$/src/dk/model/quest/Quest.java" />
         <option value="$PROJECT_DIR$/src/dk/model/quest/QuestManager.java" />
@@ -201,6 +198,7 @@
         <option value="$PROJECT_DIR$/src/dk/view/QuestCardController.java" />
         <option value="$PROJECT_DIR$/src/dk/view/PrimarySceneController.java" />
         <option value="$PROJECT_DIR$/src/todos" />
+        <option value="$PROJECT_DIR$/src/dk/data/quests.json" />
       </list>
     </option>
   </component>
@@ -223,7 +221,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,6 +272,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -286,7 +284,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/SourceTree/Small_Projects/EFT-Assistent/src/dk/view/PrimarySceneController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583415683824" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583418086982" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -351,18 +349,19 @@
       <workItem from="1583335084665" duration="2373000" />
       <workItem from="1583358120857" duration="7510000" />
       <workItem from="1583389953156" duration="788000" />
-      <workItem from="1583406459478" duration="8018000" />
+      <workItem from="1583406459478" duration="8856000" />
+      <workItem from="1583428649859" duration="3051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21438000" />
+    <option name="totallyTimeSpent" value="25327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -371,7 +370,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -485,52 +484,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1891#1892#0" expanded="true" />
-            <element signature="e#1916#1917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="55" column="49" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="364" column="17" selection-start-line="364" selection-start-column="7" selection-end-line="364" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/model/PlayerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#2227#2228#0" expanded="true" />
-            <element signature="e#2253#2254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/model/TraderType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="561">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -538,22 +497,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/view/QuestCardController.java">
+    <entry file="file://$PROJECT_DIR$/src/dk/view/PrimarySceneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="87" column="30" lean-forward="true" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2366#2367#0" expanded="true" />
-            <element signature="e#2435#2436#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3247">
+          <caret line="205" column="29" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/model/MainModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="374">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
             <element signature="e#386#387#0" expanded="true" />
             <element signature="e#419#420#0" expanded="true" />
@@ -561,21 +515,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/view/PrimarySceneController.java">
+    <entry file="file://$PROJECT_DIR$/src/dk/model/TraderType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="205" column="29" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
+        <state relative-caret-position="102">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/view/QuestCardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="87" column="30" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
           <folding>
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2366#2367#0" expanded="true" />
+            <element signature="e#2452#2453#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/model/quest/QuestManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/model/PlayerInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/todos">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="629">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="612" column="9" lean-forward="true" selection-start-line="612" selection-start-column="9" selection-end-line="612" selection-end-column="9" />
         </state>
       </provider>
     </entry>

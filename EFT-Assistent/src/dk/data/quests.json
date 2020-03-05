@@ -230,6 +230,8 @@
       "maps": [ "Customs" ],
       "objectives": [{
         "obj": "Mark white van, east, big white warehouse, inside"
+      }, {
+        "obj": "Extract"
 		}],
       "requirements": [ "1x MS2000 Marker" ]
     },
@@ -368,6 +370,248 @@
         "obj": "2-story dorm, 206, go into room"
 		}],
       "requirements": [ "Key: Dorm room 206" ]
+    },
+    {
+      "name": "Operation Aquarius - Part 2",
+      "giver": "Therapist",
+      "req_level": 6,
+      "id": 27,
+      "req_quests": [ 26 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "15x Kill Scav"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Painkiller",
+      "giver": "Therapist",
+      "req_level": 8,
+      "id": 28,
+      "req_quests": [ 25 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "5x Hand-in \"Morphine\" (found in raid)"
+      }],
+      "requirements": [ "Key: Dorm room 206" ]
+    },
+    {
+      "name": "Pharmacist",
+      "giver": "Therapist",
+      "req_level": 10,
+      "id": 29,
+      "req_quests": [ 28 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "2-story dorms, first floor, 114, ontop of safe, \"Carbon case\""
+      }],
+      "requirements": [ "Key: Dorm room 114" ]
+    },
+    {
+      "name": "Supply plans",
+      "giver": "Therapist",
+      "req_level": 13,
+      "id": 30,
+      "req_quests": [ 29 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "Saw mill, south end, cabin, under bed, \"Secure case\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "General wares",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 31,
+      "req_quests": [ 29 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "15x hand-in \"cans of meat (Tushonka)\" (found in raid)"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Car repair",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 32,
+      "req_quests": [ 29 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "4x hand-in \"car batteries\" (found in raid)"
+      }, {
+        "obj": "8x hand-in \"spark plug\" (found in raid)"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Health Care Privacy - Part 1",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 33,
+      "req_quests": [ 29 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Mark ambulance",
+        "subs": ["North-east, near tunnel", "North-east, near tunnel", "main entrance, resort area" ]
+      }, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "3x \"MS2000 marker\"" ]
+    },
+    {
+      "name": "Health Care Privacy - Part 2",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 34,
+      "req_quests": [ 33 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Resort, west wing, 306, windowsill by chair, case"
+      }, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "Key: West wing room 306" ]
+    },
+    {
+      "name": "Health Care Privacy - Part 3",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 35,
+      "req_quests": [ 34 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "West beach, edge of water, minivan, \"Blood sample\""
+      }, {
+        "obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Health Care Privacy - Part 4",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 36,
+      "req_quests": [ 35 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Health skill level 4"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Health Care Privacy - Part 5",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 37,
+      "req_quests": [ 36 ],
+      "maps": [ "Factory" ],
+      "objectives": [{
+        "obj": "Nighttime, office area, top floor, middle, breach room, 3x place \"Gunpowder \"Kite\"\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Postman Pat - Part 2",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 38,
+      "req_quests": [ ],
+      "maps": [ "Factory" ],
+      "objectives": [{
+        "obj": "Find \"lettter\" on body, south-east, concrete hut"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Out of curiosity",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 39,
+      "req_quests": [ ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "Mark white van, east, big white warehouse, inside"
+      }, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "1x MS2000 Marker" ]
+    },
+    {
+      "name": "Trust regain",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 40,
+      "req_quests": [ 16 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in keys",
+        "subs": ["Dorm room 303", "ZB-014", "Military base checkpoint key", "The key to the gas station storage room" ]
+      }],
+      "requirements": [ "1x MS2000 Marker" ]
+    },
+    {
+      "name": "Hippocratic Vow",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 41,
+      "req_quests": [ ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in 500 dollars"
+      }],
+      "requirements": [ "Complete quest: Stirrup", "Complete quest: Car repair", "Have less than 0.6 rep with Therapist" ]
+    },
+    {
+      "name": "Private clinic",
+      "giver": "Therapist",
+      "req_level": 30,
+      "id": 42,
+      "req_quests": [ 36 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "3x hand-in \"Ophthalmoscopes\""
+      }, {
+        "obj": "3x hand-in \"LEDX Skin Transilluminators\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Athlete",
+      "giver": "Therapist",
+      "req_level": 30,
+      "id": 43,
+      "req_quests": [ 36 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Level 10 \"Health skill\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Decontamination service",
+      "giver": "Therapist",
+      "req_level": 30,
+      "id": 44,
+      "req_quests": [ 37, 42 ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "30x Kill scav at less range than 60m"
+      }],
+      "requirements": [ "Must be wearing: \"Respirator\"", "Must be wearing: \"Module-3M bodyarmour\"" ]
+    },
+    {
+      "name": "An apple a day - keeps the doctor away",
+      "giver": "Therapist",
+      "req_level": 30,
+      "id": 45,
+      "req_quests": [ 35 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in 400.000 roubles"
+      }],
+      "requirements": [ ]
     }
   ]
 }
