@@ -65,9 +65,7 @@ public class QuestCardController {
             vbox_requirements.getChildren().add(label);
         }
 
-        System.out.println("Debug");
-
-        //TODO Objectives
+        //Objectives
         for(QuestObjectives qo : quest.getObjectives()){
             Label obj_label = new Label("  " + qo.getObjective());
             vbox_objectives.getChildren().add(obj_label);

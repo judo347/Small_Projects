@@ -19,14 +19,42 @@ public class JSONParserHelper {
     private static final String questsDataPostfix = "\\quests.json";
     private static final String saveDataPostfix = "\\saveData.json";
 
+    private static final int numberOfSaveSlots = 2;
+
     public JSONObject getAllQuests(){
         return getJSONFromFile(questsDataPostfix);
+    }
+
+    public boolean SaveData(int saveSlotId, ArrayList<Quest> completedQuests, PlayerInfo playerInfo){
+
+        if(saveSlotId > numberOfSaveSlots-1)
+            return false;
+
+        JSONObject rootNodeSavesJSON = getJSONFromFile(saveDataPostfix);
+        JSONArray saveSlots = rootNodeSavesJSON.getJSONArray("saves");
+        JSONObject saveSlotJSONObject = saveSlots.getJSONObject(saveSlotId);
+        JSONObject playerInfoJSONObject = saveSlotJSONObject.getJSONObject("player_info");
+        JSONArray completedQuestIdsJSONArray = saveSlotJSONObject.getJSONArray("quests_completed");
+        JSONObject loyaltyLevelJSONObject = playerInfoJSONObject.getJSONObject("loyaltyLevel");
+
+        while(completedQuestIdsJSONArray.length() > 0)
+            completedQuestIdsJSONArray.remove(0);
+        for(Quest quest : completedQuests){
+            completedQuestIdsJSONArray.put(quest.getId());
+        }
+
+        playerInfoJSONObject.put("player_level", playerInfo.getPlayerLevel());
+
+        for(TraderType traderType : TraderType.values()){
+            loyaltyLevelJSONObject.put(traderType.getName().toLowerCase(), playerInfo.getLoyaltyLevelFromTrader(traderType));
+        }
+
+        return saveJSONToSaveDataFile(rootNodeSavesJSON);
     }
 
     public SaveData loadSlot(int slotNumber){
 
         JSONObject rootNodeSavesJSON = getJSONFromFile(saveDataPostfix);
-
         JSONArray saveSlots = rootNodeSavesJSON.getJSONArray("saves");
 
         if(slotNumber > saveSlots.length())
@@ -80,6 +108,22 @@ public class JSONParserHelper {
         }
 
         throw new IllegalArgumentException();
+    }
+
+    private boolean saveJSONToSaveDataFile(JSONObject rootNode){
+        try {
+            String canonicalPath = new File(dataFolderPath).getAbsolutePath();
+            File file = new File(canonicalPath + saveDataPostfix);
+            FileUtils.writeStringToFile(file, rootNode.toString(), false);
+
+            //Convert string to JSON object
+            return true;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     private ArrayList<String> parseJSONArray(JSONArray JArray){
