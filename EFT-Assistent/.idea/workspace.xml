@@ -15,7 +15,7 @@
     <session id="929126103">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.44" value="1" />
@@ -46,15 +46,15 @@
         <counts>
           <entry key="fxml" value="4" />
           <entry key="java" value="7582" />
-          <entry key="json" value="1756" />
-          <entry key="todos" value="2360" />
+          <entry key="json" value="3369" />
+          <entry key="todos" value="2608" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="7582" />
-          <entry key="JSON" value="1756" />
-          <entry key="PLAIN_TEXT" value="2360" />
+          <entry key="JSON" value="3369" />
+          <entry key="PLAIN_TEXT" value="2608" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -118,11 +118,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/todos">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -164,11 +164,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="404">
-                  <caret line="614" column="25" lean-forward="true" selection-start-line="614" selection-start-column="25" selection-end-line="614" selection-end-column="25" />
+                <state relative-caret-position="339">
+                  <caret line="825" column="10" lean-forward="true" selection-start-line="825" selection-start-column="10" selection-end-line="825" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -229,6 +229,8 @@
       <find>Out of curiosity</find>
       <find>white</find>
       <find>deb</find>
+      <find>white</find>
+      <find>big cus</find>
     </findStrings>
     <dirStrings>
       <dir>E:\SourceTree\Small_Projects\EFT-Assistent\src\dk\data\mapLogos</dir>
@@ -256,8 +258,8 @@
         <option value="$PROJECT_DIR$/src/dk/model/MainModel.java" />
         <option value="$PROJECT_DIR$/src/dk/view/QuestCardController.java" />
         <option value="$PROJECT_DIR$/src/dk/view/PrimarySceneController.java" />
-        <option value="$PROJECT_DIR$/src/todos" />
         <option value="$PROJECT_DIR$/src/dk/data/quests.json" />
+        <option value="$PROJECT_DIR$/src/todos" />
       </list>
     </option>
   </component>
@@ -343,7 +345,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/SourceTree/Small_Projects/EFT-Assistent/src/dk/view/PrimarySceneController.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583446690428" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583451109235" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-11.0.2/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -409,18 +411,18 @@
       <workItem from="1583358120857" duration="7510000" />
       <workItem from="1583389953156" duration="788000" />
       <workItem from="1583406459478" duration="8856000" />
-      <workItem from="1583428649859" duration="15905000" />
+      <workItem from="1583428649859" duration="19595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38181000" />
+    <option name="totallyTimeSpent" value="41871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120469086" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.120469086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -429,7 +431,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3438178" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3438178" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -640,16 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/model/MainModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -689,6 +681,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/ApplicationMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/data/saveData.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -696,17 +698,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todos">
+    <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="339">
+          <caret line="825" column="10" lean-forward="true" selection-start-line="825" selection-start-column="10" selection-end-line="825" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/data/quests.json">
+    <entry file="file://$PROJECT_DIR$/src/todos">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="614" column="25" lean-forward="true" selection-start-line="614" selection-start-column="25" selection-end-line="614" selection-end-column="25" />
+        <state relative-caret-position="102">
+          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
         </state>
       </provider>
     </entry>

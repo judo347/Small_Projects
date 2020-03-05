@@ -3,6 +3,7 @@ model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectiv
 
 
 Next todo: odd cases and rest of quests
+        - next quest: skier: Informed means armed
      todo: fix load/save bugs
 
 Bugs:
@@ -43,12 +44,16 @@ Prapor: Big customer
 Prapor: No Offence
 - req_quests
  - Chemical - Part 4 or Out of curiosity
+    - Just add one, and it should be fine
 
 #2 Case
 Ops:
  - Completing some quests, completes also others: Big customer?
+    - Add special case
  - Trust regain: require completion of one of two quests
+    - Just add one or both of them, should be fine
  - Completing Big customer losses access to Trust Regain
+    - Add special case
 
 
 -------------------------
@@ -67,5 +72,6 @@ No previous requirements for the quest: Postman Pat - Part 2 ????
 
 Make sure format for specific tings are the same:
  - Wearing requirements, make sure that they are under requirements
+   - Maybe not - requirements are maybe only for items required for aiding in completion?
  - Found in raid is noted in the same way.
 

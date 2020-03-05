@@ -613,6 +613,220 @@
         "obj": "Hand-in 400.000 roubles"
       }],
       "requirements": [ ]
+    },
+
+
+
+
+
+
+    {
+      "name": "Supplier",
+      "giver": "Skier",
+      "req_level": 5,
+      "id": 46,
+      "req_quests": [ ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "4x hand-in \"Module-3M bodyarmor\""
+      }, {
+        "obj": "4x hand-in \"TOZ-106 bolt-action shotgun\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Extortionist",
+      "giver": "Skier",
+      "req_level": 7,
+      "id": 47,
+      "req_quests": [ 46 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "Between old and new gas, small white hut, under jacket on floor, \"Docs 0048\""
+      }],
+      "requirements": [ "Key: \"Unknown key\"" ]
+    },
+    {
+      "name": "The Extortionist",
+      "giver": "Skier",
+      "req_level": 8,
+      "id": 48,
+      "req_quests": [ 47 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "4x Kill PMC using pistol"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "What's on the flash drive?",
+      "giver": "Skier",
+      "req_level": 8,
+      "id": 49,
+      "req_quests": [ 47 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "2x hand-in \"USB flash drives\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Golden swag",
+      "giver": "Skier",
+      "req_level": 8,
+      "id": 50,
+      "req_quests": [ 49 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "3-story dorms, 303, on table, take Zibbo lighter"
+      }, {
+        "obj": "South of RED, parking, white hut, place Zibbo lighter"
+      }],
+      "requirements": [ "Key: \"Trailer park cabin key\" (Initial equipment)", "Key: \"Dorm room 303 key\""]
+    },
+    {
+      "name": "Chemical - Part 1",
+      "giver": "Skier",
+      "req_level": 10,
+      "id": 51,
+      "req_quests": [ 50 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "South-east, between bunkers, train cart, south-west corner, take case"
+      }, {
+        "obj": "hand-in \"Dorm room 220 Key\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Chemical - Part 2",
+      "giver": "Skier",
+      "req_level": 10,
+      "id": 52,
+      "req_quests": [ 51 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "3-story dorms, 220, table, side of laptop, take usb"
+      }, {
+        "obj": "3-story dorms, 220, shelves near door, top shelve between binders, take letter"
+      }],
+      "requirements": [ "Key: \"Dorm room 220 Key\" (Initial equipment)" ]
+    },
+    {
+      "name": "Chemical - Part 3",
+      "giver": "Skier",
+      "req_level": 11,
+      "id": 53,
+      "req_quests": [ 52 ],
+      "maps": [ "Factory" ],
+      "objectives": [{
+        "obj": "office area, top floor, middle, breach room, filing cabinet, take syringe"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Chemical - Part 4",
+      "giver": "Skier",
+      "req_level": 11,
+      "id": 54,
+      "req_quests": [ 53 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "Mark white van, east, big white warehouse, inside"
+      }, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "1x MS2000 Marker" ]
+    },
+    {
+      "name": "Loyalty buyout",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 55,
+      "req_quests": [ 16 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "hand-in 1 mil rubles"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Friend from the West - Part 1",
+      "giver": "Skier",
+      "req_level": 9,
+      "id": 56,
+      "req_quests": [ 50 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "5x Kill USEC"
+      }, {
+        "obj": "2x Hand-in \"MBSS Backpack\""
+      }, {
+        "obj": "1x Hand-in \"AVS vest\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Friend from the West - Part 2",
+      "giver": "Skier",
+      "req_level": 9,
+      "id": 57,
+      "req_quests": [ 56 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "hand-in 6000 dollars"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "\"Vitamins\" - Part 1",
+      "giver": "Skier",
+      "req_level": 22,
+      "id": 58,
+      "req_quests": [ 53 ],
+      "maps": [ "Shoreline", "Interchange" ],
+      "objectives": [{
+        "obj": "Shoreline: resort, west wing, 112, fridge, take \"Chemical container\""
+      }, {
+        "obj": "Interchange: main-floor, Emercom, middle, table, round box, take \"Chemical container\""
+      }, {
+        "obj": "Interchange: main-floor, Mantis, back right, table, round tin, take \"Chemical container\""
+      }],
+      "requirements": [ "Key: \"Office 112 West wing\"", "Key: \"EMERCOM medical unit\"" ]
+    },
+    {
+      "name": "\"Vitamins\" - Part 2",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 59,
+      "req_quests": [ 58 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "5x Hand-in \"Respirator\" (found in raid)"
+      }, {
+        "obj": "5x Hand-in \"Medical bloodset\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Lend lease - Part 1",
+      "giver": "Skier",
+      "req_level": 25,
+      "id": 60,
+      "req_quests": [ 57 ],
+      "maps": [ "Shoreline", "Woods" ],
+      "objectives": [{
+        "obj": "Woods: south-east, white hut at road, SUV, front seat, take \"Motor controller\""
+      }, {
+        "obj": "Woods: saw mill, south-east, pickup truck, black box, take \"Gyroscope\""
+      }, {
+        "obj": "Shoreline: west, at side road near Drone, in destroyed wooden box, take \"Controller\""
+      }, {
+        "obj": "Shoreline: resort, east wing, 306, balcony, cardboard box, take \"Controller\""
+      }, {
+        "obj": "Shoreline: resort, west wing, 216, metal closet near entry door, take \"Controller\""
+      }],
+      "requirements": [ "Key: \"West wing room 216\"", "Key: \"East wing room 306\" or \"East wing room 308\"" ]
     }
   ]
 }
