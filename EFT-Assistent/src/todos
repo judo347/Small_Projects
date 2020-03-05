@@ -1,21 +1,19 @@
 model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
 
-Quests unlocks other quests, system for checking this?
-
-Data:Quests:
-Privious quest requirements
- - Give quest ids to make this easier: wiki quest id + quest giver name?
-
-Ops:
- - Completing some quests, completes also others: Big customer?
-
-Remove "Requirements" from visuals if non is existing.
-
-Add PlayerInfo to visuals - give ability to change them
- - Make UI update when changed.
 
 
+Todos:
+- Add the rest of the quests
+- Trader LL limit to max
+- Regret level increase feature
+- Improve visuals
+ - Remove "Requirements" from visuals if non is existing.
+
+
+Odd cases needed to be handled:
+
+#1 Case
 Prapor: Big customer
 - req_quests
  - Chemical - Part 3
@@ -23,15 +21,7 @@ Prapor: No Offence
 - req_quests
  - Chemical - Part 4 or Out of curiosity
 
-When a quest is completed, re-check prerequisite quest requirements for all locked quests
-
-Next todo: re-adding of quests to visual component when needed. And make sure that the questManager is re-evaluating just before each time.
- - Levels increase
-
-
-
-Todos:
-- Trader LL limit to max
-- Regret level increase feature
-
+#2 Case
+Ops:
+ - Completing some quests, completes also others: Big customer?
 
