@@ -16,6 +16,7 @@ Todos:
 - Move QuestLoader to data folder, and into JSONParserHelper, use common functions
 - Maybe rework refreshing of model and visuals
   - Maybe just go through all code and cleanup code and structure
+- Display of progression... X/totalNumberOfQuests
 
 
 Todos (not so important ATM)(Listed in priority, first most important):
@@ -28,13 +29,17 @@ Visual improvements:
 - Remove "Requirements" from visuals if non is existing.
 
 Future Work:
+- Mouse over questsCards for pop-up tips or maps?
 - Found in raid items needed for future quests could be displayed and crossed out when found
 - In a given state: Display weights/priority for which quests makes sense completing first
+  - bundling multiple quests for same map
+  - Punisher series
 - Beginner and advanced mode
   - Advanced mode should display less text and require more in-game and quest knowledge
   - Beginner mode should be provide enough information so a beginner can
     complete all quests without using other information then whats in this app.
 
+--------------------------------------------------
 Odd cases needed to be handled:
 
 #1 Case
@@ -45,6 +50,8 @@ Prapor: No Offence
 - req_quests
  - Chemical - Part 4 or Out of curiosity
     - Just add one, and it should be fine
+	
+Supply plans and Kind of sabotage completes each other
 
 #2 Case
 Ops:
@@ -65,6 +72,7 @@ Check first added quests for requirements
 Missing ones:
  - Out of curiosity, missing id from Chemical - part 3
  - Trust regain, missing id from Chemical - part 4
+ - Peacekeeping mission, missing reg id quest: Lend lease - Part 2
 
 
 No previous requirements for the quest: Postman Pat - Part 2 ????
