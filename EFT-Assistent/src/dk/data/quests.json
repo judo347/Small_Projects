@@ -1308,6 +1308,406 @@
         "obj": "Hand-in 50.000 euro"
       }],
       "requirements": [ ]
+    },
+	
+	
+	
+	
+	
+	
+	{
+      "name": "Gunsmith - Part 1",
+      "giver": "Mechanic",
+      "req_level": 10,
+      "id": 93,
+      "req_quests": [ ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"MP-133\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 2",
+      "giver": "Mechanic",
+      "req_level": 11,
+      "id": 94,
+      "req_quests": [ 93 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"AKS-74U\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 3",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 95,
+      "req_quests": [ 94 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"MP5\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 4",
+      "giver": "Mechanic",
+      "req_level": 15,
+      "id": 96,
+      "req_quests": [ 95 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"M4A1\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 5",
+      "giver": "Mechanic",
+      "req_level": 17,
+      "id": 97,
+      "req_quests": [ 96 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"DVL-10\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 6",
+      "giver": "Mechanic",
+      "req_level": 18,
+      "id": 98,
+      "req_quests": [ 97 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"R11 RSASS\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 7",
+      "giver": "Mechanic",
+      "req_level": 19,
+      "id": 99,
+      "req_quests": [ 98 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"Remington Model 870\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 8",
+      "giver": "Mechanic",
+      "req_level": 19,
+      "id": 100,
+      "req_quests": [ 99 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"AKM\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 9",
+      "giver": "Mechanic",
+      "req_level": 20,
+      "id": 101,
+      "req_quests": [ 100 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"AKS-74N\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 10",
+      "giver": "Mechanic",
+      "req_level": 20,
+      "id": 102,
+      "req_quests": [ 101 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"AK-105\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 11",
+      "giver": "Mechanic",
+      "req_level": 20,
+      "id": 103,
+      "req_quests": [ 102 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"AS VAL\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 12",
+      "giver": "Mechanic",
+      "req_level": 23,
+      "id": 104,
+      "req_quests": [ 103 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"AK-102\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 13",
+      "giver": "Mechanic",
+      "req_level": 25,
+      "id": 105,
+      "req_quests": [ 104 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"SIG MPX\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 14",
+      "giver": "Mechanic",
+      "req_level": 27,
+      "id": 106,
+      "req_quests": [ 105 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"AKMN\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 15",
+      "giver": "Mechanic",
+      "req_level": 29,
+      "id": 107,
+      "req_quests": [ 106 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"M1A\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gunsmith - Part 16",
+      "giver": "Mechanic",
+      "req_level": 35,
+      "id": 108,
+      "req_quests": [ 107 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"M4A1\", that comply with specifications"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Farming - Part 1",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 109,
+      "req_quests": [ 94 ],
+      "maps": [ "Factory" ],
+      "objectives": [{
+        "obj": "Fix control boards:",
+		"subs": [ "Glass hall, middle, red light", 
+				"North-east, Room behind glass wall, corner, red light" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "2x \"A set of tools\"" ]
+    },
+	{
+      "name": "Farming - Part 2",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 110,
+      "req_quests": [ 109 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "3x \"Powercord\"", 
+				"5x \"T-Shaped Plug\"",
+				"3x \"Printed circuit board\"" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "2x \"A set of tools\"" ]
+    },
+	{
+      "name": "Farming - Part 3",
+      "giver": "Mechanic",
+      "req_level": 14,
+      "id": 111,
+      "req_quests": [ 110 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "West, big RED, office, end of hall room, cardboard box under shelves"
+      }],
+      "requirements": [ "Key: \"Customs office key\"" ]
+    },
+	{
+      "name": "Farming - Part 4",
+      "giver": "Mechanic",
+      "req_level": 14,
+      "id": 112,
+      "req_quests": [ 111 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "7x \"Graphics card\"", 
+				"7x \"CPU fan\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Signal - Part 1",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 113,
+      "req_quests": [ 94 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Find antenna:", 
+		"subs": [ "Resort, west wing, roof, east", 
+				"Radar, north-west" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Signal - Part 2",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 114,
+      "req_quests": [ 94 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Hand-in (found in raid):", 
+		"subs": [ "3 \"PC CPU\"", 
+				"3x \"Rechargeable battery\"", 
+				"3x \"Printed circuit board\"", 
+				"3x \"Broken GPhone\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Signal - Part 3",
+      "giver": "Mechanic",
+      "req_level": 15,
+      "id": 115,
+      "req_quests": [ 114 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Place \"Signal Jammer\":", 
+		"subs": [ "Resort, west wing, roof, east", 
+				"Radar, north-west", 
+				"East, Tower" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "3x \"Signal Jammer\"" ]
+    },
+	{
+      "name": "Signal - Part 4",
+      "giver": "Mechanic",
+      "req_level": 15,
+      "id": 116,
+      "req_quests": [ 115 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Increase memory skill level to 4"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Bad habit",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 117,
+      "req_quests": [ 110 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in following cigarettes(found in raid):", 
+		"subs": [ "3x \"Malboro\"", 
+				"3x \"Strike\"", 
+				"3x \"Wilston\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Scout",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 118,
+      "req_quests": [ 114 ],
+      "maps": [ "Factory"],
+      "objectives": [{
+        "obj": "Find the following exctract areas:", 
+		"subs": [ "1: north-west, Gate 3", 
+				"2: south-west, Gate 0", 
+				"3: north-east, underground, Cellars" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Insider",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 119,
+      "req_quests": [ 113 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Reach level 3 loyalty with Prapor" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Psycho Sniper",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 120,
+      "req_quests": [ 89 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Upgrade the Sniper skill to level 9" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Import",
+      "giver": "Mechanic",
+      "req_level": 35,
+      "id": 121,
+      "req_quests": [ 112 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "2x \"UHF RFID Readers\"", 
+				"2x \"VPX Flash Storage Modules\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Signal - Part 2",
+      "giver": "Mechanic",
+      "req_level": 12,
+      "id": 114,
+      "req_quests": [ 94 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Hand-in (found in raid):", 
+		"subs": [ "3 \"PC CPU\"", 
+				"3x \"Rechargeable battery\"", 
+				"3x \"Printed circuit board\"", 
+				"3x \"Broken GPhone\"" ]
+      }],
+      "requirements": [ ]
     }
   ]
 }
