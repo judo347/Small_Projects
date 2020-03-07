@@ -1,27 +1,25 @@
 package dk.model.quest;
 
+import dk.data.JSONParserHelper;
 import dk.model.PlayerInfo;
 import dk.model.TraderType;
-import dk.model.quest.Quest;
-import dk.view.QuestInstantiator;
-import javafx.beans.property.IntegerProperty;
 
 import java.util.ArrayList;
 
 public class QuestManager {
 
-    private QuestInstantiator qi = new QuestInstantiator();
+    private ArrayList<Quest> allQuests;
 
     private ArrayList<Quest> completed = new ArrayList<>();
     private ArrayList<Quest> activeQuests = new ArrayList<>();
     private ArrayList<Quest> lockedQuests = new ArrayList<>();
 
     public QuestManager() {
-
+        allQuests = loadAllQuests();
     }
 
     public void loadQuests(PlayerInfo playerInfo){
-        for(Quest quest : qi.allQuests){
+        for(Quest quest : new ArrayList<>(allQuests)){
             addQuest(quest, playerInfo);
         }
     }
@@ -90,8 +88,7 @@ public class QuestManager {
 
 
     public void reloadFromCompletedQuests(ArrayList<Integer> completedQuestIds, PlayerInfo playerInfo){
-        QuestLoader ql = new QuestLoader();
-        ArrayList<Quest> allQuests = ql.allQuest;
+        ArrayList<Quest> allQuests = loadAllQuests();
 
         //Remove completed quests
         for(Quest quest : new ArrayList<>(allQuests))
@@ -107,8 +104,9 @@ public class QuestManager {
         doPrerequisiteQuestCheckForLocked(); //TODO Should run until nothing happens??
     }
 
-    public QuestInstantiator getQi() {
-        return qi;
+    public ArrayList<Quest> loadAllQuests(){
+        JSONParserHelper jph = new JSONParserHelper();
+        return jph.getAllQuestsFromFile();
     }
 
     public ArrayList<Quest> getActiveQuests() {
