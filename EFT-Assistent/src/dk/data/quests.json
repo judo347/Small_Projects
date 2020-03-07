@@ -1589,7 +1589,7 @@
       "maps": [ "Shoreline" ],
       "objectives": [{
         "obj": "Hand-in (found in raid):", 
-		"subs": [ "3 \"PC CPU\"", 
+		"subs": [ "3x \"PC CPU\"",
 				"3x \"Rechargeable battery\"", 
 				"3x \"Printed circuit board\"", 
 				"3x \"Broken GPhone\"" ]
@@ -1663,7 +1663,7 @@
       "req_quests": [ 113 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Reach level 3 loyalty with Prapor" ]
+        "obj": "Reach level 3 loyalty with Prapor"
       }],
       "requirements": [ ]
     },
@@ -1675,7 +1675,7 @@
       "req_quests": [ 89 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Upgrade the Sniper skill to level 9" ]
+        "obj": "Upgrade the Sniper skill to level 9"
       }],
       "requirements": [ ]
     },
@@ -1694,18 +1694,95 @@
       "requirements": [ ]
     },
 	{
-      "name": "Signal - Part 2",
+      "name": "Fertilizers",
+      "giver": "Mechanic",
+      "req_level": 30,
+      "id": 122,
+      "req_quests": [ 112 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:",
+		"subs": [ "5x \"Wires\"",
+				"5x \"Capacitors\"" ]
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "A Shooter Born in Heaven",
       "giver": "Mechanic",
       "req_level": 12,
-      "id": 114,
-      "req_quests": [ 94 ],
-      "maps": [ "Shoreline" ],
+      "id": 123,
+      "req_quests": [ 114 ],
+      "maps": [ "Woods", "Interchange", "Shoreline", "Customs"],
       "objectives": [{
-        "obj": "Hand-in (found in raid):", 
-		"subs": [ "3 \"PC CPU\"", 
-				"3x \"Rechargeable battery\"", 
-				"3x \"Printed circuit board\"", 
-				"3x \"Broken GPhone\"" ]
+        "obj": "Kill with headshots at more than 100m distance:",
+        "subs": [ "Woods: 3x PMC",
+          "Interchange: 3x PMC",
+          "Shoreline: 3x PMC",
+          "Customs: 3x PMC" ]
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Introduction",
+      "giver": "Mechanic",
+      "req_level": 9,
+      "id": 124,
+      "req_quests": [ 93 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "West of saw mill, east of airplane, under jaeger's camp, take paper"
+      }],
+      "requirements": [ ]
+    },
+
+
+
+
+
+
+
+    {
+      "name": "Only business",
+      "giver": "Ragman",
+      "req_level": 15,
+      "id": 125,
+      "req_quests": [ ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Reach level 2 loyalty with Ragman"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Make ULTRA Great Again",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 126,
+      "req_quests": [ 125 ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "25x Kill Scav"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Big sale",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 127,
+      "req_quests": [ 125 ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "Checkout the following stores:",
+        "subs": [
+          "AVOKADO",
+          "KOSTIN",
+          "tRend",
+          "DINO CLOTHES",
+          "TOP BRAND" ]
+        },{
+        "obj": "Extract"
       }],
       "requirements": [ ]
     }
