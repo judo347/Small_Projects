@@ -416,7 +416,7 @@
       "req_quests": [ 29 ],
       "maps": [ "Woods" ],
       "objectives": [{
-        "obj": "Saw mill, south end, cabin, under bed, \"Secure case\""
+        "obj": "Saw mill, south end, south cabin, under bed, \"Secure case\""
       }],
       "requirements": [ ]
     },
@@ -834,19 +834,480 @@
       "req_level": 24,
       "id": 61,
       "req_quests": [ 57 ],
-      "maps": [ "Interchange" "Woods" "Customs" ],
+      "maps": [ "Interchange", "Woods", "Customs" ],
       "objectives": [{
-        "obj": "Woods: south-east, white hut at road, SUV, front seat, take \"Motor controller\""
-      }, {
-        "obj": "Woods: saw mill, south-east, pickup truck, black box, take \"Gyroscope\""
-      }, {
-        "obj": "Shoreline: west, at side road near Drone, in destroyed wooden box, take \"Controller\""
-      }, {
-        "obj": "Shoreline: resort, east wing, 306, balcony, cardboard box, take \"Controller\""
-      }, {
-        "obj": "Shoreline: resort, west wing, 216, metal closet near entry door, take \"Controller\""
+        "obj": "3x Install \"WIFI camera\"",
+		"subs": [ "Interchange: main floor, Brutal store, place on wood platform looking at Kiba", 
+				"Woods: saw mill, north, wood pile near water, place", 
+				"Customs: Road to port, bush near blue containers, place" ]
       }],
       "requirements": [ "Key: \"West wing room 216\"", "Key: \"East wing room 306\" or \"East wing room 308\"" ]
+    },
+    {
+      "name": "Chumming",
+      "giver": "Skier",
+      "req_level": 27,
+      "id": 62,
+      "req_quests": [ 61 ],
+      "maps": [ "Interchange", "Woods", "Customs" ],
+      "objectives": [{
+        "obj": "3x stash \"gold chains\"",
+		"subs": [ "3x Interchange: main floor, Generic store, place on metal bed", 
+				"Woods: saw mill, south, middle cabin, on bed, on book, place", 
+				"Customs: 3-story stors, 3rd floor, kitchen, place in microwave" ]
+      }],
+      "requirements": [ "Key: \"West wing room 216\"", "Key: \"East wing room 306\" or \"East wing room 308\"" ]
+    },
+    {
+      "name": "Kind of sabotage",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 63,
+      "req_quests": [ 29 ],
+      "maps": [ "Woods"],
+      "objectives": [{
+        "obj": "Saw mill, south end, south cabin, under bed, \"Secure case\""
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Silent caliber",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 64,
+      "req_quests": [ 62 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Kill with suppressed 12ga shutgun",
+		"subs": [ "20x Scav", "10x PMC" ]
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Flint",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 65,
+      "req_quests": [ 62 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Level 8 in Stress Resistance skill"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Bullshit",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 66,
+      "req_quests": [ 62 ],
+      "maps": [ "Customs"],
+      "objectives": [{
+		"obj": "During the entire raid, you are not allowed to shoot scavs or bosses"
+		}, {
+        "obj": "3-story dorms, top floor, pile of trash opposie of stairs, place items",
+		"subs": [ "1x \"False flash drive\"", "1x \"Roler submariner gold wrist watch\"", "1x \"SV-98\"" ]
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Setup",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 67,
+      "req_quests": [ 66 ],
+      "maps": [ "Customs"],
+      "objectives": [{
+        "obj": "15x Kill PMC while wearing/using following items",
+		"subs": [ "\"Ushanka ear-flap cap\"", "\"Scav Vest\"", "\"MP-133\" or \"MP-153\"" ]
+      }],
+      "requirements": [ ]
+    },
+	
+	
+	
+	
+	
+	
+    {
+      "name": "Setup",
+      "giver": "Peacekeeper",
+      "req_level": 10,
+      "id": 68,
+      "req_quests": [ 57 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "Gas station, beach, broken wood boat at edge of water, place following items",
+		"subs": [ "\"Leatherman Multitool\"", "\"SV-98 bolt-action sniper rifle\"" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Tigr Safari",
+      "giver": "Peacekeeper",
+      "req_level": 10,
+      "id": 69,
+      "req_quests": [ 68 ],
+      "maps": [ "Customs"],
+      "objectives": [{
+        "obj": "3x Mark following Armored vehicle vehicle:",
+		"subs": [ "Military checkpoint, on road", "Military checkpoint, west, on road", "North-west outside of contruction, on road near bridge" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "3x MS2000 Marker" ]
+    },
+	{
+      "name": "Scrap Metal",
+      "giver": "Peacekeeper",
+      "req_level": 10,
+      "id": 70,
+      "req_quests": [ 69 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "3x Mark following T-90 tanks:",
+		"subs": [ "North, Rock passage, bunker", "West, middle of village, on road", "Between Power and Radar Tower" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "3x MS2000 Marker" ]
+    },
+	{
+      "name": "Eagle Eye",
+      "giver": "Peacekeeper",
+      "req_level": 11,
+      "id": 71,
+      "req_quests": [ 70 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "2x Find \"SAS disk\":",
+		"subs": [ "North, Rock passage, Drone crash", "East, between Radar Tower and Scout Tower, Drone crash" ]
+      }],
+      "requirements": [  ]
+    },
+	{
+      "name": "Humanitarian Supplies",
+      "giver": "Peacekeeper",
+      "req_level": 11,
+      "id": 72,
+      "req_quests": [ 71 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+		"obj": "5x hand-in \"MRE ration pack\""
+		}, {
+		"obj": "10x Kill scav wearing \"MF-UNTAR armor vest\" and \"UNTAR helmet\""
+		}, {
+        "obj": "2x Mark following UN cargo trucks:",
+		"subs": [ "North-west, inside blue fence area", "Resort, north entrance" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "2x MS2000 Marker" ]
+    },
+	{
+      "name": "The Cult - Part 1",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 73,
+      "req_quests": [ 72 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "North-west, Swamp area, church, follow blood trail to other house, body inside"
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The Cult - Part 2",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 74,
+      "req_quests": [ 73 ],
+      "maps": [ "Shoreline", "Customs", "Woods"],
+      "objectives": [{
+        "obj": "3x Mark the following ritual spots:",
+		"subs": [ "Customs: 3-story dorms, marked room", 
+			"Woods: east of saw mill, marked circle in forest", 
+			"Shoreline: resort, east wing, 321 (pig room)" ]
+      }],
+      "requirements": [ "3x MS2000 Marker", "Key: Marked key" ]
+    },
+    {
+      "name": "Spa Tour - Part 1",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 75,
+      "req_quests": [ 72 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "7x Kill Scav using 12ga shotgun (HEADSHOTS only)"
+        }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Spa Tour - Part 2",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 76,
+      "req_quests": [ 75 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "Mark following spots:",
+		"subs": [ "Resort, south, front entrance, helicopter area", 
+				"Resort, south, front entrance, east of helicopter area, dirt road" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "2x MS2000 Marker" ]
+    },
+	{
+      "name": "Spa Tour - Part 3",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 77,
+      "req_quests": [ 76 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "Hand-in the following items found in raid:",
+		"subs": [ "\"WD-40 100ml\"", 
+				"2x \"Clin wipers\"", 
+				"2x \"Corrugated hoses\"", 
+				"2x \"Ox bleach\"" ]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "2x MS2000 Marker" ]
+    },
+	{
+      "name": "Spa Tour - Part 4",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 78,
+      "req_quests": [ 77 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "Find the two generators:",
+		"subs": [ "Resort, west wing 219", 
+				"Resort, east wing 220"]
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ "\"West wing room 219 key\" or \"West wing room 220 key\"" ]
+    },
+	{
+      "name": "Spa Tour - Part 5",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 79,
+      "req_quests": [ 78 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in \"The key to the closed premises of the sanatorium\""
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Spa Tour - Part 6",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 80,
+      "req_quests": [ 79 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in 8000 dollars"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Spa Tour - Part 7",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 81,
+      "req_quests": [ 80 ],
+      "maps": [ "Shoreline"],
+      "objectives": [{
+        "obj": "Hand-in the following items found in raid:",
+		"subs": [ "4x \"Morphine injector\"", 
+				"2x \"Heat-exchange alkali surface washer\"", 
+				"2x \"Corrugated hoses\"", 
+				"2x \"propane tank\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Cargo X - Part 1",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 82,
+      "req_quests": [ 81 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Resort, east wing, 306, on chair, take laptop"
+      }],
+      "requirements": [ "\"East wing room 306 key\" or \"East wing room 308 key\"" ]
+    },
+	{
+      "name": "Cargo X - Part 2",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 83,
+      "req_quests": [ 82 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Resort, west wing, basement, hole at end of pool"
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Spa Tour - Part 7",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 83,
+      "req_quests": [ 60 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in the following items:",
+		"subs": [ "2x \"Military COFDM wireless Signal Transmitters\"", 
+				"3x \"Virtex programmable processors\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Wet Job - Part 1",
+      "giver": "Peacekeeper",
+      "req_level": 14,
+      "id": 84,
+      "req_quests": [ 83 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "10x Kill Scav using suppressed M4 or ADAR"
+		}, {
+        "obj": "The following suppressers does not count:",
+		"subs": [ "\"Thunder Beast Ultra 5\"", 
+				"\"Daniel Defense Wave QD\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Wet Job - Part 2",
+      "giver": "Peacekeeper",
+      "req_level": 14,
+      "id": 85,
+      "req_quests": [ 84 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "10x Kill Scav using suppressed M4 or ADAR"
+		}, {
+        "obj": "South-east, island, house"
+      }],
+      "requirements": [ "MS2000 Marker" ]
+    },
+	{
+      "name": "Wet Job - Part 3",
+      "giver": "Peacekeeper",
+      "req_level": 14,
+      "id": 86,
+      "req_quests": [ 85 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "South-west, road near water, east of island, yellow car east of bus"
+		}, {
+        "obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Wet Job - Part 4",
+      "giver": "Peacekeeper",
+      "req_level": 14,
+      "id": 87,
+      "req_quests": [ 86 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Resort, admin part (theatre wing), east-side, wanted office, middle room, corner of table, take flash drive"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Wet Job - Part 5",
+      "giver": "Peacekeeper",
+      "req_level": 14,
+      "id": 88,
+      "req_quests": [ 87 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Resort, east wing, room 328, ontop of PC"
+      }],
+      "requirements": [ "\"East wing room 328 key\" or \"Health resort utility room key\"" ]
+    },
+	{
+      "name": "Wet Job - Part 6",
+      "giver": "Peacekeeper",
+      "req_level": 14,
+      "id": 89,
+      "req_quests": [ 88 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Reach level 7 in Sniper rifle handling skill"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The guide",
+      "giver": "Peacekeeper",
+      "req_level": 0,
+      "id": 90,
+      "req_quests": [ 89 ],
+      "maps": [ "Interchange", "Shoreline", "Factory", "Labs", "Woods", "Customs", "Reserve" ],
+      "objectives": [{
+        "obj": "Interchange: Extract"
+		}, {
+        "obj": "Shoreline: Extract"
+		}, {
+        "obj": "Factory: Extract"
+		}, {
+        "obj": "Labs: Extract"
+		}, {
+        "obj": "Woods: Extract"
+		}, {
+        "obj": "Customs: Extract"
+		}, {
+        "obj": "Reserve: Extract"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Peacekeeping mission",
+      "giver": "Peacekeeper",
+      "req_level": 14,
+      "id": 91,
+      "req_quests": [ ],
+      "maps": [ "Woods", "Interchange", "Shoreline", "Customs" ],
+      "objectives": [{
+        "obj": "Get kills while wearing \"UNTAR helmet\", \"MF-UNTAR armor\", \"M4A1\"",
+		"subs": [ "Woods: x12 kill Scav", 
+				"Interchange: x12 kill Scav", 
+				"Shoreline: x12 kill Scav", 
+				"Customs: x12 kill Scav" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Mentor",
+      "giver": "Peacekeeper",
+      "req_level": 0,
+      "id": 92,
+      "req_quests": [ 87 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in 50.000 euro"
+      }],
+      "requirements": [ ]
     }
   ]
 }
