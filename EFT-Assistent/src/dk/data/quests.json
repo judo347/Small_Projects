@@ -1785,6 +1785,122 @@
         "obj": "Extract"
       }],
       "requirements": [ ]
+    },
+    {
+      "name": "The Blood of War - Part 1",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 128,
+      "req_quests": [ 127 ], 
+      "maps": ["Interchange"],
+      "objectives": [{
+        "obj": "Mark orange fuel tank trucks",
+        "subs": ["North-east, power station", 
+		"West, on road near edge of map", 
+		"East, road near edge of map" ]
+      }],
+      "requirements": ["3x MS2000 Marker"]
+    },
+	{
+      "name": "Dressed to kill",
+      "giver": "Mechanic",
+      "req_level": 0,
+      "id": 129,
+      "req_quests": [ 127 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "7x \"Ushanka ear-flap cap\"", 
+				"7x \"Kinda cowboy hat\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Gratitude",
+      "giver": "Mechanic",
+      "req_level": 0,
+      "id": 130,
+      "req_quests": [ 129  ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "Leave the following items at the pier north of saw mill:", 
+		"subs": [ "\"Ghost balaclava\"", 
+				"\"Shemagh (NOT var. 2)\"", 
+				"\"RayBench Hipster Reserve sunglasses\"", 
+				"\"Round frame sunglasses\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Sales Night",
+      "giver": "Ragman",
+      "req_level": 30,
+      "id": 131,
+      "req_quests": [ ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "7x Extract"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Hot delivery",
+      "giver": "Ragman",
+      "req_level": 29,
+      "id": 132,
+      "req_quests": [ 130  ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "Avokado, stash following items:", 
+		"subs": [ "2x \"Peltor ComTac 2 headset\"", 
+				"2x \"6B47 Ratnik-BSh Helmet\"" ]
+		},{
+        "obj": "West, near front entrance, stage, stash following items:", 
+		"subs": [ "2x \"BNTI Gzhel-K armor\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Database - Part 1",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 133,
+      "req_quests": [ 127  ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "Find manifests:", 
+		"subs": [ "IDEA, computer room, middle desk at computers", 
+				"Goshan, on squard desk setup", 
+				"OLI, on squard desk setup" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Database - Part 2",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 134,
+      "req_quests": [ 133  ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "OLI, west, Logistics room, take manifest"
+      }],
+      "requirements": [ "Key: \"Key to OLI logistics department office\"" ]
+    },
+    {
+      "name": "Minibus",
+      "giver": "Ragman",
+      "req_level": 5,
+      "id": 4,
+      "req_quests": [ 3 ],
+      "maps": ["Interchange"],
+      "objectives": [{
+        "obj": "3x Mark minibus's:",
+        "subs": ["South-west, parking area", "parking under shopping mall, front entrance", "parking under shopping mall, front entrance, south"]
+		},{
+        "obj": "Extract",
+      }],
+      "requirements": ["3x MS2000 Marker"]
     }
   ]
 }
