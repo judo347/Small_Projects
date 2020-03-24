@@ -1,3 +1,5 @@
+Quests are updated for 0.12.4
+
 model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
 
@@ -38,6 +40,7 @@ Future Work:
   - Advanced mode should display less text and require more in-game and quest knowledge
   - Beginner mode should be provide enough information so a beginner can
     complete all quests without using other information then whats in this app.
+- Cheatsheet containing information on how to level each skill
 
 --------------------------------------------------
 Odd cases needed to be handled:
@@ -74,6 +77,7 @@ Missing ones:
  - Trust regain, missing id from Chemical - part 4
  - Peacekeeping mission, missing reg id quest: Lend lease - Part 2
  - Gratitude, missing ref from Database - Part 2
+ - Scavenger, ragman, require quest: Hot Delivery
 
 
 No previous requirements for the quest: Postman Pat - Part 2 ????

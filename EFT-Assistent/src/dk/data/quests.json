@@ -1890,10 +1890,10 @@
     {
       "name": "Minibus",
       "giver": "Ragman",
-      "req_level": 5,
-      "id": 4,
-      "req_quests": [ 3 ],
-      "maps": ["Interchange"],
+      "req_level": 24,
+      "id": 135,
+      "req_quests": [ 134 ],
+      "maps": [ "Interchange" ],
       "objectives": [{
         "obj": "3x Mark minibus's:",
         "subs": ["South-west, parking area", "parking under shopping mall, front entrance", "parking under shopping mall, front entrance, south"]
@@ -1901,6 +1901,225 @@
         "obj": "Extract",
       }],
       "requirements": ["3x MS2000 Marker"]
+    },
+	{
+      "name": "Sew it good - Part 1",
+      "giver": "Ragman",
+      "req_level": 25,
+      "id": 136,
+      "req_quests": [ 134 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "2x \"Ski hat with holes for eyes\"", 
+				"2x \"Pilgrim tourist backpack\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Sew it good - Part 2",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 137,
+      "req_quests": [ 136 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "1x \"BNTI Gzhel-K armor\" at 0-50% durability", 
+				"1x \"BNTI Gzhel-K armor\" at 50-100% durability" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Sew it good - Part 3",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 138,
+      "req_quests": [ 137 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "1x \"6B43\" at 0-50% durability", 
+				"1x \"6B43\" at 50-100% durability" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Sew it good - Part 4",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 139,
+      "req_quests": [ 138 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (found in raid):", 
+		"subs": [ "2x \"Wartech gear rig (TV-109, TV-106)\"", 
+				"2x \"BlackRock chest rig\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The Blood of War - Part 2",
+      "giver": "Ragman",
+      "req_level": 23,
+      "id": 140,
+      "req_quests": [ 136 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (found in raid):", 
+		"subs": [ "4x \"Fuel conditioner\"" ]
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Blood of War - Part 3",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 141,
+      "req_quests": [ 140 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "3x Mark fuel stash's:",
+        "subs": ["South, at extract: Mountain Stash", "west, north of plane, box rock", "south-east, rock formation"]
+		},{
+        "obj": "Extract",
+      }],
+      "requirements": ["3x MS2000 Marker"]
+    },
+	{
+      "name": "The key to success",
+      "giver": "Ragman",
+      "req_level": 26,
+      "id": 142,
+      "req_quests": [ 137 ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "Hand-in two books:", 
+		"subs": [ "Main-floor, Books, middle bookshelf, lowest shelf, middle", 
+				"1st-floor, МУЗЕЙ ИСТОРИИ, front entrance, book pile, red book" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Living high is not a crime - Part 1",
+      "giver": "Ragman",
+      "req_level": 27,
+      "id": 143,
+      "req_quests": [ 138 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "3x \"Bronze lion\"", 
+				"3x \"Horse figurine\"", 
+				"2x \"Cat figurine\"", 
+				"1x \"Roler submariner gold wrist watch\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Living high is not a crime - Part 2",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 144,
+      "req_quests": [ 141, 143 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (found in raid):", 
+		"subs": [ "3x \"Antique teapot\"", 
+				"2x \"Antique vase\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Charisma brings success",
+      "giver": "Ragman",
+      "req_level": 10,
+      "id": 145,
+      "req_quests": [ 139 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Increase Charisma skill level to 10"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "No fuss needed",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 146,
+      "req_quests": [ 145 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Reach level 3 loyalty with Therapist"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Supervisor",
+      "giver": "Ragman",
+      "req_level": 40,
+      "id": 147,
+      "req_quests": [ 131 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "\"key for Goshan cash registers\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Scavenger",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 148,
+      "req_quests": [ ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Increase Search skill level to 9"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The stylish one",
+      "giver": "Ragman",
+      "req_level": 0,
+      "id": 149,
+      "req_quests": [ 142 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "100x Kill Killa"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Textile - Part 1",
+      "giver": "Ragman",
+      "req_level": 40,
+      "id": 150,
+      "req_quests": [ 139 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (found in raid):", 
+		"subs": [ "5x \"Aramid fiber cloth\"", 
+				"10x \"Ripstop cloth\"", 
+				"3x \"Paracord\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Textile - Part 2",
+      "giver": "Ragman",
+      "req_level": 47,
+      "id": 151,
+      "req_quests": [ 150 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (found in raid):", 
+		"subs": [ "10x \"Fleece cloth\"", 
+				"10x \"Polyamide fabric Cordura\"", 
+				"5x \"KEKTAPE duct tape\"" ]
+      }],
+      "requirements": [ ]
     }
   ]
 }
