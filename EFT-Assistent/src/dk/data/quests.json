@@ -2120,6 +2120,28 @@
 				"5x \"KEKTAPE duct tape\"" ]
       }],
       "requirements": [ ]
+    },
+	
+	
+	
+	
+	
+	
+	
+	{
+      "name": "Acquaintance",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 152,
+      "req_quests": [ 124 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "5x \"Iskra lunch box\"", 
+				"6x \"Emelya rye croutons\"", 
+				"3x \"delicious beef stew\"" ]
+      }],
+      "requirements": [ ]
     }
   ]
 }
