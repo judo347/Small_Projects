@@ -20,6 +20,7 @@ Todos:
   - Maybe just go through all code and cleanup code and structure
 - Display of progression... X/totalNumberOfQuests
 - god mode: all quests shown, for first time startup, complete all qeusts
+- Make sure new unlocked quests is displayed, and only added when clicked (Confirmed accepted from trader)
 
 
 Todos (not so important ATM)(Listed in priority, first most important):
@@ -79,6 +80,7 @@ Missing ones:
  - Peacekeeping mission, missing reg id quest: Lend lease - Part 2
  - Gratitude, missing ref from Database - Part 2
  - Scavenger, ragman, require quest: Hot Delivery
+ - Nostalgia, jaeger, require quest: Courtesy Visit
 
 
 No previous requirements for the quest: Postman Pat - Part 2 ????

@@ -2142,6 +2142,336 @@
 				"3x \"delicious beef stew\"" ]
       }],
       "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Unprotected, but dangerous",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 153,
+      "req_quests": [ 152 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "7x Kill scav while not wearing body armor (Both body and rig must not contain armor)"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Thrifty",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 154,
+      "req_quests": [ 152 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "Stash the following items in both bunkers, in destroyed wooden create", 
+		"subs": [ "2x \"Iskra lunch box\"", 
+				"2x \"0.6L water bottle\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Zhivchik",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 155,
+      "req_quests": [ 154 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "Spend 5 mins dehydrated"
+		},{
+		"obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Wounded beast",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 156,
+      "req_quests": [ 155 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "5x Kill scav while under pain effect"
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Tough guy",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 157,
+      "req_quests": [ 156 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "5x Kill scav in a single raid. The use of medicine is not allowed."
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Cold blooded",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 158,
+      "req_quests": [ 156 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "4x Kill PMCs with headshots while having tremor."
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Zatoichi",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 159,
+      "req_quests": [ 158 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "2x Kill PMCs while you are blinded by flashbang."
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Eagle-owl",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 160,
+      "req_quests": [ 159 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "10x Kill Scavs between 21-03 without using NVG or Thermal sights."
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Combat medic",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 161,
+      "req_quests": [ 158 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Reach level 5 Vitality skill."
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "The survivalist path - Secured perimeter",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 162,
+      "req_quests": [ 156 ],
+      "maps": [ "Factory" ],
+      "objectives": [{
+        "obj": "10x Kill PMC i office area."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - The trophy",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 163,
+      "req_quests": [ 162 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "Kill Reshala"
+		},{
+        "obj": "Hand-in \"golden TT\" (Found in raid)"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Woods cleaning",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 164,
+      "req_quests": [ 162 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "50x Kill scav (Any map)"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Controller",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 165,
+      "req_quests": [ 164 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "3x Kill PMCs while they are blinded by flashbang."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Sell-out",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 166,
+      "req_quests": [ 164, 163 ],
+      "maps": [ "Interchange" ],
+      "objectives": [{
+        "obj": "Kill Killa"
+		},{
+        "obj": "Hand-in \"Killa's helmet\" (Found in raid)"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Woods keeper",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 166,
+      "req_quests": [ 164, 163 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "Kill Shturman"
+		},{
+        "obj": "Hand-in \"Shturman's key\" (Found in raid)"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Justice",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 167,
+      "req_quests": [ 163 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "3x Kill Reshala's guards."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Evil watchman",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 168,
+      "req_quests": [ 166 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "10x Kill PMCs in Dorms."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Eraser",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 169,
+      "req_quests": [ 166 ],
+      "maps": [ "Reserve" ],
+      "objectives": [{
+        "obj": "Kill Gluhar."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Huntsman path - Eraser - Part 2",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 170,
+      "req_quests": [ 169 ],
+      "maps": [ "Labs", "Reserve" ],
+      "objectives": [{
+        "obj": "10x Kill raiders."
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Ambulance",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 171,
+      "req_quests": [ 158 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "3x \"CMS surgery kits\"", 
+				"2x \"portable defibrillators\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Shady business",
+      "giver": "Jaeger",
+      "req_level": 20,
+      "id": 171,
+      "req_quests": [ 49 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (Found in raid):", 
+		"subs": [ "3x \"flash drives\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Nostalgia",
+      "giver": "Jaeger",
+      "req_level": 28,
+      "id": 172,
+      "req_quests": [ ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Resort, west 303, bedside table, bottom, \"Photo Album\""
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Fishing place",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 173,
+      "req_quests": [ 164 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "3x \"TerraGroup Labs access keycards\"" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Courtesy visit",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 174,
+      "req_quests": [ 157 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Find houses in the swamp:", 
+		"subs": [ "North west most house", 
+				"North east most house", 
+				"South east most house" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Hunting trip",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 175,
+      "req_quests": [ 166 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in:", 
+		"subs": [ "3x \"M700\" which has: recoil < 600 and ergo > 50" ]
+      }],
+      "requirements": [ ]
+    },
+	{
+      "name": "Reserv",
+      "giver": "Jaeger",
+      "req_level": 28,
+      "id": 176,
+      "req_quests": [ 162 ],
+      "maps": [ "Reserve" ],
+      "objectives": [{
+        "obj": "Below \"Bunker hermetic door\", one of the cages."
+      }],
+      "requirements": [ ]
     }
   ]
 }
