@@ -69,7 +69,12 @@ object PrimaryScene
 object QuestCard
 object PaneAndController
 PaneAndController : Not used?
+
+PrimaryScene - QuestCard
 }
 
+
+MainModel - JSONParserHelper
+MainModel - PrimaryScene
 
 @enduml
