@@ -3,23 +3,32 @@ Quests are updated for 0.12.4.6465
 model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
 
+TODOs:
+     Timeline:
+      1. Check overall structure. Especially the divide between components.
+      2. Odd cases
+      3. Save and load system
+        - fix load/save bugs
+        - Check bug section
+      4. God mode
+        - Start mode
+        - Sort quests after Trader/Map
+      5. Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
+      6. Regret options
+      7. Visual improvements
+        - Remove "Requirements" from visuals if non is existing.
 
-Next todo: odd cases
-     todo: fix load/save bugs
 
 Bugs:
 - Completing a quest, saving, and loading it, the quest is then not completed.
   - Seems to save the correct information
 
-Todos:
-- Save and load system
+Todos notes:
 - Move QuestLoader to data folder, and into JSONParserHelper, use common functions
 - Maybe rework refreshing of model and visuals
   - Maybe just go through all code and cleanup code and structure
-- god mode: all quests shown, for first time startup, complete all qeusts
+- god mode: all quests shown, for first time startup, complete all quests
 	- Make it possible to sort by either trader or map, to aid the starting process
-- Make sure new unlocked quests is displayed, and only added when clicked (Confirmed accepted from trader)
-
 
 
 Todos (not so important ATM)(Listed in priority, first most important):
@@ -27,8 +36,6 @@ Todos (not so important ATM)(Listed in priority, first most important):
 - Regret level increase feature
   - Re-eval quests..
 
-Visual improvements:
-- Remove "Requirements" from visuals if non is existing.
 
 Future Work:
 - Mouse over questsCards for pop-up tips or maps?
