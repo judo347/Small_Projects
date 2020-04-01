@@ -6,6 +6,11 @@ model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectiv
 TODOs:
      Timeline:
       1. Check overall structure. Especially the divide between components.
+        - Diagram done
+        - Classes cleaned:
+           - view
+              - PrimarySceneController: 1x todo
+        - TODO check todoes in method descriptions
       2. Odd cases
       3. Save and load system
         - fix load/save bugs
@@ -52,6 +57,7 @@ Future Work:
 
 Diagram todos:
  - Add main class and starting point of program
+ - PaneAndController is used as a struct
 --------------------------------------------------
 Odd cases needed to be handled:
 

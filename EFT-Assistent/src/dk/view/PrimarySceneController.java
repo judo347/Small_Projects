@@ -44,7 +44,8 @@ public class PrimarySceneController {
         this.mainModel = mainModel;
     }
 
-    public void addQuestCard(PaneAndController questCardAndController, MapType mapType){
+    /** Adds the given quest card to the correct hbox based on given mapType. */
+    private void addQuestCard(PaneAndController questCardAndController, MapType mapType){
 
         HBox desiredHBox;
 
@@ -72,7 +73,8 @@ public class PrimarySceneController {
         questCardAndController.qcc.addBoxParent(desiredHBox, questCardAndController.pane);
     }
 
-    public void cleanQuestCardBoxes(){
+    /** Removes all quest card from the model. (Quest hbox´s)*/
+    private void clearQuestCardBoxes(){
         hbox_shoreline_quests.getChildren().clear();
         hbox_labs_quests.getChildren().clear();
         hbox_mixed_quests.getChildren().clear();
@@ -83,15 +85,20 @@ public class PrimarySceneController {
         hbox_interchange_quests.getChildren().clear();
     }
 
+    /** TODO */
     public void completeQuestCard(QuestCardController qcc, HBox box, Pane layoutComponent, Quest quest){
         //TODO Model: Move to completed
         mainModel.getQm().completeQuest(quest);
         reloadQuestVisuals();
     }
 
+    /** Reloads all visuals related to quests.
+     Should be called each time changes to quests is made in the model. */
     public void reloadQuestVisuals(){
-        cleanQuestCardBoxes();
+        // Clears quest boxes
+        clearQuestCardBoxes();
 
+        // Re-adds all active quests
         for(Quest quest : mainModel.getQm().getActiveQuests()){
             PaneAndController questCardAndController = createQuestCard(quest, this);
 
@@ -105,9 +112,11 @@ public class PrimarySceneController {
             addQuestCard(questCardAndController, mapType);
         }
 
+        // Updates quests completed label
         setQuestCompletionLabel();
     }
 
+    /** Reloads the visuals related to PlayerInfo: player level and loyalty levels. */
     public void reloadPlayerInfoVisuals(){
         PlayerInfo playerInfo = mainModel.getPlayerInfo();
         label_level_player.setText(String.valueOf(playerInfo.getPlayerLevel()));
@@ -120,6 +129,7 @@ public class PrimarySceneController {
         label_level_peacekeeper.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.PEACEKEEPER)));
     }
 
+    /** Creates and returns a quest card based on the given Quest. */
     private PaneAndController createQuestCard(Quest quest, PrimarySceneController psc){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
@@ -140,9 +150,9 @@ public class PrimarySceneController {
 
     /** Updates the quest progression label. */
     private void setQuestCompletionLabel(){
-        int temp_quests_completed = mainModel.getQm().getNumberOfCompletedQuests();
-        int temp_quests_all_count = mainModel.getQm().getTotalNumberOfQuests();
-        String text = temp_quests_completed + " / " + temp_quests_all_count;
+        int quests_completed_count = mainModel.getQm().getNumberOfCompletedQuests();
+        int quests_total_count = mainModel.getQm().getTotalNumberOfQuests();
+        String text = quests_completed_count + " / " + quests_total_count;
         topbar_label_quest_completion.setText(text);
     }
 
