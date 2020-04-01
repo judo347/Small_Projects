@@ -85,9 +85,7 @@ public class PrimarySceneController {
         hbox_interchange_quests.getChildren().clear();
     }
 
-    /** TODO */
-    public void completeQuestCard(QuestCardController qcc, HBox box, Pane layoutComponent, Quest quest){
-        //TODO Model: Move to completed
+    public void completeQuestCard(Quest quest){
         mainModel.getQm().completeQuest(quest);
         reloadQuestVisuals();
     }

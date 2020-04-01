@@ -75,6 +75,6 @@ public class QuestCardController {
 
     /** Removes the questCard from the program. */
     private void deleteCard(){
-        psc.completeQuestCard(this, parentBox, layoutComponent, originalQuest);
+        psc.completeQuestCard(originalQuest);
     }
 }

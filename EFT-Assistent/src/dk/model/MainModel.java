@@ -20,14 +20,6 @@ public class MainModel {
         qm.loadQuests(playerInfo);
     }
 
-    public QuestManager getQm() {
-        return qm;
-    }
-
-    public PlayerInfo getPlayerInfo() {
-        return playerInfo;
-    }
-
     public void incrementTraderLoyaltyLevel(TraderType traderType){
         playerInfo.incrementLoyaltyLevel(traderType);
         qm.doPrerequisiteQuestCheckForLocked();
@@ -55,5 +47,13 @@ public class MainModel {
             System.out.println("Save successful!");
         else
             System.out.println("Save failed!");
+    }
+
+    public QuestManager getQm() {
+        return qm;
+    }
+
+    public PlayerInfo getPlayerInfo() {
+        return playerInfo;
     }
 }
