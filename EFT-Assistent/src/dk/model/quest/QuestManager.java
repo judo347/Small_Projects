@@ -116,4 +116,12 @@ public class QuestManager {
     public ArrayList<Quest> getCompleted() {
         return completed;
     }
+
+    public int getNumberOfCompletedQuests(){
+        return completed.size();
+    }
+
+    public int getTotalNumberOfQuests(){
+        return allQuests.size();
+    }
 }

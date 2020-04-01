@@ -18,6 +18,8 @@ import java.io.IOException;
 
 public class PrimarySceneController {
 
+    @FXML private Label topbar_label_quest_completion;
+
     @FXML private Label label_level_player;
     @FXML private Label label_level_prapor;
     @FXML private Label label_level_therapist;
@@ -102,6 +104,8 @@ public class PrimarySceneController {
 
             addQuestCard(questCardAndController, mapType);
         }
+
+        setQuestCompletionLabel();
     }
 
     public void reloadPlayerInfoVisuals(){
@@ -132,6 +136,14 @@ public class PrimarySceneController {
         }
 
         throw new IllegalArgumentException();
+    }
+
+    /** Updates the quest progression label. */
+    private void setQuestCompletionLabel(){
+        int temp_quests_completed = mainModel.getQm().getNumberOfCompletedQuests();
+        int temp_quests_all_count = mainModel.getQm().getTotalNumberOfQuests();
+        String text = temp_quests_completed + " / " + temp_quests_all_count;
+        topbar_label_quest_completion.setText(text);
     }
 
     @FXML
