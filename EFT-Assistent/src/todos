@@ -1,11 +1,10 @@
-Quests are updated for 0.12.4
+Quests are updated for 0.12.4.6465
 
 model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
 
 
-Next todo: odd cases and rest of quests
-        - next quest: skier: Informed means armed
+Next todo: odd cases
      todo: fix load/save bugs
 
 Bugs:
@@ -77,14 +76,6 @@ Check first added quests for requirements
  - all prapor
  - 3 from Therapist
 
-Missing ones:
- - Out of curiosity, missing id from Chemical - part 3
- - Trust regain, missing id from Chemical - part 4
- - Peacekeeping mission, missing reg id quest: Lend lease - Part 2
- - Gratitude, missing ref from Database - Part 2
- - Scavenger, ragman, require quest: Hot Delivery
- - Nostalgia, jaeger, require quest: Courtesy Visit
-
 
 No previous requirements for the quest: Postman Pat - Part 2 ????
 
@@ -92,5 +83,14 @@ No previous requirements for the quest: Postman Pat - Part 2 ????
 Make sure format for specific tings are the same:
  - Wearing requirements, make sure that they are under requirements
    - Maybe not - requirements are maybe only for items required for aiding in completion?
- - Found in raid is noted in the same way.
+
+
+---- FORMAT/SYNTAX of quest data ------
+# Found in raid:
+"objectives": [{
+        "obj": "Hand-in (found in raid):",
+		"subs": [ "2x \"Old firesteel\"",
+				"3x \"Antique axe\"",
+				"5x \"Fake mustache\"" ]
+      }],
 
