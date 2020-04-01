@@ -1898,7 +1898,7 @@
         "obj": "3x Mark minibus's:",
         "subs": ["South-west, parking area", "parking under shopping mall, front entrance", "parking under shopping mall, front entrance, south"]
 		},{
-        "obj": "Extract",
+        "obj": "Extract"
       }],
       "requirements": ["3x MS2000 Marker"]
     },
@@ -1982,7 +1982,7 @@
         "obj": "3x Mark fuel stash's:",
         "subs": ["South, at extract: Mountain Stash", "west, north of plane, box rock", "south-east, rock formation"]
 		},{
-        "obj": "Extract",
+        "obj": "Extract"
       }],
       "requirements": ["3x MS2000 Marker"]
     },
@@ -2470,6 +2470,135 @@
       "maps": [ "Reserve" ],
       "objectives": [{
         "obj": "Below \"Bunker hermetic door\", one of the cages."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 1",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 177,
+      "req_quests": [ 152, 97 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "10x Kill Scavs over 50m with \"Mosin\" without scope."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 2",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 178,
+      "req_quests": [ 177 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Make hits with \"Mosin\" over 80m away", 
+		"subs": [ "5x leg shots", 
+				"3x headshots" ]
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 3",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 179,
+      "req_quests": [ 178 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "5x Kill PMCs at less then 15m with \"Mosin\"."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 4",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 180,
+      "req_quests": [ 179 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Get level 5 in Sniper Rifles skill."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 5",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 181,
+      "req_quests": [ 180 ],
+      "maps": [ "Customs" ],
+      "objectives": [{
+        "obj": "10x Kill Scavs with \"Mosin\" between 23-4."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 6",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 182,
+      "req_quests": [ 181 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "10x Kill Scavs with \"Mosin\"."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 7",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 183,
+      "req_quests": [ 182 ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "7x Kill PMCs over 69m away with suppressed \"Mosin\"."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The Tarkov shooter - Part 8",
+      "giver": "Jaeger",
+      "req_level": 0,
+      "id": 184,
+      "req_quests": [ 183 ],
+      "maps": [ "Woods" ],
+      "objectives": [{
+        "obj": "3x Kill PMCs \"Mosin\" (In one raid)."
+      }],
+      "requirements": [ ]
+    },
+	
+	
+	
+	
+	
+	
+	
+	{
+      "name": "Collector",
+      "giver": "Fence",
+      "req_level": 0,
+      "id": 0,
+      "req_quests": [ ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (Found in raid):", 
+		"subs": [ "\"Old firesteel\"", 
+				"\"Antique axe\"", 
+				"\"Battered antique Book\"", 
+				"\"FireKlean gun lube\"", 
+				"\"Golden rooster\"", 
+				"\"Silver Badge\"", 
+				"\"Deadlyslob's beard oil\"", 
+				"\"Golden 1GPhone\"", 
+				"\"Jar of DevilDog mayo\"", 
+				"\"Can of sprats\"", 
+				"\"Fake mustache\"", 
+				"\"Kotton beanie\"" ]
       }],
       "requirements": [ ]
     }
