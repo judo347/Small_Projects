@@ -7,8 +7,6 @@ TODOs:
      Timeline:
       1. Check overall structure. Especially the divide between components.
         - Diagram done
-        - view
-           - PrimarySceneController: 1x todo
         - TODO check todoes in method descriptions
       2. Odd cases
       3. Save and load system
@@ -24,10 +22,14 @@ TODOs:
 
 
 Bugs:
+- Currently all quests can be completed while the player and LL are all 1!!!
 - Completing a quest, saving, and loading it, the quest is then not completed.
   - Seems to save the correct information
 
+
 Todos notes:
+- Tests for adding quests and such? Or at least manual tests!!
+  - Does check for quests that has more than one quest requirement work?
 - Move QuestLoader to data folder, and into JSONParserHelper, use common functions
 - Maybe rework refreshing of model and visuals
   - Maybe just go through all code and cleanup code and structure
@@ -52,6 +54,10 @@ Future Work:
   - Beginner mode should be provide enough information so a beginner can
     complete all quests without using other information then whats in this app.
 - Cheatsheet containing information on how to level each skill
+- Runtime improvements:
+  - QuestManager: store quests as maps<QuestId:int, Quest>
+- Visual tool for debugging quest data
+  - Graph of quest dependencies of other quests
 
 
 Diagram todos:

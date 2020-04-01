@@ -16,8 +16,7 @@ public class MainModel {
     public MainModel(PrimarySceneController psc) {
         this.psc = psc;
         playerInfo = new PlayerInfo(0);
-        qm = new QuestManager();
-        qm.loadQuests(playerInfo);
+        qm = new QuestManager(playerInfo);
     }
 
     public void incrementTraderLoyaltyLevel(TraderType traderType){

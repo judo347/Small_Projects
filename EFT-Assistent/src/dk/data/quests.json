@@ -45,7 +45,7 @@
       "giver": "Prapor",
       "req_level": 5,
       "id": 3,
-      "req_quests": [ 2 ],
+      "req_quests": [ 1 ],
       "maps": ["Customs", "Factory"],
       "objectives": [{
         "obj": "Customs: Find \"secure case\" in RED office"
