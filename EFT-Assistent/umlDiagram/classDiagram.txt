@@ -1,0 +1,75 @@
+@startuml
+
+left to right direction
+
+skinparam monochrome true
+
+title Simple Object Diagram
+
+package data {
+object quest.json
+quest.json : all quests in the game
+object saveData.json
+saveData.json : user save data
+object JSONParserHelper
+JSONParserHelper : Read/writing of files. \nParsing of JSON.
+
+JSONParserHelper - quest.json
+JSONParserHelper - saveData.json
+}
+
+package model {
+
+package quest {
+    object Quest
+    Quest : Models a quest
+    object QuestManager
+    QuestManager : Maintains model of quests. (Completed, active, locked)
+    QuestManager : Utility for quests.
+    object QuestObjectives
+    QuestObjectives : objectives (String)
+    QuestObjectives : subObjectives (List<String)
+    
+    QuestManager - Quest
+    Quest - QuestObjectives
+}
+
+
+package tools {
+    object TypeParser
+    TypeParser : stringToMapType()
+    TypeParser : stringToTrader()
+}
+
+object MainModel
+MainModel : The complete model.
+MainModel : qm (QuestManager)
+MainModel : playerInfo (PlayerInfo)
+
+
+
+object PlayerInfo
+PlayerInfo : Player level.
+PlayerInfo : Loyalty levels.
+
+object SaveData
+SaveData : completedQuestIds (List<Int>)
+SaveData : playerInfo (PlayerInfo)
+
+object MapType
+object TraderType
+
+
+MainModel - PlayerInfo
+MainModel - QuestManager
+}
+
+package view {
+object PrimaryScene
+object QuestCard
+object PaneAndController
+PaneAndController : Not used?
+}
+
+
+@enduml
