@@ -10,6 +10,8 @@ TODOs:
         - Classes cleaned:
            - view
               - PrimarySceneController: 1x todo
+              - PaneAndController
+              - QuestCardController
         - TODO check todoes in method descriptions
       2. Odd cases
       3. Save and load system
