@@ -73,7 +73,7 @@
                                     <Image url="@../data/playerPortrait.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_player" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_player" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_player" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />
@@ -91,7 +91,7 @@
                                     <Image url="@../data/traderPortraits/prapor.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_prapor" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_prapor" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_prapor" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />
@@ -109,7 +109,7 @@
                                     <Image url="@../data/traderPortraits/therapist.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_therapist" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_therapist" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_therapist" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />
@@ -127,7 +127,7 @@
                                     <Image url="@../data/traderPortraits/skier.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_skier" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_skier" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_skier" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />
@@ -145,7 +145,7 @@
                                     <Image url="@../data/traderPortraits/peacekeeper.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_peacekeeper" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_peacekeeper" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_peacekeeper" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />
@@ -163,7 +163,7 @@
                                     <Image url="@../data/traderPortraits/mechanic.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_mechanic" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_mechanic" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_mechanic" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />
@@ -181,7 +181,7 @@
                                     <Image url="@../data/traderPortraits/ragman.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_ragman" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_ragman" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_ragman" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />
@@ -199,7 +199,7 @@
                                     <Image url="@../data/traderPortraits/jaeger.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="label_level_jaeger" text="0" textAlignment="RIGHT" />
+                              <Label fx:id="label_level_jaeger" alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="18.0" text="0" textAlignment="RIGHT" />
                               <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#buttonAction_plus_jaeger" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../data/plusPicture.jpg" />

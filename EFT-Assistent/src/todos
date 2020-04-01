@@ -19,7 +19,6 @@ Todos:
 - god mode: all quests shown, for first time startup, complete all qeusts
 	- Make it possible to sort by either trader or map, to aid the starting process
 - Make sure new unlocked quests is displayed, and only added when clicked (Confirmed accepted from trader)
-- Handle requirements from the Collector quest
 
 
 
@@ -29,7 +28,6 @@ Todos (not so important ATM)(Listed in priority, first most important):
   - Re-eval quests..
 
 Visual improvements:
-- Player level in two digits is turned into dots
 - Remove "Requirements" from visuals if non is existing.
 
 Future Work:
@@ -67,6 +65,8 @@ Ops:
  - Completing Big customer losses access to Trust Regain
     - Add special case
 
+#3 Case
+Collector quest requires all other quests to be completed.
 
 -------------------------
 Quest adding notes:
