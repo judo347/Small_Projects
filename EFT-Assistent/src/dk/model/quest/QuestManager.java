@@ -17,6 +17,7 @@ public class QuestManager {
 
     private final int quest_id_postman_pat_part1 = 7;
     private final int quest_id_postman_pat_part2 = 38;
+    private final int quest_id_collector = 185;
 
     public QuestManager(PlayerInfo playerInfo) {
         this.playerInfo = playerInfo;
@@ -36,6 +37,12 @@ public class QuestManager {
 
     /** Returns true if quest fulfills all requirements for being active. */
     private boolean canQuestBeAddedToActive(Quest quest, PlayerInfo playerInfo){
+
+        // Special case: quest: collector TODO handle
+        if(quest.getId() == quest_id_collector)
+            //method for check
+            return false;
+
         // Check player level requirement
         if(quest.getRequiredLevel() > playerInfo.getPlayerLevel()){
             return false;
