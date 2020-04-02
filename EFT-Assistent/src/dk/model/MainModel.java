@@ -19,14 +19,18 @@ public class MainModel {
         qm = new QuestManager(playerInfo);
     }
 
+    public void recheckLockedQuests(){
+        qm.doPrerequisiteQuestCheckForLocked();
+    }
+
     public void incrementTraderLoyaltyLevel(TraderType traderType){
         playerInfo.incrementLoyaltyLevel(traderType);
-        qm.doPrerequisiteQuestCheckForLocked();
+        recheckLockedQuests();
     }
 
     public void incrementPlayerLevel(){
         playerInfo.incrementPlayerLevel();
-        qm.doPrerequisiteQuestCheckForLocked();
+        recheckLockedQuests();
     }
 
     public void loadSlot(int slotNumber){

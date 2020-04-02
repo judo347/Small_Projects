@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a6a98db-4bc6-41f4-9188-fb17c2325b5b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EFT-Assistent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EFT-Assistent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/model/MainModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/model/MainModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/model/quest/QuestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/model/quest/QuestManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +119,7 @@
       <workItem from="1583497160137" duration="598000" />
       <workItem from="1583579623687" duration="4118000" />
       <workItem from="1585754447708" duration="1985000" />
-      <workItem from="1585813426863" duration="1997000" />
+      <workItem from="1585813426863" duration="4354000" />
     </task>
     <servers />
   </component>

@@ -9,42 +9,26 @@ import java.util.ArrayList;
 public class QuestManager {
 
     private ArrayList<Quest> allQuests;
+    private PlayerInfo playerInfo;
 
     private ArrayList<Quest> completed = new ArrayList<>();
     private ArrayList<Quest> activeQuests = new ArrayList<>();
     private ArrayList<Quest> lockedQuests = new ArrayList<>();
 
     public QuestManager(PlayerInfo playerInfo) {
+        this.playerInfo = playerInfo;
         allQuests = loadAllQuests();
         for(Quest quest : new ArrayList<>(allQuests)) {
-            addQuest(quest, playerInfo);
+            addQuestToManager(quest, playerInfo);
         }
     }
 
     /** Adds the given quest to activeQuests if requirements are met. */
-    private void addQuest(Quest quest, PlayerInfo playerInfo){
-
-        // Check player level requirement
-        if(quest.getRequiredLevel() > playerInfo.getPlayerLevel()){
+    private void addQuestToManager(Quest quest, PlayerInfo playerInfo){
+        if(canQuestBeAddedToActive(quest, playerInfo))
+            activeQuests.add(quest);
+        else
             lockedQuests.add(quest);
-            return;
-        }
-
-        //Handle LL requirements for quests
-        TraderType questGiver = quest.getTrader();
-        int currentLoyaltyLevelForTrader = playerInfo.getLoyaltyLevelFromTrader(questGiver);
-        if(quest.getRequiredLoyaltyLevel() > currentLoyaltyLevelForTrader){
-            lockedQuests.add(quest);
-            return;
-        }
-
-        //Handle prerequisite quests
-        if(!isRequiredQuestsCompleted(quest)){
-            lockedQuests.add(quest);
-            return;
-        }
-
-        activeQuests.add(quest);
     }
 
     /** Returns true if quest fulfills all requirements for being active. */
@@ -69,13 +53,12 @@ public class QuestManager {
         return true;
     }
 
-    /** TODO Description + additional checks? */
+    /** Moves *locked* quests which fulfills checks to *active*. */
     public void doPrerequisiteQuestCheckForLocked(){
-
         boolean wasListUpdated = false;
 
         for(Quest quest : new ArrayList<>(lockedQuests)){
-            boolean shouldBeActive = isRequiredQuestsCompleted(quest);
+            boolean shouldBeActive = canQuestBeAddedToActive(quest, playerInfo);
             if(shouldBeActive){
                 lockedQuests.remove(quest);
                 activeQuests.add(quest);
@@ -125,7 +108,7 @@ public class QuestManager {
 
         //Load with remaining quests
         for(Quest quest : allQuests){
-            addQuest(quest, playerInfo);
+            addQuestToManager(quest, playerInfo);
         }
 
         doPrerequisiteQuestCheckForLocked();
