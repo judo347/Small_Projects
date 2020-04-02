@@ -15,6 +15,9 @@ public class QuestManager {
     private ArrayList<Quest> activeQuests = new ArrayList<>();
     private ArrayList<Quest> lockedQuests = new ArrayList<>();
 
+    private final int quest_id_postman_pat_part1 = 7;
+    private final int quest_id_postman_pat_part2 = 38;
+
     public QuestManager(PlayerInfo playerInfo) {
         this.playerInfo = playerInfo;
         allQuests = loadAllQuests();
@@ -89,12 +92,8 @@ public class QuestManager {
     /** Completes given quest and updates model. (Including prerequisite check)*/
     public void completeQuest(Quest quest){
         //Special case: quest: postman pat
-        //Postman pat part 1 - cannot be completed before part 2 is
-        //Postman pat part 1: id: 7
-        //Postman pat part 2: id: 38
-        if (quest.getId() == 7){
-            boolean canItBeCompleted = canPostmanPatPart1BeCompleted();
-            if (!canItBeCompleted)
+        if (quest.getId() == quest_id_postman_pat_part1){
+            if (!canPostmanPatPart1BeCompleted())
                 return;
         }
 
@@ -105,11 +104,12 @@ public class QuestManager {
         doPrerequisiteQuestCheckForLocked();
     }
 
-    // Special case: quest: postman pat
+    /** Special case: quest: postman pat
+        Postman pat part 1 - cannot be completed before part 2 is */
     private boolean canPostmanPatPart1BeCompleted(){
         // Check: has postman pat part 2 is completed
         for(Quest quest : completed){
-            if (quest.getId() == 38)
+            if (quest.getId() == quest_id_postman_pat_part2)
                 return true;
         }
 
