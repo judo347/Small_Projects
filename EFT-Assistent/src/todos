@@ -5,9 +5,8 @@ model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectiv
 
 TODOs:
      Timeline:
-      1. Check overall structure. Especially the divide between components.
-        - Diagram done
-        - TODO check todoes in method descriptions
+      DONE 1. Check overall structure. Especially the divide between components.
+              - Diagram done
       2. Odd cases
       3. Save and load system
         - fix load/save bugs
@@ -22,7 +21,6 @@ TODOs:
 
 
 Bugs:
-- Currently all quests can be completed while the player and LL are all 1!!!
 - Completing a quest, saving, and loading it, the quest is then not completed.
   - Seems to save the correct information
 
@@ -98,9 +96,6 @@ Quest adding notes:
 Check first added quests for requirements
  - all prapor
  - 3 from Therapist
-
-
-No previous requirements for the quest: Postman Pat - Part 2 ????
 
 
 Make sure format for specific tings are the same:

@@ -88,11 +88,32 @@ public class QuestManager {
 
     /** Completes given quest and updates model. (Including prerequisite check)*/
     public void completeQuest(Quest quest){
+        //Special case: quest: postman pat
+        //Postman pat part 1 - cannot be completed before part 2 is
+        //Postman pat part 1: id: 7
+        //Postman pat part 2: id: 38
+        if (quest.getId() == 7){
+            boolean canItBeCompleted = canPostmanPatPart1BeCompleted();
+            if (!canItBeCompleted)
+                return;
+        }
+
         quest.complete();
         activeQuests.remove(quest);
         completed.add(quest);
 
         doPrerequisiteQuestCheckForLocked();
+    }
+
+    // Special case: quest: postman pat
+    private boolean canPostmanPatPart1BeCompleted(){
+        // Check: has postman pat part 2 is completed
+        for(Quest quest : completed){
+            if (quest.getId() == 38)
+                return true;
+        }
+
+        return false;
     }
 
     /** Reloads quest model based on the given completed quest ids. (Sets active and locked)
