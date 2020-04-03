@@ -80,36 +80,8 @@ In-game tests:
 --------------------------------------------------
 Odd cases needed to be handled:
 
-#1 Case
-Prapor: Big customer
-- req_quests
- - Chemical - Part 3
-Prapor: No Offence
-- req_quests
- - Chemical - Part 4 or Out of curiosity
-    - Just add one, and it should be fine
-TODO Make sure loading and saving works with these quests.
-    private final int quest_id_postman_pat_part1 = 7;
-    private final int quest_id_postman_pat_part2 = 38;
-    private final int quest_id_collector = 185;
-    private final int quest_id_chemical_part_4 = 54;
-    private final int quest_id_out_of_curiosity = 39;
-    private final int quest_id_big_customer = 16;
-    private final int quest_id_trust_regain = 40;
-    private final int quest_id_loyalty_buyout = 55;
-    private final int quest_id_no_offence = 17;
-
 #1.5 case
 Supply plans and Kind of sabotage completes each other
-
-#2 Case
-Ops:
- - Completing some quests, completes also others: Big customer?
-    - Add special case
- - Trust regain: require completion of one of two quests
-    - Just add one or both of them, should be fine
- - Completing Big customer losses access to Trust Regain
-    - Add special case
 
 #3 Case (FUTURE WORK)
 Collector quest requires all other quests to be completed.
