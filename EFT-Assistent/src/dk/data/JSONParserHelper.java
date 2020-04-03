@@ -23,7 +23,7 @@ public class JSONParserHelper {
     private static final String questsDataPostfix = "\\quests.json";
     private static final String saveDataPostfix = "\\saveData.json";
 
-    private static final int numberOfSaveSlots = 2;
+    private static final int numberOfSaveSlots = 3;
 
     public ArrayList<Quest> getAllQuestsFromFile(){
         return parseAllQuests(getJSONFromFile(questsDataPostfix));

@@ -211,6 +211,10 @@ public class QuestManager {
         return completed;
     }
 
+    public ArrayList<Quest> getLockedQuests() {
+        return lockedQuests;
+    }
+
     public int getNumberOfCompletedQuests(){
         return completed.size();
     }

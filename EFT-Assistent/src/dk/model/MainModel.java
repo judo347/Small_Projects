@@ -57,13 +57,15 @@ public class MainModel {
         }
     }
 
-    public void saveSlot(int slotNumber){
+    public boolean saveSlot(int slotNumber){
         JSONParserHelper jph = new JSONParserHelper();
         boolean didSave = jph.SaveData(slotNumber, new ArrayList<>(qm.getCompleted()), playerInfo);
         if(didSave)
             System.out.println("Save successful!");
         else
             System.out.println("Save failed!");
+
+        return didSave;
     }
 
     public QuestManager getQm() {

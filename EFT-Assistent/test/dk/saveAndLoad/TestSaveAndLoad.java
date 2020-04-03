@@ -1,37 +1,43 @@
 package dk.saveAndLoad;
 
 import dk.model.MainModel;
-import dk.view.PrimarySceneController;
-import junit.framework.Assert;
-import org.junit.Before;
+import dk.model.PlayerInfo;
+import dk.model.quest.Quest;
 import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TestSaveAndLoad {
 
-    private MainModel mainModel;
-
-
-    private void initializeBasicModel(){
-        PrimarySceneController psc = new PrimarySceneController();
-        mainModel = new MainModel();
-        psc.setMainModel(mainModel);
-    }
+    private final int test_saveSlot = 2;
 
     @Test
-    public void save01(){
-        initializeBasicModel();
-    }
+    public void saveAndLoad01fresh(){
+        MainModel model = new MainModel();
+        PlayerInfo playerInfo_before = new PlayerInfo();
+        playerInfo_before.reload(model.getPlayerInfo());
+        ArrayList<Quest> completedQuests_before = new ArrayList<>(model.getQm().getCompleted());
+        ArrayList<Quest> activeQuests_before = new ArrayList<>(model.getQm().getActiveQuests());
+        ArrayList<Quest> lockedQuests_before = new ArrayList<>(model.getQm().getLockedQuests());
 
-    @Test
-    public void saveAndLoad01(){
+        boolean didSave = model.saveSlot(test_saveSlot);
+        assertTrue(didSave);
+        model.loadSlot(test_saveSlot);
 
+        PlayerInfo playerInfo_after = model.getPlayerInfo();
+        ArrayList<Quest> completedQuests_after = model.getQm().getCompleted();
+        ArrayList<Quest> activeQuests_after = model.getQm().getActiveQuests();
+        ArrayList<Quest> lockedQuests_after = model.getQm().getLockedQuests();
 
-
-        Assert.assertEquals(0,3);
-    }
-
-    @Test
-    public void saveAndLoad02(){
-        Assert.assertEquals(3,3);
+        //Data/model validation
+        TestUtils.assertPlayerInfo(playerInfo_before, playerInfo_after);
+        assertEquals(completedQuests_before.size(), 0);
+        assertEquals(completedQuests_after.size(), 0);
+        TestUtils.assertEqualQuestList(completedQuests_before, completedQuests_after);
+        TestUtils.assertEqualQuestList(activeQuests_before, activeQuests_after);
+        TestUtils.assertEqualQuestList(lockedQuests_before, lockedQuests_after);
     }
 }
