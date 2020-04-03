@@ -8,7 +8,7 @@ TODOs:
      Timeline:
       DONE 1. Check overall structure. Especially the divide between components.
               - Diagram done
-      2. Odd cases
+      DONE 2. Odd cases
       3. Save and load system
         - fix load/save bugs
         - Check bug section
