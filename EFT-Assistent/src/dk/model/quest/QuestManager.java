@@ -19,6 +19,8 @@ public class QuestManager {
     private final int quest_id_postman_pat_part2 = 38;
     private final int quest_id_collector = 185;
 
+    SpecialCaseChem4Helper specialCaseChem4Helper = new SpecialCaseChem4Helper(this);
+
     public QuestManager(PlayerInfo playerInfo) {
         this.playerInfo = playerInfo;
         allQuests = loadAllQuests();
@@ -27,9 +29,12 @@ public class QuestManager {
         }
     }
 
-    /** Adds the given quest to activeQuests if requirements are met. */
+    /** Adds the given quest to activeQuests if requirements are met.
+     * Should only be used as initializing and loading. */
     private void addQuestToManager(Quest quest, PlayerInfo playerInfo){
-        if(canQuestBeAddedToActive(quest, playerInfo))
+
+        if(specialCaseChem4Helper.addQuestCheck(quest)) { }
+        else if(canQuestBeAddedToActive(quest, playerInfo))
             activeQuests.add(quest);
         else
             lockedQuests.add(quest);
@@ -70,8 +75,7 @@ public class QuestManager {
         for(Quest quest : new ArrayList<>(lockedQuests)){
             boolean shouldBeActive = canQuestBeAddedToActive(quest, playerInfo);
             if(shouldBeActive){
-                lockedQuests.remove(quest);
-                activeQuests.add(quest);
+                moveQuestFromLockedToActive(quest);
                 wasListUpdated = true;
                 break;
             }
@@ -79,6 +83,15 @@ public class QuestManager {
 
         if(wasListUpdated)
             doPrerequisiteQuestCheckForLocked();
+    }
+
+    /** Used when a quest becomes active. */
+    private void moveQuestFromLockedToActive(Quest quest){
+        lockedQuests.remove(quest);
+        activeQuests.add(quest);
+
+        //Special case 1
+        specialCaseChem4Helper.chem4FromLockedToActiveCheck(quest);
     }
 
     /** Compares the given quest´s required quests with completed quests. */
@@ -98,11 +111,16 @@ public class QuestManager {
 
     /** Completes given quest and updates model. (Including prerequisite check)*/
     public void completeQuest(Quest quest){
+        int givenQuestId = quest.getId();
+
         //Special case: quest: postman pat
-        if (quest.getId() == quest_id_postman_pat_part1){
+        if (givenQuestId == quest_id_postman_pat_part1){
             if (!canPostmanPatPart1BeCompleted())
                 return;
         }
+
+        //Special case 1
+        specialCaseChem4Helper.primaryCompleteCheck(quest);
 
         quest.complete();
         activeQuests.remove(quest);

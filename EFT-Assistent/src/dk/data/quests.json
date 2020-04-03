@@ -530,7 +530,7 @@
       "giver": "Therapist",
       "req_level": 0,
       "id": 39,
-      "req_quests": [ 53 ],
+      "req_quests": [ ],
       "maps": [ "Customs" ],
       "objectives": [{
         "obj": "Mark white van, east, big white warehouse, inside"
@@ -544,7 +544,7 @@
       "giver": "Therapist",
       "req_level": 0,
       "id": 40,
-      "req_quests": [ 16, 54 ],
+      "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
         "obj": "Hand-in keys",
@@ -743,7 +743,7 @@
       "giver": "Skier",
       "req_level": 0,
       "id": 55,
-      "req_quests": [ 16 ],
+      "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
         "obj": "hand-in 1 mil rubles"

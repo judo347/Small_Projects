@@ -1,4 +1,5 @@
 Quests are updated for 0.12.4.6465
+Huge thanks to the EFT Wiki for all quest related information!
 
 model/QuestLoader:parseQuest - take care of objectives in objectives
 model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectives
@@ -14,7 +15,10 @@ TODOs:
       4. God mode
         - Start mode
         - Sort quests after Trader/Map
-      5. Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
+      5. Visual improvements
+        - cleanup quest card visuals
+        - Window resizing
+        - Future work? Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
       6. Regret options
       7. Visual improvements
         - Remove "Requirements" from visuals if non is existing.
@@ -56,6 +60,11 @@ Future Work:
   - QuestManager: store quests as maps<QuestId:int, Quest>
 - Visual tool for debugging quest data
   - Graph of quest dependencies of other quests
+- Testing:
+  - Tests
+    - Unit tests
+    - check: is it possible to complete all quests?
+  - Make it possible to start at a specific quest with all previous and non-related already completed.
 
 
 Diagram todos:
@@ -65,6 +74,9 @@ Diagram todos:
 
 Build notes:
  - Does saving and loading of files work?
+
+In-game tests:
+ - Does chem 3 unlock chem 4?
 --------------------------------------------------
 Odd cases needed to be handled:
 
@@ -76,7 +88,18 @@ Prapor: No Offence
 - req_quests
  - Chemical - Part 4 or Out of curiosity
     - Just add one, and it should be fine
-	
+TODO Make sure loading and saving works with these quests.
+    private final int quest_id_postman_pat_part1 = 7;
+    private final int quest_id_postman_pat_part2 = 38;
+    private final int quest_id_collector = 185;
+    private final int quest_id_chemical_part_4 = 54;
+    private final int quest_id_out_of_curiosity = 39;
+    private final int quest_id_big_customer = 16;
+    private final int quest_id_trust_regain = 40;
+    private final int quest_id_loyalty_buyout = 55;
+    private final int quest_id_no_offence = 17;
+
+#1.5 case
 Supply plans and Kind of sabotage completes each other
 
 #2 Case
