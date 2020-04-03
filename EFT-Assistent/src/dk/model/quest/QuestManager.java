@@ -19,6 +19,9 @@ public class QuestManager {
     private final int quest_id_postman_pat_part2 = 38;
     private final int quest_id_collector = 185;
 
+    private final int quest_id_kind_of_sabotage = 63;
+    private final int quest_id_supply_plans = 30;
+
     SpecialCaseChem4Helper specialCaseChem4Helper = new SpecialCaseChem4Helper(this);
 
     public QuestManager(PlayerInfo playerInfo) {
@@ -119,6 +122,9 @@ public class QuestManager {
                 return;
         }
 
+        //Special case: quest: supply plans or kind of sabotage
+        specialCaseSupplyPlansAndKindOfSabotageCompleteCheck(quest);
+
         //Special case 1
         specialCaseChem4Helper.primaryCompleteCheck(quest);
 
@@ -127,6 +133,37 @@ public class QuestManager {
         completed.add(quest);
 
         doPrerequisiteQuestCheckForLocked();
+    }
+
+    /** Special case: quest: Supply plans and Kind of sabotage: one completes the other. */
+    private void specialCaseSupplyPlansAndKindOfSabotageCompleteCheck(Quest quest){
+        if(quest.getId() == quest_id_supply_plans){
+            boolean questFound = false;
+            for(Quest q : new ArrayList<>(activeQuests)){
+                if (q.getId() == quest_id_kind_of_sabotage){
+                    q.complete();
+                    activeQuests.remove(q);
+                    completed.add(q);
+                    questFound = true;
+                }
+
+                if (questFound)
+                    break;
+            }
+        }else if(quest.getId() == quest_id_kind_of_sabotage){
+            boolean questFound = false;
+            for(Quest q : new ArrayList<>(activeQuests)){
+                if (q.getId() == quest_id_supply_plans){
+                    q.complete();
+                    activeQuests.remove(q);
+                    completed.add(q);
+                    questFound = true;
+                }
+
+                if (questFound)
+                    break;
+            }
+        }
     }
 
     /** Special case: quest: postman pat

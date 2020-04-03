@@ -65,7 +65,7 @@ Future Work:
     - Unit tests
     - check: is it possible to complete all quests?
   - Make it possible to start at a specific quest with all previous and non-related already completed.
-
+- Information mode: searchable list of all quests showing their information.
 
 Diagram todos:
  - Add main class and starting point of program
@@ -79,9 +79,6 @@ In-game tests:
  - Does chem 3 unlock chem 4?
 --------------------------------------------------
 Odd cases needed to be handled:
-
-#1.5 case
-Supply plans and Kind of sabotage completes each other
 
 #3 Case (FUTURE WORK)
 Collector quest requires all other quests to be completed.
