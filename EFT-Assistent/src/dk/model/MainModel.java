@@ -1,5 +1,6 @@
 package dk.model;
 
+import dk.Main;
 import dk.data.JSONParserHelper;
 import dk.model.quest.QuestManager;
 import dk.view.PrimarySceneController;
@@ -8,13 +9,24 @@ import java.util.ArrayList;
 
 public class MainModel {
 
-    private final PrimarySceneController psc;
+    private boolean runningHeadless;
+
+    private PrimarySceneController psc;
 
     private QuestManager qm;
     private PlayerInfo playerInfo;
 
-    public MainModel(PrimarySceneController psc) {
+    public MainModel() {
+        initialize(true);
+    }
+
+    public MainModel(PrimarySceneController psc){
         this.psc = psc;
+        initialize(false);
+    }
+
+    private void initialize(boolean runningHeadless){
+        this.runningHeadless = runningHeadless;
         playerInfo = new PlayerInfo(0);
         qm = new QuestManager(playerInfo);
     }
@@ -39,8 +51,10 @@ public class MainModel {
 
         playerInfo.reload(saveData.playerInfo);
         qm.reloadFromCompletedQuests(saveData.completedQuestIds, saveData.playerInfo);
-        psc.reloadPlayerInfoVisuals();
-        psc.reloadQuestVisuals();
+        if(!runningHeadless) {
+            psc.reloadPlayerInfoVisuals();
+            psc.reloadQuestVisuals();
+        }
     }
 
     public void saveSlot(int slotNumber){
