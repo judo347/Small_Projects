@@ -40,4 +40,6 @@ public class TestSaveAndLoad {
         TestUtils.assertEqualQuestList(activeQuests_before, activeQuests_after);
         TestUtils.assertEqualQuestList(lockedQuests_before, lockedQuests_after);
     }
+
+    //TODO Add method for comparing and coping models.
 }
