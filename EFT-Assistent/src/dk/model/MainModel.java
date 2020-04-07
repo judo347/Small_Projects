@@ -27,7 +27,7 @@ public class MainModel {
 
     private void initialize(boolean runningHeadless){
         this.runningHeadless = runningHeadless;
-        playerInfo = new PlayerInfo(0);
+        playerInfo = new PlayerInfo(1);
         qm = new QuestManager(playerInfo);
     }
 
@@ -50,6 +50,7 @@ public class MainModel {
         SaveData saveData = jph.loadSlot(slotNumber);
 
         playerInfo.reload(saveData.playerInfo);
+        qm = new QuestManager(playerInfo);
         qm.reloadFromCompletedQuests(saveData.completedQuestIds, saveData.playerInfo);
         if(!runningHeadless) {
             psc.reloadPlayerInfoVisuals();

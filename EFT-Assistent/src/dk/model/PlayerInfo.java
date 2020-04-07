@@ -2,15 +2,15 @@ package dk.model;
 
 public class PlayerInfo {
 
-    private int playerLevel;
-    private int praporLoyaltyLevel = 0;
-    private int therapistLoyaltyLevel = 0;
-    private int skierLoyaltyLevel = 0;
-    private int peacekeeperLoyaltyLevel = 0;
-    private int mechanicLoyaltyLevel = 0;
-    private int ragmanLoyaltyLevel = 0;
-    private int jaegerLoyaltyLevel = 0;
-    private int fenceLoyaltyLevel = 0;
+    private int playerLevel = 1;
+    private int praporLoyaltyLevel = 1;
+    private int therapistLoyaltyLevel = 1;
+    private int skierLoyaltyLevel = 1;
+    private int peacekeeperLoyaltyLevel = 1;
+    private int mechanicLoyaltyLevel = 1;
+    private int ragmanLoyaltyLevel = 1;
+    private int jaegerLoyaltyLevel = 1;
+    private int fenceLoyaltyLevel = 1;
 
     public PlayerInfo() {
     }
