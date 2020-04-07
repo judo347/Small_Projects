@@ -30,6 +30,7 @@ Bugs:
 
 
 Todos notes:
+- move load and save features in QuestManager to other class?
 - Tests for adding quests and such? Or at least manual tests!!
   - Does check for quests that has more than one quest requirement work?
 - Move QuestLoader to data folder, and into JSONParserHelper, use common functions
@@ -66,6 +67,7 @@ Future Work:
     - check: is it possible to complete all quests?
   - Make it possible to start at a specific quest with all previous and non-related already completed.
 - Information mode: searchable list of all quests showing their information.
+- key spawn locations cheat sheet
 
 Diagram todos:
  - Add main class and starting point of program
