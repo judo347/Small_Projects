@@ -256,7 +256,7 @@
       "req_quests": [ 8 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "10x Kill PMC with granade"
+        "obj": "12x Kill PMC with granade"
         }],
       "requirements": [ ]
     },
@@ -851,10 +851,10 @@
       "req_quests": [ 61 ],
       "maps": [ "Interchange", "Woods", "Customs" ],
       "objectives": [{
-        "obj": "3x stash \"gold chains\"",
+        "obj": "stash \"gold chains\"",
 		"subs": [ "3x Interchange: main floor, Generic store, place on metal bed", 
-				"Woods: saw mill, south, middle cabin, on bed, on book, place", 
-				"Customs: 3-story stors, 3rd floor, kitchen, place in microwave" ]
+				"3x Woods: saw mill, south, middle cabin, on bed, on book, place", 
+				"3x Customs: 3-story stors, 3rd floor, kitchen, place in microwave" ]
       }],
       "requirements": [ "Key: \"West wing room 216\"", "Key: \"East wing room 306\" or \"East wing room 308\"" ]
     },
