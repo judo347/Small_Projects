@@ -181,20 +181,52 @@ public class QuestManager {
     /** Reloads quest model based on the given completed quest ids. (Sets active and locked)
      Used when loading saved data. */
     public void reloadFromCompletedQuests(ArrayList<Integer> completedQuestIds, PlayerInfo playerInfo){
-        ArrayList<Quest> allQuests = loadAllQuests();
+        // Currently done before method call
+        //allQuests = loadAllQuests();
+        //activeQuests = new ArrayList<>();
+        //completed = new ArrayList<>();
 
-        //Remove completed quests
-        for(Quest quest : new ArrayList<>(allQuests))
-            for(int id : completedQuestIds)
-                if(quest.getId() == id)
-                    allQuests.remove(quest);
+        //Find all quests which has to be completed
+        //TODO optimize, dictionary for quests?
+        ArrayList<Quest> questsToComplete = new ArrayList<>();
+        for(Quest quest : allQuests)
+            for(Integer complId : completedQuestIds)
+                if (quest.getId() == complId){
+                    questsToComplete.add(quest);
+                    break;
+                }
 
-        //Load with remaining quests
-        for(Quest quest : allQuests){
-            addQuestToManager(quest, playerInfo);
+        for(Quest quest : questsToComplete){
+            completeQuestRecursively(quest);
         }
+    }
 
-        doPrerequisiteQuestCheckForLocked();
+    //TODO Write tests for special cases generally
+    private void completeQuestRecursively(Quest quest){
+
+        if (!quest.isCompleted()){
+            //TODO make quests have refs to each other
+            ArrayList<Quest> requiredQuests = new ArrayList<>();
+            for(Integer regQuestId : quest.getRequiredQuestIds()){
+                for(Quest allQ : allQuests){
+                    if(allQ.getId() == regQuestId){
+                        requiredQuests.add(allQ);
+                        break;
+                    }
+                }
+            }
+            if (requiredQuests.size() != quest.getRequiredQuestIds().size())
+                throw new IllegalArgumentException("Did not find all required quests"); //TODO Is proberly thrown if quest required is special case which is saved in different class
+
+            //Call method on all required quests for this one
+            for (Quest q : requiredQuests)
+                completeQuestRecursively(q);
+
+            if(!canQuestBeAddedToActive(quest, playerInfo))
+                throw new IllegalArgumentException("Something went wrong!");  //TODO This will be throw if player loads a save where Collector is completed
+
+            completeQuest(quest);
+        }
     }
 
     /** Loads all quests from data file. */
