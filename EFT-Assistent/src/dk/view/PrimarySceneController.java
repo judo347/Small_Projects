@@ -99,7 +99,7 @@ public class PrimarySceneController {
 
         // Re-adds all active quests
         for(Quest quest : mainModel.getQm().getActiveQuests()){
-            PaneAndController questCardAndController = createQuestCard(quest, this);
+            PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
 
             MapType mapType;
 
@@ -129,13 +129,13 @@ public class PrimarySceneController {
     }
 
     /** Creates and returns a quest card based on the given Quest. */
-    private PaneAndController createQuestCard(Quest quest, PrimarySceneController psc){
+    private PaneAndController createQuestCard(Quest quest, QuestState questState, PrimarySceneController psc){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
             Pane questCard = fxmlLoader.load();
             QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
 
-            questCardController.setValues(quest);
+            questCardController.setValues(quest, questState);
             questCardController.setParent(psc);
 
             return new PaneAndController(questCard, questCardController);

@@ -9,7 +9,7 @@ TODOs:
       DONE 1. Check overall structure. Especially the divide between components.
               - Diagram done
       DONE 2. Odd cases
-      3. Save and load system
+      DONE 3. Save and load system
         - fix load/save bugs
         - Check bug section
       4. God mode
@@ -23,10 +23,13 @@ TODOs:
       7. Visual improvements
         - Remove "Requirements" from visuals if non is existing.
 
+Godmode todos:
+  Prework:
+        DONE 1. Visually should quests have 3 states: accepted, available, locked. Each should have a color.
+        DONE 2. First click accepts quest, second completes it
+  Feautes-work:
+        1.
 
-Bugs:
-- Completing a quest, saving, and loading it, the quest is then not completed.
-  - Seems to save the correct information
 
 
 Todos notes:

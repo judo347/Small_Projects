@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class QuestCardController {
 
+    @FXML private Pane background_pane;
+
     @FXML private Label label_traderName;
     @FXML private Label label_questName;
     @FXML private Label label_reqLevel;
@@ -27,6 +29,7 @@ public class QuestCardController {
     private PrimarySceneController psc;
     private HBox parentBox;
     private Pane layoutComponent;
+    private QuestState state;
 
     ArrayList<Label> objectiveLabels = new ArrayList<>();
     ArrayList<Label> requirementLabels = new ArrayList<>();
@@ -40,12 +43,13 @@ public class QuestCardController {
         this.layoutComponent = layoutComponent;
     }
 
-    public void setValues(Quest quest){
-
+    public void setValues(Quest quest, QuestState questState){
+        this.state = questState;
         originalQuest = quest;
         label_traderName.setText(quest.getTrader().getName());
         label_questName.setText(quest.getQuestName());
         label_reqLevel.setText(String.valueOf(quest.getRequiredLevel()));
+        setBackgroundColorToMatchState();
 
 
         for(MapType type : quest.getMaps())
@@ -68,9 +72,21 @@ public class QuestCardController {
         }
     }
 
+    private void setBackgroundColorToMatchState(){
+        background_pane.setStyle("-fx-background-color: #" + state.getColorString());
+    }
+
     @FXML
     void cardClicked(MouseEvent event) {
-        deleteCard();
+        if(state == QuestState.AVAILABLE){
+            state = QuestState.ACCEPTED;
+            setBackgroundColorToMatchState();
+        }else if(state == QuestState.ACCEPTED){
+            deleteCard();
+        }else if(state == QuestState.LOCKED){
+            System.out.println("Clicked locked quest!"); //TODO Currently nothing happens
+        }else
+            throw new IllegalArgumentException("Should not happen!");
     }
 
     /** Removes the questCard from the program. */
