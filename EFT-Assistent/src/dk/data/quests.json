@@ -1103,9 +1103,9 @@
       "req_level": 12,
       "id": 79,
       "req_quests": [ 78 ],
-      "maps": [ ],
+      "maps": [ "Shoreline" ],
       "objectives": [{
-        "obj": "Hand-in \"The key to the closed premises of the sanatorium\""
+        "obj": "Hand-in: north, near Rock Passage exit, in bunker, on chair."
       }],
       "requirements": [ ]
     },
