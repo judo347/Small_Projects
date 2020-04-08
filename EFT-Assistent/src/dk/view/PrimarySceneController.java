@@ -42,6 +42,7 @@ public class PrimarySceneController {
 
     public void setMainModel(MainModel mainModel) {
         this.mainModel = mainModel;
+        reloadPlayerInfoVisuals();
     }
 
     /** Adds the given quest card to the correct hbox based on given mapType. */

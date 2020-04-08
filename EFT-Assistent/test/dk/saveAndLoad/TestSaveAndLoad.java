@@ -1,6 +1,5 @@
 package dk.saveAndLoad;
 
-import dk.Main;
 import dk.model.MainModel;
 import dk.model.PlayerInfo;
 import dk.model.TraderType;
@@ -40,8 +39,8 @@ public class TestSaveAndLoad {
 
         for(Quest quest : new ArrayList<>(model.getQm().getActiveQuests()))
             model.getQm().completeQuest(quest);
-        //TODO bug!! No active quests! after completing quests in this way!
 
+        assertEquals(0, model.getQm().getActiveQuests().size());
 
         ModelState modelState_origin = new ModelState(model);
         boolean didSave = model.saveSlot(test_saveSlot);
@@ -82,12 +81,23 @@ public class TestSaveAndLoad {
 
         for(Quest quest : new ArrayList<>(model.getQm().getActiveQuests()))
             model.getQm().completeQuest(quest);
-        //TODO bug!! No active quests! after completing quests in this way!
-        for(Quest quest : new ArrayList<>(model.getQm().getActiveQuests()))
-            model.getQm().completeQuest(quest);
+
+        model.incrementPlayerLevel();
+        model.incrementPlayerLevel();
+        model.incrementPlayerLevel();
+
+        assertEquals(2, model.getQm().getActiveQuests().size());
 
         for(Quest quest : new ArrayList<>(model.getQm().getActiveQuests()))
             model.getQm().completeQuest(quest);
+
+        assertEquals(1, model.getQm().getActiveQuests().size());
+
+        model.incrementPlayerLevel();
+        model.incrementPlayerLevel();
+        model.incrementPlayerLevel();
+
+        assertEquals(4, model.getQm().getActiveQuests().size());
 
         ModelState modelState_origin = new ModelState(model);
         boolean didSave = model.saveSlot(test_saveSlot);
