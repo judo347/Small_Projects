@@ -40,6 +40,8 @@ public class PrimarySceneController {
 
     private MainModel mainModel;
 
+    private boolean isInGodMode = true;
+
     public void setMainModel(MainModel mainModel) {
         this.mainModel = mainModel;
         reloadPlayerInfoVisuals();
@@ -111,6 +113,24 @@ public class PrimarySceneController {
             addQuestCard(questCardAndController, mapType);
         }
 
+        //Should locked quests be shown?
+        if(isInGodMode){
+            //TODO!!!
+
+            for(Quest quest : mainModel.getQm().getLockedQuests()){
+                PaneAndController questCardAndController = createQuestCard(quest, QuestState.LOCKED, this);
+
+                MapType mapType;
+
+                if(quest.getMaps().size() == 1)
+                    mapType = quest.getMaps().get(0);
+                else
+                    mapType = MapType.MIXED;
+
+                addQuestCard(questCardAndController, mapType);
+            }
+        }
+
         // Updates quests completed label
         setQuestCompletionLabel();
     }
@@ -145,6 +165,13 @@ public class PrimarySceneController {
         }
 
         throw new IllegalArgumentException();
+    }
+
+    private void changeGodmode(boolean wantedState){
+        if(wantedState != isInGodMode){
+            isInGodMode = wantedState;
+            reloadQuestVisuals();
+        }
     }
 
     /** Updates the quest progression label. */
@@ -250,5 +277,21 @@ public class PrimarySceneController {
     @FXML
     void menu_buttonAction_load_slot1(ActionEvent event) {
         mainModel.loadSlot(1);
+    }
+
+    @FXML void menu_buttonAction_godmode_disable(ActionEvent event) {
+        changeGodmode(false);
+    }
+
+    @FXML void menu_buttonAction_godmode_enable(ActionEvent event) {
+        changeGodmode(true);
+    }
+
+    @FXML void menu_buttonAction_sort_map(ActionEvent event) {
+        //TODO
+    }
+
+    @FXML void menu_buttonAction_sort_trader(ActionEvent event) {
+        //TODO
     }
 }

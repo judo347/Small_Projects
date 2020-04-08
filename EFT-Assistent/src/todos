@@ -22,13 +22,7 @@ TODOs:
       6. Regret options
       7. Visual improvements
         - Remove "Requirements" from visuals if non is existing.
-
-Godmode todos:
-  Prework:
-        DONE 1. Visually should quests have 3 states: accepted, available, locked. Each should have a color.
-        DONE 2. First click accepts quest, second completes it
-  Feautes-work:
-        1.
+      8. Runtime improvements!
 
 
 
@@ -50,6 +44,8 @@ Todos (not so important ATM)(Listed in priority, first most important):
 
 
 Future Work:
+- Allow godmode to complete locked quests, and complete required recursively.
+  - hint: QuestCardController: cardClicked(): if state = locked, if godmode ... code
 - Mouse over questsCards for pop-up tips or maps?
 - Found in raid items needed for future quests could be displayed and crossed out when found
 - In a given state: Display weights/priority for which quests makes sense completing first
