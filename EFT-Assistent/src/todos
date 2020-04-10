@@ -35,6 +35,7 @@ Todos notes:
   - Maybe just go through all code and cleanup code and structure
 - god mode: all quests shown, for first time startup, complete all quests
 	- Make it possible to sort by either trader or map, to aid the starting process
+- save on exit / auto save after x time
 
 
 Todos (not so important ATM)(Listed in priority, first most important):
