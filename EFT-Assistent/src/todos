@@ -16,6 +16,7 @@ TODOs:
         - Start mode
         - Sort quests after Trader/Map
       5. Visual improvements
+        - save on exit
         - cleanup quest card visuals
         - Window resizing
         - Future work? Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
@@ -24,7 +25,8 @@ TODOs:
         - Remove "Requirements" from visuals if non is existing.
       8. Runtime improvements!
 
-
+Bugs:
+ - Active quests gets Available after another quest is completed?
 
 Todos notes:
 - move load and save features in QuestManager to other class?
