@@ -7,11 +7,11 @@ model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectiv
 TODOs:
      Timeline:
       DONE 1. Check overall structure. Especially the divide between components.
-              - Diagram done
+      DONE        - Diagram done
       DONE 2. Odd cases
       DONE 3. Save and load system
-        - fix load/save bugs
-        - Check bug section
+      DONE  - fix load/save bugs
+      DONE  - Check bug section
       4. God mode
       DONE - Start mode
         - Sort quests after Trader/Map //DOING AT HOME
@@ -35,7 +35,7 @@ TODOs:
        - save on exit and auto save
 
       10. FUTURE:
-       - QUest card info: requirements if locked and show maps if mixed
+       - Quest card info: requirements if locked and show maps if mixed
        - Mouse dragging of scrollPane (Maybe future??)
 
 Bugs:
