@@ -13,17 +13,30 @@ TODOs:
         - fix load/save bugs
         - Check bug section
       4. God mode
-        - Start mode
-        - Sort quests after Trader/Map
+      DONE - Start mode
+        - Sort quests after Trader/Map //DOING AT HOME
       5. Visual improvements
-        - save on exit
-        - cleanup quest card visuals
-      DONE - Window resizing
-        - Future work? Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
+        - cleanup quest card visuals //ONLY NEEDS COLORS //dev_ui
+      DONE - Window resizing //dev_ui
+      DONE  - Future work? Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
       6. Regret options
       7. Visual improvements
-        - Remove "Requirements" from visuals if non is existing.
+      DONE - Remove "Requirements" from visuals if non is existing.
+        - Quest Card:
+          - Text wrapping
+          - some card go down into next: pref height?
+        - Overall:
+          - Padding between quests?
+          - Map/trader image size, make them match quest size
       8. Runtime improvements!
+        - Quests should be in dictionary, and found by id
+        - others! Check todos!
+      9. Others
+       - save on exit and auto save
+
+      10. FUTURE:
+       - QUest card info: requirements if locked and show maps if mixed
+       - Mouse dragging of scrollPane (Maybe future??)
 
 Bugs:
  - Active quests gets Available after another quest is completed?
@@ -33,10 +46,7 @@ Todos notes:
 - Tests for adding quests and such? Or at least manual tests!!
   - Does check for quests that has more than one quest requirement work?
 - Move QuestLoader to data folder, and into JSONParserHelper, use common functions
-- Maybe rework refreshing of model and visuals
-  - Maybe just go through all code and cleanup code and structure
-- god mode: all quests shown, for first time startup, complete all quests
-	- Make it possible to sort by either trader or map, to aid the starting process
+- Make it possible to sort by either trader or map, to aid the starting process
 - save on exit / auto save after x time
 
 
@@ -47,6 +57,7 @@ Todos (not so important ATM)(Listed in priority, first most important):
 
 
 Future Work:
+- QUest card info: requirements if locked and show maps if mixed
 - Allow godmode to complete locked quests, and complete required recursively.
   - hint: QuestCardController: cardClicked(): if state = locked, if godmode ... code
 - Mouse over questsCards for pop-up tips or maps?
