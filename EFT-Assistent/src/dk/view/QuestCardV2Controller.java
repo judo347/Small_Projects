@@ -3,17 +3,20 @@ package dk.view;
 import dk.model.quest.Quest;
 import dk.model.quest.QuestObjectives;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+
+
 
 public class QuestCardV2Controller {
 
@@ -37,8 +40,13 @@ public class QuestCardV2Controller {
         this.layoutComponent = layoutComponent;
     }
 
+    //TODO move initializing stuff for vbox_content to other method
+    //TODO make style to a common string/attribute
     public void setValues(Quest quest, QuestState questState){
         this.max_card_width = vbox_content.getPrefWidth();
+        vbox_content.prefWidthProperty().bind(((Pane)vbox_content.getParent()).widthProperty());
+        vbox_content.prefHeightProperty().bind(((Pane)vbox_content.getParent()).widthProperty());
+        ((Pane) vbox_content.getParent()).setBorder(new Border(new BorderStroke(Color.YELLOW, BorderStrokeStyle.SOLID, null, new BorderWidths(3))));
         this.state = questState;
         this.originalQuest = quest;
 
@@ -47,6 +55,8 @@ public class QuestCardV2Controller {
 
         //Title section
         HBox titelBox = new HBox();
+        titelBox.setMinWidth(max_card_width);
+        //titelBox.setMinWidth(Region.USE_PREF_SIZE);
         titelBox.setAlignment(Pos.CENTER);
         ImageView traderIcon = new ImageView(); //TODO Image based on trader
         Label questTitel = new Label(quest.getQuestName());
@@ -58,12 +68,18 @@ public class QuestCardV2Controller {
         //Maps section
         if(quest.getMaps().size() > 1){
             HBox mapsBox = new HBox();
+            mapsBox.setStyle("-fx-border-insets: 5 0 0 0; -fx-border-color: black transparent transparent transparent;");
+            mapsBox.setPadding(new Insets(5,5,5,5));
             //TODO content
             vbox_content.getChildren().add(mapsBox);
         }
 
         //Objectives section
         VBox objectives = new VBox();
+        objectives.setPadding(new Insets(5,5,5,5));
+        //objectives.setPrefWidth(Double.POSITIVE_INFINITY);
+        //objectives.setMinWidth(Region.USE_PREF_SIZE);
+        objectives.setStyle("-fx-border-insets: 5 0 0 0; -fx-border-color: black transparent transparent transparent;");
         HBox hbox_titel_obj = new HBox();
         hbox_titel_obj.setAlignment(Pos.CENTER);
         Label label_titel_obj = new Label("Objectives");
@@ -94,6 +110,8 @@ public class QuestCardV2Controller {
         //Obj requirements
         if(quest.getRequirements().size() > 0){
             VBox requirements = new VBox();
+            requirements.setPadding(new Insets(5,5,5,5));
+            requirements.setStyle("-fx-border-insets: 5 0 0 0; -fx-border-color: black transparent transparent transparent;");
             HBox hbox_titel_req = new HBox();
             hbox_titel_req.setAlignment(Pos.CENTER);
             Label label_titel_req = new Label("Requirements");
