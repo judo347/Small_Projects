@@ -16,7 +16,7 @@ TODOs:
       DONE - Start mode
         - Sort quests after Trader/Map //DOING AT HOME
       5. Visual improvements
-        - cleanup quest card visuals //ONLY NEEDS COLORS //dev_ui
+        - cleanup quest card visuals //dev_ui
       DONE - Window resizing //dev_ui
       DONE  - Future work? Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
       6. Regret options
