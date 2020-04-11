@@ -49,6 +49,7 @@ public class QuestCardV2Controller {
         ((Pane) vbox_content.getParent()).setBorder(new Border(new BorderStroke(Color.YELLOW, BorderStrokeStyle.SOLID, null, new BorderWidths(3))));
         this.state = questState;
         this.originalQuest = quest;
+        setBackgroundColorToMatchState();
 
         //TODO set style of vbox_content
         //TODO black lines between sections
