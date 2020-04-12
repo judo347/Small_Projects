@@ -159,14 +159,14 @@ public class PrimarySceneController {
     private PaneAndController createQuestCard(Quest quest, QuestState questState, PrimarySceneController psc){
         try {
             //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCardV2.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
             Pane questCard = fxmlLoader.load();
             //QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
 
             //questCardController.setValues(quest, questState);
             //questCardController.setParent(psc);
 
-            QuestCardV2Controller questCardController = (QuestCardV2Controller)fxmlLoader.getController();
+            QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
             questCardController.setValues(quest, questState);
             questCardController.setParent(psc);
 
