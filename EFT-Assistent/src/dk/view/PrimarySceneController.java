@@ -9,10 +9,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
@@ -29,6 +31,9 @@ public class PrimarySceneController {
     @FXML private Label label_level_ragman;
     @FXML private Label label_level_jaeger;
 
+    @FXML private VBox vbox_maincontent;
+
+    //TODO DELETE! and dont use!
     @FXML private HBox hbox_interchange_quests;
     @FXML private HBox hbox_labs_quests;
     @FXML private HBox hbox_customs_quests;
@@ -41,9 +46,13 @@ public class PrimarySceneController {
     private MainModel mainModel;
 
     private boolean isInGodMode = true;
+    private SortingMode currentSortingMode = SortingMode.MAP;
+    private QuestCategoryManager qcm;
 
     public void setMainModel(MainModel mainModel) {
         this.mainModel = mainModel;
+        this.qcm = new QuestCategoryManager(this, vbox_maincontent);
+        this.qcm.reloadSorting(currentSortingMode);
         reloadPlayerInfoVisuals();
     }
 
@@ -97,7 +106,7 @@ public class PrimarySceneController {
      Should be called each time changes to quests is made in the model. */
     public void reloadQuestVisuals(){
         // Clears quest boxes
-        clearQuestCardBoxes();
+        qcm.clearHboxs(currentSortingMode);
 
         // Re-adds all active quests
         for(Quest quest : mainModel.getQm().getActiveQuests()){
@@ -110,13 +119,11 @@ public class PrimarySceneController {
             else
                 mapType = MapType.MIXED;
 
-            addQuestCard(questCardAndController, mapType);
+            qcm.addQuestCard(questCardAndController, currentSortingMode, mapType, quest.getTrader());
         }
 
         //Should locked quests be shown?
         if(isInGodMode){
-            //TODO!!!
-
             for(Quest quest : mainModel.getQm().getLockedQuests()){
                 PaneAndController questCardAndController = createQuestCard(quest, QuestState.LOCKED, this);
 
@@ -127,7 +134,7 @@ public class PrimarySceneController {
                 else
                     mapType = MapType.MIXED;
 
-                addQuestCard(questCardAndController, mapType);
+                qcm.addQuestCard(questCardAndController, currentSortingMode, mapType, quest.getTrader());
             }
         }
 
@@ -171,6 +178,13 @@ public class PrimarySceneController {
         if(wantedState != isInGodMode){
             isInGodMode = wantedState;
             reloadQuestVisuals();
+        }
+    }
+
+    private void changeSortingMode(SortingMode wantedMode){
+        if(wantedMode != currentSortingMode){
+            currentSortingMode = wantedMode;
+            qcm.reloadSorting(currentSortingMode);
         }
     }
 
@@ -288,10 +302,10 @@ public class PrimarySceneController {
     }
 
     @FXML void menu_buttonAction_sort_map(ActionEvent event) {
-        //TODO
+        changeSortingMode(SortingMode.MAP);
     }
 
     @FXML void menu_buttonAction_sort_trader(ActionEvent event) {
-        //TODO
+        changeSortingMode(SortingMode.TRADER);
     }
 }

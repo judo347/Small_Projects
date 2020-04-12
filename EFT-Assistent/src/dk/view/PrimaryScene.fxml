@@ -236,7 +236,7 @@
                   </VBox>
                   <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
                      <content>
-                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="vbox_maincontent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
                            <children>
                               <HBox prefHeight="100.0" prefWidth="200.0">
                                  <children>
