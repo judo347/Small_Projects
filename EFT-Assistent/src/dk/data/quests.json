@@ -1127,7 +1127,7 @@
       "req_level": 12,
       "id": 81,
       "req_quests": [ 80 ],
-      "maps": [ "Shoreline"],
+      "maps": [ ],
       "objectives": [{
         "obj": "Hand-in (found in raid):",
 		"subs": [ "4x \"Morphine injector\"", 

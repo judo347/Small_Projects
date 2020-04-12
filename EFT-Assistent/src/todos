@@ -7,14 +7,14 @@ model/QuestLoader:stringArrayToQObjectives - take care of objectives in objectiv
 TODOs:
      Timeline:
       DONE 1. Check overall structure. Especially the divide between components.
-              - Diagram done
+      DONE        - Diagram
       DONE 2. Odd cases
       DONE 3. Save and load system
         - fix load/save bugs
         - Check bug section
       4. God mode
         - Start mode
-        - Sort quests after Trader/Map
+      DONE  - Sort quests after Trader/Map
       5. Visual improvements
         - cleanup quest card visuals
         - Window resizing
@@ -23,6 +23,7 @@ TODOs:
       7. Visual improvements
         - Remove "Requirements" from visuals if non is existing.
       8. Runtime improvements!
+      9. BUILD TODOES!
 
 
 
@@ -75,6 +76,7 @@ Diagram todos:
 
 Build notes:
  - Does saving and loading of files work?
+ - ImageHandler: paths
 
 In-game tests:
  - Does chem 3 unlock chem 4?
