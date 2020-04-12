@@ -23,10 +23,10 @@ TODOs:
         - cleanup quest card visuals //dev_ui
         - Quest Card:
           - Text wrapping
-          - some card go down into next: pref height?
+      DONE    - some card go down into next: pref height?
         - Overall:
           - Padding between quests?
-          - Map/trader image size, make them match quest size
+      DONE    - Map/trader image size, make them match quest size
       7. Regret options
       8. Runtime improvements!
 		  - Quests should be in dictionary, and found by id
