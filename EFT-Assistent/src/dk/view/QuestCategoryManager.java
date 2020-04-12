@@ -99,4 +99,8 @@ public class QuestCategoryManager {
             }
         }
     }
+
+    public ImageHandler getImageHandler() {
+        return imageHandler;
+    }
 }

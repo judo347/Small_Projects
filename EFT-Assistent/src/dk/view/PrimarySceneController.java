@@ -165,9 +165,8 @@ public class PrimarySceneController {
 
             //questCardController.setValues(quest, questState);
             //questCardController.setParent(psc);
-
             QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
-            questCardController.setValues(quest, questState);
+            questCardController.setValues(quest, questState, qcm.getImageHandler());
             questCardController.setParent(psc);
 
             return new PaneAndController(questCard, questCardController);

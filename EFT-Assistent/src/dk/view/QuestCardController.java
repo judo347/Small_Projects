@@ -1,5 +1,6 @@
 package dk.view;
 
+import dk.data.ImageHandler;
 import dk.model.quest.Quest;
 import dk.model.quest.QuestObjectives;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -42,7 +44,7 @@ public class QuestCardController {
 
     //TODO move initializing stuff for vbox_content to other method
     //TODO make style to a common string/attribute
-    public void setValues(Quest quest, QuestState questState){
+    public void setValues(Quest quest, QuestState questState, ImageHandler imageHandler){
         this.max_card_width = vbox_content.getPrefWidth();
         vbox_content.prefWidthProperty().bind(((Pane)vbox_content.getParent()).widthProperty());
         vbox_content.prefHeightProperty().bind(((Pane)vbox_content.getParent()).widthProperty());
@@ -57,9 +59,12 @@ public class QuestCardController {
         //Title section
         HBox titelBox = new HBox();
         titelBox.setMinWidth(max_card_width);
-        //titelBox.setMinWidth(Region.USE_PREF_SIZE);
         titelBox.setAlignment(Pos.CENTER);
-        ImageView traderIcon = new ImageView(); //TODO Image based on trader
+        Image traderImage = imageHandler.getImageFromTraderType(quest.getTrader());
+        ImageView traderIcon = new ImageView(traderImage);
+        traderIcon.setFitHeight(20);
+        traderIcon.setSmooth(true);
+        traderIcon.setPreserveRatio(true);
         Label questTitel = new Label(quest.getQuestName());
         questTitel.setStyle("-fx-font-weight: bold;");
         titelBox.getChildren().add(traderIcon);
