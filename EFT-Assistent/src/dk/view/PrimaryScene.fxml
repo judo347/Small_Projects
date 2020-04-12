@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="300.0" maxWidth="300.0" prefHeight="200.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.view.PrimarySceneController">
+<VBox maxHeight="400.0" maxWidth="400.0" prefHeight="200.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.view.PrimarySceneController">
   <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox maxHeight="-Infinity" prefHeight="10.0" prefWidth="200.0">
          <children>
           <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity">
             <menus>
@@ -84,7 +84,7 @@
       </HBox>
     <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <HBox>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
@@ -234,7 +234,9 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
+				<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                     <children>
+                  <ScrollPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
                         <VBox fx:id="vbox_maincontent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
                            <children>
@@ -282,7 +284,7 @@
                                  <children>
                                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../data/mapBanners/interchange.jpg" />
+                                          <Image url="@../data/mapBanners/interchange.png" />
                                        </image>
                                     </ImageView>
                                     <HBox fx:id="hbox_interchange_quests" prefHeight="100.0" prefWidth="200.0" />
@@ -309,19 +311,21 @@
                                  </children>
                               </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../data/mapBanners/mixed.png" />
-                                       </image>
-                                    </ImageView>
-                                    <HBox fx:id="hbox_mixed_quests" prefHeight="100.0" prefWidth="200.0" />
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../data/mapBanners/mixed.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox fx:id="hbox_mixed_quests" prefHeight="100.0" prefWidth="200.0" />
+                                       </children>
+                                    </HBox>
                                  </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </content>
-                  </ScrollPane>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
          </children></AnchorPane>
