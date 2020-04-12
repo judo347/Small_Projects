@@ -1,7 +1,7 @@
 package dk.view;
 
 public enum QuestState {
-    ACCEPTED("00FF11"), AVAILABLE("96BC25"), LOCKED("404040");
+    ACCEPTED("B0FFA3"), AVAILABLE("FFFFFF"), LOCKED("878787");
 
     private String colorString;
 

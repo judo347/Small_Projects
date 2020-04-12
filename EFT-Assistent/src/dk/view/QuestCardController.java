@@ -48,7 +48,7 @@ public class QuestCardController {
         this.max_card_width = vbox_content.getPrefWidth();
         vbox_content.prefWidthProperty().bind(((Pane)vbox_content.getParent()).widthProperty());
         vbox_content.prefHeightProperty().bind(((Pane)vbox_content.getParent()).widthProperty());
-        ((Pane) vbox_content.getParent()).setBorder(new Border(new BorderStroke(Color.YELLOW, BorderStrokeStyle.SOLID, null, new BorderWidths(3))));
+        ((Pane) vbox_content.getParent()).setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, null, new BorderWidths(2))));
         this.state = questState;
         this.originalQuest = quest;
         setBackgroundColorToMatchState();

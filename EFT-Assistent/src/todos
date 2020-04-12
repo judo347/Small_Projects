@@ -39,6 +39,8 @@ TODOs:
        - Mouse dragging of scrollPane (Maybe future??)
        - hide categories where no quests are active
           - in god mode, show all
+       - quest completion label does not stay to the right in full screen.
+       - Menu: sorting: mark currently active one
 
 Bugs:
  - Active quests gets Available after another quest is completed?

@@ -32,7 +32,7 @@ public class ApplicationMain extends Application {
 
             primaryStage.setTitle(appWindowName);
             primaryStage.setScene(new Scene(root));
-            root.resize(250,250);
+            root.resize(600,450);
             primaryStage.show();
 
         }catch (Exception e){
