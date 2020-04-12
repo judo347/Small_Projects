@@ -76,7 +76,7 @@ public class QuestCategoryManager {
     private HBox getQuestCatHBox(Image image){
         HBox box = new HBox();
         box.prefWidth(200);
-        box.prefHeight(100);
+        box.setMaxHeight(230);
 
         ImageView categoryLogo = new ImageView(image);
         box.getChildren().add(categoryLogo);

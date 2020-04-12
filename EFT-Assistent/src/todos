@@ -15,19 +15,19 @@ TODOs:
       DONE 4. God mode
       DONE  - Start mode
       DONE  - Sort quests after Trader/Map
-      5. Visual improvements
-        - cleanup quest card visuals //dev_ui
+      DONE 5. Visual improvements
       DONE - Window resizing //dev_ui
       DONE  - Future work? Unlocked quests are displayed as so, and only added when clicked (Confirm acc. from trader)
-      6. Regret options
-      7. Visual improvements
+      6. Visual improvements
       DONE - Remove "Requirements" from visuals if non is existing.
+        - cleanup quest card visuals //dev_ui
         - Quest Card:
           - Text wrapping
           - some card go down into next: pref height?
         - Overall:
           - Padding between quests?
           - Map/trader image size, make them match quest size
+      7. Regret options
       8. Runtime improvements!
 		  - Quests should be in dictionary, and found by id
 		  - others! Check todos!
@@ -37,6 +37,8 @@ TODOs:
       11. FUTURE:
        - Quest card info: requirements if locked and show maps if mixed
        - Mouse dragging of scrollPane (Maybe future??)
+       - hide categories where no quests are active
+          - in god mode, show all
 
 Bugs:
  - Active quests gets Available after another quest is completed?
