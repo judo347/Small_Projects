@@ -8,6 +8,8 @@ import dk.model.quest.Quest;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -15,6 +17,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -44,13 +49,15 @@ public class PrimarySceneController {
     @FXML private HBox hbox_shoreline_quests;
 
     private MainModel mainModel;
+    private Stage rootStage;
 
     private boolean isInGodMode = true;
     private SortingMode currentSortingMode = SortingMode.MAP;
     private QuestCategoryManager qcm;
 
-    public void setMainModel(MainModel mainModel) {
+    public void setModelAndStage(MainModel mainModel, Stage rootStage) {
         this.mainModel = mainModel;
+        this.rootStage = rootStage;
         this.qcm = new QuestCategoryManager(this, vbox_maincontent);
         this.qcm.reloadSorting(currentSortingMode);
         reloadPlayerInfoVisuals();
@@ -311,5 +318,19 @@ public class PrimarySceneController {
 
     @FXML void menu_buttonAction_sort_trader(ActionEvent event) {
         changeSortingMode(SortingMode.TRADER);
+    }
+
+    @FXML void buttonAction_info_popup(ActionEvent event) {
+        final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.initOwner(rootStage);
+        VBox dialogVbox = new VBox(20);
+        StringBuilder aboutText = new StringBuilder();
+        aboutText.append("Special thanks to:").append('\n');
+        aboutText.append(" - The EFT wiki for quest information and a lot of other things!");
+        dialogVbox.getChildren().add(new Text(aboutText.toString()));
+        Scene dialogScene = new Scene(dialogVbox, 400, 200);
+        dialog.setScene(dialogScene);
+        dialog.show();
     }
 }

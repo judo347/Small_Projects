@@ -27,7 +27,7 @@ public class ApplicationMain extends Application {
             Pane root = fxmlLoader.load();
             PrimarySceneController rootController = fxmlLoader.getController();
             mainModel = new MainModel(rootController);
-            rootController.setMainModel(mainModel);
+            rootController.setModelAndStage(mainModel, primaryStage);
 
             //addQuestsToScene(rootController);
             //rootController.reloadQuestVisuals();

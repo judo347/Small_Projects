@@ -13,40 +13,23 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="400.0" maxWidth="400.0" prefHeight="200.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.view.PrimarySceneController">
+<VBox maxHeight="400.0" maxWidth="400.0" prefHeight="200.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.view.PrimarySceneController">
   <children>
       <HBox maxHeight="-Infinity" prefHeight="10.0" prefWidth="200.0">
          <children>
           <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity">
             <menus>
-              <Menu mnemonicParsing="false" text="File">
-                <items>
-                  <MenuItem mnemonicParsing="false" text="New" />
-                  <MenuItem mnemonicParsing="false" text="Open…" />
-                  <Menu mnemonicParsing="false" text="Open Recent" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Close" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Save As…" />
-                  <MenuItem mnemonicParsing="false" text="Revert" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Preferences…" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Quit" />
-                </items>
-              </Menu>
               <Menu mnemonicParsing="false" text="Save/Load">
                 <items>
                   <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_save_slot0" text="Save to slot 0" />
-                  <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_save_slot1" text="Save to slot 1" />
+                  <MenuItem disable="true" mnemonicParsing="false" onAction="#menu_buttonAction_save_slot1" text="Save to slot 1" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_load_slot0" text="Load from slot 0" />
-                  <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_load_slot1" text="Load from slot 1" />
+                  <MenuItem disable="true" mnemonicParsing="false" onAction="#menu_buttonAction_load_slot1" text="Load from slot 1" />
                 </items>
               </Menu>
               <Menu mnemonicParsing="false" text="Actions">
                 <items>
-                  <MenuItem mnemonicParsing="false" text="Decrement X" />
                         <Menu mnemonicParsing="false" text="Sorting">
                           <items>
                             <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_sort_trader" text="Trader" />
@@ -63,12 +46,12 @@
                   </Menu>
                   <Menu mnemonicParsing="false" text="Regrets">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Decrement X" />
                     </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Info">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="About" />
+                      <MenuItem mnemonicParsing="false" onAction="#buttonAction_info_popup" text="About" />
                     </items>
                   </Menu>
             </menus>
