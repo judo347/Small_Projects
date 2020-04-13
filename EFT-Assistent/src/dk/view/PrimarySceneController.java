@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -24,6 +25,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class PrimarySceneController {
+
+    @FXML private MenuItem menuItem_sorting_trader;
+    @FXML private MenuItem menuItem_sorting_map;
+    @FXML private MenuItem menuItem_godmode_enable;
+    @FXML private MenuItem menuItem_godmode_disable;
 
     @FXML private Label topbar_label_quest_completion;
 
@@ -61,6 +67,8 @@ public class PrimarySceneController {
         this.qcm = new QuestCategoryManager(this, vbox_maincontent);
         this.qcm.reloadSorting(currentSortingMode);
         reloadPlayerInfoVisuals();
+        setMenuItemSortingStatus();
+        setMenuItemGodmodeStatus();
     }
 
     /** Adds the given quest card to the correct hbox based on given mapType. */
@@ -189,6 +197,7 @@ public class PrimarySceneController {
         if(wantedState != isInGodMode){
             isInGodMode = wantedState;
             reloadQuestVisuals();
+            setMenuItemGodmodeStatus();
         }
     }
 
@@ -196,6 +205,7 @@ public class PrimarySceneController {
         if(wantedMode != currentSortingMode){
             currentSortingMode = wantedMode;
             qcm.reloadSorting(currentSortingMode);
+            setMenuItemSortingStatus();
         }
     }
 
@@ -205,6 +215,32 @@ public class PrimarySceneController {
         int quests_total_count = mainModel.getQm().getTotalNumberOfQuests();
         String text = quests_completed_count + " / " + quests_total_count;
         topbar_label_quest_completion.setText(text);
+    }
+
+    /** Disables/enables the correct menu item. */
+    private void setMenuItemSortingStatus(){
+        if (currentSortingMode == SortingMode.MAP){
+            menuItem_sorting_map.setDisable(true);
+            menuItem_sorting_trader.setDisable(false);
+        }else if(currentSortingMode == SortingMode.TRADER){
+            menuItem_sorting_map.setDisable(false);
+            menuItem_sorting_trader.setDisable(true);
+        }else
+            throw new IllegalArgumentException("A new sorting mode has been added!");
+    }
+
+    //TODO BUGGED!
+    /** Disables/enables the correct menu item. */
+    private void setMenuItemGodmodeStatus(){
+        return;
+        /*
+        if (isInGodMode){
+            menuItem_godmode_enable.setDisable(true);
+            menuItem_godmode_disable.setDisable(false);
+        }else{
+            menuItem_godmode_enable.setDisable(false);
+            menuItem_godmode_disable.setDisable(true);
+        }*/
     }
 
     @FXML

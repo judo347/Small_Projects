@@ -32,16 +32,16 @@
                 <items>
                         <Menu mnemonicParsing="false" text="Sorting">
                           <items>
-                            <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_sort_trader" text="Trader" />
-                              <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_sort_map" text="Map" />
+                            <MenuItem fx:id="menuItem_sorting_trader" mnemonicParsing="false" onAction="#menu_buttonAction_sort_trader" text="Trader" />
+                              <MenuItem fx:id="menuItem_sorting_map" mnemonicParsing="false" onAction="#menu_buttonAction_sort_map" text="Map" />
                           </items>
                         </Menu>
                 </items>
               </Menu>
                   <Menu mnemonicParsing="false" text="GodMode">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_godmode_enable" text="Enable" />
-                        <MenuItem mnemonicParsing="false" onAction="#menu_buttonAction_godmode_disable" text="Disable" />
+                      <MenuItem fx:id="menuItem_godmode_enable" mnemonicParsing="false" onAction="#menu_buttonAction_godmode_enable" text="Enable" />
+                        <MenuItem fx:id="menuItem_godmode_disable" mnemonicParsing="false" onAction="#menu_buttonAction_godmode_disable" text="Disable" />
                     </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Regrets">

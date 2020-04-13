@@ -34,6 +34,7 @@ TODOs:
       DONE     - Ask for saving on exit
       DONE     - load slot 0 on launch
       DONE     - disable slot 1 in ui
+      10. help-info-window on first time launch
       11. FUTURE:
        - Quest card info: requirements if locked and show maps if mixed
        - Mouse dragging of scrollPane (Maybe future??)
@@ -48,6 +49,7 @@ TODOs:
 
 Bugs:
  - Active quests gets Available after another quest is completed?
+ - PrimarySceneController: setMenuItemGodmodeStatus() FUTURE
 
 Todos notes:
 - move load and save features in QuestManager to other class?
