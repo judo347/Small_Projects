@@ -26,12 +26,18 @@ TODOs:
       DONE    - some card go down into next: pref height?
       DONE    - Map/trader image size, make them match quest size
       7. Regret options
+       - traders: minus
+       - playerLevel: minus
+       - completed quests: regret (FUTURE)
       8. Runtime improvements!
 		  - Quests should be in dictionary, and found by id
 		  - others! Check todos!
       9. BUILD TODOES!
       10. Others
        - save on exit and auto save
+      DONE     - Ask for saving on exit
+      DONE     - load slot 0 on launch
+           - disable slot 1 in ui
       11. FUTURE:
        - Quest card info: requirements if locked and show maps if mixed
        - Mouse dragging of scrollPane (Maybe future??)

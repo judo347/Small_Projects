@@ -5,8 +5,12 @@ import dk.view.PrimarySceneController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import java.util.Optional;
 
 public class ApplicationMain extends Application {
 
@@ -26,7 +30,8 @@ public class ApplicationMain extends Application {
             rootController.setMainModel(mainModel);
 
             //addQuestsToScene(rootController);
-            rootController.reloadQuestVisuals();
+            //rootController.reloadQuestVisuals();
+            mainModel.loadSlot(0);
 
             //primaryStage.setResizable(false);
 
@@ -37,6 +42,17 @@ public class ApplicationMain extends Application {
 
         }catch (Exception e){
 
+        }
+    }
+
+    @Override
+    public void stop(){
+        Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmation.setTitle("Save progression?");
+        confirmation.setHeaderText("Press \"ok\", to save your progression.");
+        Optional<ButtonType> result = confirmation.showAndWait();
+        if (result.get() == ButtonType.OK){
+            mainModel.saveSlot(0);
         }
     }
 }
