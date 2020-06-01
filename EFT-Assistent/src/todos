@@ -42,6 +42,7 @@ TODOs:
           - in god mode, show all
        - quest completion label does not stay to the right in full screen.
        - Menu: sorting: mark currently active one
+       - dialog for saving on exit - should be homemade (Smaller!)
        7. Regret options
               - traders: minus
               - playerLevel: minus
