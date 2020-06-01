@@ -175,7 +175,7 @@ public class QuestManager {
                 return true;
         }
 
-        return false;
+        return true; //Todo: was false. Workaround = true
     }
 
     /** Reloads quest model based on the given completed quest ids. (Sets active and locked)
@@ -197,12 +197,12 @@ public class QuestManager {
                 }
 
         for(Quest quest : questsToComplete){
-            completeQuestRecursively(quest);
+            completeQuestRecursively(quest, playerInfo);
         }
     }
 
     //TODO Write tests for special cases generally
-    private void completeQuestRecursively(Quest quest){
+    private void completeQuestRecursively(Quest quest, PlayerInfo playerInfo){
 
         if (!quest.isCompleted()){
             //TODO make quests have refs to each other
@@ -220,10 +220,13 @@ public class QuestManager {
 
             //Call method on all required quests for this one
             for (Quest q : requiredQuests)
-                completeQuestRecursively(q);
+                completeQuestRecursively(q, playerInfo);
 
-            if(!canQuestBeAddedToActive(quest, playerInfo))
+            if(!canQuestBeAddedToActive(quest, playerInfo)){
+                System.out.println(quest.getId() + " " + quest.getRequiredLevel() + " " + playerInfo.getPlayerLevel());
+                //TODO debug note: quests is here because it should be completed. But when this is hit, the prereuistite quests are not completed yet??
                 throw new IllegalArgumentException("Something went wrong!");  //TODO This will be throw if player loads a save where Collector is completed
+            }
 
             completeQuest(quest);
         }
