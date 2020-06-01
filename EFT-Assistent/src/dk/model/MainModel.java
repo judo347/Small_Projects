@@ -50,7 +50,7 @@ public class MainModel {
         SaveData saveData = jph.loadSlot(slotNumber);
 
         playerInfo.reload(saveData.playerInfo);
-        qm = new QuestManager(playerInfo);
+        //qm = new QuestManager(playerInfo);
         qm.reloadFromCompletedQuests(saveData.completedQuestIds, saveData.playerInfo);
         if(!runningHeadless) {
             psc.reloadPlayerInfoVisuals();
