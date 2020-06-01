@@ -54,7 +54,7 @@
       }, {
         "obj": "Factory: extract"
       }],
-      "requirements": []
+      "requirements": [ "Customs office key" ]
     },
     {
       "name": "BP depot",
@@ -144,7 +144,7 @@
       "objectives": [{
         "obj": "12x Kill Scav using suppressed wep"
         }, {
-        "obj": "10x Hand-in \"Lower half-masks\" (found in raid)"
+        "obj": "7x Hand-in \"Lower half-masks\" (found in raid)"
         }],
       "requirements": [ ]
     },
@@ -172,7 +172,7 @@
         }, {
         "obj": "Shoreline: 10x Kill PMC while wearing \"balaclava\" and \"scav vest\""
         }, {
-        "obj": "10x Hand-in \"Bars A-2607\" knives"
+        "obj": "10x Hand-in (Found in raid) \"Bars A-2607\" knives"
         }],
       "requirements": [ ]
     },
@@ -356,7 +356,7 @@
       "req_quests": [ 24 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in \"gas analyzer\""
+        "obj": "Hand-in 2x \"gas analyzer\""
         }],
       "requirements": [ ]
     },
@@ -647,14 +647,14 @@
       "requirements": [ "Key: \"Unknown key\"" ]
     },
     {
-      "name": "The Extortionist",
+      "name": "Stirrup",
       "giver": "Skier",
       "req_level": 8,
       "id": 48,
       "req_quests": [ 47 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "4x Kill PMC using pistol"
+        "obj": "3x Kill PMC using pistol"
       }],
       "requirements": [ ]
     },
@@ -758,11 +758,9 @@
       "req_quests": [ 50 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "5x Kill USEC"
+        "obj": "7x Kill USEC"
       }, {
-        "obj": "2x Hand-in \"MBSS Backpack\""
-      }, {
-        "obj": "1x Hand-in \"AVS vest\""
+        "obj": "2x Hand-in USEC DogTags"
       }],
       "requirements": [ ]
     },
@@ -1512,7 +1510,7 @@
       "giver": "Mechanic",
       "req_level": 12,
       "id": 109,
-      "req_quests": [ 94 ],
+      "req_quests": [ 93 ],
       "maps": [ "Factory" ],
       "objectives": [{
         "obj": "Fix control boards:",
@@ -1558,11 +1556,11 @@
       "req_level": 14,
       "id": 112,
       "req_quests": [ 111 ],
-      "maps": [ "Customs" ],
+      "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in:", 
-		"subs": [ "7x \"Graphics card\"", 
-				"7x \"CPU fan\"" ]
+        "obj": "Hand-in: (Found in raid)", 
+		"subs": [ "4x \"Graphics card\"", 
+				"8x \"CPU fan\"" ]
       }],
       "requirements": [ ]
     },
@@ -1586,7 +1584,7 @@
       "req_level": 12,
       "id": 114,
       "req_quests": [ 94 ],
-      "maps": [ "Shoreline" ],
+      "maps": [ ],
       "objectives": [{
         "obj": "Hand-in (found in raid):", 
 		"subs": [ "3x \"PC CPU\"",
@@ -1806,7 +1804,7 @@
       "giver": "Mechanic",
       "req_level": 0,
       "id": 129,
-      "req_quests": [ 127 ],
+      "req_quests": [ 128 ],
       "maps": [ ],
       "objectives": [{
         "obj": "Hand-in:", 
@@ -1910,9 +1908,9 @@
       "req_quests": [ 134 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in:", 
-		"subs": [ "2x \"Ski hat with holes for eyes\"", 
-				"2x \"Pilgrim tourist backpack\"" ]
+        "obj": "Hand-in: (Found in Raid)", 
+		"subs": [ "1x \"Ski hat with holes for eyes\"", 
+				"1x \"Pilgrim tourist backpack\"" ]
       }],
       "requirements": [ ]
     },
@@ -2151,7 +2149,7 @@
       "req_quests": [ 152 ],
       "maps": [ "Woods" ],
       "objectives": [{
-        "obj": "7x Kill scav while not wearing body armor (Both body and rig must not contain armor)"
+        "obj": "5x Kill scav while not wearing body armor (Both body and rig must not contain armor)"
       }],
       "requirements": [ ]
     },
