@@ -3,6 +3,7 @@ package dk;
 import dk.model.MainModel;
 import dk.view.PrimarySceneController;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -10,6 +11,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Optional;
 
 public class ApplicationMain extends Application {
@@ -19,6 +21,7 @@ public class ApplicationMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        Platform.setImplicitExit(false);
         try {
 
 
@@ -40,8 +43,8 @@ public class ApplicationMain extends Application {
             root.resize(600,450);
             primaryStage.show();
 
-        }catch (Exception e){
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
