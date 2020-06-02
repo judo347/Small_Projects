@@ -1,6 +1,6 @@
 package dk.model.quest.treeStructure;
 
-import dk.VisualizerQuestNode;
+import dk.tools.visualizer.VisualizerQuestNode;
 import dk.model.quest.Quest;
 
 import java.util.ArrayList;
@@ -64,8 +64,12 @@ public class QuestNode {
         for(QuestNode node : followingQuests){
             visualNodes.addAll(node.getVisualizerNodes(currentLayer + 1));
         }
-        visualNodes.add(new VisualizerQuestNode(currentLayer, quest));
+        visualNodes.add(new VisualizerQuestNode(currentLayer, quest, followingQuests));
 
         return visualNodes;
+    }
+
+    public ArrayList<QuestNode> getFollowingQuests(){
+        return followingQuests;
     }
 }
