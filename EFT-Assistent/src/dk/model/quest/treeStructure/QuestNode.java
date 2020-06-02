@@ -1,5 +1,6 @@
 package dk.model.quest.treeStructure;
 
+import dk.model.PlayerInfo;
 import dk.tools.visualizer.VisualizerQuestNode;
 import dk.model.quest.Quest;
 
@@ -18,7 +19,42 @@ public class QuestNode {
         requiredQuests.add(node);
     }
 
-    //public void reCheckSta
+    /** Check if this quest can be active. If so, the following quests is also called. */
+    public void initialQuestStateActiveCheck(PlayerInfo playerInfo){
+        boolean canBeActive = quest.setStateActive(playerInfo);
+        if(canBeActive){
+            for(QuestNode questNode : followingQuests){
+                initialQuestStateActiveCheck(playerInfo);
+            }
+        }
+    }
+
+    /** */
+    public void reEvalLockedQuests(PlayerInfo playerInfo){
+        if(quest.getState() == Quest.QuestState.LOCKED){
+            initialQuestStateActiveCheck(playerInfo);
+            return;
+        }else{
+            for(QuestNode questNode : followingQuests){
+                questNode.reEvalLockedQuests(playerInfo);
+            }
+        }
+    }
+
+    public void completeQuest(PlayerInfo playerInfo){
+        if(quest.getState() == Quest.QuestState.COMPLETED){
+            throw new IllegalArgumentException("This action is not possible!");
+        }
+
+        if(quest.getState() == Quest.QuestState.LOCKED){
+            throw new IllegalArgumentException("This action is not possible!");
+        }
+
+        quest.setState(Quest.QuestState.COMPLETED);
+        for(QuestNode questNode : followingQuests){
+            questNode.initialQuestStateActiveCheck(playerInfo); //TODO rename method?
+        }
+    }
 
     public void addSelfToRequiredQuests(){
         for(QuestNode node : requiredQuests){

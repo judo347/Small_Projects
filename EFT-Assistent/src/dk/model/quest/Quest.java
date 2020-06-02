@@ -1,6 +1,7 @@
 package dk.model.quest;
 
 import dk.model.MapType;
+import dk.model.PlayerInfo;
 import dk.model.TraderType;
 
 import java.util.ArrayList;
@@ -79,5 +80,28 @@ public class Quest {
 
     public ArrayList<Integer> getRequiredQuestIds() {
         return requiredQuests;
+    }
+
+    public QuestState getState(){
+        return state;
+    }
+
+    public void setState(QuestState questState){
+        this.state = questState;
+    }
+
+    public boolean setStateActive(PlayerInfo playerInfo){
+        if(requiredLoyaltyLevel > 0){
+            if(playerInfo.getLoyaltyLevelFromTrader(getTrader()) < requiredLoyaltyLevel){
+                return false;
+            }
+        }
+
+        if(playerInfo.getPlayerLevel() < requiredLevel){
+            return false;
+        }
+
+        state = QuestState.ACTIVE;
+        return true;
     }
 }

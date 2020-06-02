@@ -1,5 +1,6 @@
 package dk.model.quest.treeStructure;
 
+import dk.model.PlayerInfo;
 import dk.model.quest.Quest;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class QuestModel {
     private HashMap<Integer, Quest> questIdMap = new HashMap<>();
     private HashMap<Quest, QuestNode> questNodeMap = new HashMap<>();
 
-    public QuestModel(ArrayList<Quest> allQuests){
+    public QuestModel(ArrayList<Quest> allQuests, PlayerInfo playerInfo){
 
         //Create a node for each quest and store in map
         for(Quest quest : allQuests){
@@ -19,26 +20,6 @@ public class QuestModel {
             questNodeMap.put(quest, questNode);
             questIdMap.put(quest.getId(), quest);
         }
-
-        //TODO: BELOW IS TEST
-        /*
-        for(Quest quest: allQuests){
-            if(!questIdMap.containsKey(quest.getId())){
-                throw new IllegalArgumentException("questIdMap does not contain: " + quest.getId());
-            }
-            if(!questNodeMap.containsKey(quest)){
-                throw new IllegalArgumentException("questNodeMap does not contain: " + quest.getId());
-            }
-        }
-
-        for(Quest quest : questIdMap.values()){
-            questNodeMap.remove(quest);
-        }
-
-        System.out.println("Size: " + questNodeMap.size());
-        //TODO: ABOVE IS TEST
-
-         */
 
         //Run through each node and add required quests
         for(Quest quest : allQuests){
@@ -64,17 +45,31 @@ public class QuestModel {
             QuestNode questNode = questNodeMap.get(quest);
                 questNode.addSelfToRequiredQuests();
         }
+
+        initialQuestStateCheck(playerInfo);
+    }
+
+    //Checks for which quests should be active at launch
+    private void initialQuestStateCheck(PlayerInfo playerInfo) {
+        for(QuestNode questNode : rootNodes){
+            questNode.initialQuestStateActiveCheck(playerInfo);
+        }
+    }
+
+    /** Searches for locked quests that can be active.*/
+    public void recheckQuestRequirements(PlayerInfo playerInfo){
+        for(QuestNode questNode : rootNodes){
+            questNode.reEvalLockedQuests(playerInfo);
+        }
+    }
+
+    public void completeQuest(Quest quest, PlayerInfo playerInfo){
+        questNodeMap.get(quest).completeQuest(playerInfo);
     }
 
     public void colleteQuestAndPreQuestsRecursively(Quest questToComplete){
         questNodeMap.get(questToComplete).completeQuestAndRequiredQuests();
     }
-
-    /*public void questStateUpdate(){
-        for(QuestNode node : rootNodes){
-            node.
-        }
-    }*/
 
     public ArrayList<QuestNode> getRootNodes(){
         return rootNodes;
