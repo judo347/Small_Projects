@@ -202,7 +202,7 @@
       "req_quests": [ 13 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "10x Kill PMC using SVD"
+        "obj": "15x Kill PMC using SVD"
         }, {
         "obj": "10x Hand-in USEC dogtags"
         }, {
@@ -1165,7 +1165,7 @@
       "name": "Lend lease - Part 2",
       "giver": "Peacekeeper",
       "req_level": 30,
-      "id": 83,
+      "id": 188,
       "req_quests": [ 60 ],
       "maps": [ ],
       "objectives": [{
@@ -1284,7 +1284,7 @@
       "giver": "Peacekeeper",
       "req_level": 14,
       "id": 91,
-      "req_quests": [ 83 ],
+      "req_quests": [ 188 ],
       "maps": [ "Woods", "Interchange", "Shoreline", "Customs" ],
       "objectives": [{
         "obj": "Get kills while wearing \"UNTAR helmet\", \"MF-UNTAR armor\", \"M4A1\"",
@@ -1834,7 +1834,7 @@
       "giver": "Ragman",
       "req_level": 30,
       "id": 131,
-      "req_quests": [ ],
+      "req_quests": [ 130 ],
       "maps": [ "Interchange" ],
       "objectives": [{
         "obj": "7x Extract"
@@ -2045,7 +2045,7 @@
       "giver": "Ragman",
       "req_level": 0,
       "id": 146,
-      "req_quests": [ 145 ],
+      "req_quests": [ 142 ],
       "maps": [ ],
       "objectives": [{
         "obj": "Reach level 3 loyalty with Therapist"
@@ -2083,7 +2083,7 @@
       "req_level": 0,
       "id": 149,
       "req_quests": [ 142 ],
-      "maps": [ ],
+      "maps": [ "Interchange" ],
       "objectives": [{
         "obj": "100x Kill Killa"
       }],
@@ -2321,7 +2321,7 @@
       "name": "Huntsman path - Woods keeper",
       "giver": "Jaeger",
       "req_level": 0,
-      "id": 166,
+      "id": 187,
       "req_quests": [ 164, 163 ],
       "maps": [ "Woods" ],
       "objectives": [{
@@ -2360,7 +2360,7 @@
       "giver": "Jaeger",
       "req_level": 0,
       "id": 169,
-      "req_quests": [ 166 ],
+      "req_quests": [ 187 ],
       "maps": [ "Reserve" ],
       "objectives": [{
         "obj": "Kill Gluhar."
@@ -2397,7 +2397,7 @@
       "name": "Shady business",
       "giver": "Jaeger",
       "req_level": 20,
-      "id": 171,
+      "id": 186,
       "req_quests": [ 49 ],
       "maps": [ ],
       "objectives": [{
@@ -2451,7 +2451,7 @@
       "giver": "Jaeger",
       "req_level": 0,
       "id": 175,
-      "req_quests": [ 166 ],
+      "req_quests": [ 187 ],
       "maps": [ ],
       "objectives": [{
         "obj": "Hand-in:", 
