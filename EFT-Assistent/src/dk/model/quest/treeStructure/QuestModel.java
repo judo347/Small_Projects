@@ -74,4 +74,45 @@ public class QuestModel {
     public ArrayList<QuestNode> getRootNodes(){
         return rootNodes;
     }
+
+    public void setQuestStatesFromCompletedQuestIds(PlayerInfo playerInfo, ArrayList<Integer> completedQuestIds){
+
+        while(!completedQuestIds.isEmpty()){
+            QuestNode questNodeTop = questNodeMap.get(questIdMap.get(completedQuestIds.get(0)));
+            ArrayList<QuestNode> nodesToRoot = questNodeTop.getAllRequiredQuests();
+            nodesToRoot.add(questNodeTop);
+            //remove all from completedQuestIds, if one is not found = corrupt save
+            for(QuestNode questNodeToRoot : nodesToRoot){
+                //Remove
+                boolean wasFoundAndRemove = false;
+                for(Integer completedQuestId : new ArrayList<>(completedQuestIds)){
+                    if(completedQuestId.compareTo(questNodeToRoot.getQuestId()) == 0){ //TODO is 0 correct?
+                        wasFoundAndRemove = true;
+                        completedQuestIds.remove(completedQuestId);
+                        break;
+                    }
+                }
+                if(!wasFoundAndRemove){
+                    throw new IllegalArgumentException("This should not be possible!! Removing a quest from the list of ids which were used to find that quest.");
+                }
+
+                //Complete
+                boolean canBeActive = questNodeToRoot.getQuest().setStateActive(playerInfo);
+                if(!canBeActive){
+                    throw new IllegalArgumentException("Corrupt save! PlayerInfo requirements not met for completed quest with id: " + questNodeToRoot.getQuestId());
+                }
+            }
+        }
+    }
+
+    public ArrayList<Quest> getCompletedQuests(){
+        ArrayList<Quest> completedQuests = new ArrayList<>();
+        for(Quest quest : questIdMap.values()){
+            if(quest.getState() == Quest.QuestState.COMPLETED){
+                completedQuests.add(quest);
+            }
+        }
+
+        return completedQuests;
+    }
 }

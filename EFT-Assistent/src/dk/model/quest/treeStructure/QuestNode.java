@@ -24,7 +24,7 @@ public class QuestNode {
         boolean canBeActive = quest.setStateActive(playerInfo);
         if(canBeActive){
             for(QuestNode questNode : followingQuests){
-                initialQuestStateActiveCheck(playerInfo);
+                questNode.initialQuestStateActiveCheck(playerInfo);
             }
         }
     }
@@ -107,5 +107,14 @@ public class QuestNode {
 
     public ArrayList<QuestNode> getFollowingQuests(){
         return followingQuests;
+    }
+
+    public ArrayList<QuestNode> getAllRequiredQuests(){
+        ArrayList<QuestNode> requiredQuestsCopy = new ArrayList<>(requiredQuests);
+        for(QuestNode reqQuestNode : requiredQuests){
+            requiredQuestsCopy.addAll(reqQuestNode.getAllRequiredQuests());
+        }
+
+        return requiredQuestsCopy;
     }
 }

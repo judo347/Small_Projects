@@ -9,10 +9,8 @@ import java.util.ArrayList;
 public class QuestManagerTree {
 
     private QuestModel questModel;
-    private PlayerInfo playerInfo;
 
     public QuestManagerTree(PlayerInfo playerInfo) {
-        this.playerInfo = playerInfo;
 
         ArrayList<Quest> allQuests = loadAllQuests();
 
@@ -25,12 +23,18 @@ public class QuestManagerTree {
         return jph.getAllQuestsFromFile();
     }
 
-    public void playerInfoHasBeenUpdated(){
+    public void playerInfoHasBeenUpdated(PlayerInfo playerInfo){
         questModel.recheckQuestRequirements(playerInfo);
     }
 
-    public void completeQuest(Quest quest){
+    public void completeQuest(Quest quest, PlayerInfo playerInfo){
         questModel.completeQuest(quest, playerInfo);
+    }
+
+    /** Reloads quest model based on the given completed quest ids. (Sets active and completed)
+     Used when loading saved data. */
+    public void reloadFromCompletedQuests(PlayerInfo playerInfo, ArrayList<Integer> completedQuestIds){
+        questModel.setQuestStatesFromCompletedQuestIds(playerInfo, completedQuestIds);
     }
 
     public QuestModel getQuestModel(){

@@ -3,6 +3,7 @@ package dk.model;
 import dk.Main;
 import dk.data.JSONParserHelper;
 import dk.model.quest.QuestManager;
+import dk.model.quest.QuestManagerTree;
 import dk.view.PrimarySceneController;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class MainModel {
     private PrimarySceneController psc;
 
     private QuestManager qm;
+    private QuestManagerTree qmt;
     private PlayerInfo playerInfo;
 
     public MainModel() {
@@ -29,6 +31,7 @@ public class MainModel {
         this.runningHeadless = runningHeadless;
         playerInfo = new PlayerInfo(1);
         qm = new QuestManager(playerInfo);
+        qmt = new QuestManagerTree(playerInfo);
     }
 
     public void recheckLockedQuests(){
@@ -37,12 +40,14 @@ public class MainModel {
 
     public void incrementTraderLoyaltyLevel(TraderType traderType){
         playerInfo.incrementLoyaltyLevel(traderType);
-        recheckLockedQuests();
+        recheckLockedQuests(); //TODO reform DELETE
+        qmt.playerInfoHasBeenUpdated(playerInfo);
     }
 
     public void incrementPlayerLevel(){
         playerInfo.incrementPlayerLevel();
-        recheckLockedQuests();
+        recheckLockedQuests(); //TODO reform DELETE
+        qmt.playerInfoHasBeenUpdated(playerInfo);
     }
 
     public void loadSlot(int slotNumber){
