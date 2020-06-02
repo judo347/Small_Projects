@@ -7,6 +7,10 @@ import java.util.ArrayList;
 
 public class Quest {
 
+    public enum QuestState {
+        ACTIVE, LOCKED, COMPLETED;
+    }
+
     private String questName;
     private ArrayList<MapType> maps = new ArrayList<>(); //Map which the quest can be completed on //May be 0, 1 or many
     private TraderType trader; //Quest giver
@@ -19,6 +23,7 @@ public class Quest {
     private ArrayList<String> requirements;
 
     private boolean completed = false;
+    private QuestState state = QuestState.LOCKED;
 
     public Quest(String questName, ArrayList<MapType> maps, TraderType trader, int requiredLevel, ArrayList<QuestObjectives> objectives, ArrayList<String> requirements, int requiredLoyaltyLevel, int id, ArrayList<Integer> requiredQuests) {
         this.questName = questName;
