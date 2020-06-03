@@ -135,9 +135,10 @@ public class PrimarySceneController {
         }
 
         //Should locked quests be shown?
-        if(isInGodMode){
+        if(isInGodMode){ //Locked quests are currently not shown as ghost quests
             for(Quest quest : mainModel.getQmt().getLockedQuests()){
-                PaneAndController questCardAndController = createQuestCard(quest, QuestState.LOCKED, this);
+
+                PaneAndController questCardAndController = createQuestCard(quest, QuestState.LOCKED, this, false);
 
                 MapType mapType;
 
@@ -164,16 +165,16 @@ public class PrimarySceneController {
             }else{
                 mapType = MapType.MIXED;
             }
-            PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
+            PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this, false);
             qcm.addQuestCard(questCardAndController, currentSortingMode, mapType, quest.getTrader());
         }else if(currentSortingMode == SortingMode.MAP){
             if(quest.getMaps().size() == 0){
-                PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
+                PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this, false);
                 qcm.addQuestCard(questCardAndController, currentSortingMode, MapType.MIXED, quest.getTrader());
             }else{
                 //Ghost quests: quests with multiple maps are showed in each row of the maps
                 for(MapType mapType : quest.getMaps()){
-                    PaneAndController paneAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
+                    PaneAndController paneAndController = createQuestCard(quest, QuestState.AVAILABLE, this, true);
                     qcm.addQuestCard(paneAndController, currentSortingMode, mapType, quest.getTrader());
                 }
             }
@@ -195,9 +196,10 @@ public class PrimarySceneController {
         label_level_peacekeeper.setText(String.valueOf(playerInfo.getLoyaltyLevelFromTrader(TraderType.PEACEKEEPER)));
     }
 
-    /** Creates and returns a quest card based on the given Quest. */
-    private PaneAndController createQuestCard(Quest quest, QuestState questState, PrimarySceneController psc){
+    /** Creates and returns a quest card based on the given Quest. Ghost is a quest which has multiple cards. */
+    private PaneAndController createQuestCard(Quest quest, QuestState questState, PrimarySceneController psc, boolean isGhost){
 
+        //TODO: isGhost
         try {
             //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
