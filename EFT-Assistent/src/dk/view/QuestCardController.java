@@ -139,6 +139,10 @@ public class QuestCardController {
         //TODO Quest LL and Level requirements if LOCKED
     }
 
+    public void addGhostEffect(){
+        background_pane.setStyle("-fx-opacity: 0.8");
+    }
+
     private void setBackgroundColorToMatchState(){
         background_pane.setStyle("-fx-background-color: #" + state.getColorString());
     }

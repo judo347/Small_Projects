@@ -171,7 +171,10 @@ public class PrimarySceneController {
             if(quest.getMaps().size() == 0){
                 PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this, false);
                 qcm.addQuestCard(questCardAndController, currentSortingMode, MapType.MIXED, quest.getTrader());
-            }else{
+            }else if(quest.getMaps().size() == 1){
+                PaneAndController paneAndController = createQuestCard(quest, QuestState.AVAILABLE, this, false);
+                qcm.addQuestCard(paneAndController, currentSortingMode, quest.getMaps().get(0), quest.getTrader());
+            }else {
                 //Ghost quests: quests with multiple maps are showed in each row of the maps
                 for(MapType mapType : quest.getMaps()){
                     PaneAndController paneAndController = createQuestCard(quest, QuestState.AVAILABLE, this, true);
@@ -199,7 +202,6 @@ public class PrimarySceneController {
     /** Creates and returns a quest card based on the given Quest. Ghost is a quest which has multiple cards. */
     private PaneAndController createQuestCard(Quest quest, QuestState questState, PrimarySceneController psc, boolean isGhost){
 
-        //TODO: isGhost
         try {
             //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("dk/view/QuestCard.fxml"));
@@ -211,6 +213,7 @@ public class PrimarySceneController {
             QuestCardController questCardController = (QuestCardController)fxmlLoader.getController();
             questCardController.setValues(quest, questState, qcm.getImageHandler());
             questCardController.setParent(psc);
+            if(isGhost) questCardController.addGhostEffect();
 
             return new PaneAndController(questCard, questCardController);
 
