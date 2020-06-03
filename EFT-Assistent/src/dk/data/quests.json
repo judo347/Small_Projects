@@ -344,7 +344,7 @@
       "req_quests": [ 23 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in \"gas analyzer\" (found in raid)"
+        "obj": "Hand-in \"gas analyzer\""
         }],
       "requirements": [ ]
     },
@@ -392,9 +392,9 @@
       "req_quests": [ 25 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "5x Hand-in \"Morphine\" (found in raid)"
+        "obj": "4x Hand-in \"Morphine\" (found in raid)"
       }],
-      "requirements": [ "Key: Dorm room 206" ]
+      "requirements": [ ]
     },
     {
       "name": "Pharmacist",
@@ -1529,10 +1529,10 @@
       "req_quests": [ 109 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in:", 
-		"subs": [ "3x \"Powercord\"", 
-				"5x \"T-Shaped Plug\"",
-				"3x \"Printed circuit board\"" ]
+        "obj": "Hand-in: (Found in Raid)", 
+		"subs": [ "2x \"Powercord\"", 
+				"4x \"T-Shaped Plug\"",
+				"2x \"Printed circuit board\"" ]
 		}, {
         "obj": "Extract"
       }],
@@ -2201,7 +2201,7 @@
       "req_quests": [ 156 ],
       "maps": [ "Woods" ],
       "objectives": [{
-        "obj": "5x Kill scav in a single raid. The use of medicine is not allowed."
+        "obj": "4x Kill scav in a single raid. The use of medicine is not allowed."
       }],
       "requirements": [ ]
     },
