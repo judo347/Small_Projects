@@ -125,7 +125,6 @@ public class PrimarySceneController {
         qcm.clearHboxs(currentSortingMode);
 
         // Re-adds all active quests
-        //for(Quest quest : mainModel.getQm().getActiveQuests()){
         for(Quest quest : mainModel.getQmt().getActiveQuests()){
             if(quest == null){ //TODO: Bug, workaround
                 continue;
