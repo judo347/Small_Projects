@@ -23,6 +23,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class PrimarySceneController {
 
@@ -129,16 +130,8 @@ public class PrimarySceneController {
             if(quest == null){ //TODO: Bug, workaround
                 continue;
             }
-            PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
 
-            MapType mapType;
-
-            if(quest.getMaps().size() == 1)
-                mapType = quest.getMaps().get(0);
-            else
-                mapType = MapType.MIXED;
-
-            qcm.addQuestCard(questCardAndController, currentSortingMode, mapType, quest.getTrader());
+            createAndAddQuestCard(quest);
         }
 
         //Should locked quests be shown?
@@ -159,6 +152,34 @@ public class PrimarySceneController {
 
         // Updates quests completed label
         setQuestCompletionLabel();
+    }
+
+    /***/
+    private void createAndAddQuestCard(Quest quest){
+        ArrayList<PaneAndController> questCardAndControllers = new ArrayList<>();
+        if(currentSortingMode == SortingMode.TRADER){
+            MapType mapType;
+            if(quest.getMaps().size() == 1){
+                mapType = quest.getMaps().get(0);
+            }else{
+                mapType = MapType.MIXED;
+            }
+            PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
+            qcm.addQuestCard(questCardAndController, currentSortingMode, mapType, quest.getTrader());
+        }else if(currentSortingMode == SortingMode.MAP){
+            if(quest.getMaps().size() == 0){
+                PaneAndController questCardAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
+                qcm.addQuestCard(questCardAndController, currentSortingMode, MapType.MIXED, quest.getTrader());
+            }else{
+                //Ghost quests: quests with multiple maps are showed in each row of the maps
+                for(MapType mapType : quest.getMaps()){
+                    PaneAndController paneAndController = createQuestCard(quest, QuestState.AVAILABLE, this);
+                    qcm.addQuestCard(paneAndController, currentSortingMode, mapType, quest.getTrader());
+                }
+            }
+        }else{
+            throw new IllegalArgumentException("New sorting mode has been added!");
+        }
     }
 
     /** Reloads the visuals related to PlayerInfo: player level and loyalty levels. */
