@@ -21,6 +21,13 @@ public class QuestNode {
 
     /** Check if this quest can be active. If so, the following quests is also called. */
     public void initialQuestStateActiveCheck(PlayerInfo playerInfo){
+        //Is required quests completed?
+        for(QuestNode questNode : requiredQuests){
+            if(questNode.getQuest().getState() != Quest.QuestState.COMPLETED){
+                return;
+            }
+        }
+
         boolean canBeActive = quest.setStateActive(playerInfo);
         if(canBeActive){
             for(QuestNode questNode : followingQuests){
@@ -116,5 +123,28 @@ public class QuestNode {
         }
 
         return requiredQuestsCopy;
+    }
+
+    /** Completes this quest and all required for this.
+     * Returns the ids of all quests that has been completed. */
+    public ArrayList<Integer> completeThisAndAllPriors(PlayerInfo playerInfo){
+
+        ArrayList<Integer> completedQuests = new ArrayList<>();
+        if(quest.getState() == Quest.QuestState.COMPLETED){
+            return completedQuests;
+        }
+
+        for(QuestNode questNode : requiredQuests){
+            completedQuests.addAll(questNode.completeThisAndAllPriors(playerInfo));
+        }
+
+        boolean canBeActive = quest.setStateActive(playerInfo);
+        if(canBeActive){
+            quest.setState(Quest.QuestState.COMPLETED);
+        }else{
+            throw new IllegalArgumentException("Quest cannot be completed. Corrupt save?");
+        }
+        completedQuests.add(this.quest.getId());
+        return completedQuests;
     }
 }

@@ -113,7 +113,8 @@ public class PrimarySceneController {
     }
 
     public void completeQuestCard(Quest quest){
-        mainModel.getQm().completeQuest(quest);
+        //mainModel.getQm().completeQuest(quest);
+        mainModel.completeQuest(quest);
         reloadQuestVisuals();
     }
 
@@ -124,7 +125,8 @@ public class PrimarySceneController {
         qcm.clearHboxs(currentSortingMode);
 
         // Re-adds all active quests
-        for(Quest quest : mainModel.getQm().getActiveQuests()){
+        //for(Quest quest : mainModel.getQm().getActiveQuests()){
+        for(Quest quest : mainModel.getQmt().getActiveQuests()){
             if(quest == null){ //TODO: Bug, workaround
                 continue;
             }
@@ -142,7 +144,7 @@ public class PrimarySceneController {
 
         //Should locked quests be shown?
         if(isInGodMode){
-            for(Quest quest : mainModel.getQm().getLockedQuests()){
+            for(Quest quest : mainModel.getQmt().getLockedQuests()){
                 PaneAndController questCardAndController = createQuestCard(quest, QuestState.LOCKED, this);
 
                 MapType mapType;
@@ -215,8 +217,8 @@ public class PrimarySceneController {
 
     /** Updates the quest progression label. */
     private void setQuestCompletionLabel(){
-        int quests_completed_count = mainModel.getQm().getNumberOfCompletedQuests();
-        int quests_total_count = mainModel.getQm().getTotalNumberOfQuests();
+        int quests_completed_count = mainModel.getQmt().getCompletedQuests().size();
+        int quests_total_count = mainModel.getQmt().getTotalNumberOfQuests();
         String text = quests_completed_count + " / " + quests_total_count;
         topbar_label_quest_completion.setText(text);
     }

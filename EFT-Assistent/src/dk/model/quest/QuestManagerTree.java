@@ -34,7 +34,23 @@ public class QuestManagerTree {
     /** Reloads quest model based on the given completed quest ids. (Sets active and completed)
      Used when loading saved data. */
     public void reloadFromCompletedQuests(PlayerInfo playerInfo, ArrayList<Integer> completedQuestIds){
-        questModel.setQuestStatesFromCompletedQuestIds(playerInfo, completedQuestIds);
+        questModel.setQuestStatesFromCompletedQuestIds(playerInfo, new ArrayList<>(completedQuestIds));
+    }
+
+    public ArrayList<Quest> getCompletedQuests(){
+        return questModel.getQuestsWithState(Quest.QuestState.COMPLETED);
+    }
+
+    public ArrayList<Quest> getActiveQuests(){
+        return questModel.getQuestsWithState(Quest.QuestState.ACTIVE);
+    }
+
+    public ArrayList<Quest> getLockedQuests(){
+        return questModel.getQuestsWithState(Quest.QuestState.LOCKED);
+    }
+
+    public int getTotalNumberOfQuests(){
+        return questModel.getTotalNumberOfQuests();
     }
 
     public QuestModel getQuestModel(){

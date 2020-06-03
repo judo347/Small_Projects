@@ -75,44 +75,52 @@ public class QuestModel {
         return rootNodes;
     }
 
-    public void setQuestStatesFromCompletedQuestIds(PlayerInfo playerInfo, ArrayList<Integer> completedQuestIds){
-
-        while(!completedQuestIds.isEmpty()){
-            QuestNode questNodeTop = questNodeMap.get(questIdMap.get(completedQuestIds.get(0)));
-            ArrayList<QuestNode> nodesToRoot = questNodeTop.getAllRequiredQuests();
-            nodesToRoot.add(questNodeTop);
-            //remove all from completedQuestIds, if one is not found = corrupt save
-            for(QuestNode questNodeToRoot : nodesToRoot){
-                //Remove
-                boolean wasFoundAndRemove = false;
-                for(Integer completedQuestId : new ArrayList<>(completedQuestIds)){
-                    if(completedQuestId.compareTo(questNodeToRoot.getQuestId()) == 0){ //TODO is 0 correct?
-                        wasFoundAndRemove = true;
-                        completedQuestIds.remove(completedQuestId);
+    public void setQuestStatesFromCompletedQuestIds(PlayerInfo playerInfo, ArrayList<Integer> completedQuestIdsFromSave){
+        while(!completedQuestIdsFromSave.isEmpty()){
+            QuestNode questNodeTop = questNodeMap.get(questIdMap.get(completedQuestIdsFromSave.get(0)));
+            ArrayList<Integer> completedQuestsIds = questNodeTop.completeThisAndAllPriors(playerInfo);
+            //System.out.println("Completed quests which ids should be removed: " + completedQuestsIds);
+            for(Integer completedId : completedQuestsIds){
+                System.out.println("Searching for completed id.");
+                boolean wasRemoved = false;
+                for(Integer comIdsSave : completedQuestIdsFromSave){
+                    if(completedId.compareTo(comIdsSave) == 0){
+                        if(!completedQuestIdsFromSave.remove(comIdsSave)){
+                            throw new IllegalArgumentException("Quest id was not found, and not removed!");
+                        }
+                        wasRemoved = true;
+                        System.out.println("Completed quest id was found and removed: " + completedId);
+                        StringBuilder remainingIds = new StringBuilder("Remaining ids: ");
+                        for(Integer remainingId : completedQuestIdsFromSave){
+                            remainingIds.append(remainingId).append(" ");
+                        }
+                        System.out.println(remainingIds.toString());
                         break;
                     }
                 }
-                if(!wasFoundAndRemove){
+
+                if(!wasRemoved){
                     throw new IllegalArgumentException("This should not be possible!! Removing a quest from the list of ids which were used to find that quest.");
                 }
-
-                //Complete
-                boolean canBeActive = questNodeToRoot.getQuest().setStateActive(playerInfo);
-                if(!canBeActive){
-                    throw new IllegalArgumentException("Corrupt save! PlayerInfo requirements not met for completed quest with id: " + questNodeToRoot.getQuestId());
-                }
             }
         }
+
+        //recheck for quests that should be active
+        recheckQuestRequirements(playerInfo);
     }
 
-    public ArrayList<Quest> getCompletedQuests(){
-        ArrayList<Quest> completedQuests = new ArrayList<>();
+    public ArrayList<Quest> getQuestsWithState(Quest.QuestState state){
+        ArrayList<Quest> foundQuests = new ArrayList<>();
         for(Quest quest : questIdMap.values()){
-            if(quest.getState() == Quest.QuestState.COMPLETED){
-                completedQuests.add(quest);
+            if(quest.getState() == state){
+                foundQuests.add(quest);
             }
         }
 
-        return completedQuests;
+        return foundQuests;
+    }
+
+    public int getTotalNumberOfQuests(){
+        return questIdMap.size();
     }
 }
