@@ -144,7 +144,7 @@
       "objectives": [{
         "obj": "12x Kill Scav using suppressed wep"
         }, {
-        "obj": "7x Hand-in \"Lower half-masks\" (found in raid)"
+        "obj": "7x Hand-in \"Lower half-masks\" (FiR)"
         }],
       "requirements": [ ]
     },
@@ -172,7 +172,7 @@
         }, {
         "obj": "Shoreline: 10x Kill PMC while wearing \"balaclava\" and \"scav vest\""
         }, {
-        "obj": "5x Hand-in (Found in raid) \"Bars A-2607\" knives"
+        "obj": "5x Hand-in (FiR) \"Bars A-2607\" knives"
         }],
       "requirements": [ ]
     },
@@ -314,7 +314,7 @@
       "req_quests": [ 15 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):",
+        "obj": "Hand-in (FiR):",
         "subs": [ "1x \"military battery\"",
           "10x \"30-mil. shells for BMP cannon\"" ]
       }],
@@ -392,7 +392,7 @@
       "req_quests": [ 25 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "4x Hand-in \"Morphine\" (found in raid)"
+        "obj": "4x Hand-in \"Morphine\" (FiR)"
       }],
       "requirements": [ ]
     },
@@ -428,7 +428,7 @@
       "req_quests": [ 29 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "15x hand-in \"cans of meat (Tushonka)\" (found in raid)"
+        "obj": "15x hand-in \"cans of meat (Tushonka)\" (FiR)"
       }],
       "requirements": [ ]
     },
@@ -440,7 +440,7 @@
       "req_quests": [ 29 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):",
+        "obj": "Hand-in (FiR):",
         "subs": [ "4x \"car batteries\"",
           "8x \"spark plug\"" ]
       }],
@@ -800,7 +800,7 @@
       "req_quests": [ 58 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "5x Hand-in \"Respirator\" (found in raid)"
+        "obj": "5x Hand-in \"Respirator\" (FiR)"
       }, {
         "obj": "5x Hand-in \"Medical bloodset\""
       }],
@@ -1069,7 +1069,7 @@
       "req_quests": [ 76 ],
       "maps": [ "Shoreline"],
       "objectives": [{
-        "obj": "Hand-in (found in raid):",
+        "obj": "Hand-in (FiR):",
 		"subs": [ "\"WD-40 100ml\"", 
 				"2x \"Clin wipers\"", 
 				"2x \"Corrugated hoses\"", 
@@ -1127,7 +1127,7 @@
       "req_quests": [ 80 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):",
+        "obj": "Hand-in (FiR):",
 		"subs": [ "4x \"Morphine injector\"", 
 				"2x \"Heat-exchange alkali surface washer\"", 
 				"2x \"Corrugated hoses\"", 
@@ -1529,7 +1529,7 @@
       "req_quests": [ 109 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in: (Found in Raid)", 
+        "obj": "Hand-in: (FiR)",
 		"subs": [ "2x \"Powercord\"", 
 				"4x \"T-Shaped Plug\"",
 				"2x \"Printed circuit board\"" ]
@@ -1558,7 +1558,7 @@
       "req_quests": [ 111 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in: (Found in raid)", 
+        "obj": "Hand-in: (FiR)",
 		"subs": [ "4x \"Graphics card\"", 
 				"8x \"CPU fan\"" ]
       }],
@@ -1586,7 +1586,7 @@
       "req_quests": [ 94 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):", 
+        "obj": "Hand-in (FiR):",
 		"subs": [ "3x \"PC CPU\"",
 				"3x \"Rechargeable battery\"", 
 				"3x \"Printed circuit board\"", 
@@ -1631,7 +1631,7 @@
       "req_quests": [ 110 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in following cigarettes (found in raid):",
+        "obj": "Hand-in following cigarettes (FiR):",
 		"subs": [ "3x \"Malboro\"", 
 				"3x \"Strike\"", 
 				"3x \"Wilston\"" ]
@@ -1908,7 +1908,7 @@
       "req_quests": [ 134 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in: (Found in Raid)", 
+        "obj": "Hand-in: (FiR)",
 		"subs": [ "1x \"Ski hat with holes for eyes\"", 
 				"1x \"Pilgrim tourist backpack\"" ]
       }],
@@ -1950,7 +1950,7 @@
       "req_quests": [ 138 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):", 
+        "obj": "Hand-in (FiR):",
 		"subs": [ "2x \"Wartech gear rig (TV-109, TV-106)\"", 
 				"2x \"BlackRock chest rig\"" ]
       }],
@@ -1964,7 +1964,7 @@
       "req_quests": [ 136 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):", 
+        "obj": "Hand-in (FiR):",
 		"subs": [ "4x \"Fuel conditioner\"" ]
       }],
       "requirements": [ ]
@@ -2022,7 +2022,7 @@
       "req_quests": [ 141, 143 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):", 
+        "obj": "Hand-in (FiR):",
 		"subs": [ "3x \"Antique teapot\"", 
 				"2x \"Antique vase\"" ]
       }],
@@ -2097,7 +2097,7 @@
       "req_quests": [ 139 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):", 
+        "obj": "Hand-in (FiR):",
 		"subs": [ "5x \"Aramid fiber cloth\"", 
 				"10x \"Ripstop cloth\"", 
 				"3x \"Paracord\"" ]
@@ -2112,7 +2112,7 @@
       "req_quests": [ 150 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):", 
+        "obj": "Hand-in (FiR):",
 		"subs": [ "10x \"Fleece cloth\"", 
 				"10x \"Polyamide fabric Cordura\"", 
 				"5x \"KEKTAPE duct tape\"" ]
@@ -2275,7 +2275,7 @@
       "objectives": [{
         "obj": "Kill Reshala"
 		},{
-        "obj": "Hand-in \"golden TT\" (found in raid)"
+        "obj": "Hand-in \"golden TT\" (FiR)"
       }],
       "requirements": [ ]
     },
@@ -2313,7 +2313,7 @@
       "objectives": [{
         "obj": "Kill Killa"
 		},{
-        "obj": "Hand-in \"Killa's helmet\" (found in raid)"
+        "obj": "Hand-in \"Killa's helmet\" (FiR)"
       }],
       "requirements": [ ]
     },
@@ -2327,7 +2327,7 @@
       "objectives": [{
         "obj": "Kill Shturman"
 		},{
-        "obj": "Hand-in \"Shturman's key\" (found in raid)"
+        "obj": "Hand-in \"Shturman's key\" (FiR)"
       }],
       "requirements": [ ]
     },
@@ -2401,7 +2401,7 @@
       "req_quests": [ 49 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):",
+        "obj": "Hand-in (FiR):",
 		"subs": [ "3x \"flash drives\"" ]
       }],
       "requirements": [ ]
@@ -2584,7 +2584,7 @@
       "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in (found in raid):",
+        "obj": "Hand-in (FiR):",
 		"subs": [ "\"Old firesteel\"", 
 				"\"Antique axe\"", 
 				"\"Battered antique Book\"", 
