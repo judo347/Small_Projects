@@ -81,7 +81,6 @@ public class QuestModel {
             ArrayList<Integer> completedQuestsIds = questNodeTop.completeThisAndAllPriors(playerInfo);
             //System.out.println("Completed quests which ids should be removed: " + completedQuestsIds);
             for(Integer completedId : completedQuestsIds){
-                System.out.println("Searching for completed id.");
                 boolean wasRemoved = false;
                 for(Integer comIdsSave : completedQuestIdsFromSave){
                     if(completedId.compareTo(comIdsSave) == 0){
@@ -89,12 +88,6 @@ public class QuestModel {
                             throw new IllegalArgumentException("Quest id was not found, and not removed!");
                         }
                         wasRemoved = true;
-                        System.out.println("Completed quest id was found and removed: " + completedId);
-                        StringBuilder remainingIds = new StringBuilder("Remaining ids: ");
-                        for(Integer remainingId : completedQuestIdsFromSave){
-                            remainingIds.append(remainingId).append(" ");
-                        }
-                        System.out.println(remainingIds.toString());
                         break;
                     }
                 }
