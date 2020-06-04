@@ -66,12 +66,12 @@ Nice improvements:
  - regret last complete
  - post man pat quests are wierd
 DONE - Found in rate, rename to, FiR
- - Quests: for multiple maps, should be shown at all maps relevant, but greyed out
+DONE - Quests: for multiple maps, should be shown at all maps relevant, but greyed out
  - mouse drage for scrolling vert and hort
  - Quest text too long = goes out of screen, bottom row
  - Objectives with map names - map names should be marked more clearly / easier to see
  - GodMode should only be enabled at first launch
- - Only prompt user with "want to save box" if current state is diffent from saveSlot
+ - Only prompt user with "want to save box" if current state is different from saveSlot
 
 
 Bugs:
