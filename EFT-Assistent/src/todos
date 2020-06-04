@@ -155,11 +155,47 @@ Make sure format for specific tings are the same:
 
 
 ---- FORMAT/SYNTAX of quest data ------
-# Found in raid:
+# Found in raid and multiple items:
 "objectives": [{
-        "obj": "Hand-in (found in raid):",
+        "obj": "Hand-in (FiR):",
 		"subs": [ "2x \"Old firesteel\"",
 				"3x \"Antique axe\"",
 				"5x \"Fake mustache\"" ]
       }],
 
+## Hand in items:
+Generel rules:
+ - has to contain the phrase: Hand-in
+ - an item marked with ""
+# quest item
+"objectives": [{
+        "obj": "Find \"bronze pocket watch\""
+      }, {
+        "obj": "Hand over quest item"
+      }],
+
+# single liner
+"objectives": [{
+        "obj": "6x Hand-in \"60 round mags for AK\""
+        }],
+
+# single liner found in raid
+"objectives": [{
+        "obj": "6x Hand-in \"60 round mags for AK\" (FiR)"
+        }],
+
+# single item
+"objectives": [{
+        "obj": "Hand-in \"gas analyzer\""
+        }],
+
+# multi line, single items:
+"objectives": [{
+        "obj": "Hand-in keys",
+        "subs": ["Dorm room 303", "ZB-014", "Military base checkpoint key", "The key to the gas station storage room" ]
+      }],
+
+# money
+"objectives": [{
+        "obj": "Hand-in \"500 dollars\""
+      }],

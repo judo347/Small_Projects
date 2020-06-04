@@ -10,7 +10,7 @@
       "objectives": [{
         "obj": "5x Kill Scav"
       }, {
-        "obj": "Hand over 2x MP-133"
+        "obj": "2x Hand-in \"MP-133\""
       }],
       "requirements": []
     },
@@ -172,7 +172,7 @@
         }, {
         "obj": "Shoreline: 10x Kill PMC while wearing \"balaclava\" and \"scav vest\""
         }, {
-        "obj": "5x Hand-in (FiR) \"Bars A-2607\" knives"
+        "obj": "5x Hand-in \"Bars A-2607\" (FiR)"
         }],
       "requirements": [ ]
     },
@@ -316,7 +316,7 @@
       "objectives": [{
         "obj": "Hand-in (FiR):",
         "subs": [ "1x \"military battery\"",
-          "10x \"30-mil. shells for BMP cannon\"" ]
+				  "10x \"30-mil. shells for BMP cannon\"" ]
       }],
       "requirements": [ ]
     },
@@ -356,7 +356,7 @@
       "req_quests": [ 24 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in 2x \"gas analyzer\""
+        "obj": "2x Hand-in \"gas analyzer\""
         }],
       "requirements": [ ]
     },
@@ -428,7 +428,7 @@
       "req_quests": [ 29 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "15x hand-in \"cans of meat (Tushonka)\" (FiR)"
+        "obj": "15x Hand-in \"cans of meat (Tushonka)\" (FiR)"
       }],
       "requirements": [ ]
     },
@@ -548,7 +548,7 @@
       "maps": [ ],
       "objectives": [{
         "obj": "Hand-in keys",
-        "subs": ["Dorm room 303", "ZB-014", "Military base checkpoint key", "The key to the gas station storage room" ]
+        "subs": ["\"Dorm room 303\"", "\"ZB-014\"", "\"Military base checkpoint key\"", "\"The key to the gas station storage room\"" ]
       }],
       "requirements": [ "1x MS2000 Marker" ]
     },
@@ -560,7 +560,7 @@
       "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in 500 dollars"
+        "obj": "Hand-in \"500 dollars\""
       }],
       "requirements": [ "Complete quest: Stirrup", "Complete quest: Car repair", "Have less than 0.6 rep with Therapist" ]
     },
@@ -572,9 +572,9 @@
       "req_quests": [ 36 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "3x hand-in \"Ophthalmoscopes\""
+        "obj": "3x Hand-in \"Ophthalmoscopes\""
       }, {
-        "obj": "3x hand-in \"LEDX Skin Transilluminators\""
+        "obj": "3x Hand-in \"LEDX Skin Transilluminators\""
       }],
       "requirements": [ ]
     },
@@ -610,7 +610,7 @@
       "req_quests": [ 35 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in 400.000 roubles"
+        "obj": "Hand-in \"400.000 roubles\""
       }],
       "requirements": [ ]
     },
@@ -628,9 +628,9 @@
       "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
-        "obj": "4x hand-in \"Module-3M bodyarmor\""
+        "obj": "4x Hand-in \"Module-3M bodyarmor\""
       }, {
-        "obj": "4x hand-in \"TOZ-106 bolt-action shotgun\""
+        "obj": "4x Hand-in \"TOZ-106 bolt-action shotgun\""
       }],
       "requirements": [ ]
     },
@@ -666,7 +666,7 @@
       "req_quests": [ 47 ],
       "maps": [ "Woods" ],
       "objectives": [{
-        "obj": "2x hand-in \"USB flash drives\""
+        "obj": "2x Hand-in \"USB flash drives\""
       }],
       "requirements": [ ]
     },
@@ -746,7 +746,7 @@
       "req_quests": [ ],
       "maps": [ ],
       "objectives": [{
-        "obj": "hand-in 1 mil rubles"
+        "obj": "Hand-in \"1 mil rubles\""
       }],
       "requirements": [ ]
     },
@@ -760,7 +760,7 @@
       "objectives": [{
         "obj": "7x Kill USEC"
       }, {
-        "obj": "2x Hand-in USEC DogTags"
+        "obj": "2x Hand-in \"USEC DogTags\""
       }],
       "requirements": [ ]
     },
@@ -772,7 +772,7 @@
       "req_quests": [ 56 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "hand-in 6000 dollars"
+        "obj": "Hand-in \"6000 dollars\""
       }],
       "requirements": [ ]
     },
@@ -800,9 +800,9 @@
       "req_quests": [ 58 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "5x Hand-in \"Respirator\" (FiR)"
+        "obj": "4x Hand-in \"Respirator\" (FiR)"
       }, {
-        "obj": "5x Hand-in \"Medical bloodset\""
+        "obj": "3x Hand-in \"Medical bloodset\" (FiR)"
       }],
       "requirements": [ ]
     },
@@ -993,7 +993,7 @@
       "req_quests": [ 71 ],
       "maps": [ "Shoreline"],
       "objectives": [{
-		"obj": "5x hand-in \"MRE ration pack\""
+		"obj": "5x Hand-in \"MRE ration pack\""
 		}, {
 		"obj": "10x Kill scav wearing \"MF-UNTAR armor vest\" and \"UNTAR helmet\""
 		}, {
@@ -1115,7 +1115,7 @@
       "req_quests": [ 79 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in 8000 dollars"
+        "obj": "Hand-in \"8000 dollars\""
       }],
       "requirements": [ ]
     },
@@ -1169,7 +1169,7 @@
       "req_quests": [ 60 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in the following items:",
+        "obj": "Hand-in:",
 		"subs": [ "2x \"Military COFDM wireless Signal Transmitters\"", 
 				"3x \"Virtex programmable processors\"" ]
       }],
@@ -1303,7 +1303,7 @@
       "req_quests": [ 87 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in 50.000 euro"
+        "obj": "Hand-in \"50.000 euro\""
       }],
       "requirements": [ ]
     },
@@ -1992,7 +1992,7 @@
       "req_quests": [ 137 ],
       "maps": [ "Interchange" ],
       "objectives": [{
-        "obj": "Hand-in two books:", 
+        "obj": "Hand over two books:", 
 		"subs": [ "Main-floor, Books, middle bookshelf, lowest shelf, middle", 
 				"1st-floor, МУЗЕЙ ИСТОРИИ, front entrance, book pile, red book" ]
       }],
@@ -2387,9 +2387,9 @@
       "req_quests": [ 158 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "Hand-in:", 
-		"subs": [ "3x \"CMS surgery kits\"", 
-				"2x \"portable defibrillators\"" ]
+        "obj": "Hand-in (FiR:", 
+		"subs": [ "2x \"CMS surgery kits\"", 
+				"1x \"portable defibrillators\"" ]
       }],
       "requirements": [ ]
     },
