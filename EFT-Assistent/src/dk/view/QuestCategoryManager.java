@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class QuestCategoryManager {
@@ -33,6 +34,16 @@ public class QuestCategoryManager {
         psc.reloadQuestVisuals();
     }
 
+    public void hideEmptyRows(SortingMode currentSortingMode){
+        if(currentSortingMode == SortingMode.MAP){ //TODO Handle traders
+            for(HBox rowBox : categoryBoxes_map.values()){
+                if(rowBox.getChildren().size() == 1){
+                    root.getChildren().remove(rowBox);
+                }
+            }
+        }
+    }
+
     /** Adds the given quest card to the correct hbox based on given mapType. */
     public void addQuestCard(PaneAndController questCardAndController, SortingMode sortingMode, MapType mapType, TraderType traderType){
         HBox desiredHBox;
@@ -47,6 +58,10 @@ public class QuestCategoryManager {
 
         desiredHBox.getChildren().add(questCardAndController.pane);
         questCardAndController.qcc.addBoxParent(desiredHBox, questCardAndController.pane);
+
+        if(!root.getChildren().contains(desiredHBox)){
+            root.getChildren().add(desiredHBox);
+        }
     }
 
     private void setupCategoryBoxes(SortingMode sortingMode){

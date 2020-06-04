@@ -153,6 +153,9 @@ public class PrimarySceneController {
 
         // Updates quests completed label
         setQuestCompletionLabel();
+
+        qcm.hideEmptyRows(currentSortingMode);
+
     }
 
     /***/
