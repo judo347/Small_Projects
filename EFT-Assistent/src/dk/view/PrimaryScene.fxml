@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -13,7 +18,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="400.0" maxWidth="400.0" prefHeight="200.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.view.PrimarySceneController">
+<VBox maxHeight="400.0" maxWidth="400.0" prefHeight="200.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.view.PrimarySceneController">
   <children>
       <HBox maxHeight="-Infinity" prefHeight="10.0" prefWidth="200.0">
          <children>
@@ -51,6 +56,7 @@
                   </Menu>
                   <Menu mnemonicParsing="false" text="Info">
                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#buttonAction_overview_popup" text="Show Overview" />
                       <MenuItem mnemonicParsing="false" onAction="#buttonAction_info_popup" text="About" />
                     </items>
                   </Menu>

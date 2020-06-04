@@ -5,13 +5,16 @@ import dk.model.MapType;
 import dk.model.PlayerInfo;
 import dk.model.TraderType;
 import dk.model.quest.Quest;
+import dk.tools.visualizer.QuestStructureVisualizer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -400,6 +403,22 @@ public class PrimarySceneController {
         aboutText.append(" - The EFT wiki for quest information and a lot of other things!");
         dialogVbox.getChildren().add(new Text(aboutText.toString()));
         Scene dialogScene = new Scene(dialogVbox, 400, 200);
+        dialog.setScene(dialogScene);
+        dialog.show();
+    }
+
+    @FXML
+    void buttonAction_overview_popup(ActionEvent event) {
+        final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.initOwner(rootStage);
+
+        Group group = new Group();
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(group);
+        QuestStructureVisualizer qsv = new QuestStructureVisualizer(group, mainModel.getQmt());
+
+        Scene dialogScene = new Scene(scrollPane, 400, 200);
         dialog.setScene(dialogScene);
         dialog.show();
     }

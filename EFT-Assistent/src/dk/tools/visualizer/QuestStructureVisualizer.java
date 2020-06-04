@@ -1,51 +1,32 @@
 package dk.tools.visualizer;
 
 import dk.model.PlayerInfo;
+import dk.model.quest.Quest;
 import dk.model.quest.QuestManagerTree;
 import dk.model.quest.treeStructure.QuestModel;
 import dk.model.quest.treeStructure.QuestNode;
-import javafx.application.Application;
 import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class QuestStructureVisualizer extends Application {
+public class QuestStructureVisualizer {
 
-    public static int questBoxWidth = 160;
-    public static int questBoxHeight = 40;
-    public static int questBoxSpacing = 50;
+    private static int questBoxWidth = 160;
+    private static int questBoxHeight = 40;
+    private static int questBoxSpacing = 50;
 
-    public static void main(String[] args) {
-        launch(args);
+    public QuestStructureVisualizer(Group root, QuestManagerTree qmt) {
+        populate(root, qmt);
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Group root = new Group();
-        ScrollPane scrollPane = new ScrollPane();
-        scrollPane.setContent(root);
-        Scene scene = new Scene(scrollPane, 500, 500, Color.BLACK);
+    public void populate(Group root, QuestManagerTree qmt){
 
-        //drawRectableAt(root, 10,10);
-        test(root);
-
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
-    public static void test(Group root){
-        QuestManagerTree qmt = new QuestManagerTree(new PlayerInfo());
-        QuestModel questModel = qmt.getQuestModel();
-        System.out.println("QMT and QM has been instantiated.");
-        ArrayList<QuestNode> rootNodes = questModel.getRootNodes();
+        ArrayList<QuestNode> rootNodes = qmt.getQuestModel().getRootNodes();
         ArrayList<VisualizerQuestNode> visualizerQuestNodes = new ArrayList<>();
         for(QuestNode node : rootNodes){
             visualizerQuestNodes.addAll(node.getVisualizerNodes(0));
@@ -61,7 +42,7 @@ public class QuestStructureVisualizer extends Application {
                 if(vqn.layer == i){
                     int x = (i * (questBoxWidth + questBoxSpacing) + 20);
                     System.out.println("Drawing node at: x:" + x + " y:" + y);
-                    drawRectableAt(root, x, y, vqn.quest.getQuestName());
+                    drawRectableAt(root, x, y, vqn.quest.getQuestName(), vqn.quest.getState());
                     drawnNodes.add(vqn);
                     idToDrawnCoordinate.put(vqn.quest.getId(), new int[]{x, y});
                     y += 50;
@@ -82,16 +63,25 @@ public class QuestStructureVisualizer extends Application {
         }
     }
 
-    public static void drawRectableAt(Group root, int x, int y, String labelText){
+    private void drawRectableAt(Group root, int x, int y, String labelText, Quest.QuestState questState){
+        Color colorOfBox;
+        if(questState == Quest.QuestState.ACTIVE){
+            colorOfBox = Color.YELLOW;
+        } else if(questState == Quest.QuestState.COMPLETED){
+            colorOfBox = Color.GREEN;
+        } else {
+            colorOfBox = Color.RED;
+        }
+
         //Filled rectangle
         Rectangle rect1 = new Rectangle(x, y, questBoxWidth, questBoxHeight);
         Text text = new Text(x + 10, y + 20, labelText);
-        rect1.setFill(Color.BLUE);
+        rect1.setFill(colorOfBox);
         root.getChildren().add(rect1);
         root.getChildren().add(text);
     }
 
-    public static void drawLine(Group root, int fromX, int fromY, int toX, int toY){
+    private void drawLine(Group root, int fromX, int fromY, int toX, int toY){
         Line line = new Line(fromX + questBoxWidth, fromY + questBoxHeight/2, toX, toY + questBoxHeight/2);
         line.setStyle("-fx-stroke: red; -fx-stroke-width: 2");
         root.getChildren().add(line);
