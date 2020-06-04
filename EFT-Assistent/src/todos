@@ -52,6 +52,38 @@ Bugs:
  - Active quests gets Available after another quest is completed?
  - PrimarySceneController: setMenuItemGodmodeStatus() FUTURE
 
+2020 04 06 post-wipe feedback: --------------------------------------------------------------------------------------------------------------------------------------
+- hide empty categories has to be done for traders
+- regret last completed quest.
+Quest unlocked from start, that should not be:
+ - Polikhim hobo
+ - Postman pat - part 2
+ - Hippocratic Vow
+
+
+Nice improvements:
+ - List quests after unlocking order
+ - regret last complete
+ - post man pat quests are wierd
+ - Found in rate, rename to, FiR
+ - Quests: for multiple maps, should be shown at all maps relevant, but greyed out
+ - mouse drage for scrolling vert and hort
+ - Quest text too long = goes out of screen, bottom row
+ - Objectives with map names - map names should be marked more clearly / easier to see
+ - GodMode should only be enabled at first launch
+ - Only prompt user with "want to save box" if current state is diffent from saveSlot
+
+
+Bugs:
+- Vitamins part. 1 - NOT showing when in-game requirements is met
+  - lvl22, LL3,3,2,2,2,2,1
+  - Chemical part 3 completed
+  - debug status: quests.json seems to be fine. Have i added it to edge case?
+- post man pat quests are wierd
+- Hippocratic Vow, Loyalty Buyout and No offence, is gated behind leveL?
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
 Todos notes:
 - move load and save features in QuestManager to other class?
 - Tests for adding quests and such? Or at least manual tests!!
