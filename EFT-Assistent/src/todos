@@ -26,7 +26,7 @@ TODOs:
       DONE    - some card go down into next: pref height?
       DONE    - Map/trader image size, make them match quest size
       8. Runtime improvements!
-		  - Quests should be in dictionary, and found by id
+	  DONE  - Quests should be in dictionary, and found by id
 		  - others! Check todos!
       9. BUILD TODOES!
       DONE 10. Others
@@ -38,8 +38,8 @@ TODOs:
       11. FUTURE:
        - Quest card info: requirements if locked and show maps if mixed
        - Mouse dragging of scrollPane (Maybe future??)
-       - hide categories where no quests are active
-          - in god mode, show all
+      DONE - hide categories where no quests are active
+      DONE     - in god mode, show all
        - quest completion label does not stay to the right in full screen.
        - Menu: sorting: mark currently active one
        - dialog for saving on exit - should be homemade (Smaller!)
