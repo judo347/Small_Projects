@@ -1155,8 +1155,20 @@
       "req_quests": [ 82 ],
       "maps": [ "Shoreline" ],
       "objectives": [{
+        "obj": "Resort, east wing, room 108, on top of blue barrel"
+		}],
+      "requirements": [ ]
+    },
+    {
+      "name": "Cargo X - Part 3",
+      "giver": "Peacekeeper",
+      "req_level": 12,
+      "id": 189,
+      "req_quests": [ 83 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
         "obj": "Resort, west wing, basement, hole at end of pool"
-		}, {
+      }, {
         "obj": "Extract"
       }],
       "requirements": [ ]
@@ -2569,11 +2581,145 @@
       }],
       "requirements": [ ]
     },
-	
-	
-	
-	
-	
+
+
+
+    {
+      "name": "The bunker - Part 1",
+      "giver": "Prapor",
+      "req_level": 10,
+      "id": 190,
+      "req_quests": [ 4 ],
+      "maps": [ "Reserve" ],
+      "objectives": [{
+        "obj": "Find underground bunker control room."
+      },{
+        "obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "The bunker - Part 2",
+      "giver": "Prapor",
+      "req_level": 0,
+      "id": 191,
+      "req_quests": [ 190 ],
+      "maps": [ "Reserve" ],
+      "objectives": [{
+        "obj": "Locate bunker entrances from the medical building and the four buildings surrounding helicopter."
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Anesthesia",
+      "giver": "Prapor",
+      "req_level": 21,
+      "id": 192,
+      "req_quests": [ 8 ],
+      "maps": ["Shoreline"],
+      "objectives": [{
+        "obj": "3x Mark Sanitar spawns",
+        "subs": ["Cottages, behind locked villa, med. table",
+                "Pier, in front of building, med. bed",
+                "Resort, outside between east and west wing, near ambulance, med. bed"]
+      },{
+        "obj": "Extract"
+      }],
+      "requirements": ["3x MS2000 Marker"]
+    },
+    {
+      "name": "Rigged game",
+      "giver": "Skier",
+      "req_level": 0,
+      "id": 193,
+      "req_quests": [ 192 ],
+      "maps": ["Shoreline"],
+      "objectives": [{
+        "obj": "3x Mark Sanitar spawns",
+        "subs": ["Cottages, behind locked villa, med. container.",
+          "Pier, in front of building, med. container.",
+          "Resort, outside between east and west wing, near ambulance, med. container."]
+      },{
+        "obj": "Extract"
+      }],
+      "requirements": ["3x MS2000 Marker"]
+    },
+    {
+      "name": "Colleagues - Part 1",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 194,
+      "req_quests": [ 31 ],
+      "maps": ["Shoreline"],
+      "objectives": [{
+        "obj": "3x Find covered bodies",
+        "subs": ["Cottages, behind locked villa, between tree and ambulance.",
+          "Pier, in front of building.",
+          "Resort, outside between east and west wing, near helicopter."]
+      },{
+        "obj": "Extract"
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "Colleagues - Part 2",
+      "giver": "Therapist",
+      "req_level": 0,
+      "id": 195,
+      "req_quests": [ 194 ],
+      "maps": ["Shoreline"],
+      "objectives": [{
+        "obj": "2x Find quest items:",
+        "subs": ["Pier, inside building, upstairs, room closest to gas, on top of shelf unit.",
+          "Cottages, locked villa, upstairs, inside potted plant."]
+      }],
+      "requirements": [ "Cottage back entrance key" ]
+    },
+    {
+      "name": "The chemistry closet",
+      "giver": "Mechanic",
+      "req_level": 0,
+      "id": 196,
+      "req_quests": [ 194, 192 ],
+      "maps": [ "Shoreline" ],
+      "objectives": [{
+        "obj": "Resort, east wing, 110, enter room."
+      },{
+        "obj": "Extract"
+      }],
+      "requirements": [ "Key with tape" ]
+    },
+    {
+      "name": "Samples",
+      "giver": "Peacekeeper",
+      "req_level": 0,
+      "id": 197,
+      "req_quests": [ ],
+      "maps": [ ],
+      "objectives": [{
+        "obj": "Hand-in (FiR):",
+        "subs": [ "\"M.U.L.E. stimulator\"",
+          "\"Cocktail \"Obdolbos\"\"",
+          "\"Meldonin\"",
+          "\"AHF1-M\"",
+          "\"P22\"",
+          "\"L1 (Norepinephrine)\"",
+          "\"3-(b-TG)\"" ]
+      }],
+      "requirements": [ ]
+    },
+    {
+      "name": "TerraGroup employee",
+      "giver": "Peacekeeper",
+      "req_level": 0,
+      "id": 198,
+      "req_quests": [ 197 ],
+      "maps": [ "Labs" ],
+      "objectives": [{
+        "obj": "Room across from green keycard room, take usb from laptop."
+      }],
+      "requirements": [ "Key card with a blue marking" ]
+    },
 	
 	
 	{
