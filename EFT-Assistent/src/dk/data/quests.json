@@ -2299,7 +2299,7 @@
       "req_quests": [ 164 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "3x Kill PMCs while they are blinded by flashbang."
+        "obj": "2x Kill PMCs while they are blinded by flashbang."
       }],
       "requirements": [ ]
     },
@@ -2373,7 +2373,7 @@
       "req_level": 0,
       "id": 170,
       "req_quests": [ 169 ],
-      "maps": [ "Labs", "Reserve" ],
+      "maps": [ ],
       "objectives": [{
         "obj": "10x Kill raiders."
       }],
@@ -2541,7 +2541,7 @@
       "req_quests": [ 181 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "10x Kill Scavs with \"Mosin\"."
+        "obj": "7x Kill Scavs with \"Mosin\"."
       }],
       "requirements": [ ]
     },
@@ -2553,7 +2553,7 @@
       "req_quests": [ 182 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "7x Kill PMCs over 69m away with suppressed \"Mosin\"."
+        "obj": "7x Kill PMCs over 54m away with suppressed \"Mosin\"."
       }],
       "requirements": [ ]
     },
