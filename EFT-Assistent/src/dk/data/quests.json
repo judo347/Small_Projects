@@ -2565,7 +2565,7 @@
       "req_quests": [ 182 ],
       "maps": [ ],
       "objectives": [{
-        "obj": "7x Kill PMCs over 54m away with suppressed \"Mosin\"."
+        "obj": "5x Kill PMCs over 54m away with suppressed \"Mosin\"."
       }],
       "requirements": [ ]
     },
@@ -2687,7 +2687,7 @@
       },{
         "obj": "Extract"
       }],
-      "requirements": [ "Key with tape" ]
+      "requirements": [ "\"Key with tape\"" ]
     },
     {
       "name": "Samples",
