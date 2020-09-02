@@ -1,10 +1,10 @@
 @startuml
-
 left to right direction
 
 skinparam monochrome true
 
-title Simple Object Diagram
+title EFT: Assistant Structure
+
 
 package data {
 object quest.json
@@ -64,17 +64,23 @@ MainModel - PlayerInfo
 MainModel - QuestManager
 }
 
-package view {
+package view/control {
 object PrimaryScene
 object QuestCard
 object PaneAndController
-PaneAndController : Not used?
+object QuestCategoryManager
+object QuestState
+object SortingMode
 
 PrimaryScene - QuestCard
 }
 
 
+package exTools {
+object QuestStructureVisualizer
+object VisualizerQuestNode
+}
+
 MainModel - JSONParserHelper
 MainModel - PrimaryScene
-
 @enduml
